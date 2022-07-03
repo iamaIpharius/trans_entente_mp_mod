@@ -1,0 +1,20 @@
+spriteTypes = {	
+
+
+
+	SpriteType = {
+		name = "GFX_idea_achived_victories_1"
+		texturefile = "gfx/interface/ideas/achived_victories_1.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_achived_victories_2"
+		texturefile = "gfx/interface/ideas/achived_victories_2.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_achived_victories_3"
+		texturefile = "gfx/interface/ideas/achived_victories_3.dds"	
+	}
+
+}
