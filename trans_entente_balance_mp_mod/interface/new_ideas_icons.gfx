@@ -16,5 +16,13 @@ spriteTypes = {
 		name = "GFX_idea_achived_victories_3"
 		texturefile = "gfx/interface/ideas/achived_victories_3.dds"	
 	}
+	SpriteType = {
+		name = "GFX_idea_axis_minors_special_forces"
+		texturefile = "gfx/interface/ideas/axis_minors_special_forces.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_allies_minors_special_forces"
+		texturefile = "gfx/interface/ideas/allies_minors_special_forces.dds"	
+	}
 
 }

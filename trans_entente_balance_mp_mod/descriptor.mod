@@ -1,6 +1,6 @@
 version="0.1"
 tags={
-	"Trans Entente Balance MP mod"
+	"Balance"
 }
-name="German Victories"
+name="Trans Entente Balance MP mod"
 supported_version="1.11.12"

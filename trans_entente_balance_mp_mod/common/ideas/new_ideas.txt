@@ -60,5 +60,46 @@ ideas = {
 				army_attack_factor = 0.3
 			}
 		}
+
+		allies_minors_special_forces = {
+		
+			picture = allies_minors_special_forces
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.2
+				acclimatization_hot_climate_gain_factor = 0.2
+				special_forces_cap = 1
+			}
+		}
+		axis_minors_special_forces = {
+		
+			picture = axis_minors_special_forces
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.2
+				acclimatization_hot_climate_gain_factor = 0.2
+				special_forces_cap = 0.15
+			}
+		}
 	}				
 }
