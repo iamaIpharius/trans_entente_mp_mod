@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+trans_entente_mp_mod.sublime-project
+trans_entente_mp_mod.sublime-workspace
