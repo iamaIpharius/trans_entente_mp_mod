@@ -2,32 +2,33 @@ ideas = {
 
 	country = {
 
-		achived_victories_1 = {
+		warlords_corruption = {
 		
-			picture = achived_victories_1
+			picture = warlords_corruption
 			
 			allowed = {
-				tag = GER
+				always = no
 			}
 			
 			removal_cost = -1
 
 			allowed_civil_war = {
 
-				always = no
+				always = yes
 			}
 			
 			modifier = {
-				army_attack_factor = 0.1
+				army_org_regain = -0.3
+				consumer_goods_factor = 0.1
 			}
 		}
 		
-		achived_victories_2 = {
+		CHI_agrarian_society = {
 		
-			picture = achived_victories_2
+			picture = CHI_agrarian_society
 			
 			allowed = {
-				tag = GER
+				always = no
 			}
 			
 			removal_cost = -1
@@ -38,7 +39,7 @@ ideas = {
 			}
 			
 			modifier = {
-				army_attack_factor = 0.2
+				industrial_capacity_factory = -0.1
 			}
 		}
 		
@@ -58,6 +59,47 @@ ideas = {
 			
 			modifier = {
 				army_attack_factor = 0.3
+			}
+		}
+
+		allies_minors_special_forces = {
+		
+			picture = allies_minors_special_forces
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.2
+				acclimatization_hot_climate_gain_factor = 0.2
+				special_forces_cap = 1
+			}
+		}
+		axis_minors_special_forces = {
+		
+			picture = axis_minors_special_forces
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.2
+				acclimatization_hot_climate_gain_factor = 0.2
+				special_forces_cap = 0.15
 			}
 		}
 	}				

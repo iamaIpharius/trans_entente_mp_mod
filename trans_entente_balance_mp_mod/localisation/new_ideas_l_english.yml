@@ -1,9 +1,11 @@
 ﻿l_english:
- ABILITY_TOOLTIP_NAME:0 "$NAME|H$"
- achived_victories_1:0 "Achived Victories Tier 1"
- achived_victories_1_desc:0 "Some victories made us stronger"
- achived_victories_2:0 "Achived Victories Tier 2"
- achived_victories_2_desc:0 "More victories! We're going on a full speed!"
+ warlords_corruption:0 "Warlords are Corrupted!!"
+ warlords_corruption_desc:0 "Kinda cringe"
+ CHI_agrarian_society:0 "Agrarian society"
+ CHI_agrarian_society_desc:0 "We live in an agrarian society"
  achived_victories_3:0 "Achived Victories Tier 3"
  achived_victories_3_desc:0 "Are we GODS?"
- 
+ allies_minors_special_forces:0 "Allies Special Forces"
+ allies_minors_special_forces_desc:0 "MORBing from the sea and air"
+ axis_minors_special_forces:0 "Axis Special Forces"
+ axis_minors_special_forces_desc:0 "are you wanna total MORB?"
