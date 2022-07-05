@@ -3,8 +3,8 @@ spriteTypes = {
 
 
 	SpriteType = {
-		name = "GFX_idea_warlors_corruption"
-		texturefile = "gfx/interface/ideas/warlors_corruption.dds"	
+		name = "GFX_idea_warlords_corruption"
+		texturefile = "gfx/interface/ideas/warlords_corruption.dds"	
 	}
 
 	SpriteType = {
