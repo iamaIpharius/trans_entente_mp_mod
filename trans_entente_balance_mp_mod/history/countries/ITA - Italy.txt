@@ -36,8 +36,7 @@ add_ideas = {
 }
 
 163 = {
-	start_resistance = no
-	set_compliance = 80
+	set_compliance = 70
 	set_resistance = 0
 	set_garrison_strength = 1.0
 }
