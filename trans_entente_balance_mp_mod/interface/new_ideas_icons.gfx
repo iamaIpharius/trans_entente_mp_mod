@@ -3,13 +3,13 @@ spriteTypes = {
 
 
 	SpriteType = {
-		name = "GFX_idea_achived_victories_1"
-		texturefile = "gfx/interface/ideas/achived_victories_1.dds"	
+		name = "GFX_idea_warlors_corruption"
+		texturefile = "gfx/interface/ideas/warlors_corruption.dds"	
 	}
 
 	SpriteType = {
-		name = "GFX_idea_achived_victories_2"
-		texturefile = "gfx/interface/ideas/achived_victories_2.dds"	
+		name = "GFX_idea_CHI_agrarian_society"
+		texturefile = "gfx/interface/ideas/CHI_agrarian_society.dds"	
 	}
 
 	SpriteType = {
