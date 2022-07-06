@@ -2,6 +2,27 @@ ideas = {
 
 	country = {
 
+		minors_license_production = {
+		
+			picture = minors_license_production
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+
+				always = yes
+			}
+			
+			modifier = {
+				license_tech_difference_speed_factor = 1
+
+			}
+		}
+
 		warlords_corruption = {
 		
 			picture = warlords_corruption
@@ -35,7 +56,7 @@ ideas = {
 
 			allowed_civil_war = {
 
-				always = no
+				always = yes
 			}
 			
 			modifier = {
@@ -43,9 +64,9 @@ ideas = {
 			}
 		}
 		
-		achived_victories_3 = {
+		d_day_defence = {
 		
-			picture = achived_victories_3
+			picture = d_day_defence
 			
 			allowed = {
 				tag = GER
@@ -58,7 +79,85 @@ ideas = {
 			}
 			
 			modifier = {
-				army_attack_factor = 0.3
+				dig_in_speed_factor = 0.5
+				max_dig_in_factor = 0.3
+			}
+		}
+
+		endsieg = {
+		
+			picture = endsieg
+			
+			allowed = {
+				tag = GER
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		JAP_light_hull_cost = {
+		
+			picture = JAP_light_hull_cost
+			
+			allowed = {
+				tag = JAP
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_cost_max_ship_hull_light = -0.15
+			}
+		}
+
+		JAP_heavy_hull_cost = {
+		
+			picture = JAP_heavy_hull_cost
+			
+			allowed = {
+				tag = JAP
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_cost_max_ship_hull_heavy = -0.1
+			}
+		}
+
+		licensies_for_minors = {
+		
+			picture = licensies_for_minors
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				production_cost_max_ship_hull_heavy = -0.1
 			}
 		}
 
@@ -73,7 +172,7 @@ ideas = {
 			removal_cost = -1
 
 			allowed_civil_war = {
-				always = no
+				always = yes
 			}
 			
 			modifier = {
@@ -93,7 +192,7 @@ ideas = {
 			removal_cost = -1
 
 			allowed_civil_war = {
-				always = no
+				always = yes
 			}
 			
 			modifier = {

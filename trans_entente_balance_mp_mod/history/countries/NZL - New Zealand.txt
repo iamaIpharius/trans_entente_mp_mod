@@ -1,4 +1,10 @@
 ﻿capital = 284
+# MOD
+
+add_ideas = {
+	allies_minors_special_forces
+	minors_license_production
+	}
 
 oob = "NZL_1936"
 
@@ -6,7 +12,6 @@ oob = "NZL_1936"
 set_stability = 0.8
 set_war_support = 0.3
 
-add_ideas = allies_minors_special_forces
 
 set_technology = {
 	infantry_weapons = 1

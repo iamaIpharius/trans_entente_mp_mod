@@ -1,6 +1,9 @@
 ﻿capital = 289
-
-add_ideas = axis_minors_special_forces
+# MOD
+add_ideas = {
+	axis_minors_special_forces
+	minors_license_production
+	}
 
 oob = "SIA_1936"
 if = {

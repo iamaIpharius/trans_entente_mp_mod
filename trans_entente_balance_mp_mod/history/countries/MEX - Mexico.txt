@@ -1,4 +1,10 @@
 ﻿capital = 277
+# MOD
+
+add_ideas = {
+	allies_minors_special_forces
+	minors_license_production
+	}
 
 oob = "MEX_1936"
 if = {
@@ -102,7 +108,6 @@ set_convoys = 45
 set_stability = 0.2
 set_war_support = 0.1
 
-add_ideas = allies_minors_special_forces
 if = {
 	limit = {
 		has_dlc = "Man the Guns"

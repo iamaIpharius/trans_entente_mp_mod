@@ -1,4 +1,10 @@
 ﻿capital = 111
+# MOD
+add_ideas = {
+	axis_minors_special_forces
+	minors_license_production
+	}
+
 
 oob = "FIN_1936"
 if = {
@@ -159,7 +165,7 @@ set_popularities = {
 	}
 }
 
-add_ideas = axis_minors_special_forces
+
 add_ideas = {
 	sisu
 }

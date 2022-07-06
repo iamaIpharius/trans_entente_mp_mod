@@ -1,5 +1,10 @@
 ﻿capital = 46
 
+add_ideas = {
+	axis_minors_special_forces
+	minors_license_production
+	}
+
 if = {
 	limit = {
 		NOT = {
@@ -131,7 +136,6 @@ if = {
 	give_guarantee = YUG
 }
 add_ideas = neutrality_idea
-add_ideas = axis_minors_special_forces
 #Kick off kings crazy life
 if = {
 	limit = {

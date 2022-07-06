@@ -1,4 +1,8 @@
 ﻿capital = 276
+# MOD
+add_ideas = allies_minors_special_forces
+add_ideas = minors_license_production
+
 
 if = {
 	limit = {
@@ -133,7 +137,7 @@ if = {
 	limit = { has_dlc = "Together for Victory" }
 	add_ideas = CAN_great_depression_1
 	add_ideas = CAN_conscription_crisis
-	add_ideas = allies_minors_special_forces
+	
 	set_cosmetic_tag = CAN_UK
 
 	add_to_tech_sharing_group = commonwealth_research
