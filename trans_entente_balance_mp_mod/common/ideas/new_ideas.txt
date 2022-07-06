@@ -18,8 +18,10 @@ ideas = {
 			}
 			
 			modifier = {
-				license_tech_difference_speed_factor = 1
-
+				license_anti_tank_eq_production_speed_factor = 1
+				license_artillery_eq_production_speed_factor = 1
+				license_infantry_eq_production_speed_factor = 1
+				license_light_tank_eq_production_speed_factor = 1
 			}
 		}
 
@@ -118,8 +120,11 @@ ideas = {
 				always = yes
 			}
 			
-			modifier = {
-				production_cost_max_ship_hull_light = -0.15
+			equipment_bonus = {
+				ship_hull_light = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
 			}
 		}
 
@@ -137,27 +142,11 @@ ideas = {
 				always = yes
 			}
 			
-			modifier = {
-				production_cost_max_ship_hull_heavy = -0.1
-			}
-		}
-
-		licensies_for_minors = {
-		
-			picture = licensies_for_minors
-			
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			modifier = {
-				production_cost_max_ship_hull_heavy = -0.1
+			equipment_bonus = {
+				ship_hull_heavy = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
 			}
 		}
 
