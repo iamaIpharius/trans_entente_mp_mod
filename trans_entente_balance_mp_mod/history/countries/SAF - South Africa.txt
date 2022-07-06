@@ -1,5 +1,10 @@
 ﻿capital = 275
 
+add_ideas = {
+	allies_minors_special_forces
+	minors_license_production
+	}
+
 oob = "SAF_1936"
 
 set_stability = 0.6
@@ -23,7 +28,6 @@ set_technology = {
 	fuel_silos = 1
 }
 
-add_ideas = allies_minors_special_forces
 
 if = {
 	limit = {

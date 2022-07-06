@@ -1,64 +1,29 @@
 ideas = {
-	economy = {
-		
-		unindustrialized = {
-			
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-		
-			modifier = {
-				consumer_goods_factor = 1
-				production_speed_industrial_complex_factor = -1
-				production_speed_arms_factory_factor = -1
-				production_speed_dockyard_factor = -1
-				conversion_cost_civ_to_mil_factor = 1
-				conversion_cost_mil_to_civ_factor = 1
-				industrial_capacity_factory = -2
-				industrial_capacity_dockyard = -2
 
-			}
+	country = {
+
+		minors_license_production = {
+		
+			picture = minors_license_production
 			
-			allowed_to_remove = {
-				OR = {
-					has_war = yes
-				}
-			}
-			cancel_if_invalid = no
-		}
-	}
-	
-	mobilization_laws = {
-	
-		uninterested = {
-	
 			allowed = {
 				always = no
 			}
+			
 			removal_cost = -1
+
+			allowed_civil_war = {
+
+				always = yes
+			}
 			
 			modifier = {
-				conscription = 0.003
-				generate_wargoal_tension = 1.00
-				join_faction_tension = 0.20
-				lend_lease_tension = 0.50
-				send_volunteers_tension = 0.20
-				guarantee_tension = 0.75
-				max_fuel_factor = -0.45
-				fuel_gain_factor = -0.6
+				license_anti_tank_eq_production_speed_factor = 1
+				license_artillery_eq_production_speed_factor = 1
+				license_infantry_eq_production_speed_factor = 1
+				license_light_tank_eq_production_speed_factor = 1
 			}
-			
-			allowed_to_remove = {
-				OR = {
-					has_war = yes
-				}
-			}
-			cancel_if_invalid = no
-			
 		}
-	}
-	country = {
 
 		warlords_corruption = {
 		
@@ -93,7 +58,7 @@ ideas = {
 
 			allowed_civil_war = {
 
-				always = no
+				always = yes
 			}
 			
 			modifier = {
@@ -101,9 +66,9 @@ ideas = {
 			}
 		}
 		
-		achived_victories_3 = {
+		d_day_defence = {
 		
-			picture = achived_victories_3
+			picture = d_day_defence
 			
 			allowed = {
 				tag = GER
@@ -116,7 +81,72 @@ ideas = {
 			}
 			
 			modifier = {
-				army_attack_factor = 0.3
+				dig_in_speed_factor = 0.5
+				max_dig_in_factor = 0.3
+			}
+		}
+
+		endsieg = {
+		
+			picture = endsieg
+			
+			allowed = {
+				tag = GER
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		JAP_light_hull_cost = {
+		
+			picture = JAP_light_hull_cost
+			
+			allowed = {
+				tag = JAP
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+
+		JAP_heavy_hull_cost = {
+		
+			picture = JAP_heavy_hull_cost
+			
+			allowed = {
+				tag = JAP
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				ship_hull_heavy = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
 			}
 		}
 
@@ -131,7 +161,7 @@ ideas = {
 			removal_cost = -1
 
 			allowed_civil_war = {
-				always = no
+				always = yes
 			}
 			
 			modifier = {
@@ -151,7 +181,7 @@ ideas = {
 			removal_cost = -1
 
 			allowed_civil_war = {
-				always = no
+				always = yes
 			}
 			
 			modifier = {

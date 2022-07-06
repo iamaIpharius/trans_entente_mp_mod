@@ -24,5 +24,26 @@ spriteTypes = {
 		name = "GFX_idea_allies_minors_special_forces"
 		texturefile = "gfx/interface/ideas/allies_minors_special_forces.dds"	
 	}
+	SpriteType = {
+		name = "GFX_idea_d_day_defence"
+		texturefile = "gfx/interface/ideas/d_day_defence.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_endsieg"
+		texturefile = "gfx/interface/ideas/endsieg.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_JAP_light_hull_cost"
+		texturefile = "gfx/interface/ideas/JAP_light_hull_cost.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_JAP_heavy_hull_cost"
+		texturefile = "gfx/interface/ideas/JAP_heavy_hull_cost.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_minors_license_production"
+		texturefile = "gfx/interface/ideas/minors_license_production.dds"	
+	}
 
 }
