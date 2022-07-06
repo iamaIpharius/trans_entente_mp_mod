@@ -870,11 +870,12 @@ country_event = {
 			}	
 		}
 		
-		# TUR = { 
-			# add_ideas = {
-				# uninterested
-			# }	
-		# }
+		TUR = { 
+			add_ideas = {
+				uninterested
+				unindustrialized
+			}	
+		}
 		
 		TZN = { 
 			add_ideas = {
