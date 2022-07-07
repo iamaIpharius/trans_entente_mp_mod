@@ -1,12 +1,11 @@
 # TEMP Mod
-> [!NOTE]
 > Work in progress
 
 ---
-
+### NOTE: This mode have been made for specific historical ruleset
 #### This mod improves MP expireince for historical games
 #### Changelog v0.1 
-- improved performance (thanks to AI Shackles mod and Spot mod)
+- improved performance
 - naval production rework
 - complete air, naval and land exp rework
 - map changes (mappies!)
