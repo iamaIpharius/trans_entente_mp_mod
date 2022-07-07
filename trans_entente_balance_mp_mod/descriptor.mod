@@ -2,5 +2,5 @@ version="0.1"
 tags={
 	"Balance"
 }
-name="Trans Entente Balance MP mod"
+name="TEMP Mod"
 supported_version="1.11.12"
