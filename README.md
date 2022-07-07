@@ -1,3 +1,22 @@
-# Trans Entente balance MP mod
-### Work in progress
-https://docs.google.com/spreadsheets/d/1Lc_I-b18btURuPFHFmdyDj0EbY8_e2jeO3dTv1xPMXA/edit#gid=0
+# TEMP Mod
+> [!NOTE]
+> Work in progress
+
+---
+
+#### This mod improves MP expireince for historical games
+#### Changelog v0.1 
+- improved performance (thanks to AI Shackles mod and Spot mod)
+- naval production rework
+- complete air, naval and land exp rework
+- map changes (mappies!)
+- new ideas for smol nations
+- new ideas for Japan
+- rework of staring conditions
+- new events
+- new cores!
+- resources and economic rework
+
+##### TEMP mod team
+
+
