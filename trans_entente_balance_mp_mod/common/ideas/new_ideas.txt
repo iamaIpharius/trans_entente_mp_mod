@@ -76,10 +76,10 @@ ideas = {
 			}
 			
 			modifier = {
-				license_anti_tank_eq_production_speed_factor = 1
-				license_artillery_eq_production_speed_factor = 1
-				license_infantry_eq_production_speed_factor = 1
-				license_light_tank_eq_production_speed_factor = 1
+				license_anti_tank_eq_production_speed_factor = 0.5
+				license_artillery_eq_production_speed_factor = 0.5
+				license_infantry_eq_production_speed_factor = 0.5
+				license_light_tank_eq_production_speed_factor = 0.5
 			}
 		}
 
