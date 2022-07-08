@@ -1,4 +1,9 @@
 ﻿l_english:
  GER_defence_category:0 "Germany on defense"
- GER_dday_defense:0 "Hold the Beaches"
+ GER_dday_defense:0 "Hold the Beaches!"
  GER_defence_berlin:0 "Festung Berlin"
+ GER_summer_offensives:0 "Summer offensives"
+ GER_start_summer_offensive:0 "Start summer offensive"
+ decision_cost_CP_70:0 "£command_power  §Y70§!"
+ decision_cost_CP_70_blocked:0 "£command_power  §R70§!"
+ decision_cost_CP_70_tooltip:0 "It costs £command_power  §Y70§! to take the decision"

@@ -17,3 +17,20 @@ GER_defence_category = {		#ID of category
 
 	}
 }
+
+GER_summer_offensives = {
+    priority = 9
+    icon = GFX_category_icon
+    allowed = {
+		original_tag = GER
+
+
+	}
+	visible = {
+	    has_completed_focus = GER_ussr_war_goal
+		has_war_with = SOV
+
+
+	}
+
+}

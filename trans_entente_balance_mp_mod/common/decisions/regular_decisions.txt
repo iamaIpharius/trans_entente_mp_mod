@@ -179,3 +179,79 @@ GER_defence_category = {		#Name of category that decisions will appear under, de
 	}
 
 }
+GER_summer_offensives = {
+    GER_start_summer_offensive = {		#ID of the mission, must not contain spaces!
+
+		icon = GFX_decision_icon_default		#The left side icon to show for this mission.
+        	#The amount of days remaining until the mission is removed.
+		is_good = no		#Determines if the timeout bar will be red or green, cosmetic setting only, has no actual impact on the mission
+
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+			NOT = {
+                has_idea = GER_barbarossa
+            }
+            OR = {
+                AND = {
+                    date > 1941.05.30
+                    date < 1941.09.01
+                }
+                AND = {
+                    date > 1942.05.30
+                    date < 1942.09.01
+                }
+                AND = {
+                    date > 1943.05.30
+                    date < 1943.09.01
+                }
+                AND = {
+                    date > 1944.05.30
+                    date < 1944.09.01
+                }
+                AND = {
+                    date > 1945.05.30
+                    date < 1945.09.01
+                }
+
+            }
+
+		}
+        custom_cost_trigger = {
+            has_command_power > 69
+            }
+    	custom_cost_text = decision_cost_CP_70
+
+		fire_only_once = no		#If set to yes, the decision will only appear once, after execution will not appear again.
+        days_remove = 90
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+
+		}
+
+		# EFFECTS OF THIS DECISION/MISSION
+        targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.05
+
+			}
+
+		modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.1
+				supply_consumption_factor = -0.05
+			}
+
+		remove_effect = {
+
+		}
+
+		# AI LOGIC FOR THIS DECISION/MISSION
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+			factor = 2
+		}
+	}
+
+
+}
