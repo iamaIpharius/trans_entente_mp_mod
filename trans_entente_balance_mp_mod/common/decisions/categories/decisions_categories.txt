@@ -1,0 +1,36 @@
+#####################################################################################################################
+# COMMENTS HAVE BEEN INCLUDED FOR SAKE OF EXPLANATION, CAN BE REMOVED #
+# ID's must not include spaces!
+#####################################################################################################################
+GER_defence_category = {		#ID of category
+	priority = 9		#Determines the order of display in the decisions tab, the higher the number, the higher it will show up.
+	icon = GFX_category_icon	#Icon to be used for the category, defined in decisions_graphics.gfx or other .gfx file you create
+	
+	allowed = {
+		original_tag = GER
+	}
+	visible = {		#Determines what makes this category visible, if a category is invisible decisions under that category also will not be visible to the AI/player.
+
+
+	has_completed_focus = GER_atlantikwall
+	has_completed_focus = GER_ostwall
+
+	}
+}
+
+GER_summer_offensives = {
+    priority = 9
+    icon = GFX_category_icon
+    allowed = {
+		original_tag = GER
+
+
+	}
+	visible = {
+	    has_completed_focus = GER_ussr_war_goal
+		has_war_with = SOV
+
+
+	}
+
+}
