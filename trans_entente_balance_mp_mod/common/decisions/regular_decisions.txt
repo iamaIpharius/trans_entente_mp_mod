@@ -12,7 +12,9 @@ GER_defence_category = {		#Name of category that decisions will appear under, de
 		
 		available = {		#Conditions that will allow the player/AI to click the decision and execute its effect.
 		    any_enemy_country = {
-                OR = {
+		        custom_trigger_tooltip = {
+                    tooltip = "Enemy controls coastline province"
+		            OR = {
                     controls_province = 743
                     controls_province = 9710
                     controls_province = 6777
@@ -71,11 +73,13 @@ GER_defence_category = {		#Name of category that decisions will appear under, de
                     controls_province = 316
                     controls_province = 394
                 }
+		        }
+
             }
 		}
 		
 		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
-
+        days_remove = 90
 		visible = {		#Conditions to make this decision visible, can be left blank to make it always appear.
 
 		}		
@@ -84,9 +88,10 @@ GER_defence_category = {		#Name of category that decisions will appear under, de
 
 		# EFFECTS OF THIS DECISION/MISSION
 
-		complete_effect = {		#The effects to execute once the envelope icon is clicked.
-			add_ideas = d_day_defence
-		}
+		modifier = {
+				dig_in_speed_factor = 0.5
+				max_dig_in_factor = 0.3
+			}
 		
 		# AI LOGIC FOR THIS DECISION/MISSION
 
@@ -189,6 +194,8 @@ GER_summer_offensives = {
 		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
 
 		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+
+		    command_power > 79
 			NOT = {
                 has_idea = GER_barbarossa
             }
@@ -217,10 +224,7 @@ GER_summer_offensives = {
             }
 
 		}
-        custom_cost_trigger = {
-            has_command_power > 69
-            }
-    	custom_cost_text = decision_cost_CP_70
+        cost = 0
 
 		fire_only_once = no		#If set to yes, the decision will only appear once, after execution will not appear again.
         days_remove = 90
@@ -242,6 +246,9 @@ GER_summer_offensives = {
 				supply_consumption_factor = -0.05
 			}
 
+        complete_effect = {		#The effects to execute once the envelope icon is clicked.
+			add_command_power = -80
+		}
 		remove_effect = {
 
 		}
