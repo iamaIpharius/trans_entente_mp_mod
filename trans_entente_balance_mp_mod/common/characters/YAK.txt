@@ -1,0 +1,55 @@
+characters={
+	YAK_pavel_pevznyak = {
+		name = "Pavel Pevznyak" 
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Pavel_Pevznyak
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1943.1.1.1"
+			id = -1
+		}
+	}
+	YAK_Pavel_egorov = {
+		name = "Pavel Egorov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/portrait_soviet_pdxcon_magic_winner.dds"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	YAK_Victor_Baydalakov = {
+		name = "Victor Baydalakov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Victor_Baydalakov.dds"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	YAK_Aleksey_Tabarkov = {
+		name = "Aleksey Tabarkov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Generic_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	

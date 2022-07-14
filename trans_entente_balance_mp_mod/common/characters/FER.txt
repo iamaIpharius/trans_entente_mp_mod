@@ -1,0 +1,42 @@
+characters={
+	FER_anatoly_pepelyayev = {
+		name = "Anatoly Pepelyayev" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/portrait_SOV_vasily_korzh.dds"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	FER_Konstantin_Rodzaevsky = {
+		name = "Konstantin Rodzaevsky" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Konstantin_Rodzaevsky.dds"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+	FER_Tikhail_Mukhachevsky = {
+		name = "Tikhail Mukhachevsky" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Mikhail_Tukhachevsky.dds"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1960.1.1.1"
+			id = -1
+		}
+	}
+}
+	
