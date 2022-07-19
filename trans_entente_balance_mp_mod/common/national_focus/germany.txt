@@ -2093,7 +2093,13 @@ focus_tree = {
 		completion_reward = {
 			
 			air_experience = 25
-
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
 			add_doctrine_cost_reduction = {
 				name = air_sup_bonus
 				cost_reduction = 0.25
@@ -2496,6 +2502,13 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = radar_tech
+			}
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
 			}
 			if = {
 				limit = {
