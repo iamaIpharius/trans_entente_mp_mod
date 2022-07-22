@@ -1,7 +1,6 @@
 ﻿capital = 439
 # MOD
 add_ideas = {
-	allies_minors_special_forces
 	minors_license_production
 	}
 	

@@ -1,0 +1,264 @@
+#####################################################################################################################
+# COMMENTS HAVE BEEN INCLUDED FOR SAKE OF EXPLANATION, CAN BE REMOVED #
+# ID's must not include spaces!
+# Decisions MUST be visible for the AI to execute them, if in doubt, switch tag to the AI country and check if they can see/execute the mission.
+#####################################################################################################################
+GER_defence_category = {		#Name of category that decisions will appear under, decisions MUST have a category to work properly.
+	GER_dday_defense = {		#ID of the decision, must not contain spaces!
+
+		icon = GFX_decision_icon_default		#The left side icon to show for this decision.
+		
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+		
+		available = {		#Conditions that will allow the player/AI to click the decision and execute its effect.
+		    any_enemy_country = {
+		        custom_trigger_tooltip = {
+                    tooltip = "Enemy controls coastline province"
+		            OR = {
+                    controls_province = 743
+                    controls_province = 9710
+                    controls_province = 6777
+                    controls_province = 6621
+                    controls_province = 9737
+                    controls_province = 11565
+                    controls_province = 9597
+                    controls_province = 6657
+                    controls_province = 11600
+                    controls_province = 11616
+                    controls_province = 11465
+                    controls_province = 9510
+                    controls_province = 6536
+                    controls_province = 542
+                    controls_province = 3552
+                    controls_province = 6572
+                    controls_province = 9525
+                    controls_province = 11508
+                    controls_province = 9550
+                    controls_province = 6449
+                    controls_province = 3579
+                    controls_province = 11535
+                    controls_province = 6599
+                    controls_province = 9434
+                    controls_province = 485
+                    controls_province = 11420
+                    controls_province = 9500
+                    controls_province = 11548
+                    controls_province = 575
+                    controls_province = 6446
+                    controls_province = 6550
+                    controls_province = 480
+                    controls_province = 9431
+                    controls_province = 9498
+                    controls_province = 3211
+                    controls_province = 68
+                    controls_province = 3314
+                    controls_province = 391
+                    controls_province = 6336
+                    controls_province = 9335
+                    controls_province = 11318
+                    controls_province = 11360
+                    controls_province = 241
+                    controls_province = 3326
+                    controls_province = 374
+                    controls_province = 6349
+                    controls_province = 6325
+                    controls_province = 9347
+                    controls_province = 3368
+                    controls_province = 3231
+                    controls_province = 11366
+                    controls_province = 332
+                    controls_province = 399
+                    controls_province = 3206
+                    controls_province = 6235
+                    controls_province = 316
+                    controls_province = 394
+                }
+		        }
+
+            }
+		}
+		
+		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+        days_remove = 90
+		visible = {		#Conditions to make this decision visible, can be left blank to make it always appear.
+
+		}		
+
+		cost = 0		#The cost to execute the decision, by default its political power.
+
+		# EFFECTS OF THIS DECISION/MISSION
+
+		modifier = {
+				dig_in_speed_factor = 0.5
+				max_dig_in_factor = 0.3
+			}
+		
+		# AI LOGIC FOR THIS DECISION/MISSION
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0			
+		}
+	}
+
+
+    GER_defence_berlin = {		#ID of the mission, must not contain spaces!
+
+		icon = GFX_decision_icon_default		#The left side icon to show for this mission.
+        	#The amount of days remaining until the mission is removed.
+		is_good = yes		#Determines if the timeout bar will be red or green, cosmetic setting only, has no actual impact on the mission
+
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+			AND = {
+			    original_tag = GER
+			    surrender_progress > 0.5
+			    has_full_control_of_state = 64
+			}
+		}
+        cost = 100
+		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+        days_remove = 30
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+
+		}
+
+		# EFFECTS OF THIS DECISION/MISSION
+        modifier = {
+			political_power_gain = -1
+		}
+
+		remove_effect = {
+            add_ideas = endsieg
+            64 = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 3499
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 375
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 3367
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11444
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11505
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 9428
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 6521
+							instant_build = yes
+						}
+					}
+		}
+
+		# AI LOGIC FOR THIS DECISION/MISSION
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+			factor = 2
+		}
+	}
+
+}
+GER_summer_offensives = {
+    GER_start_summer_offensive = {		#ID of the mission, must not contain spaces!
+
+		icon = GFX_decision_icon_default		#The left side icon to show for this mission.
+        	#The amount of days remaining until the mission is removed.
+		is_good = no		#Determines if the timeout bar will be red or green, cosmetic setting only, has no actual impact on the mission
+
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+
+		available = {		#Conditions that will allow the player/AI to click the mission and execute its effect.
+
+		    command_power > 79
+			NOT = {
+                has_idea = GER_barbarossa
+            }
+            OR = {
+                AND = {
+                    date > 1941.05.30
+                    date < 1941.09.01
+                }
+                AND = {
+                    date > 1942.05.30
+                    date < 1942.09.01
+                }
+                AND = {
+                    date > 1943.05.30
+                    date < 1943.09.01
+                }
+                AND = {
+                    date > 1944.05.30
+                    date < 1944.09.01
+                }
+                AND = {
+                    date > 1945.05.30
+                    date < 1945.09.01
+                }
+
+            }
+
+		}
+        cost = 0
+
+		fire_only_once = no		#If set to yes, the decision will only appear once, after execution will not appear again.
+        days_remove = 90
+		visible = {		#Conditions to make this mission visible, can be left blank to make it always appear.
+
+		}
+
+		# EFFECTS OF THIS DECISION/MISSION
+        targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.05
+
+			}
+
+		modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.1
+				supply_consumption_factor = -0.05
+			}
+
+        complete_effect = {		#The effects to execute once the envelope icon is clicked.
+			add_command_power = -80
+		}
+		remove_effect = {
+
+		}
+
+		# AI LOGIC FOR THIS DECISION/MISSION
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the mission.
+			factor = 2
+		}
+	}
+
+
+}
