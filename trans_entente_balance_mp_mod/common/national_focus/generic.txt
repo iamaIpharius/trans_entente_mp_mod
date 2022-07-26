@@ -1,5 +1,5 @@
 ﻿focus_tree = {
-	id = generic_focus
+	id = not_generic_focus
 	
 	country = {
 		factor = 0
@@ -9,7 +9,7 @@
 			OR = {tag = MON tag = SIA tag = BRA tag = FIN tag = AUS tag = BEL tag = DEN tag = NOR tag = SWE}
 		}
 	}
-	
+	default = no
 	reset_on_civilwar = no
 
 	initial_show_position = {
