@@ -17,7 +17,7 @@ country_event = {
 	#Add shackles {
 	option = {
 		name = shackles.1.a
-		custom_effect_tooltip = shackles.1.b.d
+		custom_effect_tooltip = shackles.1.a.d
 		set_global_flag = shackles_event_happened
 		
 		AFG = { 
@@ -965,7 +965,7 @@ country_event = {
 	#No shackles
 	option = {
 		name = shackles.1.b
-		custom_effect_tooltip = shackles.1.a.d
+		custom_effect_tooltip = shackles.1.b.d
 		set_global_flag = shackles_event_happened
 	}	
 }
