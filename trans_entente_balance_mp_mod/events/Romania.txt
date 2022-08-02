@@ -64,11 +64,23 @@ country_event = {
 		FROM = {
 			country_event = { days = 1 id = soviet.5 }
 			effect_tooltip = {
-				create_wargoal = {
-					type = take_state
-					target = ROM
-					generator = { 78 }
-				}
+				start_border_war = {
+					change_state_after_war = no
+					attacker = {
+						state = 834
+						num_provinces = 3
+						on_win = soviet.1001
+						on_lose = soviet.1002
+						on_cancel = soviet.1002
+						}
+					defender = {
+						state = 78
+						num_provinces = 4
+						on_win = soviet.1003
+						on_lose = soviet.1004
+						on_cancel = soviet.1003
+						}
+					}
 			}
 		}
 	}
