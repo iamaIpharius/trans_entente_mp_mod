@@ -81,6 +81,7 @@ country_event = {
 						on_cancel = soviet.1003
 						}
 					}
+			}
 		}
 	}
 }
