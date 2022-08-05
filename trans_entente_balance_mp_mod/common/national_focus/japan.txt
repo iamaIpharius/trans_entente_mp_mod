@@ -5204,7 +5204,7 @@
 				name = JAP_carrier_warfare_experiments
 				cost_reduction = 0.25
 				uses = 2
-				category = cat_base_strike
+				category = naval_doctrine
 			}
 			add_tech_bonus = {
 				name = JAP_carrier_warfare_experiments
