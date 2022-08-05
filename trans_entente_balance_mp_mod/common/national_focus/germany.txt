@@ -2065,7 +2065,7 @@ focus_tree = {
 				name = air_sup_bonus
 				cost_reduction = 0.25
 				uses = 2
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 			every_state = {
 				limit = { has_state_flag = GER_air_innovation_2air }
@@ -2102,7 +2102,7 @@ focus_tree = {
 				name = air_sup_bonus
 				cost_reduction = 0.25
 				uses = 2
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 
 			if = {
@@ -2191,7 +2191,7 @@ focus_tree = {
 				name = op_dest_bonus
 				cost_reduction = 0.25
 				uses = 2
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = bomber_bonus
@@ -2274,7 +2274,7 @@ focus_tree = {
 				name = strat_dest_bonus
 				cost_reduction = 0.25
 				uses = 2
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = bomber_bonus
@@ -5034,7 +5034,7 @@ focus_tree = {
 				name = GER_trade_interdiction
 				cost_reduction = 0.25
 				uses = 2
-				category = trade_interdiction_tree
+				category = naval_doctrine
 			}
 		}
 	}
