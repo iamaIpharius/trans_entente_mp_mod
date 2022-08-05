@@ -2043,8 +2043,6 @@ focus_tree = {
 			unlock_decision_tooltip = GER_reichskommissariat_norwegen
 			unlock_decision_tooltip = GER_reichskommissariat_niederlande
 			unlock_decision_tooltip = GER_reichskommissariat_belgien_nordfrankreich
-			unlock_decision_tooltip = GER_reichskommissariat_ostland
-			unlock_decision_tooltip = GER_reichskommissariat_ukraine
 		}
 	}
 
@@ -2067,7 +2065,7 @@ focus_tree = {
 				name = air_sup_bonus
 				cost_reduction = 0.25
 				uses = 2
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 			every_state = {
 				limit = { has_state_flag = GER_air_innovation_2air }
@@ -2104,7 +2102,7 @@ focus_tree = {
 				name = air_sup_bonus
 				cost_reduction = 0.25
 				uses = 2
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 
 			if = {
@@ -2193,7 +2191,7 @@ focus_tree = {
 				name = op_dest_bonus
 				cost_reduction = 0.25
 				uses = 2
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = bomber_bonus
@@ -2276,7 +2274,7 @@ focus_tree = {
 				name = strat_dest_bonus
 				cost_reduction = 0.25
 				uses = 2
-				category = battlefield_support_tree
+				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = bomber_bonus
@@ -2502,13 +2500,6 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = radar_tech
-			}
-			add_tech_bonus = {
-				name = fighter_command_focus
-				bonus = 1.0
-				uses = 1
-				category = light_fighter
-				category = cat_heavy_fighter
 			}
 			if = {
 				limit = {
@@ -4576,6 +4567,10 @@ focus_tree = {
 			is_subject = no
 			has_full_control_of_state = 8
 			has_full_control_of_state = 28
+			has_full_control_of_state = 85
+			has_full_control_of_state = 807
+			has_full_control_of_state = 86
+			has_full_control_of_state = 762
 			OR = {
 				FRA = { has_capitulated = yes }
 				FRA = { is_subject_of = GER }
@@ -4609,23 +4604,22 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_state_core = 8
-			add_state_core = 28
-			if = {
-				limit = {
-					NOT = { owns_state = 28 }
+			transfer_state = 8
+			transfer_state = 28
+			transfer_state = 85
+			transfer_state = 807
+			transfer_state = 86
+			transfer_state = 762
+			hidden_effect = {
+				add_state_core = 8
+				add_state_core = 28
+				add_state_core = 86
+				add_state_core = 762
+				PRE = { add_state_core = 85 }
+				PRE = { add_state_core = 807 }
+				PRE = { add_state_core = 86	}
+				PRE = { add_state_core = 762 }
 				}
-				transfer_state = 28
-			}
-			28 = { set_state_name = "Elsass-Lothringen" }
-			set_province_name = { id = 9503 name = "Strassburg" }
-			set_province_name = { id = 678 name = "Mulhausen" }
-			FRA = {
-				country_event = { id = wtt_germany.63 }
-			}
-			LUX = {
-				country_event = { id = wtt_germany.64 }
-			}
 		}
 	}
 
@@ -5040,7 +5034,7 @@ focus_tree = {
 				name = GER_trade_interdiction
 				cost_reduction = 0.25
 				uses = 2
-				category = trade_interdiction_tree
+				category = naval_doctrine
 			}
 		}
 	}
