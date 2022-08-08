@@ -1,4 +1,63 @@
 ideas = {
+	naval_manufacturer = {
+
+		designer = yes
+		
+		calzone_dockyard = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}
+		
+		pizza_boat_company = {
+			
+			picture = pizza_boat_company
+			
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		spaghetti_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+	}
+	
 	economy = {
 		
 		unindustrialized = {
