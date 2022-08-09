@@ -61,4 +61,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/calzone_dockyard.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_idea_gondola_industries"
+		texturefile = "gfx/interface/ideas/gondola_industries.dds"
+	}
+
 }
