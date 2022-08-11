@@ -4,7 +4,7 @@
 ---
 ### NOTE: This mode have been made for specific historical ruleset
 #### This mod improves MP expireince for historical games
-#### Changelog v0.1 
+#### Changelog
 - improved performance
 - naval production rework
 - complete air, naval and land exp rework

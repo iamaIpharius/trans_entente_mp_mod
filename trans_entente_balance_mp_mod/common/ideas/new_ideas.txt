@@ -1,4 +1,82 @@
 ideas = {
+	naval_manufacturer = {
+
+		designer = yes
+		
+		calzone_dockyard = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}
+		
+		pizza_boat_company = {
+			
+			picture = pizza_boat_company
+			
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		spaghetti_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		gondola_industries = {
+			
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+	}
+	
 	economy = {
 		
 		unindustrialized = {
@@ -76,10 +154,8 @@ ideas = {
 			}
 			
 			modifier = {
-				license_anti_tank_eq_production_speed_factor = 0.5
-				license_artillery_eq_production_speed_factor = 0.5
-				license_infantry_eq_production_speed_factor = 0.5
-				license_light_tank_eq_production_speed_factor = 0.5
+				license_production_speed = 0.3 
+				license_purchase_cost = -1 
 			}
 		}
 

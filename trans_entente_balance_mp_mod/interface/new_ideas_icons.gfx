@@ -45,5 +45,25 @@ spriteTypes = {
 		name = "GFX_idea_minors_license_production"
 		texturefile = "gfx/interface/ideas/minors_license_production.dds"	
 	}
+	
+	SpriteType = {
+		name = "GFX_idea_pizza_boat_company"
+		texturefile = "gfx/interface/ideas/pizza_boat_company.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_spaghetti_naval_yard"
+		texturefile = "gfx/interface/ideas/spaghetti_naval_yard.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_calzone_dockyard"
+		texturefile = "gfx/interface/ideas/calzone_dockyard.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_gondola_industries"
+		texturefile = "gfx/interface/ideas/gondola_industries.dds"
+	}
 
 }

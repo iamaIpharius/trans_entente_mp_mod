@@ -236,14 +236,13 @@ GER_summer_offensives = {
         targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.1
-				defense_bonus_against = 0.05
-
+				defence_bonus_against = 0.05
 			}
 
 		modifier = {
-				army_speed_factor = 0.1
 				org_loss_when_moving = -0.1
 				supply_consumption_factor = -0.05
+
 			}
 
         complete_effect = {		#The effects to execute once the envelope icon is clicked.
