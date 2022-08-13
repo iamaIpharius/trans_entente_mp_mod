@@ -2493,6 +2493,14 @@ focus_tree = {
 		completion_reward = { 
 			air_experience = 50
 
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+			
 			add_ideas = GER_air_innovations_2_idea
 			# Balance research bonus to next tech among radio, radio_detection, decimetric_radar, improved_decimetric_radar, centimetric_radar, improved_centimetric_radar, advanced_centimetric_radar
 			add_tech_bonus = {
