@@ -9,6 +9,7 @@ state={
 		owner = MON
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 		victory_points = {
 			7843 1 #Ulaangom
@@ -18,6 +19,6 @@ state={
 	}
 	manpower=149000
 	buildings_max_level_factor=1.000
-	state_category=pastoral
+	state_category=metropolis
 	local_supplies=0.000
 }
