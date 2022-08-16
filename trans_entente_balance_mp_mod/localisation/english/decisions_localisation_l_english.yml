@@ -7,3 +7,4 @@
  decision_cost_CP_70:0 "£command_power  §Y70§!"
  decision_cost_CP_70_blocked:0 "£command_power  §R70§!"
  decision_cost_CP_70_tooltip:0 "It costs £command_power  §Y70§! to take the decision"
+ demand_indochina_as_siam:0 "Demand Indochina"
