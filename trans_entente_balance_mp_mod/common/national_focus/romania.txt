@@ -3740,7 +3740,7 @@
 		id = ROM_modern_at_guns
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = ROM_artillery_modernization }
-		mutually_exclusive = { focus = ROM_mobile_tank_destroyers }
+		
 		x = 1
 		y = 2
 		relative_position_id = ROM_the_zb_53
@@ -4127,7 +4127,7 @@
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = ROM_acquire_modern_tanks }
 		prerequisite = { focus = ROM_artillery_modernization }
-		mutually_exclusive = { focus = ROM_modern_at_guns }
+		
 		x = 0
 		y = 1
 		relative_position_id = ROM_acquire_modern_tanks
