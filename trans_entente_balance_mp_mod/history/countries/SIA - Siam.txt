@@ -36,6 +36,8 @@ recruit_character = SIA_phraya_chalermarkiart
 recruit_character = SIA_kuang_abhayavongsa
 recruit_character = SIA_thawee_punyaketu
 recruit_character = SIA_phot_bhahalyodin
+recruit_character = SIA_preecha_somsak
+recruit_character = SIA_arthit_prasert
 
 
 # Starting tech
