@@ -1810,15 +1810,11 @@ focus_tree = {
 				limit = {
 					NOT = { is_in_faction_with = HUN }
 				}
-				custom_effect_tooltip = GER_integrate_war_economies_tt
-				custom_effect_tooltip = GER_integrate_war_economies_tt3
 			}
 			if = {
 				limit = {
 					NOT = { is_in_faction_with = ROM }
 				}
-				custom_effect_tooltip = GER_integrate_war_economies_tt2
-				custom_effect_tooltip = GER_integrate_war_economies_tt4
 			}
 			if = {
 				limit = {
@@ -1897,28 +1893,7 @@ focus_tree = {
 							set_state_flag = GER_integrate_war_economies_2
 						}
 					}
-					if = {
-						limit = {
-							has_dlc = "Death or Dishonor" 
-						}
-						set_autonomy = { target = HUN autonomy_state = autonomy_satellite }
-					}
-					if = {
-						limit = { 
-							has_dlc = "Together for Victory"
-							NOT = { has_dlc = "Death or Dishonor" } 
-						}
-						set_autonomy = { target = HUN autonomy_state = autonomy_dominion }
-					}
-					if = {
-						limit = { 
-							NOT = { has_dlc = "Together for Victory" }
-							NOT = { has_dlc = "Death or Dishonor" }
-						}
-						puppet = HUN
-					}
 				}
-				custom_effect_tooltip = GER_integrate_war_economies_tt3
 			}
 			if = {
 				limit = {
@@ -1997,28 +1972,7 @@ focus_tree = {
 							set_state_flag = GER_integrate_war_economies_2
 						}
 					}
-					if = {
-						limit = {
-							has_dlc = "Death or Dishonor" 
-						}
-						set_autonomy = { target = ROM autonomy_state = autonomy_satellite }
-					}
-					if = {
-						limit = { 
-							has_dlc = "Together for Victory"
-							NOT = { has_dlc = "Death or Dishonor" } 
-						}
-						set_autonomy = { target = ROM autonomy_state = autonomy_dominion }
-					}
-					if = {
-						limit = { 
-							NOT = { has_dlc = "Together for Victory" }
-							NOT = { has_dlc = "Death or Dishonor" }
-						}
-						puppet = ROM
-					}
 				}
-				custom_effect_tooltip = GER_integrate_war_economies_tt4
 			}
 		}
 	}
@@ -2493,6 +2447,14 @@ focus_tree = {
 		completion_reward = { 
 			air_experience = 50
 
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+			
 			add_ideas = GER_air_innovations_2_idea
 			# Balance research bonus to next tech among radio, radio_detection, decimetric_radar, improved_decimetric_radar, centimetric_radar, improved_centimetric_radar, advanced_centimetric_radar
 			add_tech_bonus = {

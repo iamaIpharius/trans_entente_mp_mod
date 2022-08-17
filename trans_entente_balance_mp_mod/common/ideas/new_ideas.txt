@@ -301,7 +301,7 @@ ideas = {
 			modifier = {
 				acclimatization_cold_climate_gain_factor = 0.2
 				acclimatization_hot_climate_gain_factor = 0.2
-				special_forces_min = 24
+				special_forces_min = 240
 			}
 		}
 		axis_minors_special_forces = {
@@ -321,7 +321,7 @@ ideas = {
 			modifier = {
 				acclimatization_cold_climate_gain_factor = 0.2
 				acclimatization_hot_climate_gain_factor = 0.2
-				special_forces_min = 24
+				special_forces_min = 240
 			}
 		}
 	}				

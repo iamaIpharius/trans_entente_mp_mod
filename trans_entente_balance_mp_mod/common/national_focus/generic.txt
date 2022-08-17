@@ -6,7 +6,7 @@
 		
 		modifier = {
 			add = 10
-			OR = {tag = MON tag = SIA tag = BRA tag = FIN tag = AUS tag = BEL tag = DEN tag = NOR tag = SWE tag = ALB}
+			OR = {tag = MAL tag = MON tag = SIA tag = BRA tag = FIN tag = AUS tag = BEL tag = DEN tag = NOR tag = SWE tag = ALB}
 		}
 	}
 	default = no
