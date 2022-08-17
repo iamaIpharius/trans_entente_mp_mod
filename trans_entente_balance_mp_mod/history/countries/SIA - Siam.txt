@@ -36,15 +36,27 @@ recruit_character = SIA_phraya_chalermarkiart
 recruit_character = SIA_kuang_abhayavongsa
 recruit_character = SIA_thawee_punyaketu
 recruit_character = SIA_phot_bhahalyodin
+recruit_character = SIA_preecha_somsak
+recruit_character = SIA_arthit_prasert
 
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
 	gw_artillery = 1
-	interwar_antiair = 1
 	early_fighter = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	naval_bomber1 = 1
+	early_bomber = 1
 	CAS1 = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
 	basic_train = 1
 	motorised_infantry = 1
 }
