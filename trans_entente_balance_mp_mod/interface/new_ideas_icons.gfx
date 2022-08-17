@@ -81,4 +81,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/asian_naval_arsenal.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_idea_rio_electric_docks"
+		texturefile = "gfx/interface/ideas/rio_electric_docks.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_amasonia_shipyard"
+		texturefile = "gfx/interface/ideas/amasonia_shipyard.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_south_american_naval_company"
+		texturefile = "gfx/interface/ideas/south_american_naval_company.dds"
+	}
+
 }
