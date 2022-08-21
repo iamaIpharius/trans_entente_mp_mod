@@ -1,9 +1,7 @@
+
 state={
 	id=715
 	name="STATE_715"
-	manpower = 3643373
-	
-	state_category = town
 
 	history={
 		owner = MAN
@@ -16,13 +14,16 @@ state={
 			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 1
+
 		}
 
 	}
 
 	provinces={
-		916 930 1499 1508 1558 1627 1638 3877 3978 4561 4633 4642 6893 7812 9831 10429 11836 11903 12337 12469 12478 
+		934 3814 3828 3881 3934 4514 6837 6852 6893 6898 9788 9831 9905 9927 11836 11855 11886 
 	}
-
-	local_supplies=0.0 
+	manpower=3643373
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }
