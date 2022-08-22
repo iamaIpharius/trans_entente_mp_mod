@@ -21,6 +21,8 @@ state = {
 		add_core_of = SOV
 		add_core_of = FER
 		add_core_of = YAK
+		add_core_of = MEN
+		add_core_of = MON
 	}
 
 	provinces = {
