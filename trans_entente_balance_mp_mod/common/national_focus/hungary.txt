@@ -2042,6 +2042,8 @@ focus_tree = {
 					}
 				}
 				45 = { add_core_of = HUN }
+				108 = { add_core_of = HUN }
+				764 = { add_core_of = HUN }
 				else = {
 					if = {
 						limit = {

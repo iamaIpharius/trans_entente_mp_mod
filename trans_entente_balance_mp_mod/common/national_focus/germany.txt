@@ -1428,13 +1428,11 @@ focus_tree = {
 				has_full_control_of_state = 64
 				has_full_control_of_state = 59
 				has_full_control_of_state = 60
-				has_full_control_of_state = 54
+				has_full_control_of_state = 53
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = GER_autobahn_tt
-			hidden_effect = {
 				64 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
@@ -1466,7 +1464,7 @@ focus_tree = {
 						}
 					}
 				}
-				54 = {
+				53 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						add_building_construction = {
@@ -1476,7 +1474,7 @@ focus_tree = {
 						}
 					}
 				}
-			}		
+					
 		}
 	}
 
@@ -2740,6 +2738,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
 			42 = { set_demilitarized_zone = no }
+			55 = { set_demilitarized_zone = no }
+			54 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			custom_effect_tooltip = GER_rhineland_ultimatum
 			add_political_power = 120

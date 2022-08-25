@@ -14,6 +14,8 @@ state={
 		add_core_of = SOV
 		add_core_of = ALT
 		add_core_of = YAK
+		add_core_of = MEN
+		add_core_of = MON
 		victory_points = {
 			4800 1 #Oyrot-Tura/Gorno-Altaysk
 		}
