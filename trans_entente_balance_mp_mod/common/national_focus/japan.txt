@@ -4112,7 +4112,7 @@
 		id = JAP_expand_the_showa_steel_works
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = JAP_the_manchurian_project }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = JAP_the_manchurian_project
 
@@ -4206,6 +4206,98 @@
 					level = 2
 					instant_build = yes
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_fortify_the_border
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = JAP_expand_the_showa_steel_works }
+		x = 0
+		y = 2
+		relative_position_id = JAP_expand_the_showa_steel_works 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_completed_focus = JAP_technological_exchange
+			}
+		}
+
+		available = {
+			MAN = { is_subject_of = ROOT }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			MAN = {
+				every_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						any_neighbor_state = {
+							is_controlled_by = SOV
+						}
+					}
+					set_building_level = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 2
+						}
+					}
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_loosen_the_reins
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = JAP_the_manchurian_project }
+		x = 2
+		y = 1
+		relative_position_id = JAP_the_manchurian_project 
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 0
+			
+		}
+
+		available = {
+			MAN = { is_subject_of = ROOT }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			MAN = {
+				add_autonomy_ratio = {
+				value = 0.5
+				localization = MAN_the_two_emperors
+				}	
 			}
 		}
 	}
@@ -4395,59 +4487,6 @@
 		}
 	}
 
-	focus = {
-		id = JAP_fortify_the_border
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = JAP_the_manchurian_project }
-		x = 0
-		y = 1
-		relative_position_id = JAP_the_manchurian_project 
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				has_completed_focus = JAP_technological_exchange
-			}
-		}
-
-		available = {
-			MAN = { is_subject_of = ROOT }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			MAN = {
-				every_owned_state = {
-					limit = {
-						is_fully_controlled_by = PREV
-						any_neighbor_state = {
-							is_controlled_by = SOV
-						}
-					}
-					set_building_level = {
-						type = bunker
-						level = 2
-						province = {
-							all_provinces = yes
-							limit_to_border = yes
-							level < 2
-						}
-					}
-				}				
-			}
-		}
-	}
 
 	focus = {
 		id = JAP_army_expansion_law
