@@ -324,5 +324,140 @@ ideas = {
 				special_forces_min = 240
 			}
 		}
+	
+		SPA_europes_backdoor = {
+			
+			name = SPA_europes_backdoor
+
+			picture = gre_schachtplan
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
 	}				
+	
+	naval_manufacturer = {
+
+
+		designer = yes
+		
+		rio_electric_docks = {
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}
+		
+	
+
+		amasonia_shipyard = {
+			
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		south_american_naval_company = {
+						
+			allowed = {
+				original_tag = BRA
+			}
+				
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer } #destroyer R&D
+
+			equipment_bonus = {
+				# 
+			}
+		}
+		
+	}
+
+	naval_manufacturer = {
+
+
+		designer = yes
+		
+		white_elephant_dockyard = {
+			
+			allowed = {
+				original_tag = SIA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}
+		
+	
+
+		wangchao_shipyard = {
+			
+			
+			allowed = {
+				original_tag = SIA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		asian_naval_arsenal = {
+						
+			allowed = {
+				original_tag = SIA
+			}
+				
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer } #destroyer R&D
+
+			equipment_bonus = {
+				# 
+			}
+		}
+		
+	}
 }

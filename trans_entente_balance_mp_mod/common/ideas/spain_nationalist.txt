@@ -22,25 +22,6 @@ ideas = {
 
 	country = {
 
-		SPA_europes_backdoor = {
-			
-			name = SPA_europes_backdoor
-
-			picture = gre_schachtplan
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			modifier = {
-				consumer_goods_factor = -0.1
-			}
-		}
-		
 		SPA_death_before_surrender = {
 
 			name = SPR_death_before_surrender

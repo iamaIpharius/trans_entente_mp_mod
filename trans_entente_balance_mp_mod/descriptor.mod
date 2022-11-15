@@ -1,6 +1,6 @@
-version="0.1"
+version="0.2"
 tags={
 	"Balance"
 }
 name="TEMP Mod"
-supported_version="1.11.12"
+supported_version="1.12.5"
