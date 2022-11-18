@@ -14258,11 +14258,6 @@ focus_tree = {
 				    target = ITA
 				    modifier = ITA_latin_initiatives
 				}
-				country_event = { 
-				    id = BBA_italy_interaction_events.44
-				    days = 2
-				    random = 6
-				}
 			}
 		}
 	}

@@ -1,17 +1,5 @@
 spriteTypes = {	
 
-
-
-	SpriteType = {
-		name = "GFX_idea_warlords_corruption"
-		texturefile = "gfx/interface/ideas/warlords_corruption.dds"	
-	}
-
-	SpriteType = {
-		name = "GFX_idea_CHI_agrarian_society"
-		texturefile = "gfx/interface/ideas/CHI_agrarian_society.dds"	
-	}
-
 	SpriteType = {
 		name = "GFX_idea_achived_victories_3"
 		texturefile = "gfx/interface/ideas/achived_victories_3.dds"	
@@ -94,6 +82,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_south_american_naval_company"
 		texturefile = "gfx/interface/ideas/south_american_naval_company.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_megacucked"
+		texturefile = "gfx/interface/ideas/megacucked.dds"	
 	}
 
 }
