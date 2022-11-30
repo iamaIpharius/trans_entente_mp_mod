@@ -2,9 +2,7 @@
 state={
 	id=911
 	name="STATE_911"
-	provinces={
-		657 687 3076 6677 9635 11636 
-	}
+
 	history={
 		owner = ROM
 		victory_points = {
@@ -27,8 +25,12 @@ state={
 		add_core_of = ROM
 
 	}
-	manpower=1115350
+
+	provinces={
+		657 687 3076 9635 
+	}
+	manpower=1005350
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=town
 	local_supplies=0.000
 }

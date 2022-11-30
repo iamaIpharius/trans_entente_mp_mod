@@ -16,9 +16,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			arms_factory = 4
 			industrial_complex = 1
-			air_base = 3
 
 		}
 		add_core_of = ROM
@@ -26,10 +24,10 @@ state={
 	}
 
 	provinces={
-		660 674 818 3636 3639 3663 6658 6695 9617 9651 11603 11619 
+		660 818 3636 3639 3663 6695 11619 
 	}
-	manpower=3346050
+	manpower=1338420
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=town
 	local_supplies=0.000
 }
