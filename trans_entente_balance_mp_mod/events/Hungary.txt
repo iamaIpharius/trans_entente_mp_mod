@@ -113,3 +113,76 @@ country_event = {
 		HUN = { transfer_state = 45 }
 	}
 }
+
+# Unternehmen Margarethe
+country_event = {
+	id = hungary.101
+	title = hungary.101.t
+	desc = hungary.101.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.101.a
+		GER = {
+			annex_country = { target = HUN transfer_troops = yes }
+			}
+		HUN = {
+			every_core_state = { set_compliance = 70 }
+			}
+	}
+
+	option = {
+		name = hungary.101.b
+		GER = {
+			annex_country = { target = HUN transfer_troops = yes }
+			}
+		ROM = { 
+			transfer_state = 154
+			if = {
+				limit = {
+					73 = {
+						CONTROLLER = {
+							OR = {
+								original_tag = HUN
+								is_subject_of = HUN
+								original_tag = GER
+								is_subject_of = GER
+							}
+						}
+					}
+				}
+				transfer_state = 73
+			}
+			if = {
+				limit = {
+					764 = {
+						CONTROLLER = {
+							OR = {
+								original_tag = HUN
+								is_subject_of = HUN
+								original_tag = GER
+								is_subject_of = GER
+							}
+						}
+					}
+				}
+				transfer_state = 764
+			}
+		HUN = {
+			every_core_state = { set_compliance = 65 }
+			}
+		}
+	}
+
+	option = {
+		name = hungary.101.c
+		ROM = {
+			annex_country = { target = HUN transfer_troops = yes }
+			}
+		HUN = {
+			every_core_state = { set_compliance = 60 }
+			}
+	}
+}

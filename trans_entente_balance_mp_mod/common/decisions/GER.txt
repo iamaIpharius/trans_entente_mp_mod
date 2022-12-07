@@ -348,6 +348,26 @@ operations = {
 			factor = 1
 		}
 	}
+
+	GER_unternehmen_margarethe = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = GER
+			GER = { has_government = fascism }
+			HUN = {	is_ai = yes }
+			}
+		available = {
+			divisions_in_state = { state = 909 size > 9 }
+			has_war_together_with = HUN
+		}
+
+		complete_effect = {
+				country_event = { id = hungary.101 hours = 1 }		
+		}
+	}
+
 }
 
 GER_case_anton_category = {
