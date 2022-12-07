@@ -416,10 +416,11 @@ ROM_change_sides = {
 		allowed = {
 			original_tag = ROM
 			ROM = { has_government = fascism }
-			BUL = {	is_ai = yes has_war_together_with = GER }
+			BUL = {	is_ai = yes }
 			}
 		available = {
 			divisions_in_state = { state = 48 size > 9 }
+			has_war_together_with = BUL
 		}
 
 		complete_effect = {

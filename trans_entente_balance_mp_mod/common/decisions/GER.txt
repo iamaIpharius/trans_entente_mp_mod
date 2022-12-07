@@ -356,10 +356,11 @@ operations = {
 		allowed = {
 			original_tag = GER
 			GER = { has_government = fascism }
-			HUN = {	is_ai = yes has_war_together_with = GER }
+			HUN = {	is_ai = yes }
 			}
 		available = {
 			divisions_in_state = { state = 909 size > 9 }
+			has_war_together_with = HUN
 		}
 
 		complete_effect = {

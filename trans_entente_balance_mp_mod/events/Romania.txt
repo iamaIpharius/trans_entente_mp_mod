@@ -333,7 +333,7 @@ country_event = {
 	}
 }
 
-# Unternehmen Margarethe
+# operatia ganimede
 country_event = {
 	id = romania.101
 	title = romania.101.t
