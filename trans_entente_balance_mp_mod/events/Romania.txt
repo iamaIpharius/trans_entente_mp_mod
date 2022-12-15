@@ -118,11 +118,13 @@ country_event = {
 		HUN = {
 			country_event = { days = 1 id = hungary.2 }
 		}
-		set_country_flag = second_vienna_accepted_north
-		add_state_core = 192
-		add_state_core = 834
-		add_manpower = 100000
-		add_offsite_building = { type = industrial_complex level = 1 }
+		ROM = {
+			set_country_flag = second_vienna_accepted_north
+			add_state_core = 192
+			add_state_core = 834
+			add_manpower = 100000
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
 	}
 	option = { # Refuse
 		name = romania.2.b
@@ -162,7 +164,7 @@ country_event = {
 	option = { # Accept demands
 		name = romania.2.a
 		ai_chance = {
-			factor = 50
+			factor = 100
 			modifier = { # Don't accept if in a faction that can protect them
 				factor = 0
 				OR = {
@@ -175,16 +177,18 @@ country_event = {
 		HUN = {
 			country_event = { days = 1 id = hungary.3 }
 		}
-		add_state_core = 192
-		add_state_core = 834
-		add_manpower = 200000
-		add_offsite_building = { type = industrial_complex level = 4 }
-		add_offsite_building = { type = arms_factory level = 5 }
-		set_country_flag = second_vienna_accepted_all
+		ROM = {
+			add_state_core = 192
+			add_state_core = 834
+			add_manpower = 200000
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_offsite_building = { type = arms_factory level = 4 }
+			set_country_flag = second_vienna_accepted_all
+		}
 	}
 	option = { # Refuse
 		name = romania.2.b
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 0 }
 		HUN = {
 			country_event = { days = 1 id = hungary.5 }
 			effect_tooltip = {
@@ -326,5 +330,25 @@ country_event = {
 			base = 0
 		}
 		
+	}
+}
+
+# operatia ganimede
+country_event = {
+	id = romania.101
+	title = romania.101.t
+	desc = romania.101.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = romania.101.a
+		ROM = {
+			annex_country = { target = BUL transfer_troops = yes }
+			}
+		BUL = {
+			every_core_state = { set_compliance = 70 }
+			}
 	}
 }

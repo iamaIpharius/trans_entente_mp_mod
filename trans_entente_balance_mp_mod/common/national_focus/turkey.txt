@@ -5730,6 +5730,7 @@ focus_tree = {
 		prerequisite = { focus = TUR_the_italo_turkish_naval_academy }
 		available = { 
 			NOT = { has_war_with = ITA }
+			is_in_faction_with = ITA
 			is_subject = no
 		}
 		x = -1
@@ -5760,6 +5761,7 @@ focus_tree = {
 		prerequisite = { focus = TUR_the_italo_turkish_naval_academy }
 		available = { 
 			NOT = { has_war_with = GER }
+			is_in_faction_with = GER
 			is_subject = no
 		}
 		x = -1
@@ -7121,6 +7123,7 @@ focus_tree = {
 		prerequisite = { focus = TUR_dissolve_the_ODPA }
 		available = {
 			NOT = { is_in_faction_with = SOV }
+			is_in_faction_with = SPA
 			is_subject = no
 		}
 		x = 0
@@ -7173,6 +7176,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			is_in_faction_with = SOV
 		}
 		bypass = {
 			is_in_faction = yes

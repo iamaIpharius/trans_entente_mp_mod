@@ -359,7 +359,6 @@ ideas = {
 			}
 
 			modifier = {
-				ai_focus_defense_factor = 1
 				ai_focus_aviation_factor = -1
 				ai_focus_naval_factor = -1
 				critical_receive_chance = 10
