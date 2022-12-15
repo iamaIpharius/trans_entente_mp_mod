@@ -422,6 +422,10 @@ ROM_change_sides = {
 			divisions_in_state = { state = 48 size > 9 }
 			has_war_together_with = BUL
 		}
+		visible = {
+			tag = ROM
+			has_war_together_with = BUL
+		}
 
 		complete_effect = {
 				country_event = { id = romania.101 hours = 1 }		
