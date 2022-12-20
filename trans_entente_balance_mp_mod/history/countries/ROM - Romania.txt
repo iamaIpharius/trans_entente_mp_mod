@@ -57,6 +57,12 @@ recruit_character = ROM_mihail_sturdza
 recruit_character = ROM_gheorghe_argeseanu
 recruit_character = ROM_king_michael
 recruit_character = ROM_octavian_goga
+recruit_character = ROM_ion_minos
+recruit_character = ROM_count_vlad
+recruit_character = ROM_petre_olga
+
+activate_advisor = ROM_count_vlad
+
 
 # Starting tech
 set_technology = {

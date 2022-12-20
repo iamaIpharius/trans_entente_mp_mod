@@ -348,6 +348,30 @@ operations = {
 			factor = 1
 		}
 	}
+
+	GER_unternehmen_margarethe = {
+
+		icon = generic_operation
+
+		allowed = {
+			tag = GER
+			GER = { has_government = fascism }
+			HUN = {	is_ai = yes }
+			}
+		available = {
+			divisions_in_state = { state = 909 size > 9 }
+			has_war_together_with = HUN
+		}
+		visible = {
+			tag = GER
+			has_war_together_with = HUN
+		}
+
+		complete_effect = {
+				country_event = { id = hungary.101 hours = 1 }		
+		}
+	}
+
 }
 
 GER_case_anton_category = {
@@ -387,6 +411,7 @@ GER_case_anton_category = {
 			divisions_in_state = { state = 25 size < 1 }
 			divisions_in_state = { state = 22 size < 1 }
 			divisions_in_state = { state = 21 size < 1 }
+			divisions_in_state = { state = 851 size < 1 }
 			divisions_in_state = { state = 32 size < 1 }
 			divisions_in_state = { state = 22 size < 1 }
 			divisions_in_state = { state = 26 size < 1 }
@@ -835,7 +860,7 @@ GER_military_buildup = {
 					size < 750
 				}
 				has_equipment = {
-					fighter_equipment < 250
+					small_plane_airframe < 250
 				}
 			}
 			NOT = {
@@ -857,7 +882,7 @@ GER_military_buildup = {
 					size < 750
 				}
 				has_equipment = {
-					fighter_equipment < 250
+					small_plane_airframe < 250
 				}
 			}
 			NOT = {

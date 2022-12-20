@@ -1,0 +1,105 @@
+﻿l_english:
+ warlords_corruption:0 "Warlord Corruption"
+ warlords_corruption_desc:0 "The countryside is overrun with warlord pretenders taking their slice of taxes and men."
+ CHI_agrarian_society:0 "Agrarian society"
+ CHI_agrarian_society_desc:0 "We live in an agrarian society."
+ achived_victories_3:0 "Achived Victories Tier 3"
+ achived_victories_3_desc:0 "Are we GODS?"
+ allies_minors_special_forces:0 "Allies Special Forces"
+ allies_minors_special_forces_desc:0 "MORBing from the sea and air"
+ axis_minors_special_forces:0 "Axis Special Forces"
+ axis_minors_special_forces_desc:0 "are you wanna total MORB?"
+
+ d_day_defence:0 "Man the Beaches!"
+ d_day_defence_desc:0 "Defence strategy against D-Day"
+ endsieg:0 "Endsieg"
+ endsieg_desc:0 "They said we'd be home by Christmas!"
+ JAP_light_hull_cost:0 "Smoll hulls energy..."
+ JAP_light_hull_cost_desc:0 "...means cheaper!"
+ JAP_heavy_hull_cost:0 "BIG SHIPS ENERGY"
+ JAP_heavy_hull_cost_desc:0 "...and also cheaper!"
+ minors_license_production:0 "Minor License Production"
+ minors_license_production_desc:0 "...because they're poor"
+
+ pizza_boat_company:0 "Pizza Boat Company"
+ spaghetti_naval_yard:0 "Spaghetti Naval Yard"
+ calzone_dockyard:0 "Calzone Docks"
+ gondola_industries:0 "Electric Gondola Company"
+
+
+ japan.19.t:0 "Siam demand Indochina!"
+ japan.19.d:0 "Plese UwU"
+ japan.19.a:0 "Oh well"
+
+ siam.1.t:0 "Hurra!"
+ siam.1.d:0 "We got Indochina!"
+ siam.1.a:0 "POG!"
+
+ white_elephant_dockyard:0 "White Elephant Dockyard"
+ wangchao_shipyard:0 "Wangchao Shipyard"
+ asian_naval_arsenal:0 "Asian Naval Arsenal"
+
+ south_american_naval_company:0 "South American Navak Company"
+ amasonia_shipyard:0 "Amasonia Shipyard"
+ rio_electric_docks:0 "Rio Electric Docks"
+ 
+ remove_shackles:0 "Remove Shackles"
+ remove_shackles_desc:0 "In order to make the game playable until the 1960s the minor's ability to field massive armies and produce massive ammounts of equipment was limited. If you want to play with a minor or medium power that has been limited in any way, this decision will remove those shackles."
+  
+ shackles.1.t:0 "AI Shackles"
+ shackles.1.d:0 "HoI4 late game is notorious for its slow down. This is caused by AI nations building copious amounts of military equipment and training huge armies, even tiny nations. This is a problem by the end of the 1940s and even more so into the 1950s and 1960s, which have a significant impact in the game performance. AI Shackles mod adds production and recruitment limitations to those minor countries in order to ensure a playable game. Some countries, like Brazil and Argentina, which had a reasonable industry but did not much care for conflicts abroad (until, in the case of Brazil for example, they were dragged to it) will have a limitation on recruitable manpower only, while others (like El Salvador), will have both manpower and industry capped. \n\nIf you decided to impose these limitations, called shackles, on the AI, it can be removed via a decision (costs 1pp) if you want to play with a minor nation. Or you can play without them from the beginning, for all countries, but it will most certainly adversely impact the game performance. Its your choice.\n\nI invite you to check the Extended Tech Tree 1960 mod on Steam to continue playing way past the normal end date with new content."
+ shackles.1.b:0 "I don't want to limit the AI."
+ shackles.1.b.d:0 "Minor countries will receive no limitations."
+ shackles.1.a:0 "Restrain the AI"
+ shackles.1.a.d:0 "Minor countries will be limited."
+ 
+ unindustrialized:0 "Unindustrialized"
+ uninterested:0 "Uninterested"
+ 
+ GER_defence_category:0 "Germany on defense"
+ GER_dday_defense:0 "Hold the Beaches!"
+ GER_defence_berlin:0 "Festung Berlin"
+ GER_summer_offensives:0 "Summer offensives"
+ GER_start_summer_offensive:0 "Start summer offensive"
+ decision_cost_CP_70:0 "£command_power  §Y70§!"
+ decision_cost_CP_70_blocked:0 "£command_power  §R70§!"
+ decision_cost_CP_70_tooltip:0 "It costs £command_power  §Y70§! to take the decision"
+ demand_indochina_as_siam:0 "Demand Indochina"
+ 
+ SPA_europes_backdoor:0 "Europe's Backdoor"
+ 
+ JAP_loosen_the_reins:0 "Loosen the Reins"
+ JAP_loosen_the_reins_desc:0 "We have reconsidered our imperial disposition to the Manchu state."
+
+ SPA_take_lisbon:0 "Take Lisbon"
+ SPA_take_lisbon_desc:0 "Having joined the war on the continent, we must now secure our flanks from Allied invasion. To do this, plans for a coup in Lisbon have been drawn up in collaboration with our sympathisers in Portugal. We are determined not to be the Axis' soft underbelly."
+ SPA_trade_with_the_allies:0 "Trade With the Allies"
+ SPA_trade_with_the_allies_desc:0 "Although we have aligned ourselves with the European Axis, we remain formally neutral. We should take advantage of the opputunities this provides, including trade with our ostensible enemies. The fact of the matter is that we can serve as a backdoor for western resources and manufactured goods into mainland Europe."
+ SPA_exploit_tungsten_reserves:0 "Exploit Tungsten Reserves"
+ SPA_exploit_tungsten_reserves_desc:0 "Tungsten has proven to be an critical resource in this war. We have a multitude of dormant deposits of the metal in our western provinces that we must go about extracting if we are to supply our allies in Berlin."
+
+ romania.101.t:0 "Operatia Ganimede"
+ romania.101.d:0 "Our coup in Sofia has gone off without a hitch. We will administer Bulgaria directly from Bucharest, with the help of local collaborators."
+ romania.101.a:0 "Good."
+ ROM_operatia_ganimede:0 "Operatia Ganimede"
+ GER_unternehmen_margarethe:0 "Unternehmen Margarethe"
+ hungary.101.t:0 "Unternehmen Margarethe"
+ hungary.101.d:0 "We have detained [HUN.GetLeader] in Vienna while troops have taken control of the city centre in Budapest. The operation has been a resounding success, the only question now is what to do with our newly subjugated vassal."
+ hungary.101.a:0 "Incorporate Greater Hungary into the Reich."
+ hungary.101.b:0 "Hand the Romanians their claims."
+ hungary.101.c:0 "Place the Magyars under the protection of [ROM.GetLeader]."
+
+
+ megacucked:0 "Mr. President, They Clicked Punish Them"
+ megacucked_desc:0 "A second nerf has hit the Axis. If this was triggered by an experienced USA please shame them."
+ cuck_the_japanese:0 "The Slay Button"
+ cuck_the_japanese_desc:0 "This button will add huge debuffs to Japan in the Pacific theatre. Please only use it if you are unconfident in your ability to kill Japan; if you are a regular major player and you use this, we will mock you."
+ 
+ human_torpedo_raid:0 "Human Torpedo Raid"
+ human_torpedo_raid_desc:0 "Click the funny button! *eyes emoji*"
+ human_torpedo_raid_outcome_tt:0 "Our finest men, Mario and Luigi, will deploy using submarines and destroy the Anglo fleet!"
+ 
+ 
+
+
+

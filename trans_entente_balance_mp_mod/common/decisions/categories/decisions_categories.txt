@@ -10,11 +10,7 @@ GER_defence_category = {		#ID of category
 		original_tag = GER
 	}
 	visible = {		#Determines what makes this category visible, if a category is invisible decisions under that category also will not be visible to the AI/player.
-
-
-	has_completed_focus = GER_atlantikwall
-	has_completed_focus = GER_ostwall
-
+		original_tag = GER
 	}
 }
 

@@ -914,6 +914,24 @@
 				uses = 2
 				category = industry
 			}
+			random_owned_controlled_state = {
+				prioritize = { 79 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ROM_malaxa_IC
+			}
 		}
 	}
 
@@ -948,10 +966,10 @@
 				limit = {
 					has_state_flag = ROM_national_defense_industry_AF1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -959,10 +977,10 @@
 				limit = {
 					has_state_flag = ROM_national_defense_industry_AF2
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -978,10 +996,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = ROM_national_defense_industry_AF1
@@ -995,10 +1013,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ROM_national_defense_industry_AF2
@@ -1071,7 +1089,7 @@
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1081,7 +1099,7 @@
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1091,7 +1109,7 @@
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1108,7 +1126,7 @@
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ROM_danubian_transport_network_Inf
@@ -1123,7 +1141,7 @@
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ROM_danubian_transport_network_Inf_2
@@ -1138,7 +1156,7 @@
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ROM_danubian_transport_network_Inf_3
@@ -1178,10 +1196,10 @@
 				limit = {
 					has_state_flag = ROM_malaxa_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1198,10 +1216,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = ROM_malaxa_IC
@@ -1281,7 +1299,7 @@
 				}
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 16
 				}
 			}
 		}
@@ -1297,16 +1315,16 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = ROM_hunedoara_steel_works_IC
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 42
 				}
 			}
 		}
@@ -1343,10 +1361,10 @@
 				limit = {
 					has_state_flag = ROM_invest_in_the_iar_AF1
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -1363,10 +1381,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 				set_state_flag = ROM_invest_in_the_iar_AF1
@@ -1408,7 +1426,7 @@
 			46 = {
 				add_resource = {
 					type = oil
-					amount = 24
+					amount = 44
 				}
 			}
 		}
@@ -1429,7 +1447,7 @@
 		}
 
 		available = {
-			num_of_factories > 50
+			num_of_factories > 30
 		}
 
 		bypass = {
@@ -1473,6 +1491,23 @@
 
 		completion_reward = {
 			add_ideas = ROM_exploit_the_baita_mines
+			random_owned_controlled_state = {
+				prioritize = { 84 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3385,25 +3420,55 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			#Give generic fighter bonus if fighter_2 already researched
 			if = {
-				limit = {
-					has_tech = fighter2
-				}
-				add_tech_bonus = {
-					name = ROM_iar_80
-					bonus = 1.0
-					ahead_reduction = 2
-					uses = 1
-					category = light_fighter
-				}
-				else = {
+				limit = { NOT = { has_dlc = "By Blood Alone" } }
+				if = {
+					limit = {
+						has_tech = fighter2
+					}
 					add_tech_bonus = {
 						name = ROM_iar_80
 						bonus = 1.0
 						ahead_reduction = 2
 						uses = 1
-						technology = fighter2
+						category = light_fighter
+					}
+					else = {
+						add_tech_bonus = {
+							name = ROM_iar_80
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							technology = fighter2
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				if = {
+					limit = {
+						has_tech = improved_small_airframe
+					}
+					create_equipment_variant = {
+						name = "IAR 80"
+						type = small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = light_mg_4x
+							fixed_auxiliary_weapon_slot_1 = light_mg_2x
+							engine_type_slot = engine_2_1x
+							special_type_slot_1 = empty
+						}
+						icon = "GFX_ROM_fighter2_medium"
+					}
+					else = {
+						add_tech_bonus = {
+							name = ROM_iar_80
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							technology = improved_small_airframe
+						}
 					}
 				}
 			}
@@ -3548,7 +3613,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 25
+			army_experience = 50
 		}
 	}
 
@@ -3740,7 +3805,6 @@
 		id = ROM_modern_at_guns
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = ROM_artillery_modernization }
-		
 		x = 1
 		y = 2
 		relative_position_id = ROM_the_zb_53
@@ -4127,7 +4191,6 @@
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = ROM_acquire_modern_tanks }
 		prerequisite = { focus = ROM_artillery_modernization }
-		
 		x = 0
 		y = 1
 		relative_position_id = ROM_acquire_modern_tanks
