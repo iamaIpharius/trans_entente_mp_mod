@@ -603,7 +603,7 @@ equipment_modules = {
 				attack_logistics
 			}
 			add_stats = {
-				air_ground_attack = 1
+				air_ground_attack = 2
 			}
 		}
 		can_convert_from = {
@@ -651,7 +651,7 @@ equipment_modules = {
 				attack_logistics
 			}
 			add_stats = {
-				air_ground_attack = 2
+				air_ground_attack = 4
 			}
 		}
 		can_convert_from = {
@@ -699,7 +699,7 @@ equipment_modules = {
 				attack_logistics
 			}
 			add_stats = {
-				air_ground_attack = 2
+				air_ground_attack = 4
 			}
 		}
 		can_convert_from = {
@@ -730,7 +730,7 @@ equipment_modules = {
 			add_stats = {
 				air_agility = -15
 				weight = 4
-				air_ground_attack = 6
+				air_ground_attack = 9
 			}
 		}
 		mission_type_stats = {
@@ -768,7 +768,7 @@ equipment_modules = {
 				attack_logistics
 			}
 			add_stats = {
-				air_ground_attack = 4
+				air_ground_attack = 8
 				weight = 1
 			}
 		}
@@ -797,7 +797,7 @@ equipment_modules = {
 				attack_logistics
 			}
 			add_stats = {
-				air_ground_attack = 8
+				air_ground_attack = 12
 				weight = 0
 			}
 		}
@@ -840,7 +840,7 @@ equipment_modules = {
 				port_strike
 			}
 			add_stats = {
-				air_ground_attack = 3
+				air_ground_attack = 6
 				weight = 0
 			}
 		}
@@ -899,7 +899,7 @@ equipment_modules = {
 		add_equipment_type = cas
 
 		add_stats = {
-			air_ground_attack = 8
+			air_ground_attack = 12
 			build_cost_ic = 5
 			weight = 8
 			air_agility = -15
@@ -918,7 +918,7 @@ equipment_modules = {
 		add_equipment_type = cas
 
 		add_stats = {
-			air_ground_attack = 15
+			air_ground_attack = 22
 			build_cost_ic = 8
 			weight = 12
 			air_agility = -20
