@@ -1739,7 +1739,7 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 			
 			equipment_bonus = {
-				small_plane_fighter_airframe = {
+				small_plane_airframe = {
 					build_cost_ic = -0.15
 				}
 				
