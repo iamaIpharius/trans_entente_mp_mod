@@ -968,7 +968,7 @@
 		}
 	}
 
-	focus = {
+	focus = { # probably should be remande
 		id = VIC_appeal_to_the_navy
 		icon = GFX_goal_generic_propaganda
 		
@@ -1003,6 +1003,9 @@
 		cost = 5 
 		x = -2
 		y = 1
+		mutually_exclusive = { 
+			focus = VIC_raid_the_sea
+		}
 		prerequisite = {
 			focus = VIC_appeal_to_the_navy
 		}
@@ -1105,6 +1108,8 @@
 			random_owned_controlled_state = { 
 				limit = {
 					state = 21
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
 					free_building_slots = {
 					building = dockyard
 					size > 10
@@ -1121,6 +1126,8 @@
 			random_owned_controlled_state = { 
 				limit = {
 					state = 19
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
 					free_building_slots = {
 					building = dockyard
 					size > 10
@@ -1140,13 +1147,15 @@
 		id = VIC_remove_all_safety
 		icon = GFX_goal_generic_production
 		cost = 5
-		x = 0
+		x = 1
 		y = 1 
 		prerequisite = {
 			focus = VIC_we_need_more_dockyard 
 
 		}
-		
+		mutually_exclusive = { 
+			focus = VIC_High_sea_fleet
+		}
 		relative_position_id = VIC_we_need_more_dockyard
 		available = {
 
@@ -1163,6 +1172,861 @@
 		}
 
 	}
-	
 
+	focus = { #sekleton focus 
+		id = VIC_High_sea_fleet
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5 
+		x = -1
+		y = 1
+		prerequisite = {
+			focus  = VIC_we_need_more_dockyard
+		}
+		mutually_exclusive = { 
+			focus = VIC_remove_all_safety
+		}
+		relative_position_id = VIC_we_need_more_dockyard
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+
+		}
+	}
+
+	focus = { #sekleton focus 
+		id = VIC_raid_the_sea
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5 
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = VIC_appeal_to_the_navy
+		}
+		mutually_exclusive = { 
+			focus = VIC_rebuild_the_french_navy
+		}
+		relative_position_id = VIC_appeal_to_the_navy
+		available ={
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+
+		}
+	}
+
+	focus = { #sekleton focus 
+		id = VIC_produce_german_sub
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 5 
+		x = -1
+		y = 1 
+		
+		prerequisite = {
+			focus  = VIC_raid_the_sea
+		}
+		relative_position_id = VIC_raid_the_sea
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+
+		}
+	}
+	
+	focus = { #sekleton focus 
+		id = VIC_make_more_sub
+		icon = GFX_goal_generic_navy_submarine
+		cost = 5
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = VIC_raid_the_sea
+		}
+
+		relative_position_id = VIC_raid_the_sea
+
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+
+		}
+	}
+
+	focus = { #sekleton focus 
+		id = VIC_make_better_one
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = { 
+			focus = VIC_produce_german_sub
+		}
+		relative_position_id = VIC_produce_german_sub
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+
+		}
+	}
+
+	focus = { 
+		id = VIC_make_more_dockyard 
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = { 
+			focus = VIC_make_more_sub
+		}
+		relative_position_id = VIC_make_more_sub
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+			navy_experience = 50
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+					building = dockyard
+					size > 12
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 12
+				add_building_construction = {
+				type = dockyard
+				level = 12
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_defend_the_altantic_wall
+		icon = GFX_focus_generic_coastal_fort
+		x = 38
+		y = 0 
+		cost = 5 
+		mutually_exclusive = { 
+			focus = VIC_expand_the_special_corp
+		}
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_expand_the_special_corp
+		icon = GFX_goal_generic_special_forces
+		x = 50
+		y = 0
+		cost = 5 
+		mutually_exclusive = { 
+			focus = VIC_defend_the_altantic_wall
+		}
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}	
+
+	focus = { 
+		id = VIC_the_foreign_legion
+		icon = GFX_focus_fra_french_union
+		x = 4
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_expand_the_special_corp
+		}
+		mutually_exclusive = { 
+			focus = VIC_expand_the_marines_corp
+		}
+		relative_position_id = VIC_expand_the_special_corp
+
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_expand_the_marines_corp
+		icon = GFX_goal_generic_amphibious_assault
+		x =-5
+		y = 1
+		cost = 5 
+		mutually_exclusive = { 
+			focus = VIC_the_foreign_legion
+		}
+		prerequisite = { 
+			focus = VIC_expand_the_special_corp
+		}
+		relative_position_id = VIC_expand_the_special_corp
+
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_modernize_the_army
+		icon = GFX_goal_generic_build_tank
+		x = 2
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_defend_the_altantic_wall
+		}
+		mutually_exclusive = { 
+			focus = VIC_the_old_guard
+		}
+		relative_position_id = VIC_defend_the_altantic_wall
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = {
+		id = VIC_the_old_guard
+		icon = GFX_goal_generic_axis_build_infantry
+		x =-2
+		y = 1
+		cost = 5 
+		mutually_exclusive = { 
+			focus = VIC_modernize_the_army
+		}
+		prerequisite = { 
+			focus = VIC_defend_the_altantic_wall
+		}
+		relative_position_id = VIC_defend_the_altantic_wall
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = {
+		id = VIC_amtrack_are_the_futur
+		icon = GFX_focus_VIC_amtrack
+		x = -2.5
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_expand_the_marines_corp focus = VIC_modernize_the_army
+		}
+		relative_position_id = VIC_expand_the_marines_corp
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_build_amtank
+		icon = GFX_goal_generic_build_tank
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_amtrack_are_the_futur
+		}
+		relative_position_id = VIC_amtrack_are_the_futur
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_research_half_track
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_modernize_the_army
+		}
+		relative_position_id = VIC_modernize_the_army
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_tank_are_the_futur
+		icon = GFX_focus_generic_army_tanks2
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_research_half_track
+		}
+		relative_position_id = VIC_research_half_track
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_restructure_the_army
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_the_old_guard focus = VIC_modernize_the_army
+		}
+		relative_position_id = VIC_the_old_guard
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_protect_the_coast
+		icon = GFX_goal_generic_army_artillery
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_the_old_guard
+		}
+		relative_position_id = VIC_the_old_guard
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_protect_our_homeland
+		icon = GFX_goal_generic_defence
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_protect_the_coast
+		}
+		relative_position_id = VIC_protect_the_coast
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+	focus = { 
+		id = VIC_by_any_mean
+		icon = GFX_focus_fra_le_deluge
+		x = 0
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_protect_our_homeland
+		}
+		relative_position_id = VIC_protect_our_homeland
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_napeleon_would_be_proud
+		icon = GFX_focus_VIC_napoleon
+		x = 0 
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_restructure_the_army
+		}
+		relative_position_id = VIC_restructure_the_army
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_they_will_pay
+		icon = GFX_focus_generic_tank_production
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_tank_are_the_futur
+		}
+		relative_position_id = VIC_tank_are_the_futur
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+		}
+	}
+
+	focus = { 
+		id = VIC_help_the_axis
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_expand_the_marines_corp
+		}
+		relative_position_id = VIC_expand_the_marines_corp
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_crush_the_river_line
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_help_the_axis
+		}
+		mutually_exclusive = {
+			focus = VIC_control_the_mediteaneran
+		}
+		relative_position_id = VIC_help_the_axis
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_control_the_mediteaneran
+		icon = GFX_focus_attack_britain
+		x = 2
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_help_the_axis
+		}
+		mutually_exclusive = {
+			focus = VIC_crush_the_river_line
+		}
+		relative_position_id = VIC_help_the_axis
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_the_best_of_the_best
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_crush_the_river_line focus = VIC_control_the_mediteaneran
+		}
+		relative_position_id = VIC_crush_the_river_line
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_help_sealion
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 0 
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_control_the_mediteaneran
+		}
+		relative_position_id = VIC_control_the_mediteaneran
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_better_training
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 2
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_expand_the_marines_corp focus = VIC_the_foreign_legion
+		}
+		relative_position_id = VIC_expand_the_special_corp
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_better_equipment
+		icon = GFX_focus_generic_combined_arms
+		x = 0 
+		y = 1
+		cost = 5 
+		prerequisite = {
+			focus = VIC_better_training
+		}
+		relative_position_id = VIC_better_training
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_conscription_campaign
+		icon = GFX_VIC_eiffel_tower_soldier
+		x = 0
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_the_foreign_legion
+		}
+		relative_position_id = VIC_the_foreign_legion
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+			country_event = {id = france.37}
+		}
+	}
+
+	focus = { 
+		id = VIC_assault_compagny
+		icon = GFX_focus_VIC_assault_company2
+		x = -1
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_conscription_campaign
+		}
+		mutually_exclusive = { 
+			focus = VIC_armor_compagny
+		}
+		relative_position_id = VIC_conscription_campaign
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_armor_compagny
+		icon = GFX_focus_generic_tankette
+		x = 1
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_conscription_campaign
+		}
+		mutually_exclusive = { 
+			focus = VIC_assault_compagny
+		}
+		relative_position_id = VIC_conscription_campaign
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 
+		id = VIC_extensive_air_training 
+		icon = GFX_focus_generic_paratrooper
+		x = 1
+		y = 2
+		cost = 5 
+		prerequisite = {
+			focus = VIC_assault_compagny focus = VIC_armor_compagny
+		}
+		mutually_exclusive = { 
+			focus = VIC_training_for_winter
+		}
+		relative_position_id = VIC_conscription_campaign
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = VIC_training_for_winter
+		icon = GFX_focus_prc_infiltration
+		x =-1
+		y = 2
+		cost = 5 
+		prerequisite = {
+			focus = VIC_assault_compagny focus = VIC_armor_compagny
+		}
+		mutually_exclusive = { 
+			focus = VIC_extensive_air_training
+		}
+		relative_position_id = VIC_conscription_campaign
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+
+		}
+	}
 }

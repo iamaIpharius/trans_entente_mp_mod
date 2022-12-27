@@ -2316,3 +2316,28 @@ country_event = {
 		}
 	}
 }
+
+country_event = { 
+	id = france.37
+	title = "extending the campaign of the foreign legion"
+	desc = "The legion need more man, the only question is where should we do
+	it, we could make a campaigne in what is left of our empire or we could do
+	it in our allies in the axis ..."
+	picture = GFX_report_event_german_parade_paris
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "let's go with the colonies ..."
+		VIC = { 
+			add_ideas = recruiting_from_colonies
+		}
+	}
+	option = {
+		
+		name = "Let's try with our allies ..."
+		VIC = {
+			add_ideas = recruiting_from_axis
+		}
+	}
+}

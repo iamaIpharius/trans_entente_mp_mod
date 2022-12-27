@@ -270,7 +270,7 @@ ideas = {
 	country = {
 		rebuild_fleet_vichy = { 
 			name = "rebuild the Navy"
-			picture = generic_navy_europe_1
+			picture = generic_navy_bonus
 			allowed = {
 				always = no 
 			}
@@ -278,13 +278,121 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				industrial_capacity_dockyard = 0.25
+				industrial_capacity_dockyard = 0.20
 			}
-		
-			picture = ENG_steady_as_she_goes
 
 			removal_cost = -1
 		}
 
+		recruiting_from_colonies = { 
+			name = "begining recruitement process in the colonies"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+		}
+
+		recruiting_from_axis = { 
+			name = "begining recruitement process in the axis"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+		}
+
+		new_recruit_from_the_colony = {
+			name = "new rectruit from the colonies"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_cap  = 0.10
+			}
+		}
+
+	
+		new_recruit_from_the_axis = {
+			name = "new recruit are arriving from the axis"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_cap  = 0.05
+			}
+		}
+
+		new_recruit_from_the_axis2 = {
+			name = "new recruit are arriving from  Germany"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_cap  = 0.10
+			}
+		}
+
+		new_recruit_from_the_axis3 = {
+			name = "new recruit are arriving from Italy"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_cap  = 0.15
+			}
+		}
+
+		new_recruit_from_the_axis4 = {
+			name = "new recruit are arriving from Romania"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_cap  = 0.20
+			}
+		}
+
+		new_recruit_from_the_axis5 = {
+			name = "new recruit are arriving from Hungary"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_cap  = 0.25
+			}
+		}
+
 	}
+
 }
