@@ -89,4 +89,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/megacucked.dds"	
 	}
 
+	SpriteType = { 
+		name = "GFX_idea_vic_marines"
+		texturefile = "gfx/interface/ideas/vic_marines_ideas.dds"
+	}
+
 }
