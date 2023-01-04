@@ -1615,22 +1615,6 @@ ideas = {
 				local_resources_factor = 0.10
 			}
 		}
-
-		GER_vichy_naval_production_help = {
-			picture = generic_navy_europe_1
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_dockyard = 0.15
-			}
-
-		}
 	}
 
 	# TECHNOLOGY
@@ -1755,6 +1739,9 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 			
 			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.15
+				}
 				
 			}
 			
@@ -1775,7 +1762,9 @@ ideas = {
 			traits = { CAS_manufacturer }
 			
 			equipment_bonus = {
-				
+				small_plane_cas_airframe = {
+					air_ground_attack = 0.2
+				}
 			}
 			
 			ai_will_do = {
@@ -1797,6 +1786,12 @@ ideas = {
 			}
 			
 			traits = { medium_aircraft_manufacturer }
+
+			equipment_bonus = {
+				medium_plane_airframe = {
+					air_ground_attack = 0.15
+				}
+			}
 			
 			ai_will_do = {
 				factor = 1

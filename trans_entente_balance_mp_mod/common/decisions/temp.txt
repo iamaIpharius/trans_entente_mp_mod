@@ -355,8 +355,7 @@ VIC_war_mesures = {
 		}
 		complete_effect = { 
 			VIC = {
-				remove_ideas = recruiting_from_colonies
-				add_ideas = new_recruit_from_the_colony
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
 			}
 		}
 	}
@@ -381,8 +380,7 @@ VIC_war_mesures = {
 		}
 		complete_effect = { 
 			VIC = {
-				remove_ideas = recruiting_from_axis
-				add_ideas = new_recruit_from_the_axis
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
 			}
 		}
 	}
@@ -392,7 +390,7 @@ VIC_war_mesures = {
 		available = { 
 			tag = VIC
 			VIC = {
-				has_idea = new_recruit_from_the_axis
+				has_idea = recruiting_from_axis
 			}
 		}
 		cost = 50
@@ -403,13 +401,12 @@ VIC_war_mesures = {
 		visible = {
 			tag = VIC
 			VIC = {
-				has_idea = new_recruit_from_the_axis
+				has_idea = recruiting_from_axis
 			}
 		}
 		complete_effect = { 
 			VIC = {
-				remove_ideas = new_recruit_from_the_axis
-				add_ideas = new_recruit_from_the_axis2
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
 			}
 		}
 	}
@@ -419,7 +416,7 @@ VIC_war_mesures = {
 		available = { 
 			tag = VIC
 			VIC = {
-				has_idea = new_recruit_from_the_axis2
+				has_idea = recruiting_from_axis
 			}
 		}
 		cost = 50
@@ -430,13 +427,12 @@ VIC_war_mesures = {
 		visible = {
 			tag = VIC
 			VIC = {
-				has_idea = new_recruit_from_the_axis2
+				has_idea = recruiting_from_axis
 			}
 		}
 		complete_effect = { 
 			VIC = {
-				remove_ideas = new_recruit_from_the_axis2
-				add_ideas = new_recruit_from_the_axis3
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
 			}
 		}
 	}
@@ -446,7 +442,7 @@ VIC_war_mesures = {
 		available = { 
 			tag = VIC
 			VIC = {
-				has_idea = new_recruit_from_the_axis3
+				has_idea = recruiting_from_axis
 			}
 		}
 		cost = 50
@@ -457,13 +453,12 @@ VIC_war_mesures = {
 		visible = {
 			tag = VIC
 			VIC = {
-				has_idea = new_recruit_from_the_axis3
+				has_idea = recruiting_from_axis
 			}
 		}
 		complete_effect = { 
 			VIC = {
-				remove_ideas = new_recruit_from_the_axis3
-				add_ideas = new_recruit_from_the_axis4
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
 			}
 		}
 	}
@@ -473,7 +468,7 @@ VIC_war_mesures = {
 		available = { 
 			tag = VIC
 			VIC = {
-				has_idea = new_recruit_from_the_axis4
+				has_idea = recruiting_from_axis
 			}
 		}
 		cost = 50
@@ -484,13 +479,12 @@ VIC_war_mesures = {
 		visible = {
 			tag = VIC
 			VIC = {
-				has_idea = new_recruit_from_the_axis4
+				has_idea = recruiting_from_axis
 			}
 		}
 		complete_effect = { 
 			VIC = {
-				remove_ideas = new_recruit_from_the_axis4
-				add_ideas = new_recruit_from_the_axis5
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
 			}
 		}
 	}

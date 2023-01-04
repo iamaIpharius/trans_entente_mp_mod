@@ -75,19 +75,6 @@ ideas = {
 			}
 		}
 		
-		skeleton_ship = { 
-			allowed = {
-				always = no 
-			}
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-
-			traits = { coastal_defence_naval_manufacturer }
-			modifier = {
-					
-			}
-		}
 	}
 	
 	economy = {

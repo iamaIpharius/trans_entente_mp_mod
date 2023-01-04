@@ -41,6 +41,57 @@ ideas = {
 		}
 	}
 
+	naval_manufacturer = { 
+		designer = yes 
+
+		vic_arsenal_de_toulon = {
+			allowed = {
+				always = no  
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.20
+			}
+			
+			equipment_bonus = {
+				
+			}
+			removal_cost = -1
+			traits = { special_sub_production_manufacturer }
+		}
+
+		vic_arsenal_de_brest = {
+			allowed = {
+				always = no 
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				
+			}
+			removal_cost = -1
+			traits = { big_ship_strong }
+		}
+		VIC_skelon_ship = {
+			allowed = {
+				always = no 
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.2
+			}
+			
+			equipment_bonus = {
+				
+			}
+			removal_cost = -1
+			traits = { really_bad_ship_manufacturer }
+		}
+	}
+
 	theorist = {
 
 		VIC_charles_huntziger = {
@@ -284,6 +335,25 @@ ideas = {
 			removal_cost = -1
 		}
 
+		vic_sub_production = {
+			name = "more sub"
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.2 instant = yes
+					}
+				}
+			
+			removal_cost = -1
+		}
+
 		recruiting_from_colonies = { 
 			name = "begining recruitement process in the colonies"
 			picture = generic_army_europe_1
@@ -292,6 +362,10 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				add_stability = 0.05
 			}
 			
 		}
@@ -305,94 +379,47 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
+			removal_cost = -1
+			modifier = { 
+				add_war_support = 0.05
+			}
 			
 		}
 
-		new_recruit_from_the_colony = {
-			name = "new rectruit from the colonies"
-			picture = generic_army_europe_1
+		VIC_atlantic_wall_idea = {
+		
 			allowed = {
-				always = no 
+				original_tag = FRA
+				always = no
 			}
+
 			allowed_civil_war = {
 				always = yes
 			}
+			
+			removal_cost = -1
+
+			picture = generic_fortify_the_borders
+
 			modifier = {
-				special_forces_cap  = 0.10
+				production_speed_coastal_bunker_factor = 0.4
 			}
 		}
-
-	
-		new_recruit_from_the_axis = {
-			name = "new recruit are arriving from the axis"
-			picture = generic_army_europe_1
+		VIC_big_strong_marines ={ 
 			allowed = {
 				always = no 
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			modifier = {
-				special_forces_cap  = 0.05
-			}
-		}
+			
+			removal_cost = -1
 
-		new_recruit_from_the_axis2 = {
-			name = "new recruit are arriving from  Germany"
-			picture = generic_army_europe_1
-			allowed = {
-				always = no 
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				special_forces_cap  = 0.10
-			}
-		}
-
-		new_recruit_from_the_axis3 = {
-			name = "new recruit are arriving from Italy"
-			picture = generic_army_europe_1
-			allowed = {
-				always = no 
-			}
-			allowed_civil_war = {
-				always = yes
-			}
+			picture = GFX_idea_vic_marines
 			modifier = {
 				special_forces_cap  = 0.15
 			}
 		}
-
-		new_recruit_from_the_axis4 = {
-			name = "new recruit are arriving from Romania"
-			picture = generic_army_europe_1
-			allowed = {
-				always = no 
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				special_forces_cap  = 0.20
-			}
-		}
-
-		new_recruit_from_the_axis5 = {
-			name = "new recruit are arriving from Hungary"
-			picture = generic_army_europe_1
-			allowed = {
-				always = no 
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				special_forces_cap  = 0.25
-			}
-		}
-
 	}
 
 }
