@@ -1173,7 +1173,7 @@
 
 	}
 
-	focus = { 
+	focus = { #sekleton focus 
 		id = VIC_High_sea_fleet
 		icon = GFX_goal_generic_navy_battleship
 		cost = 5 
@@ -1196,11 +1196,11 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_ideas = vic_arsenal_de_brest
+
 		}
 	}
 
-	focus = { 
+	focus = { #sekleton focus 
 		id = VIC_raid_the_sea
 		icon = GFX_goal_generic_wolf_pack
 		cost = 5 
@@ -1214,8 +1214,7 @@
 		}
 		relative_position_id = VIC_appeal_to_the_navy
 		available ={
-			
-			
+
 		}
 		bypass = {
 
@@ -1224,17 +1223,11 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_tech_bonus = {
-				name = "Raid the sea"
-				bonus = 1.0
-				uses = 3
-				category = ss_tech
-			}
-			navy_experience = 50
+
 		}
 	}
 
-	focus = { 
+	focus = { #sekleton focus 
 		id = VIC_produce_german_sub
 		icon = GFX_focus_chi_mission_to_germany
 		cost = 5 
@@ -1255,11 +1248,11 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_ideas = { FRA_buy_from_the_enemy }
+
 		}
 	}
 	
-	focus = { 
+	focus = { #sekleton focus 
 		id = VIC_make_more_sub
 		icon = GFX_goal_generic_navy_submarine
 		cost = 5
@@ -1282,11 +1275,11 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_ideas = vic_sub_production
+
 		}
 	}
 
-	focus = {
+	focus = { #sekleton focus 
 		id = VIC_make_better_one
 		icon = GFX_goal_generic_navy_anti_submarine
 		cost = 5
@@ -1306,7 +1299,7 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_ideas = { vic_arsenal_de_toulon }
+
 		}
 	}
 
@@ -1370,9 +1363,7 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no 
 		available_if_capitulated = no 
-		completion_reward = {
-			add_ideas = VIC_atlantic_wall_idea 
-			army_experience = 50
+		completion_reward = { 
 		}
 	}
 
@@ -1395,14 +1386,12 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_dynamic_modifier = {id = VIC_army_dynamic_modifier}
-
 		}
 	}	
 
 	focus = { 
 		id = VIC_the_foreign_legion
-		#icon = GFX_focus_fra_french_union
+		icon = GFX_focus_fra_french_union
 		x = 4
 		y = 1
 		cost = 5 
@@ -1451,13 +1440,12 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_ideas = {id = VIC_big_strong_marines}
 		}
 	}
 
 	focus = { 
 		id = VIC_modernize_the_army
-		#icon = GFX_goal_generic_build_tank
+		icon = GFX_goal_generic_build_tank
 		x = 2
 		y = 1
 		cost = 5 
@@ -1478,13 +1466,12 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			
 		}
 	}
 
 	focus = {
 		id = VIC_the_old_guard
-		#icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_axis_build_infantry
 		x =-2
 		y = 1
 		cost = 5 
@@ -1505,18 +1492,12 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_doctrine_cost_reduction = {
-				name = "the old guard"
-				cost_reduction = 0.75
-				uses = 4
-				category = cat_grand_battle_plan
-			}
 		}
 	}
 
 	focus = {
 		id = VIC_amtrack_are_the_futur
-		#icon = GFX_focus_VIC_amtrack
+		icon = GFX_focus_VIC_amtrack
 		x = -2.5
 		y = 1 
 		cost = 5 
@@ -1539,7 +1520,7 @@
 
 	focus = { 
 		id = VIC_build_amtank
-		#icon = GFX_goal_generic_build_tank
+		icon = GFX_goal_generic_build_tank
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1562,7 +1543,7 @@
 
 	focus = { 
 		id = VIC_research_half_track
-		#icon = GFX_goal_generic_army_motorized
+		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 1
 		cost = 5 
@@ -1585,7 +1566,7 @@
 
 	focus = { 
 		id = VIC_tank_are_the_futur
-		#icon = GFX_focus_generic_army_tanks2
+		icon = GFX_focus_generic_army_tanks2
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1608,7 +1589,7 @@
 
 	focus = { 
 		id = VIC_restructure_the_army
-		#icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_generic_position_armies
 		x = 2
 		y = 1
 		cost = 5 
@@ -1631,7 +1612,7 @@
 
 	focus = { 
 		id = VIC_protect_the_coast
-		#icon = GFX_goal_generic_army_artillery
+		icon = GFX_goal_generic_army_artillery
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1654,7 +1635,7 @@
 
 	focus = { 
 		id = VIC_protect_our_homeland
-		#icon = GFX_goal_generic_defence
+		icon = GFX_goal_generic_defence
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1676,7 +1657,7 @@
 	}
 	focus = { 
 		id = VIC_by_any_mean
-		#icon = GFX_focus_fra_le_deluge
+		icon = GFX_focus_fra_le_deluge
 		x = 0
 		y = 1 
 		cost = 5 
@@ -1699,7 +1680,7 @@
 
 	focus = { 
 		id = VIC_napeleon_would_be_proud
-		#icon = GFX_focus_VIC_napoleon
+		icon = GFX_focus_VIC_napoleon
 		x = 0 
 		y = 1
 		cost = 5 
@@ -1722,7 +1703,7 @@
 
 	focus = { 
 		id = VIC_they_will_pay
-		#icon = GFX_focus_generic_tank_production
+		icon = GFX_focus_generic_tank_production
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1745,7 +1726,7 @@
 
 	focus = { 
 		id = VIC_help_the_axis
-		#icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_axis_build_infantry
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1769,7 +1750,7 @@
 
 	focus = { 
 		id = VIC_crush_the_river_line
-		#icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_goal_generic_war_with_comintern
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1796,7 +1777,7 @@
 
 	focus = { 
 		id = VIC_control_the_mediteaneran
-		#icon = GFX_focus_attack_britain
+		icon = GFX_focus_attack_britain
 		x = 2
 		y = 1
 		cost = 5 
@@ -1823,7 +1804,7 @@
 
 	focus = { 
 		id = VIC_the_best_of_the_best
-		#icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 1 
 		cost = 5 
@@ -1847,7 +1828,7 @@
 
 	focus = { 
 		id = VIC_help_sealion
-		#icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 0 
 		y = 1
 		cost = 5 
@@ -1871,7 +1852,7 @@
 
 	focus = { 
 		id = VIC_better_training
-		#icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 2
 		cost = 5 
@@ -1895,7 +1876,7 @@
 
 	focus = { 
 		id = VIC_better_equipment
-		#icon = GFX_focus_generic_combined_arms
+		icon = GFX_focus_generic_combined_arms
 		x = 0 
 		y = 1
 		cost = 5 
@@ -1964,16 +1945,13 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-			custom_effect_tooltip = ITA_battaglioni_d_assalto_tt
-			hidden_effect = {
-				set_technology = { blackshirt_assault_battalion_tech = 1 popup = no }
-			}
+
 		}
 	}
 
 	focus = { 
 		id = VIC_armor_compagny
-		#icon = GFX_focus_generic_tankette
+		icon = GFX_focus_generic_tankette
 		x = 1
 		y = 1
 		cost = 5 
@@ -2000,7 +1978,7 @@
 
 	focus = { 
 		id = VIC_extensive_air_training 
-		#icon = GFX_focus_generic_paratrooper
+		icon = GFX_focus_generic_paratrooper
 		x = 1
 		y = 2
 		cost = 5 
@@ -2027,7 +2005,7 @@
 	
 	focus = {
 		id = VIC_training_for_winter
-		#icon = GFX_focus_prc_infiltration
+		icon = GFX_focus_prc_infiltration
 		x =-1
 		y = 2
 		cost = 5 
