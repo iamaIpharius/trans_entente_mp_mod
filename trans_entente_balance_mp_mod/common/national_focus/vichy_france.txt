@@ -1373,6 +1373,7 @@
 		completion_reward = {
 			add_ideas = VIC_atlantic_wall_idea 
 			army_experience = 50
+			add_dynamic_modifier = { modifier = VIC_army_dynamic_modifier }
 		}
 	}
 
@@ -1395,7 +1396,7 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_dynamic_modifier = { modifier = VIC_army_dynamic_modifier }
+			add_dynamic_modifier = { modifier = VIC_army_special_forces_dynamic_modifier }
 			add_to_variable = { VIC_special_force_cap = 0.2 } 
 		}
 	}	
@@ -1424,7 +1425,16 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
-			add_to_variable = { VIC_special_force_cap = 0.15 } 
+			add_to_variable = { VIC_special_force_cap = 0.05 } 
+			add_tech_bonus = {
+				name = "the foreign legion"
+				effects = 1.5
+				uses = 2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = paratroopers
+				technology = paratroopers2
+			}
 		}
 	}
 
@@ -1460,16 +1470,14 @@
 			}
 			army_experience = 50
 			add_to_variable = { VIC_special_force_cap = 0.05 } 
-			add_to_variable = { VIC_special_force_attack_factor = 0.1 }
-			add_to_variable = { VIC_special_force_defence_factor = 0.1 }
-			add_to_variable = { VIC_special_force_out_of_supply_factor = -0.25 }
+			add_to_variable = { VIC_special_force_out_of_supply_factor = -0.15 }
 			# custom_effect_tooltip {!!!} 
 		}
 	}
 
 	focus = { 
 		id = VIC_modernize_the_army
-		#icon = GFX_goal_generic_build_tank
+		icon = GFX_goal_generic_build_tank
 		x = 2
 		y = 1
 		cost = 5 
@@ -1490,13 +1498,23 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_doctrine_cost_reduction = {
+				name = "modernization of the army"
+				cost_reduction = 0.75
+				uses = 4
+				category = cat_mobile_warfare
+			}
+			add_to_variable = { VIC_army_gain_experience = 0.4 }
+			add_to_variable = { VIC_army_org_factor = -0.05 }
+			add_to_variable = { VIC_supply_consumption_factor = -0.05 }
+			add_to_variable = { VIC_army_attack_factor = 0.05 }
 			
 		}
 	}
 
 	focus = {
 		id = VIC_the_old_guard
-		#icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_axis_build_infantry
 		x =-2
 		y = 1
 		cost = 5 
@@ -1523,12 +1541,18 @@
 				uses = 4
 				category = cat_grand_battle_plan
 			}
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
+			add_to_variable = { VIC_army_org_factor = 0.05 }
+			add_to_variable = { VIC_max_dig_in = 2 }
+			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
+			add_to_variable = { VIC_army_defence_factor = 0.2 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
 		}
 	}
 
 	focus = {
 		id = VIC_amtrack_are_the_futur
-		#icon = GFX_focus_VIC_amtrack
+		icon = GFX_focus_VIC_amtrack
 		x = -2.5
 		y = 1 
 		cost = 5 
@@ -1546,12 +1570,18 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_tech_bonus = {
+				name = "amtrack are the futur"
+				bonus = 2
+				uses = 1 
+				category = cat_mechanized_equipment
+			}
 		}
 	}
 
 	focus = { 
 		id = VIC_build_amtank
-		#icon = GFX_goal_generic_build_tank
+		icon = GFX_goal_generic_build_tank
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1569,12 +1599,19 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_tech_bonus = {
+				name = "make amtank good"
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1 
+				category = tp_tech
+			}
 		}
 	}
 
 	focus = { 
 		id = VIC_research_half_track
-		#icon = GFX_goal_generic_army_motorized
+		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 1
 		cost = 5 
@@ -1592,12 +1629,19 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_tech_bonus = {
+				name = "half track"
+				bonus = 2
+				ahead_reduction = 1
+				uses = 2 
+				category = mechanized_equipment
+			}
 		}
 	}
 
 	focus = { 
 		id = VIC_tank_are_the_futur
-		#icon = GFX_focus_generic_army_tanks2
+		icon = GFX_focus_generic_army_tanks2
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1615,6 +1659,12 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_tech_bonus = {
+				name = "tank for the futur"
+				bonus = 2
+				uses = 4
+				category = armor 
+			}
 		}
 	}
 
@@ -1643,7 +1693,7 @@
 
 	focus = { 
 		id = VIC_protect_the_coast
-		#icon = GFX_goal_generic_army_artillery
+		icon = GFX_goal_generic_army_artillery
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1652,7 +1702,17 @@
 		}
 		relative_position_id = VIC_the_old_guard
 		available = {
-
+			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
+			add_to_variable = { VIC_army_defence_factor = 0.2 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_org_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
+			add_tech_bonus = {
+				name = "better equipment"
+				cost_reduction = 1
+				uses = 2
+				category = artillery 
+			}
 		}
 		bypass = {
 
@@ -1666,7 +1726,7 @@
 
 	focus = { 
 		id = VIC_protect_our_homeland
-		#icon = GFX_goal_generic_defence
+		icon = GFX_goal_generic_defence
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1684,11 +1744,16 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_to_variable = { VIC_dig_in_speed_factor = 0.05 }
+			add_to_variable = { VIC_army_defence_factor = 0.1 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_org_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = -0.4 }
 		}
 	}
 	focus = { 
 		id = VIC_by_any_mean
-		#icon = GFX_focus_fra_le_deluge
+		icon = GFX_focus_fra_le_deluge
 		x = 0
 		y = 1 
 		cost = 5 
@@ -1706,6 +1771,13 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
+			add_to_variable = { VIC_army_defence_factor = 0.2 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_org_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = -0.4 }
+			add_to_variable = { VIC_cas_damage_reduction = 0.4 }
+			add_to_variable = { VIC_equipment_capture_factor = 0.2 }
 		}
 	}
 
@@ -1734,7 +1806,7 @@
 
 	focus = { 
 		id = VIC_they_will_pay
-		#icon = GFX_focus_generic_tank_production
+		icon = GFX_focus_generic_tank_production
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1752,12 +1824,13 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+
 		}
 	}
 
 	focus = { 
 		id = VIC_help_the_axis
-		#icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_axis_build_infantry
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1775,13 +1848,14 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-
+			add_to_variable = { VIC_add_war_support = -0.05 }
+			add_to_variable = { VIC_add_stability = -0.05 }
 		}
 	}
 
 	focus = { 
 		id = VIC_crush_the_river_line
-		#icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_goal_generic_war_with_comintern
 		x = 0 
 		y = 1 
 		cost = 5 
@@ -1802,15 +1876,21 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.15 }
+			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.10 }
 			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
+			add_tech_bonus = {
+				name = "Marin des riviers"
+				bonus = 1.5
+				uses = 1 
+				category = marine_tech
+			}
 			
 		}
 	}
 
 	focus = { 
 		id = VIC_control_the_mediteaneran
-		#icon = GFX_focus_attack_britain
+		icon = GFX_focus_attack_britain
 		x = 2
 		y = 1
 		cost = 5 
@@ -1831,18 +1911,25 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-
+			add_to_variable = { VIC_special_force_attack_factor = 0.12 }
+			add_to_variable = { VIC_special_force_defence_factor = 0.12 }
+			add_tech_bonus = {
+				name = "Marin des iles"
+				bonus = 1.5
+				uses = 1 
+				category = marine_tech
+			}
 		}
 	}
 
 	focus = { 
-		id = VIC_the_best_of_the_best
+		id = VIC_help_bararossa
 		#icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 1 
 		cost = 5 
 		prerequisite = { 
-			focus = VIC_crush_the_river_line focus = VIC_control_the_mediteaneran
+			focus = VIC_crush_the_river_line 
 		}
 		relative_position_id = VIC_crush_the_river_line
 		available = {
@@ -1855,13 +1942,13 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-
+			
 		}
 	}
 
 	focus = { 
 		id = VIC_help_sealion
-		#icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 0 
 		y = 1
 		cost = 5 
@@ -1879,7 +1966,37 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
+			add_tech_bonus = {
+				name = "help sealions"
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1 
+				category = tp_tech
+			}
+			
+		}
+	}
+	focus = {
+		id = VIC_time_to_die
+		icon = GFX_goal_generic_territory_or_war
+		x = 0 
+		y = 1
+		cost = 1
+		prerequisite = { 
+			focus = VIC_help_sealion
+		}
+		relative_position_id = VIC_help_sealion
+		available = {
 
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+			add_timed_idea = { id = VIC_time_to_die time = 180}
 		}
 	}
 
@@ -1911,7 +2028,7 @@
 
 	focus = { 
 		id = VIC_better_equipment
-		#icon = GFX_focus_generic_combined_arms
+		icon = GFX_focus_generic_combined_arms
 		x = 0 
 		y = 1
 		cost = 5 
@@ -1929,7 +2046,26 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
+			add_tech_bonus = {
+				name = "better equipment"
+				cost_reduction = 1.5
+				uses = 2
+				category = infantry_weapons
+			}
 
+			add_tech_bonus = {
+				name = "better equipment"
+				cost_reduction = 1.5
+				uses = 2
+				category = artillery 
+			}
+
+			add_tech_bonus = {
+				name = "better equipment"
+				cost_reduction = 1.5
+				uses = 2
+				category = support_tech
+			}
 		}
 	}
 
@@ -1988,7 +2124,7 @@
 
 	focus = { 
 		id = VIC_armor_compagny
-		#icon = GFX_focus_generic_tankette
+		icon = GFX_focus_generic_tankette
 		x = 1
 		y = 1
 		cost = 5 
@@ -2009,13 +2145,18 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = "tankette"
+				cost_reduction = 1.5
+				uses = 2
+				category = armor
+			}
 		}
 	}
 
 	focus = { 
-		id = VIC_extensive_air_training 
-		#icon = GFX_focus_generic_paratrooper
+		id = VIC_training_for_africa 
+		icon = GFX_focus_prc_infiltration
 		x = 1
 		y = 2
 		cost = 5 
@@ -2036,7 +2177,8 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-
+			add_to_variable = { VIC_acclimatization_hot_climate_gain_factor = 0.10 }
+			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
 		}
 	}
 	
@@ -2050,7 +2192,7 @@
 			focus = VIC_assault_compagny focus = VIC_armor_compagny
 		}
 		mutually_exclusive = { 
-			focus = VIC_extensive_air_training
+			focus = VIC_training_for_africa
 		}
 		relative_position_id = VIC_conscription_campaign
 		available = {
@@ -2064,7 +2206,7 @@
 		available_if_capitulated = no 
 		completion_reward = {
 			army_experience = 15
-			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.15 }
+			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.10 }
 			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
 		}
 	}

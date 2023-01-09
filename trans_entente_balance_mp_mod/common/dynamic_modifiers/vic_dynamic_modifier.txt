@@ -1,4 +1,4 @@
-VIC_army_dynamic_modifier = { 
+VIC_army_special_forces_dynamic_modifier = { 
     enable = { 
         always = yes 
     }
@@ -9,6 +9,25 @@ VIC_army_dynamic_modifier = {
     special_forces_defence_factor = VIC_special_force_defence_factor
     special_forces_out_of_supply_factor = VIC_special_force_out_of_supply_factor
     acclimatization_cold_climate_gain_factor = VIC_acclimatization_cold_climate_gain_factor
+    add_war_support = VIC_add_war_support
+    add_stability = VIC_add_stability
     
 }
 
+VIC_army_dynamic_modifier = {
+    enable = {
+        always = yes
+    }
+    icon = generic_army_europe_3
+    experience_gain_army_factor = VIC_army_gain_experience
+    army_org_factor = VIC_army_org_factor
+    max_dig_in = VIC_max_dig_in
+    dig_in_speed_factor = VIC_dig_in_speed_factor
+    cas_damage_reduction = VIC_cas_damage_reduction
+    equipment_capture_factor = VIC_equipment_capture_factor
+    army_defence_factor = VIC_army_defence_factor
+    supply_consumption_factor = VIC_supply_consumption_factor
+    army_attack_factor = VIC_army_attack_factor
+    army_core_defence_factor = VIC_army_core_defence_factor
+
+}

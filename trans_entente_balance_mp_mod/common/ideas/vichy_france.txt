@@ -405,7 +405,7 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.4
 			}
 		}
-		VIC_big_strong_marines ={ 
+		VIC_big_strong_marines = { 	
 			allowed = {
 				always = no 
 			}
@@ -420,6 +420,27 @@ ideas = {
 				special_forces_cap  = 0.15
 			}
 		}
-	}
 
+		VIC_time_to_die = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = GFX_idea_vic_marines
+			modifier = { 
+				org_loss_when_moving = -0.05
+				supply_consumption_factor = -0.05
+			}
+			
+			targeted_modifier = {
+				tag = UK 
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+	}
 }

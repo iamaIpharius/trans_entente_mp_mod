@@ -355,7 +355,8 @@ VIC_war_mesures = {
 		}
 		complete_effect = { 
 			VIC = {
-				add_to_variable = { VIC_special_force_cap = 0.05 } 
+				add_to_variable = { VIC_special_force_cap = 0.10 } 
+				add_to_variable = {VIC_acclimatization_hot_climate_gain_factor = 0.05}
 			}
 		}
 	}
