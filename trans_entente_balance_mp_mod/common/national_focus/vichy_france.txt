@@ -1428,7 +1428,7 @@
 			add_to_variable = { VIC_special_force_cap = 0.05 } 
 			add_tech_bonus = {
 				name = "the foreign legion"
-				effects = 1.5
+				bonus = 1.5
 				uses = 2
 				technology = tech_mountaineers
 				technology = tech_mountaineers2
@@ -1634,7 +1634,7 @@
 				bonus = 2
 				ahead_reduction = 1
 				uses = 2 
-				category = mechanized_equipment
+				category = cat_mechanized_equipment
 			}
 		}
 	}
@@ -1702,16 +1702,7 @@
 		}
 		relative_position_id = VIC_the_old_guard
 		available = {
-			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
-			add_to_variable = { VIC_army_defence_factor = 0.2 }
-			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
-			add_to_variable = { VIC_army_org_factor = 0.05 }
-			add_to_variable = { VIC_army_gain_experience = -0.2 }
-			add_tech_bonus = {
-				name = "better equipment"
-				cost_reduction = 1
-				uses = 2
-				category = artillery 
+			
 			}
 		}
 		bypass = {
@@ -1721,6 +1712,16 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
+			add_to_variable = { VIC_army_defence_factor = 0.2 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_org_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
+			add_tech_bonus = {
+				name = "better equipment"
+				bonus = 1
+				uses = 2
+				category = artillery 
 		}
 	}
 
@@ -2048,21 +2049,21 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = "better equipment"
-				cost_reduction = 1.5
+				bonus = 1.5
 				uses = 2
 				category = infantry_weapons
 			}
 
 			add_tech_bonus = {
 				name = "better equipment"
-				cost_reduction = 1.5
+				bonus = 1.5
 				uses = 2
 				category = artillery 
 			}
 
 			add_tech_bonus = {
 				name = "better equipment"
-				cost_reduction = 1.5
+				bonus = 1.5
 				uses = 2
 				category = support_tech
 			}
@@ -2147,7 +2148,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = "tankette"
-				cost_reduction = 1.5
+				bonus = 1.5
 				uses = 2
 				category = armor
 			}
