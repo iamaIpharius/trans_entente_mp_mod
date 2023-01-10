@@ -117,3 +117,16 @@
  tfv_australia.6.d:0 "Today his Majesty was crowned again, as the King of the United Kingdom of Australasia, South Africa, and the Indies. He takes this throne at the same time as the governments of the aforementioned nations met in [522.GetCapitalVictoryPointName] to discuss processes of merger and unprecedented plans for the future."
  tfv_australia.6.a:0 "God save the King!"
 
+ BBA_italy_interaction_events.47.t:0 "Italy Offers Territory in Exchange for Mutual Guarantees"
+ BBA_italy_interaction_events.47.desc:0 "[ITA.GetName] has offered to support our claims to [106.GetName] in exchange for mutual guarantees and cooperation treaties. This seems like a good deal to us, should we accept?"
+ BBA_italy_interaction_events.47.a:0 "Sounds great!"
+ BBA_italy_interaction_events.47.b:0 "And why should we trust an Italian?"
+ ITA_support_the_bulgarians:0 "Support the Bulgarians"
+ ITA_support_the_bulgarians_desc:0 "We will offer the Bulgarians a deal, mutual guarantees in exchange for recognition of their claims in the Balkans."
+
+ BBA_italy_interaction_events.48.t:0 "Italy Seeks Agreement on Slovenia"
+ BBA_italy_interaction_events.48.desc:0 "[ITA.GetName] has offered to support our claims to [102.GetName] in exchange for coequal support for their claims to [853.GetName]. This seems like a good deal to us, should we accept?"
+ BBA_italy_interaction_events.48.a:0 "Sounds great!"
+ BBA_italy_interaction_events.48.b:0 "And why should we trust an Italian?"
+ ITA_partition_slovenia:0 "Partition Slovenia"
+ ITA_partition_slovenia_desc:0 "We will offer the Germans a clean treaty, wherein Slovenia is clearly divided between us, north and south."
