@@ -333,7 +333,7 @@ war_measures = {
 	}
 }
 
-VIC_war_mesures = {
+war_measures = {
 	expend_the_foreign_legion_in_colonies = { 
 		icon = generic_construction
 		available = { 

@@ -1425,6 +1425,7 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			army_experience = 50
 			add_to_variable = { VIC_special_force_cap = 0.05 } 
 			add_tech_bonus = {
 				name = "the foreign legion"
@@ -1508,6 +1509,7 @@
 			add_to_variable = { VIC_army_org_factor = -0.05 }
 			add_to_variable = { VIC_supply_consumption_factor = -0.05 }
 			add_to_variable = { VIC_army_attack_factor = 0.05 }
+			
 			
 		}
 	}
@@ -1670,7 +1672,7 @@
 
 	focus = { 
 		id = VIC_restructure_the_army
-		#icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_generic_position_armies
 		x = 2
 		y = 1
 		cost = 5 
@@ -1688,6 +1690,8 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_timed_idea = {idea = VIC_restruturing_the_army days = 90}
+			set_country_flag = VIC_training_flag
 		}
 	}
 
@@ -1703,8 +1707,8 @@
 		relative_position_id = VIC_the_old_guard
 		available = {
 			
-			}
 		}
+		
 		bypass = {
 
 		}
@@ -1722,6 +1726,7 @@
 				bonus = 1
 				uses = 2
 				category = artillery 
+			}
 		}
 	}
 
@@ -1784,7 +1789,7 @@
 
 	focus = { 
 		id = VIC_napeleon_would_be_proud
-		#icon = GFX_focus_VIC_napoleon
+		icon = GFX_focus_VIC_napoleon
 		x = 0 
 		y = 1
 		cost = 5 
@@ -1793,7 +1798,13 @@
 		}
 		relative_position_id = VIC_restructure_the_army
 		available = {
-
+			custom_trigger_tooltip = {
+				tooltip = VIC_trained_army
+				has_country_flag = {
+					flag = VIC_training_flag
+					days > 120
+				}
+			}
 		}
 		bypass = {
 
@@ -1802,6 +1813,14 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = { 
+			add_to_variable = { VIC_dig_in_speed_factor = 0.2 }
+			add_to_variable = { VIC_army_defence_factor = 0.2 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_org_factor = 0.1 }
+			add_to_variable = { VIC_army_gain_experience = 0.1 }
+			add_to_variable = { VIC_cas_damage_reduction = 0.2 }
+			add_to_variable = { VIC_equipment_capture_factor = 0.05 }
+			add_to_variable = { VIC_army_attack_factor = 0.15}
 		}
 	}
 
@@ -1943,7 +1962,14 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = "help barbarossa"
+				bonus = 2
+				uses = 2
+				category = train_tech
+			}
+			add_to_variable = { VIC_special_force_attack_factor = 0.03 }
+			add_to_variable = { VIC_special_force_defence_factor = 0.03 }
 		}
 	}
 
@@ -1997,7 +2023,7 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
-			add_timed_idea = { id = VIC_time_to_die time = 180}
+			add_timed_idea = { idea = VIC_time_to_die days = 180}
 		}
 	}
 
@@ -2178,6 +2204,7 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		completion_reward = {
+			army_experience = 15
 			add_to_variable = { VIC_acclimatization_hot_climate_gain_factor = 0.10 }
 			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
 		}

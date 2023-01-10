@@ -365,7 +365,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				add_stability = 0.05
+				stability_factor = 0.05
 			}
 			
 		}
@@ -381,7 +381,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = { 
-				add_war_support = 0.05
+				war_support_factor = 0.05
 			}
 			
 		}
@@ -440,6 +440,22 @@ ideas = {
 				tag = UK 
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
+			}
+		}
+		VIC_restruturing_the_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = GFX_idea_vic_marines
+			modifier = { 
+				org_loss_when_moving = 0.05
+				supply_consumption_factor = 0.05
+				army_org_factor = -0.1
 			}
 		}
 	}

@@ -2282,7 +2282,6 @@ news_event = {
 		}
 	}
 }
-
 country_event = {
 	id = france.35
 	title = "germany refuse"

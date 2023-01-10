@@ -1615,7 +1615,7 @@ ideas = {
 				local_resources_factor = 0.10
 			}
 		}
-		
+
 		GER_vichy_naval_production_help = {
 			picture = generic_navy_europe_1
 			allowed = {
