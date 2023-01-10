@@ -11,7 +11,7 @@ state={
 		add_core_of = JAP
 		buildings = {
 			infrastructure = 2
-			dockyard = 2
+			dockyard = 4
 		}
 		victory_points = {
 			10444 15 

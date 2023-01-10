@@ -6609,6 +6609,7 @@ ITA_diplomacy_balkan_decision_category = {
 			}
 		}
 
+
 		complete_effect = {
 
 			HUN = {
@@ -6714,7 +6715,6 @@ ITA_diplomacy_balkan_decision_category = {
 				ITA = {
 					has_government = fascism
 				}
-				
 			}
 			IF = {
 				limit = {
@@ -6753,7 +6753,7 @@ ITA_diplomacy_balkan_decision_category = {
 				}
 		}
 	}
-
+  
 	ITA_demand_turkish_demilitarization = {
 		priority = 20
 
