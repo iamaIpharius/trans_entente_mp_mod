@@ -1101,6 +1101,7 @@ form_ottoman_empire_category = {
 				455 = { add_core_of = ROOT }
 				183 = { add_core_of = ROOT }
 				656 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
 			}
 			hidden_effect = {
 				news_event = { id = wtt_news.61 hours = 6 }
@@ -1595,6 +1596,8 @@ form_ottoman_empire_category = {
 			controls_state = 858
 			controls_state = 854
 			controls_state = 859
+			controls_state = 907
+			
 		}
 
 		visible = {
@@ -1620,6 +1623,7 @@ form_ottoman_empire_category = {
 			858 = { add_core_of = ROOT }
 			854 = { add_core_of = ROOT }
 			859 = { add_core_of = ROOT }
+			907 = { add_core_of = ROOT }
 			create_wargoal = { 
 				type = annex_everything
 				target = OMA
@@ -4194,6 +4198,8 @@ form_persian_empire_category = {
 				354 = { add_core_of = ROOT }
 				353 = { add_core_of = ROOT }
 				352 = { add_core_of = ROOT }
+				797 = { add_core_of = ROOT }
+				798 = { add_core_of = ROOT }
 			}
 			# France
 			custom_effect_tooltip = form_persia_france_coring_states_tt
@@ -4376,6 +4382,8 @@ form_byzantine_empire_category = {
 				353 = { add_core_of = ROOT }
 				352 = { add_core_of = ROOT }
 				799 = { add_core_of = ROOT }
+				797 = { add_core_of = ROOT }
+				798 = { add_core_of = ROOT }
 			}
 			# Bulgaria
 			custom_effect_tooltip = form_country_bulgaria_coring_states_tt
@@ -4918,6 +4926,7 @@ form_byzantine_empire_category = {
 			controls_state = 446
 			controls_state = 456
 			controls_state = 457
+			controls_state = 907
 		}
 
 		visible = {
@@ -4946,6 +4955,7 @@ form_byzantine_empire_category = {
 			446 = { add_core_of = ROOT }
 			456 = { add_core_of = ROOT }
 			457 = { add_core_of = ROOT }
+			907 = { add_core_of = ROOT }
 			set_global_flag = triumph_for_egypt_and_tunis
 		}
 
@@ -5051,6 +5061,7 @@ form_arabia_category = {
 				controls_state = 656
 				controls_state = 658
 				controls_state = 659
+				controls_state = 907
 			}
 		}
 
@@ -5134,6 +5145,7 @@ form_arabia_category = {
 				656 = { add_core_of = ROOT }
 				658 = { add_core_of = ROOT }
 				659 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
 			}
 			hidden_effect = {
 				news_event = { id = wtt_news.67 hours = 6 }
@@ -6813,6 +6825,9 @@ form_macedonian_empire_category = {
 				controls_state = 354
 				controls_state = 353
 				controls_state = 352
+				controls_state = 797
+				controls_state = 798
+				controls_state = 800
 			}
 			# France: Syria
 			custom_trigger_tooltip = {
@@ -6831,6 +6846,7 @@ form_macedonian_empire_category = {
 				controls_state = 456
 				controls_state = 453
 				controls_state = 457
+				controls_state = 907
 			}
 			# Britain: Levant / Kuwait
 			custom_trigger_tooltip = {
@@ -6926,6 +6942,9 @@ form_macedonian_empire_category = {
 				354 = { add_core_of = ROOT }
 				353 = { add_core_of = ROOT }
 				352 = { add_core_of = ROOT }
+				797 = { add_core_of = ROOT }
+				798 = { add_core_of = ROOT }
+				800 = { add_core_of = ROOT }
 			}
 			# France
 			custom_effect_tooltip = form_persia_france_coring_states_tt
@@ -6957,6 +6976,7 @@ form_macedonian_empire_category = {
 				183 = { add_core_of = ROOT }
 				656 = { add_core_of = ROOT }
 				118 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
 			}
 			hidden_effect = {
 				set_global_flag = form_macedonian_empire_flag

@@ -2170,7 +2170,6 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 15
 			add_doctrine_cost_reduction = {
 				name = CAN_red_deer_training_camp
 				cost_reduction = 0.5
@@ -3283,7 +3282,7 @@
 		id = CAN_defence_scheme_no_1
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = CAN_skewer_the_eagle focus = CAN_pinion_the_eagle }
-		x = -1
+		x = -2
 		y = 4
 		relative_position_id = CAN_swastika_clubs
 
@@ -3324,10 +3323,11 @@
 		id = CAN_demand_labrador_and_newfoundland
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = CAN_skewer_the_eagle focus = CAN_pinion_the_eagle }
-		x = 1
+		x = 2
 		y = 4
 		relative_position_id = CAN_swastika_clubs
-
+		mutually_exclusive = { focus = CAN_offer_concessions_for_labrador_and_newfoundland }
+		
 		cost = 10
 
 		ai_will_do = {
@@ -3348,12 +3348,58 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
+			custom_effect_tooltip = CAN_demand_labrador_tooltip
 			ENG = {
 				country_event = { id = tfv_canada.60 }
 			}
 		}
 	}
 
+	focus = {
+		id = CAN_offer_concessions_for_labrador_and_newfoundland
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = CAN_skewer_the_eagle focus = CAN_pinion_the_eagle }
+		x = 0
+		y = 4
+		relative_position_id = CAN_swastika_clubs
+		mutually_exclusive = { focus = CAN_demand_labrador_and_newfoundland }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			NOT = { has_country_flag = britain_enforced_our_loyalty }
+			NOT = { has_war_with = ENG }
+			473 = {
+				is_owned_by = CAN
+				is_controlled_by = CAN
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			custom_effect_tooltip = CAN_offer_concessions_for_labrador_tooltip
+			effect_tooltip = {
+				CAN = {
+					give_resource_rights = { receiver = ENG state = 473 }
+				}
+			}
+			ENG = {
+				country_event = { id = tfv_canada.63 }
+			}
+		}
+	}
 
 	############################
 	### GO COMMUNIST SECTION ###
