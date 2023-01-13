@@ -27,4 +27,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/vic_amatrack.dds" 
 	}
 
+	SpriteType = {
+		name = "GFX_focus_VIC_devlop_southern_france"
+		texturefile = "gfx/interface/goals/VIC_focus_south_france.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_VIC_devlop_algeria"
+		texturefile = "gfx/interface/goals/vic_invest_algeria.dds"
+	}
+
 }

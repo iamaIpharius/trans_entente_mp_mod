@@ -1,7 +1,0 @@
-spriteTypes = {	
-
-    spriteType = {
-        name = "GFX_petain_betraying_new"
-        texturefile = "gfx/leaders/VIC/portait_petain_betraying.dds"
-    }
-}
