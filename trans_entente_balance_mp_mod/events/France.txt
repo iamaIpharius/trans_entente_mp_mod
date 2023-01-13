@@ -2340,3 +2340,194 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = france.38
+	title = "Vichy is willing to give part of there colonies for our economic support"
+	desc = "A delegation from vichy proposed an insteresting idea for our ecomic support they would be willing to give us tunisia"
+	picture = GFX_report_event_german_parade_paris
+	is_triggered_only = yes
+	option = {
+		name = "let's do it"
+		ITA = {
+			transfer_state = 665
+			transfer_state = 458
+		}
+		VIC = {
+			country_event = {id = france.39}
+			add_ideas = VIC_italian_economic_support
+		}
+	}
+	option = {
+		name = "no"
+		VIC =  { country_event = {id = france.40} }
+	}
+}
+country_event = {
+	id = france.39
+	is_triggered_only = yes
+	title = "Italy accept"
+	option = {
+		name = "yes"
+	}
+}
+country_event = {
+	id = france.40
+	is_triggered_only = yes
+	title = "Italy refuse"
+	option = {
+		name = "well"
+	}
+}
+
+country_event = {
+	id = france.41
+	title = "Vichy is willing to give part of there colonies for our economic support"
+	desc = "A delegation from vichy proposed an insteresting idea for our ecomic support they would be willing to give us morocco"
+	picture = GFX_report_event_german_parade_paris
+	is_triggered_only = yes
+	option = {
+		name = "let's do it"
+		GER = {
+			transfer_state = 461
+			transfer_state = 462
+		}
+		VIC = {
+			country_event = {id = france.42}
+			add_ideas = VIC_german_economic_support
+		}
+	}
+	option = {
+		name = "no"
+		VIC =  { country_event = {id = france.43} }
+	}
+}
+country_event = {
+	id = france.42
+	title = "germany accept"
+	is_triggered_only = yes
+	option = {
+		name = "yes"
+	}
+}
+country_event = {
+	id = france.43
+	title = "germany refuse"
+	is_triggered_only = yes
+	option = {
+		name = "well"
+	}
+}
+
+country_event = {
+	id = france.44
+	title = "Vichy ask us to invest in there country"
+	is_triggered_only = yes
+	option = {
+		name = "let's do it"
+		GER = {
+			add_timed_idea = {idea = VIC_german_support days = 70}
+			VIC = {
+				random_owned_controlled_state = { 
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+						building = arms_factory
+						size > 4
+						include_locked = yes
+					}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+					}
+				}
+				random_owned_controlled_state = { 
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+						building = arms_factory
+						size > 4
+						include_locked = yes
+					}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "no"
+		VIC =  { country_event = {id = france.43} }
+	}
+}
+
+country_event = {
+	id = france.45
+	title = "Vichy ask us for gun"
+	is_triggered_only = yes
+	option = {
+		name = "let's do it"
+		GER = {
+			add_equipment_to_stockpile ={
+				type = infantry_equipment
+				amount = -4000
+			}
+		}
+		VIC = {
+			add_equipment_to_stockpile ={
+				type = infantry_equipment_1
+				amount = 6000
+			}
+			add_war_support = 0.05
+		}
+	}
+	option = {
+		name = "no"
+		VIC =  { 
+			country_event = {id = france.43} 
+			add_stability = -0.05
+		}
+
+	}
+}
+
+country_event = {
+	id = france.46
+	title = "france ask for the end of the occupation"
+	is_triggered_only = yes
+	option = {
+		name = "yes"
+		GER = {
+			transfer_state = 806
+			transfer_state = 17
+			transfer_state = 19
+			transfer_state = 15
+			transfer_state = 29
+			transfer_state = 785
+			transfer_state = 16
+			transfer_state = 24
+			transfer_state = 30
+			transfer_state = 23 
+			transfer_state = 14
+			transfer_state = 29
+			transfer_state = 18
+		}
+	}
+	option = {
+		name = "no"
+		VIC = {
+			country_event = {id = france.43}
+			add_stability = -0.25
+		}
+	}
+}

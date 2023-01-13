@@ -23,7 +23,7 @@
 		prerequisite = {}
 		mutually_exclusive = { }
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -968,11 +968,11 @@
 	# 	}
 	# }
 
-	focus = { # probably should be remande
+	focus = { # probably should be remade
 		id = VIC_appeal_to_the_navy
 		icon = GFX_goal_generic_propaganda
 		
-		x = 34
+		x = 38
 		y = 8
 
 		cost = 2
@@ -1355,7 +1355,7 @@
 	focus = { 
 		id = VIC_defend_the_altantic_wall
 		icon = GFX_focus_generic_coastal_fort
-		x = 34
+		x = 38
 		y = 0 
 		cost = 5 
 		mutually_exclusive = { 
@@ -1380,7 +1380,7 @@
 	focus = { 
 		id = VIC_expand_the_special_corp
 		icon = GFX_goal_generic_special_forces
-		x = 47
+		x = 51
 		y = 0
 		cost = 5 
 		mutually_exclusive = { 
@@ -1759,7 +1759,7 @@
 	}
 	focus = { 
 		id = VIC_by_any_mean
-		icon = GFX_focus_fra_le_deluge
+		icon = GFX_focus_secret_rearmament
 		x = 0
 		y = 1 
 		cost = 5 
@@ -2239,7 +2239,7 @@
 		}
 	}
 
-	focus = { #skeleton focus
+	focus = {
 		id = VIC_seeking_membership_in_the_axis
 		icon = GFX_focus_chi_mission_to_germany
 		x = -6
@@ -2254,20 +2254,40 @@
 		relative_position_id = VIC_emergency_powers_to_petain
 
 		available = {
-		
+			GER = { 
+				is_faction_leader = yes
+				has_government = fascism
+			}
+			is_in_faction = no
+			NOT = { has_war_with = GER }
+			is_subject = no
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = VIC 
+				}
+			}
 		}
-		bypass = {
 
+		bypass = {
+			is_in_faction_with = GER
 		}
+
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
+		available_if_capitulated = yes
 
+
+		completion_reward = {
+			GER = {
+				country_event = generic.2
+			}
+			add_stability = -0.05
+			add_war_support = 0.05
 		}
 	}
 
-	focus = { #skeleton focus
+	focus = {
 		id = VIC_remaining_neutral
 		icon = GFX_goal_generic_neutrality_focus
 		x = 6
@@ -2291,11 +2311,12 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_stability = 0.05
+			add_war_support = -0.05
 		}
 	}
 
-	focus = {  #skeleton focus
+	focus = {
 		id = VIC_negociate_the_occupation
 		icon = GFX_goal_generic_territory_or_war
 		x = 0
@@ -2305,7 +2326,7 @@
 			focus = VIC_remaining_neutral focus = VIC_seeking_membership_in_the_axis
 		}
 		mutually_exclusive = { 
-			focus = VIC_make_conssession_to_the_german
+			focus = VIC_make_conssession_to_the_german focus = VIC_there_will_be_no_more_conssesion
 		}
 		relative_position_id = VIC_seeking_membership_in_the_axis
 
@@ -2319,11 +2340,16 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_war_support = 0.05
+			remove_ideas = FRA_occupation_costs_4
+			add_ideas = FRA_occupation_costs_1
+			GER = {
+				add_ideas = {id = VIC_occupation_2}
+			}
 		}
 	}
 
-	focus = { #skeleton focus
+	focus = { 
 		id = VIC_there_will_be_no_more_conssesion
 		icon = GFX_goal_generic_political_pressure
 		x = 0
@@ -2342,11 +2368,13 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_stability = 0.1
+			add_war_support = -0.1
+			remove_ideas = FRA_occupation_costs_4
 		}
 	}
 
-	focus = { #skeleton focus
+	focus = {
 		id = VIC_make_conssession_to_the_german
 		icon = GFX_focus_generic_treaty
 		x = 0
@@ -2365,16 +2393,22 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_stability = -0.05
+			add_war_support = 0.05
+			remove_ideas = FRA_occupation_costs_4
+			add_ideas = FRA_occupation_costs_2
+			GER = {
+				add_ideas = {id = VIC_occupation_1}
+			}
 		}
 	}
 
-	focus = {  #skeleton focus
+	focus = {
 		id = VIC_help_the_german_occupation
 		icon = GFX_focus_fra_milice
 		x = 3
 		y = 1
-		cost
+		cost = 5
 		prerequisite = {
 			focus = VIC_negociate_the_occupation focus = VIC_make_conssession_to_the_german
 		}
@@ -2388,15 +2422,16 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+	 		add_ideas = FRA_milice
 		}
 	}
 
 	focus = {  #skeleton focus
-		id = VIC_ask_for_german_garison
-		icon = GFX_focus_generic_treaty
+		id = VIC_military_propagand
+		icon = GFX_goal_support_fascism
 		x = 0 
 		y = 1
+		cost = 5
 		prerequisite = {
 			focus = VIC_make_conssession_to_the_german
 		}
@@ -2410,7 +2445,8 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_war_support = 0.20
+			add_stability = -0.05
 		}
 	}
 
@@ -2419,6 +2455,7 @@
 		icon = GFX_goal_generic_consumer_goods
 		x = -3 
 		y = 1
+		cost = 5
 		prerequisite = {
 			focus = VIC_there_will_be_no_more_conssesion focus = VIC_make_conssession_to_the_german
 		}
@@ -2432,15 +2469,17 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_timed_idea = {idea = VIC_stabilizing days = 70}
 		}
 	}
 
-	focus = {  #skeleton focus
-		id = VIC_hide_gun
+
+	focus = {
+		id = VIC_hiden_gun
 		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 1
+		cost = 5
 		prerequisite = {
 			focus = VIC_there_will_be_no_more_conssesion 
 		}
@@ -2454,15 +2493,16 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_ideas = { FRA_hidden_materials }
 		}
 	}
 
-	focus = {  #skeleton focus
-		id = VIC_
-		icon = GFX_
+	focus = {
+		id = VIC_prepare_the_country_for_war
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0 
 		y = 1
+		cost = 5 
 		prerequisite = {
 			focus = VIC_negociate_the_occupation
 		}
@@ -2476,60 +2516,81 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_ideas = war_economy
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+				}
+			}
 		}
 	}
-	focus = {  #skeleton focus
-		id = VIC_1
-		icon = GFX_
-		x = -3 
+	focus = {  
+		id = VIC_deal_wiht_the_colonies
+		icon = GFX_goal_tfv_saf_support_german_coup
+		x = -2
 		y = 1
+		cost = 5
 		prerequisite = {
-			focus = VIC_
+			focus = VIC_prepare_the_country_for_war
 		}
 		mutually_exclusive = {
 
 		}
-		relative_position_id = VIC_
+		relative_position_id = VIC_prepare_the_country_for_war
 		available = { }
 		bypass = { }
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			GER = {country_event = {id = france.41}}
+			ITA = {country_event = {id = france.38}}
 		}
 	}
 
-	focus = {  #skeleton focus
-		id = VIC_2
-		icon = GFX_2
+	focus = { 
+		id = VIC_deal_with_the_german
+		icon = GFX_goal_generic_demand_territory
 		x = 0 
 		y = 1
+		cost = 5
 		prerequisite = {
-			focus = VIC_ focus = VIC_help_the_german_occupation 
+			focus = VIC_prepare_the_country_for_war focus = VIC_help_the_german_occupation 
 		}
 		mutually_exclusive = {
 
 		}
-		relative_position_id = VIC_
+		relative_position_id = VIC_prepare_the_country_for_war
 		available = { }
 		bypass = { }
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			GER = {country_event = {id = france.44 days = 90}}
 		}
 	}
 
-	focus = {  #skeleton focus
-		id = VIC_3
-		icon = GFX_3
+	focus = {
+		id = VIC_send_worker_to_germany
+		icon =  GFX_goal_generic_construction2
 		x = 0
 		y = 1
+		cost = 5
 		prerequisite = {
-			focus = VIC_help_the_german_occupation focus = VIC_ focus = VIC_ask_for_german_garison
+			focus = VIC_help_the_german_occupation focus = VIC_prepare_the_country_for_war focus = VIC_military_propagand
 		}
 		mutually_exclusive = {
 
@@ -2541,29 +2602,395 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			reduce_occupation_cost_effect = yes
+			add_ideas = { FRA_mandatory_work_service }
+			unlock_decision_category_tooltip = VIC_concessions_to_the_germans
 		}
 	}
 
-	focus = {  #skeleton focus
-		id = VIC_4
-		icon = GFX_3
+	focus = {  
+		id = VIC_ask_for_german_equipment
+		icon = GFX_goal_generic_axis_build_infantry
 		x = 0
 		y = 1
+		cost = 5
 		prerequisite = {
-				focus = VIC_ask_for_german_garison
+				focus = VIC_military_propagand
 		}
 		mutually_exclusive = {
 
 		}
-		relative_position_id = VIC_ask_for_german_garison
+		relative_position_id = VIC_military_propagand
 		available = { }
 		bypass = { }
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			GER = {country_event = {id = france.45}}
+		}
+	}
 
+	focus = {  #skeleton focus
+		id = VIC_stabilize_the_economie
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+				focus = VIC_stabilize_the_country focus = VIC_military_propagand focus = VIC_hiden_gun
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_stabilize_the_country
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+					building = industrial_complex
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_prepare_for_the_fight
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+				focus = VIC_hiden_gun
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_hiden_gun
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_war_support = 0.5
+			add_equipment_to_stockpile ={
+				type = infantry_equipment_1
+				amount = 4000
+			}
+
+		}
+	}
+
+	focus = { 
+		id = VIC_an_oppening_to_our_colonies
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_hiden_gun
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_hiden_gun
+		available = { }
+		bypass = { 
+			NOT = { 
+				458 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				665 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				461 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				462 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_state_core = 458
+			add_state_core = 665
+			add_state_core = 461
+			add_state_core = 462
+		}
+	}
+
+	focus = { #skeleton focus
+		id = VIC_like_a_phoenix
+		icon = GFX_goal_support_fascism
+		x = 0 
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_deal_with_the_german
+		}
+		mutually_exclusive = { 
+			focus = VIC_faithul_supporter_of_germany
+		}
+		relative_position_id = VIC_deal_with_the_german
+		available = { 
+			806 = {
+				is_fully_controlled_by = GER 
+			}
+			19 = {
+				is_fully_controlled_by = GER 
+			}
+			23 = {
+				is_fully_controlled_by = GER 
+			}
+			24 = {
+				is_fully_controlled_by = GER 
+			}
+			27 = {
+				is_fully_controlled_by = GER 
+			}
+			17 = {
+				is_fully_controlled_by = GER 
+			}
+			18 = {
+				is_fully_controlled_by = GER 
+			}
+			16 = {
+				is_fully_controlled_by = GER 
+			}
+			30 = {
+				is_fully_controlled_by = GER 
+			}
+			14 = {
+				is_fully_controlled_by = GER 
+			}
+			15 = {
+				is_fully_controlled_by = GER 
+			}
+			29 = {
+				is_fully_controlled_by = GER 
+			}
+			785 = {
+				is_fully_controlled_by = GER 
+			}
+			31 = {
+				is_fully_controlled_by = VIC
+			}
+			22 = {
+				is_fully_controlled_by = VIC
+			}
+			21 = {
+				is_fully_controlled_by = VIC
+			}
+			851 = {
+				is_fully_controlled_by = VIC
+			}
+		}
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = FRA_occupation_costs_1
+			GER = {
+				remove_ideas = {id = VIC_occupation_2}
+				country_event = {id = france.46} 
+			}
+		}
+	}
+
+	focus = { #skeleton focus
+		id = VIC_faithul_supporter_of_germany
+		icon = GFX_focus_up_joan_of_arc
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_ask_for_german_equipment
+		}
+		mutually_exclusive = { 
+			focus = VIC_like_a_phoenix focus = VIC_our_country_back_for_joining_the_war
+		}
+		relative_position_id = VIC_ask_for_german_equipment
+		available = { 
+			806 = {
+				is_fully_controlled_by = GER 
+			}
+			19 = {
+				is_fully_controlled_by = GER 
+			}
+			23 = {
+				is_fully_controlled_by = GER 
+			}
+			24 = {
+				is_fully_controlled_by = GER 
+			}
+			27 = {
+				is_fully_controlled_by = GER 
+			}
+			17 = {
+				is_fully_controlled_by = GER 
+			}
+			18 = {
+				is_fully_controlled_by = GER 
+			}
+			16 = {
+				is_fully_controlled_by = GER 
+			}
+			30 = {
+				is_fully_controlled_by = GER 
+			}
+			14 = {
+				is_fully_controlled_by = GER 
+			}
+			15 = {
+				is_fully_controlled_by = GER 
+			}
+			29 = {
+				is_fully_controlled_by = GER 
+			}
+			785 = {
+				is_fully_controlled_by = GER 
+			}
+			31 = {
+				is_fully_controlled_by = VIC
+			}
+			22 = {
+				is_fully_controlled_by = VIC
+			}
+			21 = {
+				is_fully_controlled_by = VIC
+			}
+			851 = {
+				is_fully_controlled_by = VIC
+			}
+		}
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = FRA_occupation_costs_2
+			GER = {
+				remove_ideas = {id = VIC_occupation_1}
+				country_event = {id = france.46} 	
+			}
+		}
+	}
+
+	focus = {
+		id = VIC_our_country_back_for_joining_the_war
+		icon = GFX_focus_attack_germany
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_prepare_for_the_fight
+		}
+		mutually_exclusive = { 
+			focus = VIC_faithul_supporter_of_germany
+		}
+		relative_position_id = VIC_prepare_for_the_fight
+		available = { 
+			806 = {
+				is_fully_controlled_by = GER 
+			}
+			19 = {
+				is_fully_controlled_by = GER 
+			}
+			23 = {
+				is_fully_controlled_by = GER 
+			}
+			24 = {
+				is_fully_controlled_by = GER 
+			}
+			27 = {
+				is_fully_controlled_by = GER 
+			}
+			17 = {
+				is_fully_controlled_by = GER 
+			}
+			18 = {
+				is_fully_controlled_by = GER 
+			}
+			16 = {
+				is_fully_controlled_by = GER 
+			}
+			30 = {
+				is_fully_controlled_by = GER 
+			}
+			14 = {
+				is_fully_controlled_by = GER 
+			}
+			15 = {
+				is_fully_controlled_by = GER 
+			}
+			29 = {
+				is_fully_controlled_by = GER 
+			}
+			785 = {
+				is_fully_controlled_by = GER 
+			}
+			31 = {
+				is_fully_controlled_by = VIC
+			}
+			22 = {
+				is_fully_controlled_by = VIC
+			}
+			21 = {
+				is_fully_controlled_by = VIC
+			}
+			851 = {
+				is_fully_controlled_by = VIC
+			}
+		}
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			GER = {
+				country_event = {id = france.46} 	
+			}
 		}
 	}
 }

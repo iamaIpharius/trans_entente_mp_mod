@@ -1,0 +1,16 @@
+characters = {
+	VIC_petain_if_he_wasnt_a_complet_nazis = {
+		name = "Petain \"death to the axis\"  "
+		portraits = {
+			civilian= {
+				large = GFX_petain_betraying
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire="1965.1.1.1"
+			id =-1
+		}
+		
+	}
+}

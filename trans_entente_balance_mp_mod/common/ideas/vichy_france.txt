@@ -442,6 +442,7 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 		}
+
 		VIC_restruturing_the_army = {
 			allowed = {
 				always = no
@@ -457,6 +458,100 @@ ideas = {
 				supply_consumption_factor = 0.05
 				army_org_factor = -0.1
 			}
+		}
+		
+		VIC_pulling_a_italy_mouve = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_vic_marines
+			modifier = { 
+				stability_factor = 0.1
+			}
+		}
+		VIC_occupation_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_vic_marines
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+		VIC_occupation_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_vic_marines
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		VIC_italian_economic_support = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_vic_marines
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		VIC_german_economic_support = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_vic_marines
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+		VIC_stabilizing = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_vic_marines
+			modifier = {
+				consumer_goods_factor = 0.10
+				stability_weekly = 0.002
+			}
+		}
+		VIC_german_support = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_vic_marines
+			modifier = {
+				consumer_goods_factor = 0.20
+			}
+				
+			
 		}
 	}
 }
