@@ -6701,6 +6701,8 @@ ITA_diplomacy_balkan_decision_category = {
 			}
 		}
 
+		fire_only_once = yes
+		
 		allowed = {
 			original_tag = ITA
 		}
