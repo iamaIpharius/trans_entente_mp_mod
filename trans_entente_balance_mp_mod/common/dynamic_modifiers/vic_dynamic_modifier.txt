@@ -31,3 +31,19 @@ VIC_army_dynamic_modifier = {
     army_core_defence_factor = VIC_army_core_defence_factor
 
 }
+
+VIC_industry_modifier = {
+    enable = {
+        always = no 
+    }
+    icon = generic_army_europe_3
+
+    production_speed_industrial_complex_factor = VIC_civ_production
+    production_speed_arms_factory_factor = VIC_mil_production
+    production_factory_max_efficiency_factor = VIC_max_efficiency
+    production_factory_efficiency_gain_factor = VIC_efficenty_gain
+    industry_repair_factor = VIC_repair_factor
+    industrial_capacity_factory = VIC_capacity_factor
+    production_speed_infrastructure_factor = VIC_infrastructure_factor
+    production_speed_rail_way_factor = VIC_sncf_factor
+}

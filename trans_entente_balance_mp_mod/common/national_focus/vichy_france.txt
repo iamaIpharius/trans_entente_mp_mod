@@ -3010,7 +3010,11 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_stability = 0.1
+			add_to_variable = { VIC_civ_production  = 0.2 }
+			add_to_variable = { VIC_repair_factor   = 0.2 }
+			add_to_variable = { VIC_capacity_factor = 0.2 }
+			add_dynamic_modifier = {modifier = VIC_industry_modifier}
 		}
 	}
 
@@ -3030,7 +3034,12 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_to_variable = { VIC_mil_production  = 0.2 }
+			add_to_variable = { VIC_max_efficiency  = 0.2 }
+			add_to_variable = { VIC_capacity_factor = 0.2 }
+			add_dynamic_modifier = {modifier = VIC_industry_modifier}
 		}
 	}
 
@@ -3051,7 +3060,23 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = industrial_complex
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3072,8 +3097,24 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
-		}
+			random_owned_controlled_state = { 
+				limit = {
+					state = 459
+					is_fully_controlled_by = VIC
+					free_building_slots = {
+					building = industrial_complex
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+				}
+			}
+		}	
 	}
 
 	focus = {
@@ -3093,9 +3134,10 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+		
+			}
 		}
-	}
+	
 
 	focus = {
 		id = VIC_move_research_center_to_marseille
@@ -3135,7 +3177,23 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			random_owned_controlled_state = { 
+				limit = {
+					state = 462
+					is_fully_controlled_by = VIC
+					free_building_slots = {
+					building = industrial_complex
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3156,7 +3214,8 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			add_to_variable = { VIC_infrastructure_factor = 0.2 }
+			add_to_variable = { VIC_sncf_factor = 0.2 }
 		}
 	}
 
@@ -3178,33 +3237,32 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+				}
+			}
+			add_to_variable = { VIC_mil_production = 0.2  }
+			add_to_variable = { VIC_max_efficiency = 0.1  }
+			add_to_variable = { VIC_efficenty_gain = 0.05 }
 		}
 	}
 
 	focus = {
 		id = VIC_improve_production_speed
 		icon = GFX_goal_generic_production
-		x = 0 
-		y = 1
-		cost = 5
-		prerequisite = {
-			focus = VIC_military_ecco
-		}
-		relative_position_id = VIC_military_ecco
-		available = { }
-		bypass = { }
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = VIC_take_controlle_of_the_industrie
-		icon = GFX_goal_generic_construct_mil_factory
 		x = 3
 		y = 1
 		cost = 5
@@ -3218,7 +3276,46 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			add_to_variable = { VIC_max_efficiency = 0.1 }
+			add_to_variable = { VIC_efficenty_gain = 0.2 }
+
+		}
+	}
+
+	focus = {
+		id = VIC_take_controlle_of_the_industrie
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_military_ecco
+		}
+		relative_position_id = VIC_military_ecco
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = -0.05
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3238,13 +3335,59 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			add_stability = -0.05
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				}
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			}
 		}
-	}
+	
 
 	focus = {
 		id = VIC_move_research_center_to_vichy
 		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_take_controlle_of_the_industrie
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_take_controlle_of_the_industrie
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = VIC_modernize_production_line
+		icon = GFX_goal_generic_production2
 		x = 0
 		y = 1
 		cost = 5
@@ -3259,35 +3402,19 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = VIC_modernize_production_line
-		icon = GFX_goal_generic_production2
-		x = 3
-		y = 1
-		cost = 5
-		prerequisite = {
-			focus = VIC_take_controlle_of_the_industrie
-		}
-		mutually_exclusive = { }
-		relative_position_id = VIC_improve_production_speed
-		available = { }
-		bypass = { }
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			
+			add_tech_bonus ={
+				name = "modernisation"
+				uses = 2
+				bonus = 1.5
+				category = cat_production
+			}
 		}
 	}
 	
 	focus = {
-		id = VIC_more_gun
+		id = VIC_more_factory
 		icon = GFX_focus_generic_industry_3
-		x = -3
+		x = -6
 		y = 1
 		cost = 5
 		prerequisite = {
@@ -3312,7 +3439,7 @@
 		y = 1
 		cost = 5
 		prerequisite = {
-			focus = VIC_more_gun 
+			focus = VIC_more_factory 
 			focus = VIC_move_research_center_to_vichy 
 			focus = VIC_modernize_production_line
 		}
@@ -3324,7 +3451,40 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = industrial_complex
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+				}
+			}
 		}
 	}
 }
