@@ -2367,6 +2367,7 @@ country_event = {
 	id = france.39
 	is_triggered_only = yes
 	title = "Italy accept"
+	desc = "the italian have accepted our demand !"
 	option = {
 		name = "yes"
 	}
@@ -2375,6 +2376,7 @@ country_event = {
 	id = france.40
 	is_triggered_only = yes
 	title = "Italy refuse"
+	desc = "the italian have refused our demand !"
 	option = {
 		name = "well"
 	}
@@ -2387,7 +2389,7 @@ country_event = {
 	picture = GFX_report_event_german_parade_paris
 	is_triggered_only = yes
 	option = {
-		name = "let's do it"
+		name = "We will accept there proposal"
 		GER = {
 			transfer_state = 461
 			transfer_state = 462
@@ -2398,33 +2400,36 @@ country_event = {
 		}
 	}
 	option = {
-		name = "no"
+		name = "we are not interested"
 		VIC =  { country_event = {id = france.43} }
 	}
 }
 country_event = {
 	id = france.42
 	title = "germany accept"
+	desc = "the german have accpeted our demmand !"
 	is_triggered_only = yes
 	option = {
-		name = "yes"
+		name = "YES"
 	}
 }
 country_event = {
 	id = france.43
 	title = "germany refuse"
+	desc = "the german have refused our demand !"
 	is_triggered_only = yes
 	option = {
-		name = "well"
+		name = "well ..."
 	}
 }
 
 country_event = {
 	id = france.44
 	title = "Vichy ask us to invest in there country"
+	desc = "the Vichy is asking us help in building some new arm factorie"
 	is_triggered_only = yes
 	option = {
-		name = "let's do it"
+		name = "they will have our support"
 		GER = {
 			add_timed_idea = {idea = VIC_german_support days = 70}
 		}
@@ -2466,7 +2471,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "no"
+		name = "they do not have the power to ask for anything"
 		VIC =  { country_event = {id = france.43} }
 	}
 }
@@ -2474,6 +2479,7 @@ country_event = {
 country_event = {
 	id = france.45
 	title = "Vichy ask us for gun"
+	desc = "the Vichy gouverment is asking us for gun ..."
 	is_triggered_only = yes
 	option = {
 		name = "let's do it"
@@ -2492,7 +2498,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "no"
+		name = "we need those"
 		VIC =  { 
 			country_event = {id = france.43} 
 			add_stability = -0.05
@@ -2504,6 +2510,7 @@ country_event = {
 country_event = {
 	id = france.46
 	title = "france ask for the end of the occupation"
+	desc = "Vichy ask us for the return of there land"
 	is_triggered_only = yes
 	option = {
 		name = "yes"
