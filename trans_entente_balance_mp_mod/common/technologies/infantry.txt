@@ -781,7 +781,7 @@ technologies = {
 			mountaineers_tech
 			cat_special_forces_generic
 		}
-		
+				
 		ai_will_do = {
 			factor = 0.7
 		}
@@ -1070,13 +1070,13 @@ technologies = {
 		#Change the custom tooltip too: HUN_light_infantry_divisions_doctrine_effect
 		infantry = {
 			forest = {
-				attack = 0.2
-				movement = 0.2
+				attack = 0.02
+				movement = 0.05
 			}
 
 			urban = {
-				attack = 0.2 
-				movement = 0.2
+				attack = 0.05 
+				movement = 0.05
 			}
 		}
 	}
@@ -1667,8 +1667,36 @@ technologies = {
 			armored_car
 		}
 
+		enable_equipment_modules = {
+			car_riveted_armor
+			car_4x4_suspension
+			car_6x6_suspension
+			car_8x8_suspension
+			car_flat_armor
+			car_semi-flat_armor
+			car_one_man_tank_turret
+			car_two_man_tank_turret
+			car_three_man_tank_turret
+			car_nft_one_man_tank_turret
+			car_nft_two_man_tank_turret
+			car_nft_three_man_tank_turret
+			car_machine_gun
+		   #car_medium_cannon
+			car_smoke_launchers
+			car_extra_ammo_storage
+			car_wet_ammo_storage
+		   #car_wide
+			car_additional_machine_guns
+			car_internal_machine_gun
+			car_gasoline_engine
+			car_diesel_engine
+			mech_4x4_suspension
+			mech_6x6_suspension
+			mech_8x8_suspension
+		}
+
 		enable_equipments = {
-			gw_armored_car_equipment
+			armored_car_chassis_0
 		}
 		allow_branch = { has_dlc = "La Resistance" }
 		path = {
@@ -1686,7 +1714,6 @@ technologies = {
 		categories = {
 			motorized_equipment
 			armor
-			cat_armored_cars
 		}
 		
 		ai_will_do = {
@@ -1716,7 +1743,7 @@ technologies = {
 	armored_car2 = {
 
 		enable_equipments = {
-			armored_car_equipment_1
+			armored_car_chassis_1
 		}
 		
 		path = {
@@ -1734,7 +1761,6 @@ technologies = {
 		categories = {
 			motorized_equipment
 			armor
-			cat_armored_cars
 		}
 		
 		ai_will_do = {
@@ -1742,17 +1768,17 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				date > "1940.1.1"
+				date > "1937.1.1"
 			}
 			
 			modifier = {
 				factor = 2
-				date > "1941.1.1"
+				date > "1938.1.1"
 			}
 			
 			modifier = {
 				factor = 2
-				date > "1942.1.1"
+				date > "1939.1.1"
 			}
 			modifier = {
 				is_major = no
@@ -1764,7 +1790,7 @@ technologies = {
 	armored_car3 = {
 
 		enable_equipments = {
-			armored_car_equipment_2
+			armored_car_chassis_2
 		}
 
 		research_cost = 2
@@ -1777,7 +1803,6 @@ technologies = {
 		categories = {
 			motorized_equipment
 			armor
-			cat_armored_cars
 		}
 		
 		sub_technologies = {
@@ -1789,17 +1814,17 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				date > "1942.1.1"
+				date > "1937.1.1"
 			}
 			
 			modifier = {
 				factor = 2
-				date > "1943.1.1"
+				date > "1938.1.1"
 			}
 			
 			modifier = {
 				factor = 2
-				date > "1944.1.1"
+				date > "1939.1.1"
 			}
 			modifier = {
 				is_major = no
@@ -1821,7 +1846,6 @@ technologies = {
 		categories = {
 			motorized_equipment
 			armor
-			cat_armored_cars
 		}
 
 		ai_will_do = {
@@ -1829,17 +1853,17 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				date > "1942.1.1"
+				date > "1937.1.1"
 			}
 			
 			modifier = {
 				factor = 2
-				date > "1943.1.1"
+				date > "1938.1.1"
 			}
 			
 			modifier = {
 				factor = 2
-				date > "1944.1.1"
+				date > "1939.1.1"
 			}
 			modifier = {
 				is_major = no
@@ -1851,11 +1875,31 @@ technologies = {
 	mechanised_infantry = {
 
 		enable_equipments = {
-			mechanized_equipment_1
+			mech_chassis_0
 		}
 
 		enable_equipment_modules = {
 			tank_half_track_suspension
+		}
+
+		enable_subunits = {
+			mechanized
+			#aa_mechanized
+		}
+
+		enable_equipment_modules = {
+			mech_gasoline_engine
+			mech_diesel_engine
+			mech_riveted_armor
+			half_interleaf_suspension
+			half_boogie_suspension
+			mech_sex_machine_gun
+			mech_sex_heavy_machine_gun
+			mech_machine_gun
+			mech_heavy_machine_gun
+			troop_carrier
+			troop_carrier_special
+			troop_carrier_special2
 		}
 		
 		motorized = {
@@ -1885,10 +1929,10 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1940
+		start_year = 1939
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1940 }
+			position = { x = 0 y = @1939 }
 		}
 		
 		categories = {
@@ -1978,7 +2022,7 @@ technologies = {
 	mechanised_infantry2 = {
 
 		enable_equipments = {
-			mechanized_equipment_2
+			mech_chassis_1
 		}
 		
 		path = {
@@ -1987,10 +2031,10 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1942
+		start_year = 1941
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1942 }
+			position = { x = 0 y = @1941 }
 		}
 		
 		categories = {
@@ -2007,7 +2051,7 @@ technologies = {
 	mechanised_infantry3 = {
 
 		enable_equipments = {
-			mechanized_equipment_3
+			mech_chassis_2
 		}
 
 		mechanized = {
@@ -2016,10 +2060,10 @@ technologies = {
 		}
 
 		research_cost = 3
-		start_year = 1944
+		start_year = 1943
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1944 }
+			position = { x = 0 y = @1943 }
 		}
 		
 		categories = {
@@ -2076,7 +2120,7 @@ technologies = {
 			penal_battalion
 		}
 	}
-
+	
 	######### FROM ITALIAN FOCUS ##########
 	blackshirt_assault_battalion_tech = {
 		
