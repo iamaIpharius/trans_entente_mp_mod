@@ -1,7 +1,7 @@
 
 state={
 	id=459
-	name="Oran" # Algiers
+	name="Oran"
 	manpower = 3089944
 	state_category = town
 	
@@ -19,9 +19,6 @@ state={
 		buildings = {
 			infrastructure = 2
 			air_base = 5
-			1145 = {
-				naval_base = 2
-			}
 			7132 = {
 				naval_base = 6
 			}
