@@ -130,3 +130,8 @@
  BBA_italy_interaction_events.48.b:0 "And why should we trust an Italian?"
  ITA_partition_slovenia:0 "Partition Slovenia"
  ITA_partition_slovenia_desc:0 "We will offer the Germans a clean treaty, wherein Slovenia is clearly divided between us, north and south."
+
+VIC_army_special_forces_dynamic_modifier:0 "Special forces Modifier"
+VIC_army_dynamic_modifier:0 "Army Modifier"
+VIC_industry_modifier:0 "industry Modifier"
+

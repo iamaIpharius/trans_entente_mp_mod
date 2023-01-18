@@ -1021,7 +1021,7 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no 
 		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		search_filters = {FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
 		completion_reward = { 
 			add_ideas = rebuild_fleet_vichy
 		}
@@ -1404,9 +1404,11 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP}
+		
 		completion_reward = { 
+			add_to_variable = { VIC_special_force_cap = 0.1 } 
 			add_dynamic_modifier = { modifier = VIC_army_special_forces_dynamic_modifier }
-			add_to_variable = { VIC_special_force_cap = 0.2 } 
+			custom_effect_tooltip =  VIC_expand_the_special_corp_tt 
 		}
 	}	
 
@@ -1436,14 +1438,17 @@
 		completion_reward = { 
 			army_experience = 50
 			add_to_variable = { VIC_special_force_cap = 0.05 } 
+			custom_effect_tooltip = VIC_the_foreign_legion_tt
 			add_tech_bonus = {
 				name = "the foreign legion"
 				bonus = 1.5
 				uses = 2
 				technology = tech_mountaineers
 				technology = tech_mountaineers2
+				technology = tech_mountaineers3
 				technology = paratroopers
 				technology = paratroopers2
+				technology = paratroopers3
 			}
 		}
 	}
@@ -1482,7 +1487,7 @@
 			army_experience = 50
 			add_to_variable = { VIC_special_force_cap = 0.05 } 
 			add_to_variable = { VIC_special_force_out_of_supply_factor = -0.15 }
-			# custom_effect_tooltip {!!!} 
+			custom_effect_tooltip = VIC_expand_the_marines_corp_tt
 		}
 	}
 
@@ -1518,10 +1523,8 @@
 			}
 			add_to_variable = { VIC_army_gain_experience = 0.4 }
 			add_to_variable = { VIC_army_org_factor = -0.05 }
-			add_to_variable = { VIC_supply_consumption_factor = -0.05 }
-			add_to_variable = { VIC_army_attack_factor = 0.05 }
-			
-			
+			add_to_variable = { VIC_supply_consumption_factor = 0.05 }
+			custom_effect_tooltip = VIC_modernize_the_army_tt
 		}
 	}
 
@@ -1559,8 +1562,8 @@
 			add_to_variable = { VIC_army_org_factor = 0.05 }
 			add_to_variable = { VIC_max_dig_in = 2 }
 			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
-			add_to_variable = { VIC_army_defence_factor = 0.2 }
-			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.25 }
+			custom_effect_tooltip = VIC_the_old_guard_tt
 		}
 	}
 
@@ -1734,11 +1737,9 @@
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 		completion_reward = { 
-			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
-			add_to_variable = { VIC_army_defence_factor = 0.2 }
-			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
-			add_to_variable = { VIC_army_org_factor = 0.05 }
-			add_to_variable = { VIC_army_gain_experience = -0.2 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.2 }
+			add_to_variable = { VIC_army_org_factor = 0.2 }
+			custom_effect_tooltip = VIC_protect_the_coast_tt
 			add_tech_bonus = {
 				name = "better equipment"
 				bonus = 1
@@ -1769,11 +1770,9 @@
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP }
 		completion_reward = { 
-			add_to_variable = { VIC_dig_in_speed_factor = 0.05 }
-			add_to_variable = { VIC_army_defence_factor = 0.1 }
-			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
-			add_to_variable = { VIC_army_org_factor = 0.05 }
-			add_to_variable = { VIC_army_gain_experience = -0.4 }
+			add_to_variable = { VIC_dig_in_speed_factor = 0.4 }
+			add_to_variable = { VIC_max_dig_in = 3 }
+			custom_effect_tooltip = VIC_protect_our_homeland_tt
 		}
 	}
 	focus = { 
@@ -1781,13 +1780,13 @@
 		icon = GFX_focus_secret_rearmament
 		x = 0
 		y = 1 
-		cost = 5 
+		cost = 5
 		prerequisite = { 
 			focus = VIC_protect_our_homeland
 		}
 		relative_position_id = VIC_protect_our_homeland
 		available = {
-
+			
 		}
 		bypass = {
 
@@ -1797,13 +1796,12 @@
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP }
 		completion_reward = { 
-			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
-			add_to_variable = { VIC_army_defence_factor = 0.2 }
-			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
-			add_to_variable = { VIC_army_org_factor = 0.05 }
-			add_to_variable = { VIC_army_gain_experience = -0.4 }
-			add_to_variable = { VIC_cas_damage_reduction = 0.4 }
+			add_to_variable = { VIC_dig_in_speed_factor = 0.2 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.1 }
+			add_to_variable = { VIC_army_gain_experience = -0.8 }
+			add_to_variable = { VIC_cas_damage_reduction = 0.2 }
 			add_to_variable = { VIC_equipment_capture_factor = 0.2 }
+			custom_effect_tooltip = VIC_by_any_mean_tt
 		}
 	}
 
@@ -1833,15 +1831,12 @@
 		continue_if_invalid = no 
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP }
-		completion_reward = { 
-			add_to_variable = { VIC_dig_in_speed_factor = 0.2 }
+		completion_reward = {
 			add_to_variable = { VIC_army_defence_factor = 0.2 }
-			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
 			add_to_variable = { VIC_army_org_factor = 0.1 }
-			add_to_variable = { VIC_army_gain_experience = 0.1 }
-			add_to_variable = { VIC_cas_damage_reduction = 0.2 }
-			add_to_variable = { VIC_equipment_capture_factor = 0.05 }
+			add_to_variable = { VIC_cas_damage_reduction = 0.1 }
 			add_to_variable = { VIC_army_attack_factor = 0.15}
+			custom_effect_tooltip = VIC_napeleon_would_be_proud_tt
 		}
 	}
 
@@ -1866,7 +1861,7 @@
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP }
 		completion_reward = { 
-			add_ideas = {id = VIC_tonk_good}
+			add_ideas = VIC_tonk_good
 		}
 	}
 
@@ -1891,8 +1886,8 @@
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
-			add_to_variable = { VIC_add_war_support = -0.05 }
-			add_to_variable = { VIC_add_stability = -0.05 }
+			add_war_support = -0.05
+			add_stability = -0.05
 		}
 	}
 
@@ -1922,6 +1917,7 @@
 		completion_reward = {
 			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.10 }
 			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
+			custom_effect_tooltip = VIC_crush_the_river_line_tt
 			add_tech_bonus = {
 				name = "Marin des riviers"
 				bonus = 1.5
@@ -1956,8 +1952,9 @@
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 		completion_reward = {
-			add_to_variable = { VIC_special_force_attack_factor = 0.12 }
-			add_to_variable = { VIC_special_force_defence_factor = 0.12 }
+			add_to_variable = { VIC_special_force_attack_factor = 0.10 }
+			add_to_variable = { VIC_special_force_defence_factor = 0.10 }
+			custom_effect_tooltip = VIC_control_the_mediteaneran_tt
 			add_tech_bonus = {
 				name = "Marin des iles"
 				bonus = 1.5
@@ -1994,8 +1991,9 @@
 				uses = 2
 				category = train_tech
 			}
-			add_to_variable = { VIC_special_force_attack_factor = 0.03 }
-			add_to_variable = { VIC_special_force_defence_factor = 0.03 }
+			add_to_variable = { VIC_special_force_attack_factor = 0.05 }
+			add_to_variable = { VIC_special_force_defence_factor = 0.05 }
+			custom_effect_tooltip = VIC_help_bararossa_tt
 		}
 	}
 
@@ -2174,6 +2172,7 @@
 		available_if_capitulated = no 
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = ITA_battaglioni_d_assalto_tt
 			hidden_effect = {
 				set_technology = { blackshirt_assault_battalion_tech = 1 popup = no }
 			}
@@ -2246,6 +2245,7 @@
 			army_experience = 15
 			add_to_variable = { VIC_acclimatization_hot_climate_gain_factor = 0.10 }
 			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
+			custom_effect_tooltip = VIC_training_for_africa_tt
 		}
 	}
 	
@@ -2276,6 +2276,7 @@
 			army_experience = 15
 			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.10 }
 			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
+			custom_effect_tooltip = VIC_training_for_winter_tt
 		}
 	}
 
@@ -3075,6 +3076,7 @@
 			add_to_variable = { VIC_repair_factor   = 0.2 }
 			add_to_variable = { VIC_capacity_factor = 0.2 }
 			add_dynamic_modifier = {modifier = VIC_industry_modifier}
+			custom_effect_tooltip = VIC_civilian_ecco_tt
 		}
 	}
 
@@ -3101,6 +3103,7 @@
 			add_to_variable = { VIC_max_efficiency  = 0.2 }
 			add_to_variable = { VIC_capacity_factor = 0.2 }
 			add_dynamic_modifier = {modifier = VIC_industry_modifier}
+			custom_effect_tooltip = VIC_military_ecco_tt
 		}
 	}
 
@@ -3288,6 +3291,7 @@
 		completion_reward = {
 			add_to_variable = { VIC_infrastructure_factor = 0.2 }
 			add_to_variable = { VIC_sncf_factor = 0.2 }
+			custom_effect_tooltip= VIC_rebuild_infrastructure_tt
 		}
 	}
 
@@ -3329,7 +3333,8 @@
 			}
 			add_to_variable = { VIC_mil_production = 0.2  }
 			add_to_variable = { VIC_max_efficiency = 0.1  }
-			add_to_variable = { VIC_efficenty_gain = 0.05 }
+			add_to_variable = { VIC_efficenty_gain = 0.1 }
+			custom_effect_tooltip = VIC_build_mil_tt
 		}
 	}
 
@@ -3352,6 +3357,7 @@
 		completion_reward = {
 			add_to_variable = { VIC_max_efficiency = 0.1 }
 			add_to_variable = { VIC_efficenty_gain = 0.2 }
+			custom_effect_tooltip = VIC_improve_production_speed_tt
 
 		}
 	}
@@ -3617,7 +3623,7 @@
 			add_doctrine_cost_reduction = {
 				name = "studie foreign doctorine"
 				uses = 2
-				bonus = 1.25
+				cost_reduction = 1.25
 				category = air_doctrine
 			}
 		}
@@ -3647,7 +3653,7 @@
 				bonus = 1
 				category = light_air
 			}
-			add_ideas = {id = VIC_producing_fighter_en_masse}
+			add_ideas =  VIC_producing_fighter_en_masse
 		}
 	}
 	
@@ -3694,7 +3700,7 @@
 		completion_reward = {
 			add_timed_idea = {idea = VIC_heavy_consequence_of_helping_the_german_plane_prod days = 90}
 			GER = {
-				add_timed_idea = {id = VIC_help_german_figther_prod2 days = 90}
+				add_timed_idea = {idea = VIC_help_german_figther_prod2 days = 90}
 			}
 		}
 	}

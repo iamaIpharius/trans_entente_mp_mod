@@ -45,6 +45,7 @@ ideas = {
 		designer = yes 
 
 		vic_arsenal_de_toulon = {
+			name =  "Arsenal de Toulon"
 			allowed = {
 				always = no  
 			}
@@ -61,6 +62,7 @@ ideas = {
 		}
 
 		vic_arsenal_de_brest = {
+			name = "Arsenal de Brest"
 			allowed = {
 				always = no 
 			}
@@ -76,6 +78,7 @@ ideas = {
 			traits = { big_ship_strong }
 		}
 		VIC_skelon_ship = {
+			name = "skeleton ship"
 			allowed = {
 				always = no 
 			}
@@ -94,6 +97,7 @@ ideas = {
 
 	aircraft_manufacturer = {
 		vic_our_own_good_plane = {
+			name = "Our own plane designer"
 			allowed = {
 				always = no 
 			}
@@ -406,7 +410,8 @@ ideas = {
 		}
 
 		VIC_atlantic_wall_idea = {
-		
+			name = "atlantic wall"
+			picture = generic_fortify_the_borders
 			allowed = {
 				original_tag = FRA
 				always = no
@@ -418,13 +423,15 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = generic_fortify_the_borders
+			
 
 			modifier = {
 				production_speed_coastal_bunker_factor = 0.4
 			}
 		}
 		VIC_big_strong_marines = { 	
+			name = "Strong Marines"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no 
 			}
@@ -434,13 +441,15 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = GFX_idea_vic_marines
+			
 			modifier = {
 				special_forces_cap  = 0.15
 			}
 		}
 
 		VIC_time_to_die = {
+			name = "time to die"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no
 			}
@@ -449,7 +458,7 @@ ideas = {
 			}
 			
 			removal_cost = -1
-			picture = GFX_idea_vic_marines
+			
 			modifier = { 
 				org_loss_when_moving = -0.05
 				supply_consumption_factor = -0.05
@@ -457,12 +466,14 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = UK 
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 
 		VIC_restruturing_the_army = {
+			name = "restructuring the army"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no
 			}
@@ -471,7 +482,7 @@ ideas = {
 			}
 			
 			removal_cost = -1
-			picture = GFX_idea_vic_marines
+			
 			modifier = { 
 				org_loss_when_moving = 0.05
 				supply_consumption_factor = 0.05
@@ -479,20 +490,9 @@ ideas = {
 			}
 		}
 		
-		VIC_pulling_a_italy_mouve = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = GFX_idea_vic_marines
-			modifier = { 
-				stability_factor = 0.1
-			}
-		}
 		VIC_occupation_1 = {
+			name = "Occupation cost"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no
 			}
@@ -500,12 +500,14 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = GFX_idea_vic_marines
+			
 			modifier = {
 				consumer_goods_factor = -0.04
 			}
 		}
 		VIC_occupation_2 = {
+			name = "Occupation cost"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no
 			}
@@ -513,12 +515,14 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = GFX_idea_vic_marines
+			
 			modifier = {
 				consumer_goods_factor = -0.02
 			}
 		}
 		VIC_italian_economic_support = {
+			name = "Italian ecomoic support"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no
 			}
@@ -526,12 +530,14 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = GFX_idea_vic_marines
+			
 			modifier = {
 				consumer_goods_factor = -0.05
 			}
 		}
 		VIC_german_economic_support = {
+			name = "German ecconomic support"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no
 			}
@@ -539,12 +545,14 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = GFX_idea_vic_marines
+			
 			modifier = {
 				consumer_goods_factor = -0.10
 			}
 		}
 		VIC_stabilizing = {
+			name = "stabilizing"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no
 			}
@@ -552,32 +560,35 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = GFX_idea_vic_marines
+			
 			modifier = {
 				consumer_goods_factor = 0.10
 				stability_weekly = 0.002
 			}
 		}
 		VIC_german_support = {
+			name = "German support"
+			picture = GFX_idea_vic_marines
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = GFX_idea_vic_marines
+			
 			modifier = {
 				consumer_goods_factor = 0.10
 			}
 		}
 		VIC_producing_fighter_en_masse = {
+			name = "producing fighter en masse"
+			picture = generic_air_bonus
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_air_bonus
 			equipment_bonus = {
 				small_plane_airframe = {
 					build_cost_ic = -0.1
@@ -590,13 +601,15 @@ ideas = {
 		}
 
 		VIC_help_german_figther_prod = {
+			name = "Help german fighter production"
+			picture = generic_air_bonus
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_air_bonus
+			
 			equipment_bonus = {
 				small_plane_airframe = {
 					build_cost_ic = -0.05
@@ -609,6 +622,7 @@ ideas = {
 		}
 
 		VIC_consequence_of_helping_the_german_plane_prod = {
+			name = "consequence of helping the german plane industry"
 			allowed = {
 				always = no
 			}
@@ -628,6 +642,7 @@ ideas = {
 		}
 
 		VIC_heavy_consequence_of_helping_the_german_plane_prod = {
+			name = "heavy consequence of helping the german plane industry"
 			allowed = {
 				always = no
 			}
@@ -647,6 +662,7 @@ ideas = {
 		}
 
 		VIC_help_german_figther_prod2 = {
+			name = "Hevly help german fighter production"
 			allowed = {
 				always = no
 			}
@@ -665,13 +681,14 @@ ideas = {
 			}
 		}
 		VIC_tonk_good = {
+			name = "vichy tank"
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			icon = generic_army_europe_4
+			picture = generic_army_europe_4
 			equipment_bonus = {
 				medium_tank_chassis = {
 					build_cost_ic = -0.2
