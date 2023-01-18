@@ -1,0 +1,495 @@
+ideas = {
+	naval_manufacturer = {
+
+		designer = yes
+		
+		calzone_dockyard = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}
+		
+		pizza_boat_company = {
+			
+			picture = pizza_boat_company
+			
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		spaghetti_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		gondola_industries = {
+			
+			
+			allowed = {
+				original_tag = ITA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+	}
+	
+	economy = {
+		
+		unindustrialized = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		
+			modifier = {
+				consumer_goods_factor = 1
+				production_speed_industrial_complex_factor = -1
+				production_speed_arms_factory_factor = -1
+				production_speed_dockyard_factor = -1
+				conversion_cost_civ_to_mil_factor = 1
+				conversion_cost_mil_to_civ_factor = 1
+				industrial_capacity_factory = -2
+				industrial_capacity_dockyard = -2
+
+			}
+			
+			allowed_to_remove = {
+				OR = {
+					has_war = yes
+				}
+			}
+			cancel_if_invalid = no
+		}
+	}
+	
+	mobilization_laws = {
+	
+		uninterested = {
+	
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.003
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.75
+				max_fuel_factor = -0.45
+				fuel_gain_factor = -0.6
+			}
+			
+			allowed_to_remove = {
+				OR = {
+					has_war = yes
+				}
+			}
+			cancel_if_invalid = no
+			
+		}
+	}
+	country = {
+
+		minors_license_production = {
+		
+			picture = minors_license_production
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+
+				always = yes
+			}
+			
+			modifier = {
+				license_production_speed = 0.3 
+				license_purchase_cost = -1 
+			}
+		}
+
+		warlords_corruption = {
+		
+			picture = idea_chi_warlord_integration3
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+
+				always = yes
+			}
+			
+			modifier = {
+				army_org_regain = -0.3
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		CHI_agrarian_society = {
+		
+			picture = idea_generic_agrarian_society
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = -0.1
+			}
+		}
+		
+		d_day_defence = {
+		
+			picture = d_day_defence
+			
+			allowed = {
+				tag = GER
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				dig_in_speed_factor = 0.5
+				max_dig_in_factor = 0.3
+			}
+		}
+
+		endsieg = {
+		
+			picture = endsieg
+			
+			allowed = {
+				tag = GER
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		JAP_light_hull_cost = {
+		
+			picture = JAP_light_hull_cost
+			
+			allowed = {
+				tag = JAP
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+
+		JAP_heavy_hull_cost = {
+		
+			picture = JAP_heavy_hull_cost
+			
+			allowed = {
+				tag = JAP
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				ship_hull_heavy = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		allies_minors_special_forces = {
+		
+			picture = allies_minors_special_forces
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.2
+				acclimatization_hot_climate_gain_factor = 0.2
+				special_forces_min = 240
+			}
+		}
+		axis_minors_special_forces = {
+		
+			picture = axis_minors_special_forces
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.2
+				acclimatization_hot_climate_gain_factor = 0.2
+				special_forces_min = 240
+			}
+		}
+	
+		SPA_europes_backdoor = {
+			
+			name = SPA_europes_backdoor
+
+			picture = gre_schachtplan
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		megacucked = {
+			
+			name = megacucked
+
+			picture = megacucked
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				ai_focus_aviation_factor = -1
+				ai_focus_naval_factor = -1
+				critical_receive_chance = 10
+				naval_retreat_chance = 1
+				naval_retreat_speed = -0.5
+				navy_visibility = 1
+				air_defence_factor = -0.5
+				air_attack_factor = -0.5
+			}
+			
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = -0.2
+				defense_bonus_against = -0.2
+			}
+		}
+	}				
+	
+	naval_manufacturer = {
+
+
+		designer = yes
+		
+		rio_electric_docks = {
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}
+		
+	
+
+		amasonia_shipyard = {
+			
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		south_american_naval_company = {
+						
+			allowed = {
+				original_tag = BRA
+			}
+				
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer } #destroyer R&D
+
+			equipment_bonus = {
+				# 
+			}
+		}
+		
+	}
+
+	naval_manufacturer = {
+
+
+		designer = yes
+		
+		white_elephant_dockyard = {
+			
+			allowed = {
+				original_tag = SIA
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		}
+		
+	
+
+		wangchao_shipyard = {
+			
+			
+			allowed = {
+				original_tag = SIA
+			}
+			
+	
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		asian_naval_arsenal = {
+						
+			allowed = {
+				original_tag = SIA
+			}
+				
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer } #destroyer R&D
+
+			equipment_bonus = {
+				# 
+			}
+		}
+		
+	}
+}

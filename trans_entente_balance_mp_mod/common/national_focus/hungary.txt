@@ -231,6 +231,8 @@ focus_tree = {
 
 		cost = 10
 
+		cancel_if_invalid = yes
+
 		ai_will_do = {
 			factor = 70
 		}
@@ -238,11 +240,9 @@ focus_tree = {
 		available = {
 			NOT = { has_war_with = AUS }
 			is_subject = no
-			AUS = {
-				OR = {
-					exists = yes
-					is_subject = no
-				}
+			AUS = {				
+				exists = yes
+				is_subject = no				
 			}
 		}
 
@@ -250,6 +250,7 @@ focus_tree = {
 			OR = {
 				AND = {
 					owns_state = 4
+					owns_state = 848
 					owns_state = 153
 					owns_state = 152
 				}
@@ -315,12 +316,13 @@ focus_tree = {
 						type = take_state_focus
 						target = PREV
 						expire = 0
-						generator = { 4 152 153 }
+						generator = { 4 152 153 848 }
 					}
 				}
 			}
 			add_state_claim = 152
 			add_state_claim = 153
+			add_state_claim = 848
 			add_state_claim = 4
 		}
 	}
@@ -342,6 +344,7 @@ focus_tree = {
 		available = {
 			controls_state = 152
 			controls_state = 153
+			controls_state = 848
 			controls_state = 4
 			is_subject = no
 		}
@@ -360,6 +363,7 @@ focus_tree = {
 			hidden_effect = { AUS = { set_cosmetic_tag = AUS_NOT_WHITE } }
 			152 = { add_core_of = ROOT }
 			153 = { add_core_of = ROOT }
+			848 = { add_core_of = ROOT }
 			4 = { add_core_of = ROOT }
 			69 = { add_core_of = ROOT }
 			9 = { add_core_of = ROOT }
@@ -415,6 +419,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			CZE = { country_event = { id = DOD_hungary.10 } }
+			custom_effect_tooltip = HUN_protect_czechoslovakia_tt
 		}
 	}
 
@@ -506,6 +511,7 @@ focus_tree = {
 
 		bypass = {
 			controls_state = 102
+			controls_state = 853
 			controls_state = 103
 			controls_state = 109
 			controls_state = 104
@@ -522,6 +528,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			add_state_claim = 102
+			add_state_claim = 853
 			add_state_claim = 103
 			add_state_claim = 109
 			add_state_claim = 104
@@ -568,8 +575,10 @@ focus_tree = {
 		bypass = {
 			is_subject = no
 			controls_state = 736
+			controls_state = 852
 			controls_state = 160
 			controls_state = 39
+			controls_state = 850
 		}
 
 		cancel_if_invalid = yes
@@ -579,8 +588,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			add_state_claim = 736
+			add_state_claim = 852
 			add_state_claim = 160
 			add_state_claim = 39
+			add_state_claim = 850
 			if = {
 				limit = {
 					160 = { is_controlled_by = ITA }
@@ -1513,6 +1524,9 @@ focus_tree = {
 			153 = {
 				NOT = { is_owned_by = AUS }
 			}
+			848 = {
+				NOT = { is_owned_by = AUS }
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1550,6 +1564,7 @@ focus_tree = {
 					is_faction_leader = yes
 				}
 				is_subject = no
+				ITA_is_kinda_fascist = yes
 			}
 		}
 
@@ -1808,7 +1823,7 @@ focus_tree = {
 			add_state_core = 664
 			add_state_core = 45
 			add_state_core = 764
-			add_state_core = 82
+			add_state_claim = 82
 		}
 	}
 
@@ -2042,7 +2057,6 @@ focus_tree = {
 					}
 				}
 				45 = { add_core_of = HUN }
-				108 = { add_core_of = HUN }
 				764 = { add_core_of = HUN }
 				else = {
 					if = {
@@ -2433,7 +2447,7 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			is_in_faction_with = SOV
 		}
 
 		cancel_if_invalid = yes
@@ -2623,8 +2637,25 @@ focus_tree = {
 			add_tech_bonus = {
 				name = HUN_industrial_revitalization
 				bonus = 1.0
-				uses = 1
+				uses = 3
 				category = industry
+			}
+						random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = ROM_malaxa_IC
 			}
 		}
 	}
@@ -2663,7 +2694,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2673,7 +2704,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2683,7 +2714,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2708,7 +2739,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_reintegrate_the_railroads_Inf
@@ -2723,7 +2754,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_reintegrate_the_railroads_Inf_2
@@ -2738,7 +2769,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_reintegrate_the_railroads_Inf_3
@@ -2786,10 +2817,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_support_domestic_industry_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2804,10 +2835,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = HUN_support_domestic_industry_IC
@@ -2853,7 +2884,7 @@ focus_tree = {
 					}
 				}
 				43 = {
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 8
 				}
 			}
 		}
@@ -2862,8 +2893,7 @@ focus_tree = {
 	focus = {
 		id = HUN_institute_for_industrial_techniques
 		icon = GFX_focus_research
-		prerequisite = { focus = HUN_support_urbanization }
-		prerequisite = { focus = HUN_support_domestic_industry }
+		prerequisite = { focus = HUN_support_urbanization focus = HUN_support_domestic_industry }
 		x = 0
 		y = 3
 		relative_position_id = HUN_industrial_revitalization
@@ -2923,7 +2953,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = HUN_announce_the_gyor_program
 				bonus = 1.0
-				uses = 2
+				uses = 3
 				category = industry
 			}
 		}
@@ -2966,10 +2996,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_civilian_industry_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2984,10 +3014,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = HUN_civilian_industry_IC
@@ -3061,15 +3091,15 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_expand_the_manfred_weiss_steel_works_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 26
 				}
 			}
 		}
@@ -3085,16 +3115,16 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_expand_the_manfred_weiss_steel_works_IC
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 26
 				}
 			}
 		}
@@ -3131,7 +3161,7 @@ focus_tree = {
 			43 = {
 				add_resource = {
 					type = aluminium
-					amount = 16
+					amount = 48
 				}
 			}
 		}
@@ -3207,10 +3237,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_domestic_arms_industry_AF1
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3218,10 +3248,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_domestic_arms_industry_AF2
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -3236,10 +3266,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = HUN_domestic_arms_industry_AF1
@@ -3252,10 +3282,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 5
 					instant_build = yes
 				}
 				set_state_flag = HUN_domestic_arms_industry_AF2
@@ -3329,10 +3359,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_boost_hungarian_aviation_industry_AF1
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -3347,10 +3377,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_boost_hungarian_aviation_industry_AF1
@@ -3394,7 +3424,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = HUN_synthetic_industry
 				bonus = 3.0
-				uses = 1
+				uses = 3
 				category = synth_resources
 			}
 		}
@@ -3433,10 +3463,10 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_synthetic_industry_AF1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -3455,10 +3485,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = HUN_synthetic_industry_AF1
@@ -3528,7 +3558,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 25
+			army_experience = 125
 		}
 	}
 
@@ -3562,8 +3592,8 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = HUN_theoretical_air_efforts
-				cost_reduction = 0.5
-				uses = 1
+				cost_reduction = 1.5
+				uses = 3
 				category = air_doctrine
 			}
 		}
@@ -3670,7 +3700,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = HUN_establish_the_air_force
 				cost_reduction = 0.5
-				uses = 1
+				uses = 3
 				category = air_doctrine
 			}
 		}
@@ -3745,9 +3775,7 @@ focus_tree = {
 				bonus = 1.0
 				ahead_reduction = 2
 				uses = 1
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = cat_heavy_fighter
 			}
 		}
 	}
@@ -3785,11 +3813,8 @@ focus_tree = {
 				name = HUN_light_fighter_effort
 				bonus = 1.0
 				ahead_reduction = 2
-				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				uses = 2
+				category = light_fighter
 			}
 		}
 	}
@@ -3828,9 +3853,7 @@ focus_tree = {
 				bonus = 1.0
 				ahead_reduction = 2
 				uses = 1
-				technology = CAS1
-				technology = CAS2
-				technology = CAS3
+				category = cas_bomber
 			}
 		}
 	}
@@ -3922,9 +3945,22 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				has_tech = fighter3
-				has_tech = heavy_fighter3
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				NOT = {
+					has_tech = fighter3
+					has_tech = heavy_fighter3
+				}
+			}
+			else = {
+				NOT = {
+					has_tech = advanced_small_airframe
+					has_tech = advanced_medium_airframe
+				}
 			}
 			OR = {
 				GER = {
@@ -4004,9 +4040,22 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				has_tech = CAS3
-				has_tech = tactical_bomber3
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				NOT = {
+					has_tech = CAS3
+					has_tech = tactical_bomber3
+				}
+			}
+			else = {
+				NOT = {
+					has_tech = advanced_small_airframe
+					has_tech = advanced_medium_airframe
+				}
 			}
 			OR = {
 				GER = {
@@ -4816,6 +4865,81 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HUN_a_new_flagship
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = HUN_capital_ships }
+		x = 0
+		y = 1
+		relative_position_id = HUN_capital_ships
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+		
+		available = {
+			has_tech = basic_ship_hull_heavy
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Viribus Unitis Class"
+				type = ship_hull_heavy_2
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = dp_ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_heavy_battery_1
+					mid_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = dp_ship_secondaries_1
+					rear_1_custom_slot = ship_heavy_battery_1
+				}
+				upgrades = {
+					ship_reliability_upgrade = 2
+					ship_engine_upgrade = 2
+					ship_armor_upgrade = 3
+					ship_gun_upgrade = 3
+				}
+			}
+
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					creator = "HUN"
+					version_name = "Viribus Unitis Class"
+				}
+				name = "Viribus Unitis"
+				requested_factories = 2
+				progress = 0.75
+				amount = 1
+			}
+		}
+	}
 
 	focus = {
 		id = HUN_reform
@@ -4853,6 +4977,73 @@ focus_tree = {
 				category = naval_doctrine
 			}
 
+		}
+	}
+	
+	focus = {
+		id = HUN_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = HUN_naval_warfare }
+		x = 0
+		y = 1
+		relative_position_id = HUN_naval_warfare
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = HUN_dockyards_flag
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			navy_experience = 50
+			random_owned_controlled_state = {
+				prioritize = { 103 }
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = HUN_dockyards_flag
+			}
 		}
 	}
 
