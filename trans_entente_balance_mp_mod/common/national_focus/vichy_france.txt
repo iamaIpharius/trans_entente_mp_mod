@@ -2387,7 +2387,7 @@
 			remove_ideas = FRA_occupation_costs_4
 			add_ideas = FRA_occupation_costs_1
 			GER = {
-				add_ideas = {id = VIC_occupation_2}
+				add_ideas = { VIC_occupation_2}
 			}
 		}
 	}
@@ -2443,7 +2443,7 @@
 			remove_ideas = FRA_occupation_costs_4
 			add_ideas = FRA_occupation_costs_2
 			GER = {
-				add_ideas = {id = VIC_occupation_1}
+				add_ideas = { VIC_occupation_1}
 			}
 		}
 	}
@@ -2517,7 +2517,7 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_timed_idea = {idea = VIC_stabilizing days = 70}
+			add_timed_idea = {idea = VIC_stabilizing days = 120}
 		}
 	}
 
@@ -2834,40 +2834,76 @@
 				is_fully_controlled_by = GER 
 			}
 			19 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			23 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			24 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			27 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			17 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			18 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			16 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			30 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			14 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			15 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			29 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			785 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			31 = {
 				is_fully_controlled_by = VIC
@@ -2890,7 +2926,7 @@
 		completion_reward = {
 			remove_ideas = FRA_occupation_costs_1
 			GER = {
-				remove_ideas = {id = VIC_occupation_2}
+				remove_ideas = { VIC_occupation_2}
 				country_event = {id = france.46} 
 			}
 		}
@@ -2914,40 +2950,76 @@
 				is_fully_controlled_by = GER 
 			}
 			19 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			23 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			24 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			27 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			17 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			18 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			16 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			30 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			14 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			15 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			29 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			785 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			31 = {
 				is_fully_controlled_by = VIC
@@ -2970,7 +3042,7 @@
 		completion_reward = {
 			remove_ideas = FRA_occupation_costs_2
 			GER = {
-				remove_ideas = {id = VIC_occupation_1}
+				remove_ideas = {VIC_occupation_1}
 				country_event = {id = france.46} 	
 			}
 		}
@@ -2994,40 +3066,76 @@
 				is_fully_controlled_by = GER 
 			}
 			19 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			23 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			24 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			27 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			17 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			18 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			16 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			30 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			14 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				}
 			}
 			15 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			29 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			785 = {
-				is_fully_controlled_by = GER 
+				OR ={
+					is_fully_controlled_by = GER
+					is_fully_controlled_by = VIC
+				} 
 			}
 			31 = {
 				is_fully_controlled_by = VIC
@@ -3675,9 +3783,9 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_ideas = {id = VIC_consequence_of_helping_the_german_plane_prod}
+			add_ideas = { VIC_consequence_of_helping_the_german_plane_prod}
 			GER = {
-				add_ideas = {id = VIC_help_german_figther_prod}
+				add_ideas = {VIC_help_german_figther_prod}
 			}
 		}
 	}
@@ -3698,9 +3806,10 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_timed_idea = {idea = VIC_heavy_consequence_of_helping_the_german_plane_prod days = 90}
+			set_country_flag = heavly_helping_german_fighter_prod_flag
+			add_ideas = VIC_heavy_consequence_of_helping_the_german_plane_prod
 			GER = {
-				add_timed_idea = {idea = VIC_help_german_figther_prod2 days = 90}
+				add_ideas = VIC_help_german_figther_prod2
 			}
 		}
 	}
@@ -3728,7 +3837,7 @@
 				category = light_air
 			}
 			air_experience = 80
-			add_ideas = {id = vic_our_own_good_plane}
+			add_ideas = {vic_our_own_good_plane}
 		}
 	}
 	focus = {

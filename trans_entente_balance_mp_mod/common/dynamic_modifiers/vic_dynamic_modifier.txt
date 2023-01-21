@@ -31,7 +31,7 @@ VIC_army_dynamic_modifier = {
 
 VIC_industry_modifier = {
     enable = {
-        always = no 
+        always = yes
     }
     icon = generic_army_europe_3
 
