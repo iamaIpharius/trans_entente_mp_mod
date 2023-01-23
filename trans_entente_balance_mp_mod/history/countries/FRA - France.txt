@@ -414,6 +414,7 @@ recruit_character = FRA_jacques_duclos
 recruit_character = FRA_marcel_bucard
 
 
+
 if = {
 	limit = { has_dlc = "La Resistance" }
 	create_operative_leader = {

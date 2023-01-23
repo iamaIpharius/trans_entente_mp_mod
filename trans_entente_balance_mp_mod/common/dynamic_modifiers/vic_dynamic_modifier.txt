@@ -2,7 +2,8 @@ VIC_army_special_forces_dynamic_modifier = {
     enable = { 
         always = yes 
     }
-    icon = generic_army_europe_3
+    
+    icon = GFX_idea_general_staff
 
     special_forces_cap = VIC_special_force_cap
     special_forces_attack_factor = VIC_special_force_attack_factor
@@ -15,7 +16,9 @@ VIC_army_dynamic_modifier = {
     enable = {
         always = yes
     }
-    icon = generic_army_europe_3
+
+    icon = GFX_idea_vic_army
+
     experience_gain_army_factor = VIC_army_gain_experience
     army_org_factor = VIC_army_org_factor
     max_dig_in = VIC_max_dig_in
@@ -33,7 +36,7 @@ VIC_industry_modifier = {
     enable = {
         always = yes
     }
-    icon = generic_army_europe_3
+    icon = GFX_idea_man_five_year_plan_industry
 
     production_speed_industrial_complex_factor = VIC_civ_production
     production_speed_arms_factory_factor = VIC_mil_production

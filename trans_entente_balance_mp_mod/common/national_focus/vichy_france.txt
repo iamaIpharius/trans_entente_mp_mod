@@ -40,6 +40,24 @@
 			add_ideas = minors_license_production
 			add_ideas = axis_minors_special_forces
 			add_country_leader_trait = emergency_powers
+
+			hidden_effect = { 
+				recruit_character = VIC_pierre_laval
+				recruit_character = VIC_marius_viple
+				recruit_character = VIC_rene_bousquet
+				recruit_character = VIC_eugene_bridoux
+				recruit_character = VIC_maxime_weygand
+				recruit_character = VIC_jean_marie_bergeret
+				recruit_character = VIC_jean_romatet
+				recruit_character = VIC_jean_francois_darlan
+				recruit_character = VIC_jean_marie_abrial
+				recruit_character = VIC_jean_francois_jannekeyn
+				recruit_character = VIC_jean_de_laborde
+				recruit_character = VIC_marcel_bruno_gensoul
+				recruit_character = VIC_jean_romatet
+				recruit_character = VIC_pierre_le_gloan
+			}
+
 			if = {
 				limit = {
 					has_idea = FRA_disjointed_government

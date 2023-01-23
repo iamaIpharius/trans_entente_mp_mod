@@ -1,16 +1,252 @@
-characters = {
-	VIC_petain_if_he_wasnt_a_complet_nazis = {
-		name = "Petain \"death to the axis\"  "
-		portraits = {
-			civilian= {
-				large = GFX_petain_betraying
+characters = { 
+	# political_advisor #
+
+	 	VIC_pierre_laval = {
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_political_advisor_europe_1"
+				}
+			}
+			advisor={
+				slot = political_advisor
+				cost = 100 
+				idea_token = VIC_pierre_laval
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { captain_of_industry}
+			}
+
+			
+		}
+		VIC_marius_viple = {
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_political_advisor_europe_2"
+				}
+			}
+			advisor={
+				slot = political_advisor
+				cost = 100 
+				idea_token = VIC_marius_viple
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { popular_figurehead }
+			}
+
+			
+		}
+
+		VIC_rene_bousquet = {
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_political_advisor_europe_2"
+				}
+			}
+			advisor={
+				slot = political_advisor
+				cost = 100 
+				idea_token = VIC_rene_bousquet
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { silent_workhorse }
+			}
+
+			
+		}
+
+	# army chief # 
+
+		VIC_eugene_bridoux = {
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_army_europe_1"
+				}
+			}
+			advisor={
+				slot = army_chief
+				cost = 100 
+				idea_token = VIC_eugene_bridoux
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { army_chief_reform_2 }
 			}
 		}
-		country_leader = {
-			ideology = despotism
-			expire="1965.1.1.1"
-			id =-1
+
+		VIC_maxime_weygand = {
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_army_europe_2"
+				}
+			}
+			advisor={
+				slot = army_chief
+				cost = 100 
+				idea_token = VIC_maxime_weygand
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { army_chief_defensive_3 }
+			}
+		}
+	# air_chief # 
+
+		VIC_jean_marie_bergeret = {
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_air_europe_1"
+				}
+			}
+			advisor={
+				slot = air_chief
+				cost = 100 
+				idea_token = VIC_jean_marie_bergeret
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { air_chief_reform_3 }
+			}
+		}
+
+		VIC_jean_romatet = {
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_air_europe_1"
+				}
+			}
+			advisor={
+				slot = air_chief
+				cost = 100 
+				idea_token = VIC_jean_romatet
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { air_chief_reform_3 }
+			}
 		}
 		
-	}
+	# navy_chief # 
+
+		VIC_jean_francois_darlan ={ 
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_air_europe_2"
+				}
+			}
+			advisor={
+				slot = navy_chief
+				cost = 100 
+				idea_token = VIC_jean_francois_darlan
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { navy_chief_naval_aviation_3 }
+			}
+		}
+
+		VIC_jean_marie_abrial ={ 
+			portraits = {
+				civilian={
+				small = "GFX_idea_generic_air_europe_3"
+				}
+			}
+			advisor={
+				slot = navy_chief
+				cost = 100 
+				idea_token = VIC_jean_marie_abrial
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { navy_chief_decisive_battle_2 }
+			}
+		}
+
+	# high_command # 
+		VIC_jean_francois_jannekeyn = {
+			portraits = { 
+				civilian={
+				small = "GFX_idea_generic_air_europe_1"
+				}
+			}
+			advisor={
+				slot = high_command
+				cost = 100
+				idea_token = VIC_jean_francois_jannekeyn
+				ledger = navy
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { air_naval_strike_2 }
+			}
+		}
+
+		VIC_jean_de_laborde = {
+			portraits = { 
+				civilian={
+				small = "GFX_idea_generic_air_europe_1"
+				}
+			}
+			advisor={
+				slot = high_command
+				cost = 100
+				idea_token = VIC_jean_de_laborde
+				ledger = navy 
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { navy_capital_ship_2 }
+			}
+		}
+
+		VIC_marcel_bruno_gensoul = {
+			portraits = { 
+				civilian={
+				small = "GFX_idea_generic_navy_europe_2"
+				}
+			}
+			advisor={
+				slot = high_command
+				cost = 100
+				idea_token = VIC_marcel_bruno_gensoul
+				ledger = army  
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { army_infantry_2 }
+			}
+		}
+		
+		VIC_pierre_le_gloan = {
+			portraits = { 
+				civilian={
+				small = "GFX_idea_generic_navy_europe_1"
+				}
+			}
+			advisor={
+				slot = high_command
+				cost = 100
+				idea_token = VIC_marcel_bruno_gensoul
+				ledger = air   
+				allowed = {
+					original_tag = FRA
+		 			has_government = fascism
+				}
+				traits = { air_air_superiority_2 }
+			}
+		}
 }

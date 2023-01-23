@@ -1,51 +1,10 @@
 ideas = {
-	political_advisor = {
-
-		VIC_pierre_laval = {
-
-			picture = generic_political_advisor_europe_1
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-			traits = { backroom_backstabber }
-			ai_will_do = {
-				factor = 0
-			}
-		}
-
-		VIC_marius_viple = {
-
-			picture = generic_political_advisor_europe_2
-
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-			traits = { popular_figurehead }
-		}
-
-		VIC_rene_bousquet = {
-
-			picture = generic_political_advisor_europe_3
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-			traits = { compassionate_gentleman }
-		}
-	}
-
 	naval_manufacturer = { 
 		designer = yes 
 
 		vic_arsenal_de_toulon = {
 			name =  "Arsenal de Toulon"
+			picture= FRA_army_of_aggression_focus
 			allowed = {
 				always = no  
 			}
@@ -63,6 +22,7 @@ ideas = {
 
 		vic_arsenal_de_brest = {
 			name = "Arsenal de Brest"
+			picture = fra_deluge
 			allowed = {
 				always = no 
 			}
@@ -82,6 +42,7 @@ ideas = {
 			allowed = {
 				always = no 
 			}
+			picture = skelton_ships
 			
 			research_bonus = {
 				naval_equipment = 0.2
@@ -114,233 +75,7 @@ ideas = {
 		}
 
 	}
-
-	theorist = {
-
-		VIC_charles_huntziger = {
-			ledger = army
-					
-					
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-			picture = generic_army_europe_4
-			
-			traits = { military_theorist }
-		}
-
-		VIC_lucien_lacaze = {
-			ledger = navy
-					
-					
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-			picture = generic_navy_europe_1
-			
-			traits = { naval_theorist }
-		}
-	}
-	# MILITARY
-	army_chief = {
-
-		VIC_eugene_bridoux = {
-			
-			picture = generic_army_europe_1
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-			traits = { army_chief_reform_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		VIC_maxime_weygand = {
-			
-			picture = generic_army_europe_3
-			
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-			traits = { army_chief_defensive_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-
-	air_chief = {
-		
-
-		VIC_jean_marie_bergeret = {
-			
-			picture = generic_air_europe_2
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-
-			
-			traits = { air_chief_safety_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		VIC_jean_romatet = {
-			
-			picture = generic_air_europe_3
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-
-			
-			traits = { air_chief_ground_support_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-	}
-
-	navy_chief = {
-
-		VIC_jean_francois_darlan = {
-			
-			picture = generic_navy_europe_1
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-
-			
-			traits = { navy_chief_maneuver_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		VIC_jean_marie_abrial = {
-			
-			picture = generic_navy_europe_1
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-
-			
-			traits = { navy_anti_submarine_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-
-	high_command = {
-
-
-		VIC_jean_francois_jannekeyn = {
-			ledger = navy
-			
-			picture = generic_air_europe_1
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-
-			
-			traits = { air_naval_strike_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 	
-		VIC_jean_de_laborde = {
-			ledger = navy
-			
-			picture = generic_navy_europe_2
-
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-
-			
-			traits = { navy_capital_ship_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		VIC_marcel_bruno_gensoul = {
-			ledger = navy
-			
-			picture = generic_navy_europe_1
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-
-			
-			traits = { navy_screen_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		VIC_pierre_le_gloan = {
-			ledger = air
-			
-			picture = generic_air_europe_2
-			
-			allowed = {
-				original_tag = FRA
-				has_government = fascism
-			}
-			
-
-			
-			traits = { air_air_superiority_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
 	country = {
 		rebuild_fleet_vichy = { 
 			name = "rebuild the Navy"
@@ -431,7 +166,7 @@ ideas = {
 		}
 		VIC_big_strong_marines = { 	
 			name = "Strong Marines"
-			picture = GFX_idea_vic_marines
+			picture = eng_special_air_service
 			allowed = {
 				always = no 
 			}
@@ -449,7 +184,7 @@ ideas = {
 
 		VIC_time_to_die = {
 			name = "time to die"
-			picture = GFX_idea_vic_marines
+			picture = triumphant_will
 			allowed = {
 				always = no
 			}
@@ -473,7 +208,7 @@ ideas = {
 
 		VIC_restruturing_the_army = {
 			name = "restructuring the army"
-			picture = GFX_idea_vic_marines
+			picture = chi_army_corruption3
 			allowed = {
 				always = no
 			}
@@ -492,7 +227,7 @@ ideas = {
 		
 		VIC_occupation_1 = {
 			name = "Occupation cost"
-			picture = GFX_idea_vic_marines
+			picture = generic_goods_red_bonus
 			allowed = {
 				always = no
 			}
@@ -507,7 +242,7 @@ ideas = {
 		}
 		VIC_occupation_2 = {
 			name = "Occupation cost"
-			picture = GFX_idea_vic_marines
+			picture = generic_goods_red_bonus
 			allowed = {
 				always = no
 			}
@@ -522,7 +257,7 @@ ideas = {
 		}
 		VIC_italian_economic_support = {
 			name = "Italian ecomoic support"
-			picture = GFX_idea_vic_marines
+			picture = ITA_impero_italiano
 			allowed = {
 				always = no
 			}
@@ -537,7 +272,7 @@ ideas = {
 		}
 		VIC_german_economic_support = {
 			name = "German ecconomic support"
-			picture = GFX_idea_vic_marines
+			picture = hol_caved_to_the_germans
 			allowed = {
 				always = no
 			}
@@ -552,7 +287,7 @@ ideas = {
 		}
 		VIC_stabilizing = {
 			name = "stabilizing"
-			picture = GFX_idea_vic_marines
+			picture = Gchi_hyper_inflation 
 			allowed = {
 				always = no
 			}
@@ -568,7 +303,7 @@ ideas = {
 		}
 		VIC_german_support = {
 			name = "German support"
-			picture = GFX_idea_vic_marines
+			picture = ger_rebuild_the_nation
 			allowed = {
 				always = no
 			}
@@ -582,7 +317,7 @@ ideas = {
 		}
 		VIC_producing_fighter_en_masse = {
 			name = "producing fighter en masse"
-			picture = generic_air_bonus
+			picture = air_support_focus
 			allowed = {
 				always = no
 			}
@@ -602,7 +337,7 @@ ideas = {
 
 		VIC_help_german_figther_prod = {
 			name = "Help german fighter production"
-			picture = generic_air_bonus
+			picture = air_support_focus
 			allowed = {
 				always = no
 			}
@@ -623,13 +358,14 @@ ideas = {
 
 		VIC_consequence_of_helping_the_german_plane_prod = {
 			name = "consequence of helping the german plane industry"
+			picture = saf_ossewabrandwag
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_air_bonus
+			
 			equipment_bonus = {
 				small_plane_airframe = {
 					build_cost_ic = 0.2
@@ -643,13 +379,14 @@ ideas = {
 
 		VIC_heavy_consequence_of_helping_the_german_plane_prod = {
 			name = "heavy consequence of helping the german plane industry"
+			picture = saf_ossewabrandwag_2 
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_air_bonus
+			
 			equipment_bonus = {
 				small_plane_airframe = {
 					build_cost_ic = 0.8
@@ -663,13 +400,14 @@ ideas = {
 
 		VIC_help_german_figther_prod2 = {
 			name = "Hevly help german fighter production"
+			picture = air_support_focus
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_air_bonus
+			
 			equipment_bonus = {
 				small_plane_airframe = {
 					build_cost_ic = -0.2
@@ -688,7 +426,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_army_europe_4
+			picture = man_five_year_plan_tank
 			equipment_bonus = {
 				medium_tank_chassis = {
 					build_cost_ic = -0.2
@@ -701,3 +439,4 @@ ideas = {
 		}
 	}
 }
+
