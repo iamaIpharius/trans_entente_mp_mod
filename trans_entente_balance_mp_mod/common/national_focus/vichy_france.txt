@@ -984,7 +984,7 @@
 	# 	}
 	# }
 
-	focus = { # probably should be remade
+	focus = { 
 		id = VIC_appeal_to_the_navy
 		icon = GFX_goal_generic_propaganda
 		
@@ -1011,6 +1011,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		completion_reward = {
 			add_war_support = 0.05
+			custom_effect_tooltip = VIC_appeal_to_the_navy_tt
 		}
 	}
 

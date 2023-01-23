@@ -2474,3 +2474,4 @@ VIC_improve_production_speed_tt:0 "$VIC_modify_industry_modifier$ \n max efficie
 VIC_civilian_ecco_tt:0 "industrial complex construction speed : §G+0.20%§! \n repair factor : §G+0.20%§! \n capacity factor : §G+0.20%§!"
 VIC_build_mil_tt:0 "$VIC_modify_industry_modifier$ \n arms factory construction speed : §G+0.20%§! \n max efficiency : §G+0.10%§! \n efficency gain factor : §G+0.10%§!"
 VIC_rebuild_infrastructure_tt:0 "$VIC_modify_industry_modifier$ \n infrastructure construction speed factor : §G+0.20%§! \n construction speed railways factor : §G+0.20%§!"
+VIC_appeal_to_the_navy_tt:0 "This focus will §Gremove§! the al-elkabir decision. "
