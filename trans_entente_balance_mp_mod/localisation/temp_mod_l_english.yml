@@ -169,3 +169,11 @@
  defensive_line_desc:0 "If you entrench yourself behind strong fortifications, you compel the enemy to seek a solution elsewhere."
  mandatory_officer_school:0 "Mandatory Officer School"
  mandatory_officer_school_desc:0 "Victory usually goes to the army who has better trained officers and men."
+ 
+ mongolia.1.t:0 "The Mongols Ride Again"
+ mongolia.1.d:0 "With the rapidly deteriorating situation of the Sino-Japanese War, we have an oppurtunity, nay, a responsibility, to protect the people of Inner Mongolia from Japanese oppression."
+ mongolia.1.a:0 "Ready our saddles, we ride at dawn."
+ mongolia.1.b:0 "We cannot go back to the old ways."
+ mongolia.2.t:0 "Northern Menace"
+ mongolia.2.d:0 "As if the deteriorating situation with the Japanese invasion wasn't bad enough, word has come of yet another incursion into China, this time from a foe far older. The Mongolian Army has crossed the border, aiming to seize our Chinese land from us, and they have been met by local groups of ethnic Mongols and Communist sympathisers."
+ mongolia.2.a:0 "There is nothing we can do."
