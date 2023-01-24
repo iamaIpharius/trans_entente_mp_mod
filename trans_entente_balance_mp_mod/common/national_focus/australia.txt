@@ -3191,7 +3191,7 @@
 			is_in_faction_with = ENG
 			ENG = { has_government = ROOT }
 			MAL = {
-				is_puppet_of = ENG
+				is_subject_of = ENG
 			}
 		}
 		
@@ -3244,10 +3244,10 @@
 			is_in_faction_with = ENG
 			ENG = { has_government = ROOT }
 			SAF = {
-				is_puppet_of = ENG
+				is_subject_of = ENG
 			}
 			MAL = {
-				is_puppet_of = AST
+				is_subject_of = AST
 			}
 			284 = {
 				is_owned_by = AST

@@ -102,7 +102,7 @@
  tfv_australia.4.t:0 "Outpost in the East"
  tfv_australia.4.d:0 "The Crown has decided not only to support our proposal to take responsibility for Singapore and Borneo, but have added that we should incorporate the New Zealand government into our Commonwealth, thereby becoming the sole representative of the Crown in the Pacific region."
  tfv_australia.4.a:0 "God save the King!"
- tfv_australia.1.c:0 "The Australians should take command of all our defensive needs in the region."
+ tfv_australia.1.c:0 "The Australians should take command of all our defensive needs in the region, including New Zealand."
 
  AST_antipodean_union:0 "Antipodean Union"
  AST_antipodean_union_desc:0 "With the merger of the governments in [285.GetCapitalVictoryPointName], [284.GetCapitalVictoryPointName], and [336.GetCapitalVictoryPointName], we have the oppurtunity to establish a truly unprecedented union of the British antipodean territories."
@@ -110,12 +110,16 @@
 
  tfv_australia.5.t:0 "A Second United Kingdom?"
  tfv_australia.5.d:0 "The Governor-General has forwarded a proposal from [AST.GetLeader] to establish a mirror government of Westminster in the southern hemisphere. This proposed union, constituting the dominions of South Africa, Australia, and New Zealand, and the colonies of the Indies, the Pacific, and southern Africa would be a bastion for our interests on the other half of the globe."
- tfv_australia.5.a:0 "We can trust [AST.GetLeader.GetSurname] with this responsibility, even though it may seem great."
+ tfv_australia.5.a:0 "We can trust the Australians with this responsibility, even though it may seem great."
  tfv_australia.5.b:0 "This proposal is insanity!"
 
  tfv_australia.6.t:0 "The United Kingdom of Australasia, South Africa, and the Indies"
  tfv_australia.6.d:0 "Today his Majesty was crowned again, as the King of the United Kingdom of Australasia, South Africa, and the Indies. He takes this throne at the same time as the governments of the aforementioned nations met in [522.GetCapitalVictoryPointName] to discuss processes of merger and unprecedented plans for the future."
  tfv_australia.6.a:0 "God save the King!"
+ 
+ AST_antipodean_union:0 "Antipodean Union"
+ AST_antipodean_union_ADJ:0 "Antipodean"
+ AST_antipodean_union_DEF:0 "United Kingdom of Australasia, South Africa, and the Indies"
  
  BBA_italy_interaction_events.47.t:0 "Italy Offers Territory in Exchange for Mutual Guarantees"
  BBA_italy_interaction_events.47.desc:0 "[ITA.GetName] has offered to support our claims to [106.GetName] in exchange for mutual guarantees and cooperation treaties. This seems like a good deal to us, should we accept?"
