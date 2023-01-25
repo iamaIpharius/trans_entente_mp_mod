@@ -1,0 +1,442 @@
+ideas = {
+	naval_manufacturer = { 
+		designer = yes 
+
+		vic_arsenal_de_toulon = {
+			name =  "Arsenal de Toulon"
+			picture= FRA_army_of_aggression_focus
+			allowed = {
+				always = no  
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.20
+			}
+			
+			equipment_bonus = {
+				
+			}
+			removal_cost = -1
+			traits = { special_sub_production_manufacturer }
+		}
+
+		vic_arsenal_de_brest = {
+			name = "Arsenal de Brest"
+			picture = fra_deluge
+			allowed = {
+				always = no 
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				
+			}
+			removal_cost = -1
+			traits = { big_ship_strong }
+		}
+		VIC_skelon_ship = {
+			name = "skeleton ship"
+			allowed = {
+				always = no 
+			}
+			picture = skelton_ships
+			
+			research_bonus = {
+				naval_equipment = 0.2
+			}
+			
+			equipment_bonus = {
+				
+			}
+			removal_cost = -1
+			traits = { really_bad_ship_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		vic_our_own_good_plane = {
+			name = "Our own plane designer"
+			allowed = {
+				always = no 
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.15
+				}
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+	}
+	
+	country = {
+		rebuild_fleet_vichy = { 
+			name = "rebuild the Navy"
+			picture = generic_navy_bonus
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.20
+			}
+
+			removal_cost = -1
+		}
+
+		vic_sub_production = {
+			name = "more sub"
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.2 instant = yes
+					}
+				}
+			
+			removal_cost = -1
+		}
+
+		recruiting_from_colonies = { 
+			name = "begining recruitement process in the colonies"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+			}
+			
+		}
+
+		recruiting_from_axis = { 
+			name = "begining recruitement process in the axis"
+			picture = generic_army_europe_1
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = { 
+				war_support_factor = 0.05
+			}
+			
+		}
+
+		VIC_atlantic_wall_idea = {
+			name = "atlantic wall"
+			picture = generic_fortify_the_borders
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.4
+			}
+		}
+		VIC_big_strong_marines = { 	
+			name = "Strong Marines"
+			picture = eng_special_air_service
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+				special_forces_cap  = 0.15
+			}
+		}
+
+		VIC_time_to_die = {
+			name = "time to die"
+			picture = triumphant_will
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = { 
+				org_loss_when_moving = -0.05
+				supply_consumption_factor = -0.05
+			}
+			
+			targeted_modifier = {
+				tag = UK 
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		VIC_restruturing_the_army = {
+			name = "restructuring the army"
+			picture = chi_army_corruption3
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = { 
+				org_loss_when_moving = 0.05
+				supply_consumption_factor = 0.05
+				army_org_factor = -0.1
+			}
+		}
+		
+		VIC_occupation_1 = {
+			name = "Occupation cost"
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+		VIC_occupation_2 = {
+			name = "Occupation cost"
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		VIC_italian_economic_support = {
+			name = "Italian ecomoic support"
+			picture = ITA_impero_italiano
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		VIC_german_economic_support = {
+			name = "German ecconomic support"
+			picture = hol_caved_to_the_germans
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+		VIC_stabilizing = {
+			name = "stabilizing"
+			picture = Gchi_hyper_inflation 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				stability_weekly = 0.002
+			}
+		}
+		VIC_german_support = {
+			name = "German support"
+			picture = ger_rebuild_the_nation
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+		VIC_producing_fighter_en_masse = {
+			name = "producing fighter en masse"
+			picture = air_support_focus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+		VIC_help_german_figther_prod = {
+			name = "Help german fighter production"
+			picture = air_support_focus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+		VIC_consequence_of_helping_the_german_plane_prod = {
+			name = "consequence of helping the german plane industry"
+			picture = saf_ossewabrandwag
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = 0.2
+					instant = yes
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+		VIC_heavy_consequence_of_helping_the_german_plane_prod = {
+			name = "heavy consequence of helping the german plane industry"
+			picture = saf_ossewabrandwag_2 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = 0.8
+					instant = yes
+				}
+			}
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		VIC_help_german_figther_prod2 = {
+			name = "Hevly help german fighter production"
+			picture = air_support_focus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			modifier = {
+				
+			}
+		}
+		VIC_tonk_good = {
+			name = "vichy tank"
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = man_five_year_plan_tank
+			equipment_bonus = {
+				medium_tank_chassis = {
+					build_cost_ic = -0.2
+					instant = yes 
+				}
+			}
+			modifier = {
+				
+			}
+		}
+	}
+}
+

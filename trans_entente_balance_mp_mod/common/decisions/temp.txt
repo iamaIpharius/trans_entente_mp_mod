@@ -332,3 +332,161 @@ war_measures = {
 		}
 	}
 }
+
+war_measures = {
+	expend_the_foreign_legion_in_colonies = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_colonies
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_colonies
+			}
+		}
+		complete_effect = { 
+			VIC = {
+				add_to_variable = { VIC_special_force_cap = 0.10 } 
+				add_to_variable = {VIC_acclimatization_hot_climate_gain_factor = 0.05}
+			}
+		}
+	}
+	expend_the_foreign_legion_in_axis = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		complete_effect = { 
+			VIC = {
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
+			}
+		}
+	}
+
+	expend_recruitment_in_germany = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		complete_effect = { 
+			VIC = {
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
+			}
+		}
+	}
+
+	expend_recruitment_in_italy = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		complete_effect = { 
+			VIC = {
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
+			}
+		}
+	}
+
+	expend_recruitment_in_romania = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		complete_effect = { 
+			VIC = {
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
+			}
+		}
+	}
+
+	expend_recruitment_in_hungary = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		complete_effect = { 
+			VIC = {
+				add_to_variable = { VIC_special_force_cap = 0.05 } 
+			}
+		}
+	}
+}

@@ -2232,7 +2232,7 @@ equipment_modules = {
 		parent = ship_airplane_launcher_1
 		add_stats = {
 			surface_detection = 10
-			sub_detection = 7
+			sub_detection = 3.5
 			build_cost_ic = 170
 		}
 		can_convert_from = {
@@ -2314,7 +2314,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 		parent = ship_sonar_1
 		add_stats = {
-			sub_detection = 14
+			sub_detection = 10.0
 			build_cost_ic = 60
 		}
 		can_convert_from = {

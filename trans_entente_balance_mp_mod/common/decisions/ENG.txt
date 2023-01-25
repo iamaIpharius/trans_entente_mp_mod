@@ -9056,6 +9056,7 @@ operations = {
 			any_country_with_original_tag = {
 				original_tag_to_check = FRA
 				has_government = fascism
+				NOT ={ VIC = { has_completed_focus = VIC_appeal_to_the_navy } }
 			}
 		}
 
@@ -9080,6 +9081,7 @@ operations = {
 				any_country_with_original_tag = {
 					original_tag_to_check = FRA
 					has_government = fascism
+					NOT = { VIC = { has_completed_focus = VIC_appeal_to_the_navy } }
 				}
 			}
 		}
