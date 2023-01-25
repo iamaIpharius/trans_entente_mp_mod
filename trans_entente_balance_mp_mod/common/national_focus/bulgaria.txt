@@ -6497,6 +6497,10 @@ focus_tree = {
 			add_political_power = 70
 			add_stability = 0.05
 			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
 		}
 	}
 
@@ -7550,7 +7554,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.05
+				popularity = 0.1
 			}
 			add_political_power = 70
 			custom_effect_tooltip = available_political_advisor
@@ -7917,7 +7921,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.1
+				popularity = 0.2
 			}
 			add_stability = -0.05
 			BUL_bs_low_loyalty_decrease_effect = yes

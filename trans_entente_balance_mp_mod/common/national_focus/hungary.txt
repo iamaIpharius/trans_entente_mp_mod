@@ -1821,6 +1821,7 @@ focus_tree = {
 			add_state_core = 83
 			add_state_core = 84
 			add_state_core = 664
+			add_state_core = 73
 			add_state_core = 45
 			add_state_core = 764
 			add_state_claim = 82
@@ -4274,7 +4275,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = HUN_the_botond
-				bonus = 1.0
+				ahead_reduction = 1
+				bonus = 3.0
 				uses = 1
 				category = motorized_equipment
 			}
