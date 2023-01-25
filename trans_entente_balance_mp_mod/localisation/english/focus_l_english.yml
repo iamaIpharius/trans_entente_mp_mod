@@ -2461,11 +2461,11 @@ VIC_training_for_winter_tt:0 "$VIC_modify_army_special_forces_dynamic_modifier$ 
 
 VIC_modify_army_dynamic_modifier:0 "Modify §Y$VIC_army_dynamic_modifier$§! by:"
 VIC_modernize_the_army_tt:0 "$VIC_modify_army_dynamic_modifier$ \n Army experience factor : §G+0.4%§! \n Army organisation factor: §R-0.05%§! \n Supply comsumption factor : §R+0.05%§!"
-VIC_the_old_guard_tt:0 "$VIC_modify_army_dynamic_modifier$ \n Army experience factor : §R-0.20%§! \n army org factor: §G+0.05%§! \n max dig in : §G+2§! \n dig in speed factor : §G+0.10%§! \n army core defence factor : §G+0.25%§! "
-VIC_napeleon_would_be_proud_tt:0 "$VIC_modify_army_dynamic_modifier$ \n army defence factor : §G+0.20%§! \n army org factor : §G+0.10%§! \n cas damage reduction : §G+0.10%§! \n army attack factor : §G+0.15%§!  "
+VIC_the_old_guard_tt:0 "$VIC_modify_army_dynamic_modifier$ \n Army experience factor : §R-0.20%§! \n army org factor: §G+0.05%§! \n max dig in : §G+2§! \n dig in speed factor : §G+0.10%§! \n army core defence factor : §G+0.05%§! "
+VIC_napeleon_would_be_proud_tt:0 "$VIC_modify_army_dynamic_modifier$ \n army defence factor : §G+0.05%§! \n army org factor : §G+0.10%§! \n cas damage reduction : §G+0.10%§! \n army attack factor : §G+0.05%§!  "
 VIC_protect_the_coast_tt:0 "$VIC_modify_army_dynamic_modifier$ \n army core defence factor : §G+0.20%§! \n Army organisation factor : §G+0.20%§!"
 VIC_protect_our_homeland_tt:0 "$VIC_modify_army_dynamic_modifier$ \n max dig in: §G+3§! \n dig in speed factor : §G+0.40%§!"
-VIC_by_any_mean_tt:0 "$VIC_modify_army_dynamic_modifier$ \n army core defence factor : §G+0.10%§! \n  dig in speed factor: §G+0.20%§! \n cas damage reduction : §G+0.20%§! \n equipement capture factor : §G+0.20%§! \n army gained exprience : §R-0.80%§! "
+VIC_by_any_mean_tt:0 "$VIC_modify_army_dynamic_modifier$ \n army core defence factor : §G+0.05%§! \n  dig in speed factor: §G+0.20%§! \n cas damage reduction : §G+0.10%§! \n equipement capture factor : §G+0.10%§! \n army gained exprience : §R-0.80%§! "
 
 
 VIC_modify_industry_modifier:0 "Modify §Y$VIC_industry_modifier$§! by:"
