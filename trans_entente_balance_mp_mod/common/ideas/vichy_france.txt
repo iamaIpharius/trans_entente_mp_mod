@@ -164,23 +164,6 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.4
 			}
 		}
-		VIC_big_strong_marines = { 	
-			name = "Strong Marines"
-			picture = eng_special_air_service
-			allowed = {
-				always = no 
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			
-			modifier = {
-				special_forces_cap  = 0.15
-			}
-		}
 
 		VIC_time_to_die = {
 			name = "time to die"

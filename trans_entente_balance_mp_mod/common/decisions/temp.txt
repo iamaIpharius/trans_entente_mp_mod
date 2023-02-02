@@ -297,6 +297,7 @@ political_actions = {
 				}
 				add = 50
 			}
+			
 		}
 	}	
 }
@@ -334,7 +335,7 @@ war_measures = {
 }
 
 war_measures = {
-	expend_the_foreign_legion_in_colonies = { 
+	better_training_colonies = { 
 		icon = generic_construction
 		available = { 
 			tag = VIC
@@ -343,6 +344,7 @@ war_measures = {
 			}
 		}
 		cost = 50
+		days_remove = 30
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 200
@@ -353,14 +355,13 @@ war_measures = {
 				has_idea = recruiting_from_colonies
 			}
 		}
-		complete_effect = { 
+		remove_effect = { 
 			VIC = {
-				add_to_variable = { VIC_special_force_cap = 0.10 } 
 				add_to_variable = {VIC_acclimatization_hot_climate_gain_factor = 0.05}
 			}
 		}
 	}
-	expend_the_foreign_legion_in_axis = { 
+	better_training_axis = { 
 		icon = generic_construction
 		available = { 
 			tag = VIC
@@ -369,6 +370,7 @@ war_measures = {
 			}
 		}
 		cost = 50
+		days_remove = 30
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 200
@@ -379,22 +381,22 @@ war_measures = {
 				has_idea = recruiting_from_axis
 			}
 		}
-		complete_effect = { 
+		remove_effect = { 
 			VIC = {
-				add_to_variable = { VIC_special_force_cap = 0.05 } 
+				add_to_variable = {VIC_acclimatization_cold_climate_gain_factor = 0.05}
 			}
 		}
 	}
-
-	expend_recruitment_in_germany = { 
+	better_training_colonies_2 = { 
 		icon = generic_construction
 		available = { 
 			tag = VIC
 			VIC = {
-				has_idea = recruiting_from_axis
+				has_idea = recruiting_from_colonies
 			}
 		}
 		cost = 50
+		days_remove = 30
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 200
@@ -402,17 +404,16 @@ war_measures = {
 		visible = {
 			tag = VIC
 			VIC = {
-				has_idea = recruiting_from_axis
+				has_idea = recruiting_from_colonies
 			}
 		}
-		complete_effect = { 
+		remove_effect = { 
 			VIC = {
-				add_to_variable = { VIC_special_force_cap = 0.05 } 
+				add_to_variable = {VIC_acclimatization_hot_climate_gain_factor = 0.05}
 			}
 		}
 	}
-
-	expend_recruitment_in_italy = { 
+	better_training_axis_2 = { 
 		icon = generic_construction
 		available = { 
 			tag = VIC
@@ -421,6 +422,7 @@ war_measures = {
 			}
 		}
 		cost = 50
+		days_remove = 30
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 200
@@ -431,14 +433,13 @@ war_measures = {
 				has_idea = recruiting_from_axis
 			}
 		}
-		complete_effect = { 
+		remove_effect = { 
 			VIC = {
-				add_to_variable = { VIC_special_force_cap = 0.05 } 
+				add_to_variable = {VIC_acclimatization_cold_climate_gain_factor = 0.05}
 			}
 		}
 	}
-
-	expend_recruitment_in_romania = { 
+	better_training_anywhere = { 
 		icon = generic_construction
 		available = { 
 			tag = VIC
@@ -446,7 +447,8 @@ war_measures = {
 				has_idea = recruiting_from_axis
 			}
 		}
-		cost = 50
+		cost = 60
+		days_remove = 70
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 200
@@ -457,35 +459,11 @@ war_measures = {
 				has_idea = recruiting_from_axis
 			}
 		}
-		complete_effect = { 
+		remove_effect = { 
 			VIC = {
-				add_to_variable = { VIC_special_force_cap = 0.05 } 
-			}
-		}
-	}
-
-	expend_recruitment_in_hungary = { 
-		icon = generic_construction
-		available = { 
-			tag = VIC
-			VIC = {
-				has_idea = recruiting_from_axis
-			}
-		}
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 200
-		}
-		visible = {
-			tag = VIC
-			VIC = {
-				has_idea = recruiting_from_axis
-			}
-		}
-		complete_effect = { 
-			VIC = {
-				add_to_variable = { VIC_special_force_cap = 0.05 } 
+				add_to_variable = {VIC_special_force_attack_factor = 0.05}
+				add_to_variable = {VIC_special_force_defence_factor = 0.05}
+				add_to_variable = { VIC_special_force_out_of_supply_factor = -0.15 }
 			}
 		}
 	}

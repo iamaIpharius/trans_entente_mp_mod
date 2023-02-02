@@ -10,6 +10,7 @@ VIC_army_special_forces_dynamic_modifier = {
     special_forces_defence_factor = VIC_special_force_defence_factor
     special_forces_out_of_supply_factor = VIC_special_force_out_of_supply_factor
     acclimatization_cold_climate_gain_factor = VIC_acclimatization_cold_climate_gain_factor
+    acclimatization_hot_climate_gain_factor = VIC_acclimatization_hot_climate_gain_factor
 }
 
 VIC_army_dynamic_modifier = {
