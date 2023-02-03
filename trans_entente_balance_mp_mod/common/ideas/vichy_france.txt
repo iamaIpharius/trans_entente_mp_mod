@@ -10,7 +10,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.20
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -35,7 +35,7 @@ ideas = {
 				
 			}
 			removal_cost = -1
-			traits = { big_ship_strong }
+			traits = { atlantic_fleet_naval_manufacturer }
 		}
 		VIC_skelon_ship = {
 			name = "skeleton ship"
@@ -49,10 +49,22 @@ ideas = {
 			}
 			
 			equipment_bonus = {
-				
+				ship_hull_light = {
+					lg_attack = 0.1
+					naval_range = -0.5
+					build_cost_ic = -0.20
+				}
+				ship_hull_cruiser = {
+					lg_attack = 0.1
+					naval_range = -0.5
+					build_cost_ic = -0.20
+				}
 			}
-			removal_cost = -1
-			traits = { really_bad_ship_manufacturer }
+			
+			traits = { naval_manufacturer }
+			
+			modifier = {
+			}
 		}
 	}
 
@@ -87,7 +99,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				industrial_capacity_dockyard = 0.20
+				industrial_capacity_dockyard = 0.15
 			}
 
 			removal_cost = -1
