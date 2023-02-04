@@ -2439,14 +2439,14 @@ country_event = {
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 2
 					include_locked = yes
 					}
 				}
-					add_extra_state_shared_building_slots = 4
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2456,14 +2456,14 @@ country_event = {
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 2
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2506,35 +2506,3 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = france.46
-	title = "france ask for the end of the occupation"
-	desc = "Vichy ask us for the return of there land"
-	is_triggered_only = yes
-	option = {
-		name = "yes"
-		VIC = {
-			transfer_state = 806
-			transfer_state = 17
-			transfer_state = 19
-			transfer_state = 15
-			transfer_state = 29
-			transfer_state = 785
-			transfer_state = 16
-			transfer_state = 24
-			transfer_state = 30
-			transfer_state = 23 
-			transfer_state = 14
-			transfer_state = 29
-			transfer_state = 18
-			transfer_state = 27
-		}
-	}
-	option = {
-		name = "no"
-		VIC = {
-			country_event = {id = france.43}
-			add_stability = -0.25
-		}
-	}
-}

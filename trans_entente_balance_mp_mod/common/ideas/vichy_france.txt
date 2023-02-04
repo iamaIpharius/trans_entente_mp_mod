@@ -432,6 +432,24 @@ ideas = {
 				
 			}
 		}
+		VIC_div_charlemagne = {
+
+			picture = SPA_la_division_azul
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				send_volunteer_size = 6
+				send_volunteer_divisions_required = -0.25
+				send_volunteers_tension = -0.20
+			}
+		}
 	}
 }
 

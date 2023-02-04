@@ -23,7 +23,7 @@
 		prerequisite = { }
 		mutually_exclusive = { }
 		
-		cost = 5
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -2302,7 +2302,7 @@
 		icon = GFX_focus_chi_mission_to_germany
 		x = -6
 		y = 1
-		cost = 1 
+		cost = 3 
 		prerequisite = {
 			focus = VIC_emergency_powers_to_petain
 		}
@@ -2350,7 +2350,7 @@
 		icon = GFX_goal_generic_neutrality_focus
 		x = 6
 		y = 1
-		cost = 1 
+		cost = 3 
 		prerequisite = {
 			focus = VIC_emergency_powers_to_petain
 		}
@@ -2380,7 +2380,7 @@
 		icon = GFX_goal_generic_territory_or_war
 		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = VIC_seeking_membership_in_the_axis
 		}
@@ -2414,7 +2414,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 1 
-		cost = 5 
+		cost = 10
 		prerequisite = {
 			focus = VIC_remaining_neutral 
 		}
@@ -2431,7 +2431,7 @@
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = -0.1
-			remove_ideas = FRA_occupation_costs_4
+			
 		}
 	}
 
@@ -2440,7 +2440,7 @@
 		icon = GFX_focus_generic_treaty
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = VIC_remaining_neutral focus = VIC_seeking_membership_in_the_axis
 		}
@@ -2509,7 +2509,7 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_war_support = 0.20
+			add_war_support = 0.1
 			add_stability = -0.05
 		}
 	}
@@ -2590,14 +2590,14 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 2
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = arms_factory
-				level = 4
+				level = 2
 				instant_build = yes
 				}
 			}
@@ -2728,14 +2728,14 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = industrial_complex
-					size > 4
+					size > 2
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = industrial_complex
-				level = 4
+				level = 2
 				instant_build = yes
 				}
 			}
@@ -2776,7 +2776,7 @@
 		icon = GFX_goal_generic_improve_relations
 		x = 2
 		y = 1
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = VIC_hiden_gun
 		}
@@ -2847,93 +2847,6 @@
 		}
 		relative_position_id = VIC_deal_with_the_german
 		available = { 
-			806 = {
-				is_fully_controlled_by = GER 
-			}
-			19 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			23 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			24 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			27 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			17 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			18 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			16 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			30 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			14 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			15 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			29 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			785 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			31 = {
-				is_fully_controlled_by = VIC
-			}
-			22 = {
-				is_fully_controlled_by = VIC
-			}
-			21 = {
-				is_fully_controlled_by = VIC
-			}
-			851 = {
-				is_fully_controlled_by = VIC
-			}
 		}
 		bypass = { }
 		cancel_if_invalid = yes
@@ -2944,7 +2857,6 @@
 			remove_ideas = FRA_occupation_costs_1
 			GER = {
 				remove_ideas = { VIC_occupation_2}
-				country_event = {id = france.46} 
 			}
 		}
 	}
@@ -2963,93 +2875,7 @@
 		}
 		relative_position_id = VIC_ask_for_german_equipment
 		available = { 
-			806 = {
-				is_fully_controlled_by = GER 
-			}
-			19 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			23 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			24 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			27 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			17 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			18 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			16 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			30 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			14 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			15 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			29 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			785 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			31 = {
-				is_fully_controlled_by = VIC
-			}
-			22 = {
-				is_fully_controlled_by = VIC
-			}
-			21 = {
-				is_fully_controlled_by = VIC
-			}
-			851 = {
-				is_fully_controlled_by = VIC
-			}
+			
 		}
 		bypass = { }
 		cancel_if_invalid = yes
@@ -3059,9 +2885,9 @@
 		completion_reward = {
 			remove_ideas = FRA_occupation_costs_2
 			GER = {
-				remove_ideas = {VIC_occupation_1}
-				country_event = {id = france.46} 	
+				remove_ideas = {VIC_occupation_1}	
 			}
+			
 		}
 	}
 
@@ -3079,93 +2905,7 @@
 		}
 		relative_position_id = VIC_prepare_for_the_fight
 		available = { 
-			806 = {
-				is_fully_controlled_by = GER 
-			}
-			19 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			23 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			24 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			27 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			17 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			18 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			16 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			30 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			14 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				}
-			}
-			15 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			29 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			785 = {
-				OR ={
-					is_fully_controlled_by = GER
-					is_fully_controlled_by = VIC
-				} 
-			}
-			31 = {
-				is_fully_controlled_by = VIC
-			}
-			22 = {
-				is_fully_controlled_by = VIC
-			}
-			21 = {
-				is_fully_controlled_by = VIC
-			}
-			851 = {
-				is_fully_controlled_by = VIC
-			}
+			
 		}
 		bypass = { }
 		cancel_if_invalid = yes
@@ -3173,9 +2913,8 @@
 		available_if_capitulated = no
 		
 		completion_reward = {
-			GER = {
-				country_event = {id = france.46} 	
-			}
+			remove_ideas = FRA_occupation_costs_4
+			add_ideas = {id = VIC_div_charlemagne }
 		}
 	}
 
@@ -3184,7 +2923,7 @@
 		icon = GFX_goal_generic_construct_civilian
 		x = 14
 		y = 8
-		cost = 5
+		cost = 10
 		prerequisite = { }
 		mutually_exclusive = { 
 			focus = VIC_military_ecco
@@ -3210,7 +2949,7 @@
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 22
 		y = 8
-		cost = 5
+		cost = 10
 		prerequisite = { }
 		mutually_exclusive = { 
 			focus = VIC_civilian_ecco
