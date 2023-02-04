@@ -1532,7 +1532,7 @@
 				uses = 4
 				category = cat_mobile_warfare
 			}
-			add_to_variable = { VIC_army_gain_experience = 0.4 }
+			add_to_variable = { VIC_army_gain_experience = 0.2 }
 			add_to_variable = { VIC_army_org_factor = -0.05 }
 			add_to_variable = { VIC_supply_consumption_factor = 0.05 }
 			add_to_variable = { VIC_army_attack_factor = 0.05}
@@ -1751,6 +1751,7 @@
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 		completion_reward = { 
 			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
 			add_to_variable = { VIC_army_org_factor = 0.1 }
 			custom_effect_tooltip = VIC_protect_the_coast_tt
 			add_tech_bonus = {
@@ -1784,6 +1785,7 @@
 		search_filters = {FOCUS_FILTER_ARMY_XP }
 		completion_reward = { 
 			add_to_variable = { VIC_dig_in_speed_factor = 0.2 }
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
 			add_to_variable = { VIC_max_dig_in = 2 }
 			custom_effect_tooltip = VIC_protect_our_homeland_tt
 		}
@@ -1811,7 +1813,7 @@
 		completion_reward = { 
 			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
 			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
-			add_to_variable = { VIC_army_gain_experience = -0.8 }
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
 			add_to_variable = { VIC_cas_damage_reduction = 0.05 }
 			add_to_variable = { VIC_equipment_capture_factor = 0.1 }
 			custom_effect_tooltip = VIC_by_any_mean_tt
@@ -1846,6 +1848,7 @@
 		search_filters = {FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			add_to_variable = { VIC_army_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = 0.2 }
 			add_to_variable = { VIC_army_org_factor = 0.1 }
 			add_to_variable = { VIC_army_attack_factor = 0.05}
 			add_to_variable = {VIC_army_core_defence_factor = 0.05}
@@ -3194,9 +3197,9 @@
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_stability = 0.1
-			add_to_variable = { VIC_civ_production  = 0.2 }
-			add_to_variable = { VIC_repair_factor   = 0.2 }
-			add_to_variable = { VIC_capacity_factor = 0.2 }
+			add_to_variable = { VIC_civ_production  = 0.05 }
+			add_to_variable = { VIC_repair_factor   = 0.1 }
+			add_to_variable = { VIC_capacity_factor = 0.1 }
 			add_dynamic_modifier = {modifier = VIC_industry_modifier}
 			custom_effect_tooltip = VIC_civilian_ecco_tt
 		}
@@ -3221,9 +3224,9 @@
 		completion_reward = {
 			add_stability = -0.05
 			add_war_support = 0.05
-			add_to_variable = { VIC_mil_production  = 0.2 }
-			add_to_variable = { VIC_max_efficiency  = 0.2 }
-			add_to_variable = { VIC_capacity_factor = 0.2 }
+			add_to_variable = { VIC_mil_production  = 0.05 }
+			add_to_variable = { VIC_max_efficiency  = 0.1 }
+			add_to_variable = { VIC_capacity_factor = 0.1 }
 			add_dynamic_modifier = {modifier = VIC_industry_modifier}
 			custom_effect_tooltip = VIC_military_ecco_tt
 		}
@@ -3254,14 +3257,14 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = industrial_complex
-					size > 6
+					size > 3
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 				type = industrial_complex
-				level = 6
+				level = 3
 				instant_build = yes
 				}
 			}
@@ -3293,14 +3296,14 @@
 					is_fully_controlled_by = VIC
 					free_building_slots = {
 					building = industrial_complex
-					size > 6
+					size > 3
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 				type = industrial_complex
-				level = 6
+				level = 3
 				instant_build = yes
 				}
 			}
@@ -3386,10 +3389,10 @@
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 				type = industrial_complex
-				level = 6
+				level = 3
 				instant_build = yes
 				}
 			}
@@ -3414,8 +3417,8 @@
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_to_variable = { VIC_infrastructure_factor = 0.2 }
-			add_to_variable = { VIC_sncf_factor = 0.2 }
+			add_to_variable = { VIC_infrastructure_factor = 0.1 }
+			add_to_variable = { VIC_sncf_factor = 0.1 }
 			custom_effect_tooltip= VIC_rebuild_infrastructure_tt
 		}
 	}
@@ -3425,7 +3428,7 @@
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 0 
 		y = 1
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = VIC_invest_in_morocco 
 			focus = VIC_move_research_center_to_marseille 
@@ -3446,20 +3449,20 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 3
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 				type = arms_factory
-				level = 4
+				level = 3
 				instant_build = yes
 				}
 			}
-			add_to_variable = { VIC_mil_production = 0.2  }
-			add_to_variable = { VIC_max_efficiency = 0.1  }
-			add_to_variable = { VIC_efficenty_gain = 0.1 }
+			add_to_variable = { VIC_mil_production = 0.05  }
+			add_to_variable = { VIC_max_efficiency = 0.05  }
+			add_to_variable = { VIC_efficenty_gain = 0.05 }
 			custom_effect_tooltip = VIC_build_mil_tt
 		}
 	}
@@ -3481,8 +3484,8 @@
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_to_variable = { VIC_max_efficiency = 0.1 }
-			add_to_variable = { VIC_efficenty_gain = 0.2 }
+			add_to_variable = { VIC_max_efficiency = 0.05 }
+			add_to_variable = { VIC_efficenty_gain = 0.05 }
 			custom_effect_tooltip = VIC_improve_production_speed_tt
 
 		}
@@ -3548,11 +3551,11 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 2
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				}
 			random_owned_controlled_state = { 
 				limit = {
@@ -3560,7 +3563,7 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 2
 					include_locked = yes
 				}
 				}
@@ -3643,14 +3646,14 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 2
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = arms_factory
-				level = 3
+				level = 2
 				instant_build = yes
 				}
 			}
@@ -3679,7 +3682,7 @@
 		icon = GFX_goal_generic_secret_weapon
 		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = VIC_more_factory 
 			focus = VIC_move_research_center_to_vichy 
@@ -3700,14 +3703,14 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 2
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = arms_factory
-				level = 4
+				level = 2
 				instant_build = yes
 				}
 			}
@@ -3717,14 +3720,14 @@
 					is_core_of = ROOT
 					free_building_slots = {
 					building = arms_factory
-					size > 4
+					size > 2
 					include_locked = yes
 				}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = arms_factory
-				level = 4
+				level = 2
 				instant_build = yes
 				}
 			}
