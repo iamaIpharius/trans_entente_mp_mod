@@ -86,6 +86,22 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 		}
 
+		vic_interceptor_aircraft = {
+			name = "no bomber in france"
+			allowed = {
+				always = no 
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.07
+				}
+			}
+			traits = { light_interceptor }
+		}
 	}
 	
 	country = {
@@ -319,90 +335,6 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-			}
-			modifier = {
-				
-			}
-		}
-
-		VIC_help_german_figther_prod = {
-			name = "Help german fighter production"
-			picture = air_support_focus
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.05
-					instant = yes
-				}
-			}
-			modifier = {
-				
-			}
-		}
-
-		VIC_consequence_of_helping_the_german_plane_prod = {
-			name = "consequence of helping the german plane industry"
-			picture = saf_ossewabrandwag
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = 0.2
-					instant = yes
-				}
-			}
-			modifier = {
-				
-			}
-		}
-
-		VIC_heavy_consequence_of_helping_the_german_plane_prod = {
-			name = "heavy consequence of helping the german plane industry"
-			picture = saf_ossewabrandwag_2 
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = 0.8
-					instant = yes
-				}
-			}
-			modifier = {
-				consumer_goods_factor = 0.2
-			}
-		}
-
-		VIC_help_german_figther_prod2 = {
-			name = "Hevly help german fighter production"
-			picture = air_support_focus
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			
 			equipment_bonus = {
 				small_plane_airframe = {
 					build_cost_ic = -0.1

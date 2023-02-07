@@ -1580,32 +1580,6 @@ VIC_concessions_to_the_germans = {
 			clr_country_flag = VIC_send_guest_workers
 		}
 	}
-
-	remove_our_figther_production_support = {
-		available = {
-			has_country_flag = heavly_helping_german_fighter_prod_flag
-		}
-		visible = {
-			has_country_flag = heavly_helping_german_fighter_prod_flag
-		}
-		cost = 10
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				controls_state = 16
-				add = 10
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			GER ={
-				remove_ideas = VIC_help_german_figther_prod2
-			}
-			VIC = {
-				remove_ideas = VIC_heavy_consequence_of_helping_the_german_plane_prod
-			}
-		}
-	}
 }
 VIC_joining_the_axis = {
 	VIC_the_axis = {

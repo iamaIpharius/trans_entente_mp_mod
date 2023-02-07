@@ -3524,7 +3524,7 @@
 	}
 	
 	focus = {
-		id = VIC_help_german_air_production
+		id = VIC_interception_aircraft
 		icon = GFX_goal_generic_air_fighter2
 		x = 3
 		y = 1
@@ -3539,11 +3539,19 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		
 		completion_reward = {
-			add_ideas = { VIC_consequence_of_helping_the_german_plane_prod}
-			GER = {
-				add_ideas = {VIC_help_german_figther_prod}
+			add_tech_bonus = {
+				name = "small plane designe"
+				uses = 1
+				bonus = 1
+				category = light_air
+			}
+			add_tech_bonus = { 
+				name = "air to air radar"
+				uses = 2 
+				bonus = 2
+				category = radar_tech
 			}
 		}
 	}
@@ -3555,20 +3563,22 @@
 		y = 1
 		cost = 1
 		prerequisite = {
-			focus = VIC_help_german_air_production
+			focus = VIC_interception_aircraft
 		}
-		relative_position_id = VIC_help_german_air_production
+		relative_position_id = VIC_interception_aircraft
 		mutually_exclusive = { }
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		
 		completion_reward = {
-			set_country_flag = heavly_helping_german_fighter_prod_flag
-			add_ideas = VIC_heavy_consequence_of_helping_the_german_plane_prod
-			GER = {
-				add_ideas = VIC_help_german_figther_prod2
+			add_tech_bonus = {
+				name = "small plane designe"
+				uses = 1
+				bonus = 2
+				category = light_air
 			}
+			add_ideas = { id = vic_interceptor_aircraft }
 		}
 	}
 
@@ -3606,7 +3616,7 @@
 		cost = 5
 		prerequisite = {
 			focus = VIC_small_aircraft_prod
-			focus = VIC_help_german_air_production
+			focus = VIC_interception_aircraft
 		}
 		relative_position_id = VIC_analyse_german_plane_doctorine
 		cancel_if_invalid = yes
