@@ -175,8 +175,8 @@ ideas = {
 			}
 			
 			modifier = {
-				# army_org_regain = -0.3
-				# consumer_goods_factor = 0.1
+				army_org_regain = -0.3
+				consumer_goods_factor = 0.1
 			}
 		}
 		
@@ -196,7 +196,7 @@ ideas = {
 			}
 			
 			modifier = {
-				# industrial_capacity_factory = -0.1
+				industrial_capacity_factory = -0.1
 			}
 		}
 		
