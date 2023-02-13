@@ -23,7 +23,7 @@
 		prerequisite = { }
 		mutually_exclusive = { }
 		
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1757,7 +1757,7 @@
 			add_tech_bonus = {
 				name = "better equipment"
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = artillery 
 			}
 		}
@@ -2402,7 +2402,7 @@
 		completion_reward = {
 			add_war_support = 0.05
 			remove_ideas = FRA_occupation_costs_4
-			add_ideas = FRA_occupation_costs_1
+			add_ideas = FRA_occupation_costs_2
 			GER = {
 				add_ideas = { VIC_occupation_2}
 			}
@@ -2458,7 +2458,7 @@
 			add_stability = -0.05
 			add_war_support = 0.05
 			remove_ideas = FRA_occupation_costs_4
-			add_ideas = FRA_occupation_costs_2
+			add_ideas = FRA_occupation_costs_3
 			GER = {
 				add_ideas = { VIC_occupation_1}
 			}
@@ -2762,7 +2762,7 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_war_support = 0.5
+			add_war_support = 0.05
 			add_equipment_to_stockpile ={
 				type = infantry_equipment_1
 				amount = 4000
@@ -2914,7 +2914,7 @@
 		
 		completion_reward = {
 			remove_ideas = FRA_occupation_costs_4
-			add_ideas = {id = VIC_div_charlemagne }
+			add_ideas = VIC_div_charlemagne
 		}
 	}
 
@@ -2923,7 +2923,7 @@
 		icon = GFX_goal_generic_construct_civilian
 		x = 14
 		y = 8
-		cost = 10
+		cost = 5
 		prerequisite = { }
 		mutually_exclusive = { 
 			focus = VIC_military_ecco
@@ -2936,7 +2936,7 @@
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_stability = 0.1
-			add_to_variable = { VIC_civ_production  = 0.05 }
+			add_to_variable = { VIC_civ_production  = 0.05}
 			add_to_variable = { VIC_repair_factor   = 0.1 }
 			add_to_variable = { VIC_capacity_factor = 0.1 }
 			add_dynamic_modifier = {modifier = VIC_industry_modifier}
@@ -2949,7 +2949,7 @@
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 22
 		y = 8
-		cost = 10
+		cost = 5
 		prerequisite = { }
 		mutually_exclusive = { 
 			focus = VIC_civilian_ecco
@@ -3497,7 +3497,7 @@
 
 	focus = { 
 		id = VIC_small_aircraft_prod
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_generic_aircraft_production
 		x = -3
 		y = 1
 		cost = 5
@@ -3505,7 +3505,7 @@
 			focus = VIC_analyse_german_plane_doctorine
 		}
 		mutually_exclusive = { 
-			focus = VIC_help_german_air_production
+			focus = VIC_interception_aircraft
 		}
 		relative_position_id = VIC_analyse_german_plane_doctorine
 		cancel_if_invalid = yes
@@ -3545,7 +3545,7 @@
 				name = "small plane designe"
 				uses = 1
 				bonus = 1
-				category = light_air
+				category = medium_air
 			}
 			add_tech_bonus = { 
 				name = "air to air radar"
@@ -3553,15 +3553,16 @@
 				bonus = 2
 				category = radar_tech
 			}
+			add_ideas =  VIC_producing_interceptor_en_masse
 		}
 	}
 
 	focus = {
-		id = VIC_help_the_german_counter_britsh_fighter
-		icon = GFX_focus_generic_aircraft_production
+		id = VIC_better_interceptor
+		icon = GFX_goal_generic_CAS
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = VIC_interception_aircraft
 		}
@@ -3576,15 +3577,15 @@
 				name = "small plane designe"
 				uses = 1
 				bonus = 2
-				category = light_air
+				category = medium_air
 			}
-			add_ideas = { id = vic_interceptor_aircraft }
+			add_ideas = vic_interceptor_aircraft 
 		}
 	}
 
 	focus = {
 		id = VIC_our_own_glory_in_the_sky
-		icon = GFX_goal_generic_CAS
+		icon = GFX_goal_generic_air_fighter
 		x = 0
 		y = 1
 		cost = 5
