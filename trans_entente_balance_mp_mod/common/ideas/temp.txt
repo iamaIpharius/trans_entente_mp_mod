@@ -174,10 +174,10 @@ ideas = {
 				always = yes
 			}
 			
-			modifier = {
-				army_org_regain = -0.3
-				consumer_goods_factor = 0.1
-			}
+			# modifier = {
+			# 	army_org_regain = -0.3
+			# 	consumer_goods_factor = 0.1
+			# }
 		}
 		
 		CHI_agrarian_society = {
@@ -195,9 +195,9 @@ ideas = {
 				always = yes
 			}
 			
-			modifier = {
-				industrial_capacity_factory = -0.1
-			}
+			# modifier = {
+			# 	industrial_capacity_factory = -0.1
+			# }
 		}
 		
 		d_day_defence = {
