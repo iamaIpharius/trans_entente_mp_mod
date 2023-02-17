@@ -88,10 +88,12 @@ NDiplomacy = {
 	INFLUENCE_RATIO_CONTROLLED = 0.5,               -- Ratio of influence based on distance to neared controlled territory (including uncontested peace conference bids)
 	INFLUENCE_DISTANCE_DIVISOR = 30.0,              -- Divide pixel distance with this when determining distance to capital / core / controlled states. Just an arbitrary way of scaling the distance numbers.
 	
-	INFLUENCE_MAJOR_FACTOR = 1.0,					--How much influence discount a major will get
-	INFLUENCE_MINOR_FACTOR = 0.65,					--How much influence discount a minor will get
+	INFLUENCE_PER_ADJACENCY = 0.05,					-- How much influence to add per uncontested adjacent state in the PC (blob, don't snake)
 	
-	PEACE_TRIGGER_AI_MAX_INFLUENCE_VALUE = 0.89,	-- Max influence value for pc_is_state_outside_influence_for trigger
+	INFLUENCE_MAJOR_FACTOR = 1.0,					--How much influence discount an AI major will get (inverse)
+	INFLUENCE_MINOR_FACTOR = 1.0,					--How much influence discount an AI minor will get (inverse)
+
+	PEACE_TRIGGER_AI_MAX_INFLUENCE_VALUE = 0.99,	-- Max influence value for pc_is_state_outside_influence_for_winner trigger
 	
 	BASE_IMPROVE_RELATION_COST = 10,                -- Political power cost to initiate relation improvement
 	BASE_IMPROVE_RELATION_SAME_IDEOLOGY_GROUP_MAINTAIN_COST = 0.2, -- Political power cost each update when boosting relations with nation of same ideology
@@ -158,6 +160,12 @@ NDiplomacy = {
 	BASE_CONDITIONAL_PEACE_MONTHS = 1,				-- War length must be before a surrender is possible.
 	JOINING_NAP_WAR_PENALTY = 0.2,					-- War support penalty for breaking non-breakable NAP
 	BREAKING_GUARANTEE_PENALTY = 0.2,				-- War support penalty for breaking guarantee
+
+	-- WARNING ! if you modify the following values, you should update corresponding loc keys in games_rules_l_english.yml
+	PEACE_SCORE_TRANSFERRED_TO_FACTION_LEADER = 0.1, 		-- Part of the peace score transferred from the faction members to the faction leader (if game rule enabled)
+	PEACE_SCORE_RESET_LOW_SCORE_THRESHOLD = 0.05,			-- Winners with less than this ratio of war participation will give all their score to other players
+	PEACE_SCORE_RESET_LOW_SCORE_MINIMUM_FOR_RECEIVER = 0.1, -- Disable the previous, if no winner has at least this ratio of war participation
+
 	PEACE_SCORE_SCALE_FACTOR = 1.35,                -- Losers' total value times this factor becomes the default total peace conference score that is distributed to the winners.
 
 	PEACE_SCORE_MINOR_BOOST_FRACTION = 0.05,        -- Low-scoring winners are boosted by receiving more of their score earlier. This value, multiplied by the total score distributed this turn, is the minimum score they will receive (up until their total allocated score).
@@ -1292,6 +1300,8 @@ NAir = {
 	MIN_PLANE_COUNT_PARADROP = 25,
 	MIN_PLANE_COUNT_AIR_SUPPLY = 1,
 	BASE_UNIT_WEIGHT_IN_TRANSPORT_PLANES = 45.0,
+
+	MANPOWER_LOSS_RATIO_PLANE_SHOT = 0.01,	-- The loss ratio of manpower for a shot plane.
 
 	MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane to create a mission
 		0.0, -- AIR_SUPERIORITY
@@ -2468,6 +2478,8 @@ NAI = {
 	DIVISION_DESIGN_COMBAT_WIDTH_TARGET_WEIGHT = -200.0,	-- This score is reduced the farther the width is from the target width (if set)
 	DIVISION_DESIGN_MAX_FAILED_DAYS = 60,					-- max days we keep track of since failure of a template design update
 
+	DIVISION_MATCH_ROLE_BOOST_FACTOR = 1.2,                 -- When finding closest matching existing template to a target template, boost the score by this much if the template also has the correct role
+
 	EQUIPMENT_DESIGN_MAX_FAILED_DAYS = 60,					-- max days we keep track of since failure of an equipment design update
 
 
@@ -3073,10 +3085,9 @@ NAI = {
 
 	COMMAND_POWER_BEFORE_SPEND_ON_TRAITS = 30.0,
 
+	PEACE_BID_FOLD_TURNS_AGAINST_OTHER_AI = 2,					--Resolve contests against other AIs after this many turns. Don't always contest forever, it yields the same results.
 	PEACE_BID_FOLD_AGAINST_PLAYER_CHANCE = 0.5,                 -- Likelihood that AI will fold in a bidding contest against human player.
-	PEACE_BID_FOLD_AGAINST_AI_CHANCE_UNCONTROLLED = 0.40,		-- Likelihood an AI will fold against an AI in a bidding contest where they do not control the state in question, if their own bid is take_states and there is a bidder with more points.
 	PEACE_BID_FOLD_AGAINST_LIBERATE_CONTEST = 1.0,				-- Likelihood that the AI will back down against a same-ideology country performing a contesting liberate bid ##Bordergore prevention therapy
-	PEACE_BID_FOLD_MINOR_VS_MAJOR = 1.0,						-- Likelihood that AI minors will fold against majors (majors will already try and return cores and claims, so this should not be a particularly big deal)
 	PEACE_AI_GROUP_PEACE_ACTIONS = true,                        -- Whether AI should group peace actions or greedily just select the most-desired peace actions
 	PEACE_AI_EVALUATE_FOR_SUBJECTS = true,                      -- Whether AI should include subjects when evaluating giving states to other winners (may affect performance on new conference turn)
 	PEACE_AI_EVALUATE_FOR_ALLIES = true,                        -- Whether AI should include allies when evaluating giving states to other winners (may affect performance on new conference turn)
