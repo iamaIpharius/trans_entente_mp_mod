@@ -1449,8 +1449,6 @@
 		available_if_capitulated = no 
 		completion_reward = { 
 			army_experience = 50
-			add_to_variable = { VIC_special_force_cap = 0.05 } 
-			custom_effect_tooltip = VIC_the_foreign_legion_tt
 			add_tech_bonus = {
 				name = "the foreign legion"
 				bonus = 1.5
@@ -1695,8 +1693,8 @@
 		completion_reward = { 
 			add_tech_bonus = {
 				name = "tank for the futur"
-				bonus = 2
-				uses = 4
+				bonus = 1
+				uses = 2
 				category = armor 
 			}
 		}
@@ -2222,16 +2220,17 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = "tankette"
-				bonus = 1.5
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = armor
 			}
 			add_tech_bonus = {
 				name = "flame tank maybe"
-				bonus = 3
+				bonus = 1
 				uses = 1
 				category = support_tech
 			}
+			add_ideas = { id = VIC_recon_tank }
 		}
 	}
 
