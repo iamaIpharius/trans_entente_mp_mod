@@ -1601,7 +1601,7 @@
 		completion_reward = { 
 			add_tech_bonus = {
 				name = "amtrack are the futur"
-				bonus = 2
+				bonus = 1
 				uses = 1 
 				category = cat_mechanized_equipment
 			}
@@ -1632,7 +1632,7 @@
 			add_tech_bonus = {
 				name = "make amtank good"
 				bonus = 1
-				ahead_reduction = 2
+				ahead_reduction = 1
 				uses = 1 
 				category = tp_tech
 			}
@@ -1662,7 +1662,7 @@
 		completion_reward = { 
 			add_tech_bonus = {
 				name = "half track"
-				bonus = 2
+				bonus = 1
 				ahead_reduction = 1
 				uses = 1 
 				category = cat_mechanized_equipment
@@ -2117,21 +2117,21 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = "better equipment"
-				bonus = 1.5
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = infantry_weapons
 			}
 
 			add_tech_bonus = {
 				name = "better equipment"
-				bonus = 1.5
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = artillery 
 			}
 
 			add_tech_bonus = {
 				name = "better equipment"
-				bonus = 1.5
+				bonus = 1
 				uses = 2
 				category = support_tech
 			}
@@ -2379,7 +2379,7 @@
 		icon = GFX_goal_generic_territory_or_war
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = VIC_seeking_membership_in_the_axis
 		}
@@ -2413,7 +2413,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 1 
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = VIC_remaining_neutral 
 		}
@@ -2439,7 +2439,7 @@
 		icon = GFX_focus_generic_treaty
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = VIC_remaining_neutral focus = VIC_seeking_membership_in_the_axis
 		}
@@ -3514,7 +3514,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = "small plane designe"
-				uses = 2
+				uses = 1
 				bonus = 1
 				category = light_air
 			}
@@ -3572,12 +3572,7 @@
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_tech_bonus = {
-				name = "small plane designe"
-				uses = 1
-				bonus = 2
-				category = medium_air
-			}
+			air_experience = 80
 			add_ideas = vic_interceptor_aircraft 
 		}
 	}
@@ -3598,12 +3593,7 @@
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = "glory to the vichy plane design"
-				uses = 2
-				bonus = 1
-				category = light_air
-			}
+			
 			air_experience = 80
 			add_ideas = {vic_our_own_good_plane}
 		}
