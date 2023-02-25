@@ -20,10 +20,10 @@
 			x = 0
 			y = 0
 		}
-		prerequisite = {}
+		prerequisite = { }
 		mutually_exclusive = { }
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -31,9 +31,7 @@
 			has_country_leader = { ruling_only = yes character = FRA_philippe_petain }
 		}
 		
-		bypass = {
-
-		}
+		bypass = { }
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -42,6 +40,24 @@
 			add_ideas = minors_license_production
 			add_ideas = axis_minors_special_forces
 			add_country_leader_trait = emergency_powers
+
+			hidden_effect = { 
+				recruit_character = VIC_pierre_laval
+				recruit_character = VIC_marius_viple
+				recruit_character = VIC_rene_bousquet
+				recruit_character = VIC_eugene_bridoux
+				recruit_character = VIC_maxime_weygand
+				recruit_character = VIC_jean_marie_bergeret
+				recruit_character = VIC_jean_romatet
+				recruit_character = VIC_jean_francois_darlan
+				recruit_character = VIC_jean_marie_abrial
+				recruit_character = VIC_jean_francois_jannekeyn
+				recruit_character = VIC_jean_de_laborde
+				recruit_character = VIC_marcel_bruno_gensoul
+				recruit_character = VIC_jean_romatet
+				recruit_character = VIC_pierre_le_gloan
+			}
+
 			if = {
 				limit = {
 					has_idea = FRA_disjointed_government
@@ -50,766 +66,1676 @@
 			}
 		}
 	}
-	focus = {
-		id = VIC_the_national_revolution
-		icon = GFX_focus_generic_strike_at_democracy1
-		x = -5
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_emergency_powers_to_petain
-		}
-		relative_position_id = VIC_emergency_powers_to_petain
+	# focus = {
+	# 	id = VIC_the_national_revolution
+	# 	icon = GFX_focus_generic_strike_at_democracy1
+	# 	x = -5
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_emergency_powers_to_petain
+	# 	}
+	# 	relative_position_id = VIC_emergency_powers_to_petain
 		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
 			
-		}
+	# 	}
 		
-		bypass = {
+	# 	bypass = {
 
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			add_stability = 0.5
-		}
-	}
-	focus = {
-		id = VIC_long_term_economic_planning
-		icon = GFX_goal_generic_construct_civilian
-		x = -2
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_the_national_revolution
-		}
-		relative_position_id = VIC_the_national_revolution
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_STABILITY }
+	# 	completion_reward = {
+	# 		add_stability = 0.5
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_long_term_economic_planning
+	# 	icon = GFX_goal_generic_construct_civilian
+	# 	x = -2
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_the_national_revolution
+	# 	}
+	# 	relative_position_id = VIC_the_national_revolution
 		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
 			
-		}
+	# 	}
 		
-		bypass = {
+	# 	bypass = {
 
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_tech_bonus = {
-				name = VIC_long_term_economic_planning
-				category = industry
-				uses = 2
-				bonus = 1
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 6
-				add_building_construction = {
-					type = arms_factory
-					level = 6
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = VIC_aid_small_businesses
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_long_term_economic_planning
-		}
-		relative_position_id = VIC_long_term_economic_planning
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_INDUSTRY }
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = VIC_long_term_economic_planning
+	# 			category = industry
+	# 			uses = 2
+	# 			bonus = 1
+	# 		}
+	# 		random_owned_controlled_state = {
+	# 			limit = {
+	# 				free_building_slots = {
+	# 					building = arms_factory
+	# 					size > 0
+	# 					include_locked = yes
+	# 				}
+	# 				OR = {
+	# 					is_in_home_area = yes
+	# 					NOT = {
+	# 						owner = {
+	# 							any_owned_state = {
+	# 								free_building_slots = {
+	# 									building = arms_factory
+	# 									size > 0
+	# 									include_locked = yes
+	# 								}
+	# 								is_in_home_area = yes
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 			add_extra_state_shared_building_slots = 6
+	# 			add_building_construction = {
+	# 				type = arms_factory
+	# 				level = 6
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_aid_small_businesses
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_long_term_economic_planning
+	# 	}
+	# 	relative_position_id = VIC_long_term_economic_planning
 		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
 			
-		}
+	# 	}
 		
-		bypass = {
+	# 	bypass = {
 
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 6
-				add_building_construction = {
-					type = industrial_complex
-					level = 6
-					instant_build = yes
-				}
-			}
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_INDUSTRY }
+	# 	completion_reward = {
+	# 		random_owned_state = {
+	# 			limit = {
+	# 				is_fully_controlled_by = ROOT
+	# 				is_core_of = ROOT
+	# 				free_building_slots = {
+	# 					building = industrial_complex
+	# 					size > 1
+	# 					include_locked = yes
+	# 				}
+	# 			}
+	# 			add_extra_state_shared_building_slots = 6
+	# 			add_building_construction = {
+	# 				type = industrial_complex
+	# 				level = 6
+	# 				instant_build = yes
+	# 			}
+	# 		}
 			
-		}
-	}
-	focus = {
-		id = VIC_venerate_the_craftsman
-		icon = GFX_goal_generic_production
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_aid_small_businesses
-		}
-		relative_position_id = VIC_aid_small_businesses
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_venerate_the_craftsman
+	# 	icon = GFX_goal_generic_production
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_aid_small_businesses
+	# 	}
+	# 	relative_position_id = VIC_aid_small_businesses
 		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
 			
-		}
+	# 	}
 		
-		bypass = {
+	# 	bypass = {
 
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = { FRA_venerate_the_craftsman }
-		}
-	}
-	focus = {
-		id = VIC_down_with_marianne
-		icon = GFX_focus_focus_fra_down_marianne
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_the_national_revolution
-		}
-		relative_position_id = VIC_the_national_revolution
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_INDUSTRY }
+	# 	completion_reward = {
+	# 		add_ideas = { FRA_venerate_the_craftsman }
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_down_with_marianne
+	# 	icon = GFX_focus_focus_fra_down_marianne
+	# 	x = 0
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_the_national_revolution
+	# 	}
+	# 	relative_position_id = VIC_the_national_revolution
 		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
 			
-		}
+	# 	}
 		
-		bypass = {
+	# 	bypass = {
 
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_timed_idea = { 
-				idea = FRA_down_with_marianne 
-				days = 730
-			}
-		}
-	}
-	focus = {
-		id = VIC_up_with_jean_darc
-		icon = GFX_focus_up_joan_of_arc
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_down_with_marianne
-		}
-		relative_position_id = VIC_down_with_marianne
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_timed_idea = { 
+	# 			idea = FRA_down_with_marianne 
+	# 			days = 730
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_up_with_jean_darc
+	# 	icon = GFX_focus_up_joan_of_arc
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_down_with_marianne
+	# 	}
+	# 	relative_position_id = VIC_down_with_marianne
 		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
 			
-		}
+	# 	}
 		
-		bypass = {
+	# 	bypass = {
 
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_timed_idea = { 
-				idea = FRA_up_with_jean_darc 
-				days = 730
-			}
-		}
-	}
-	focus = {
-		id = VIC_celebrate_motherhood
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_timed_idea = { 
+	# 			idea = FRA_up_with_jean_darc 
+	# 			days = 730
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_celebrate_motherhood
+	# 	icon = GFX_goal_generic_propaganda
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_up_with_jean_darc
+	# 	}
+	# 	relative_position_id = VIC_up_with_jean_darc
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_STABILITY }
+	# 	completion_reward = {
+	# 		add_stability = 0.15
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_prosecute_the_losers
+	# 	icon = GFX_goal_generic_neutrality_focus
+	# 	x = 2
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_the_national_revolution
+	# 	}
+	# 	relative_position_id = VIC_the_national_revolution
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	# 	completion_reward = {
+	# 		add_war_support = 0.25
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_concessions_to_the_germans
+	# 	icon = GFX_focus_chi_mission_to_germany
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_prosecute_the_losers
+	# 	}
+	# 	relative_position_id = VIC_prosecute_the_losers
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+	# 		16 = {
+	# 			is_controlled_by = GER
+	# 		}
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST }
+	# 	completion_reward = {
+	# 		unlock_decision_category_tooltip = VIC_concessions_to_the_germans
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_mandatory_work_service
+	# 	icon = GFX_goal_generic_construction2
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_concessions_to_the_germans
+	# 	}
+	# 	relative_position_id = VIC_concessions_to_the_germans
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST }
+	# 	completion_reward = {
+	# 		reduce_occupation_cost_effect = yes
+	# 		add_ideas = { FRA_mandatory_work_service }
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_a_nation_reborn
+	# 	icon = GFX_goal_support_fascism
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_celebrate_motherhood
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_venerate_the_craftsman
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_mandatory_work_service
+	# 	}
+	# 	relative_position_id = VIC_celebrate_motherhood
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_STABILITY }
+	# 	completion_reward = {
+	# 		add_stability = 0.1
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_end_the_occupation
+	# 	icon = GFX_goal_generic_territory_or_war
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_a_nation_reborn
+	# 	}
+	# 	relative_position_id = VIC_a_nation_reborn
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 		modifier = {
+	# 			is_historical_focus_on = yes
+	# 			NOT = {
+	# 				GER = { owns_state = 219 } 
+	# 			}
+	# 			factor = 0
+	# 		}
+	# 	}
+	# 	available = {
+	# 		16 = {
+	# 			NOT = {
+	# 				is_controlled_by = ROOT
+	# 			}
+	# 		}
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		set_rule = {
+	# 			can_join_factions = yes
+	# 			can_not_declare_war = no
+	# 			can_create_factions = yes
+	# 		}
+	# 		remove_occupation_cost_effect = yes
+	# 		if = {
+	# 			limit = {
+	# 				has_idea = VIC_produce_aircraft_parts
+	# 			}
+	# 			remove_ideas = VIC_produce_aircraft_parts
+	# 		}
+	# 		GER = { 
+	# 			country_event = lar_end_the_occupation.1 
+	# 			if = { limit = { has_idea = VIC_aircraft_parts }
+	# 				remove_ideas = VIC_aircraft_parts
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_the_national_bureau_of_statistics
+	# 	icon = GFX_focus_generic_treaty
+	# 	x = -2
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_emergency_powers_to_petain
+	# 	}
+	# 	relative_position_id = VIC_emergency_powers_to_petain
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_ideas = { FRA_national_bureau_of_statistics }
+	# 	}
+	# }
+
+	# focus = {
+	# 	id = VIC_the_legionary_service_order
+	# 	icon = GFX_goal_generic_small_arms
+	# 	x = 0
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_emergency_powers_to_petain
+	# 	}
+	# 	relative_position_id = VIC_emergency_powers_to_petain
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_ideas = { FRA_legionary_service_order }
+	# 		hidden_effect = { add_named_threat = { threat = 10 name = VIC_the_legionary_service_order } }
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_form_the_milice
+	# 	icon = GFX_focus_fra_milice
+	# 	x = -1
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_the_legionary_service_order
+	# 	}
+	# 	relative_position_id = VIC_the_legionary_service_order
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		swap_ideas = {
+	# 			remove_idea = FRA_legionary_service_order
+	# 			add_idea = FRA_milice
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_anti_bolshevist_volunteers
+	# 	icon = GFX_focus_generic_military_mission
+	# 	x = 1
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_the_legionary_service_order
+	# 	}
+	# 	relative_position_id = VIC_the_legionary_service_order
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+	# 		16 = { # Controller of paris is in a war against any communist major
+	# 			CONTROLLER = {
+	# 				NOT = {
+	# 					tag = ROOT
+	# 				}
+	# 				NOT = { has_war_with = ROOT }
+	# 				any_enemy_country = {
+	# 					is_major = yes
+	# 					has_government = communism
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_ideas = { FRA_anti_bolshevist_volunteers }
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_rebuild_the_military
+	# 	icon = GFX_goal_generic_construct_mil_factory
+	# 	x = 4
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_emergency_powers_to_petain
+	# 	}
+	# 	relative_position_id = VIC_emergency_powers_to_petain
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_ideas = { FRA_rebuild_the_military }
+	# 		random_owned_controlled_state = {
+	# 			limit = {
+	# 				free_building_slots = {
+	# 					building = arms_factory
+	# 					size > 0
+	# 					include_locked = yes
+	# 				}
+	# 				OR = {
+	# 					is_in_home_area = yes
+	# 					NOT = {
+	# 						owner = {
+	# 							any_owned_state = {
+	# 								free_building_slots = {
+	# 									building = arms_factory
+	# 									size > 0
+	# 									include_locked = yes
+	# 								}
+	# 								is_in_home_area = yes
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 			add_extra_state_shared_building_slots = 7
+	# 			add_building_construction = {
+	# 				type = arms_factory
+	# 				level = 7
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_finish_the_naval_buildup
+	# 	icon = GFX_goal_generic_construct_naval_dockyard
+	# 	x = -2
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_rebuild_the_military
+	# 	}
+	# 	relative_position_id = VIC_rebuild_the_military
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_INDUSTRY }
+	# 	completion_reward = {
+	# 		navy_experience = 50
+	# 		random_owned_state = {
+	# 			limit = {
+	# 				is_fully_controlled_by = ROOT
+	# 				is_core_of = ROOT
+	# 				is_coastal = yes
+	# 				free_building_slots = {
+	# 					building = dockyard
+	# 					size > 1
+	# 					include_locked = yes
+	# 				}
+	# 			}
+	# 			add_extra_state_shared_building_slots = 12
+	# 			add_building_construction = {
+	# 				type = dockyard
+	# 				level = 12
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_hidden_materials
+	# 	icon = GFX_focus_secret_rearmament
+	# 	x = 0
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_rebuild_the_military
+	# 	}
+	# 	relative_position_id = VIC_rebuild_the_military
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_ideas = { FRA_hidden_materials }
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_analyze_our_defeat
+	# 	icon = GFX_goal_generic_army_doctrines
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_hidden_materials
+	# 	}
+	# 	relative_position_id = VIC_hidden_materials
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	search_filters = { FOCUS_FILTER_RESEARCH }
+	# 	completion_reward = {
+	# 		add_doctrine_cost_reduction = {
+	# 			name = VIC_analyze_our_defeat
+	# 			category = land_doctrine
+	# 			uses = 5
+	# 			cost_reduction = 0.5
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_modernize_the_airforce
+	# 	icon = GFX_goal_generic_air_doctrine
+	# 	x = 2
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_rebuild_the_military
+	# 	}
+	# 	relative_position_id = VIC_rebuild_the_military
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = VIC_modernize_the_airforce
+	# 			category = light_fighter
+	# 			category = cas_bomber
+	# 			category = tactical_bomber
+	# 			bonus = 2
+	# 			uses = 2
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_learn_from_the_enemy
+	# 	icon = GFX_focus_research2
+	# 	x = 0
+	# 	y = 1
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	prerequisite = { 
+	# 		focus = VIC_modernize_the_airforce
+	# 	}
+	# 	relative_position_id = VIC_modernize_the_airforce
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_to_tech_sharing_group = VIC_learn_from_the_enemy
+	# 		GER = { add_to_tech_sharing_group = VIC_learn_from_the_enemy }
+	# 	}
+	# }
+	# focus = {
+	# 	id = VIC_buy_from_the_enemy
+	# 	icon = GFX_goal_generic_air_fighter
+	# 	x = 0
+	# 	y = 2
+	# 	offset = {
+	# 		x = 0
+	# 		y = 0
+	# 	}
+	# 	allow_branch = { has_dlc = "Death or Dishonor" }
+	# 	prerequisite = { 
+	# 		focus = VIC_learn_from_the_enemy
+	# 	}
+	# 	relative_position_id = VIC_learn_from_the_enemy
+		
+	# 	cost = 10
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	available = {
+			
+	# 	}
+		
+	# 	bypass = {
+
+	# 	}
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	# 	completion_reward = {
+	# 		add_ideas = { FRA_buy_from_the_enemy }
+	# 	}
+	# }
+
+	focus = { 
+		id = VIC_appeal_to_the_navy
 		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_up_with_jean_darc
-		}
-		relative_position_id = VIC_up_with_jean_darc
 		
-		cost = 10
+		x = 38
+		y = 8
+
+		cost = 2
+
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
+
 		available = {
 			
 		}
-		
+
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			add_stability = 0.15
-		}
-	}
-	focus = {
-		id = VIC_prosecute_the_losers
-		icon = GFX_goal_generic_neutrality_focus
-		x = 2
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_the_national_revolution
-		}
-		relative_position_id = VIC_the_national_revolution
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
 
-		}
 		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		continue_if_invalid = no 
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
 		completion_reward = {
-			add_war_support = 0.25
+			add_war_support = 0.05
+			custom_effect_tooltip = VIC_appeal_to_the_navy_tt
 		}
 	}
-	focus = {
-		id = VIC_concessions_to_the_germans
-		icon = GFX_focus_chi_mission_to_germany
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_prosecute_the_losers
-		}
-		relative_position_id = VIC_prosecute_the_losers
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			16 = {
-				is_controlled_by = GER
-			}
-		}
-		
-		bypass = {
 
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST }
-		completion_reward = {
-			unlock_decision_category_tooltip = VIC_concessions_to_the_germans
-		}
-	}
-	focus = {
-		id = VIC_mandatory_work_service
-		icon = GFX_goal_generic_construction2
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_concessions_to_the_germans
-		}
-		relative_position_id = VIC_concessions_to_the_germans
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST }
-		completion_reward = {
-			reduce_occupation_cost_effect = yes
-			add_ideas = { FRA_mandatory_work_service }
-		}
-	}
-	focus = {
-		id = VIC_a_nation_reborn
-		icon = GFX_goal_support_fascism
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_celebrate_motherhood
-		}
-		prerequisite = { 
-			focus = VIC_venerate_the_craftsman
-		}
-		prerequisite = { 
-			focus = VIC_mandatory_work_service
-		}
-		relative_position_id = VIC_celebrate_motherhood
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			add_stability = 0.1
-		}
-	}
-	focus = {
-		id = VIC_end_the_occupation
-		icon = GFX_goal_generic_territory_or_war
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_a_nation_reborn
-		}
-		relative_position_id = VIC_a_nation_reborn
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_historical_focus_on = yes
-				NOT = {
-					GER = { owns_state = 219 } 
-				}
-				factor = 0
-			}
-		}
-		available = {
-			16 = {
-				NOT = {
-					is_controlled_by = ROOT
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			set_rule = {
-				can_join_factions = yes
-				can_not_declare_war = no
-				can_create_factions = yes
-			}
-			remove_occupation_cost_effect = yes
-			if = {
-				limit = {
-					has_idea = VIC_produce_aircraft_parts
-				}
-				remove_ideas = VIC_produce_aircraft_parts
-			}
-			GER = { 
-				country_event = lar_end_the_occupation.1 
-				if = { limit = { has_idea = VIC_aircraft_parts }
-					remove_ideas = VIC_aircraft_parts
-				}
-			}
-		}
-	}
-	focus = {
-		id = VIC_the_national_bureau_of_statistics
-		icon = GFX_focus_generic_treaty
+	focus = { 
+		id = VIC_rebuild_the_french_navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5 
 		x = -2
 		y = 1
-		offset = {
-			x = 0
-			y = 0
+		mutually_exclusive = { 
+			focus = VIC_raid_the_sea
 		}
-		prerequisite = { 
-			focus = VIC_emergency_powers_to_petain
+		prerequisite = {
+			focus = VIC_appeal_to_the_navy
 		}
-		relative_position_id = VIC_emergency_powers_to_petain
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
+		relative_position_id = VIC_appeal_to_the_navy
+
 		available = {
 			
 		}
-		
+
 		bypass = {
 
 		}
+
 		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_ideas = { FRA_national_bureau_of_statistics }
+		continue_if_invalid = no 
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			add_ideas = rebuild_fleet_vichy
 		}
 	}
 
 	focus = {
-		id = VIC_the_legionary_service_order
-		icon = GFX_goal_generic_small_arms
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_emergency_powers_to_petain
-		}
-		relative_position_id = VIC_emergency_powers_to_petain
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_ideas = { FRA_legionary_service_order }
-			hidden_effect = { add_named_threat = { threat = 10 name = VIC_the_legionary_service_order } }
-		}
-	}
-	focus = {
-		id = VIC_form_the_milice
-		icon = GFX_focus_fra_milice
+		id = VIC_help_the_german_naval_industry
+		icon = GFX_goal_generic_propaganda
+		cost = 5
 		x = -1
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_the_legionary_service_order
-		}
-		relative_position_id = VIC_the_legionary_service_order
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = FRA_legionary_service_order
-				add_idea = FRA_milice
-			}
-		}
-	}
-	focus = {
-		id = VIC_anti_bolshevist_volunteers
-		icon = GFX_focus_generic_military_mission
-		x = 1
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_the_legionary_service_order
-		}
-		relative_position_id = VIC_the_legionary_service_order
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			16 = { # Controller of paris is in a war against any communist major
-				CONTROLLER = {
-					NOT = {
-						tag = ROOT
-					}
-					NOT = { has_war_with = ROOT }
-					any_enemy_country = {
-						is_major = yes
-						has_government = communism
-					}
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_ideas = { FRA_anti_bolshevist_volunteers }
-		}
-	}
-	focus = {
-		id = VIC_rebuild_the_military
-		icon = GFX_goal_generic_construct_mil_factory
-		x = 4
 		y = 1
-		offset = {
-			x = 0
-			y = 0
+		mutually_exclusive = {
+			focus = VIC_ask_the_german_for_bordeaux
 		}
-		prerequisite = { 
-			focus = VIC_emergency_powers_to_petain
+		prerequisite = {
+			focus = VIC_rebuild_the_french_navy
 		}
-		relative_position_id = VIC_emergency_powers_to_petain
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
+		relative_position_id = VIC_rebuild_the_french_navy
+
 		available = {
-			
+
 		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
 		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = { FRA_rebuild_the_military }
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 7
-				add_building_construction = {
-					type = arms_factory
-					level = 7
-					instant_build = yes
-				}
-			}
+			GER = { add_ideas = GER_vichy_naval_production_help} 
 		}
 	}
 	focus = {
-		id = VIC_finish_the_naval_buildup
+		id = VIC_ask_the_german_for_bordeaux
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 5
+		x = 1 
+		y = 1
+		mutually_exclusive = {
+			focus = VIC_help_the_german_naval_industry
+		}
+		prerequisite = {
+			focus = VIC_rebuild_the_french_navy
+		}
+		relative_position_id = VIC_rebuild_the_french_navy
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		completion_reward = {
+			GER = {country_event = {id = germany.1044}}
+		}
+	}
+	
+	focus = { 
+		id = VIC_we_need_more_dockyard
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = -2
+		cost = 5 
+		x = -1
 		y = 1
-		offset = {
-			x = 0
-			y = 0
+		prerequisite = {
+			focus = VIC_ask_the_german_for_bordeaux focus = VIC_help_the_german_naval_industry
 		}
-		prerequisite = { 
-			focus = VIC_rebuild_the_military
-		}
-		relative_position_id = VIC_rebuild_the_military
+		relative_position_id = VIC_ask_the_german_for_bordeaux
 		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
 		available = {
-			
-		}
-		
-		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			navy_experience = 50
-			random_owned_state = {
+			random_owned_controlled_state = { 
 				limit = {
-					is_fully_controlled_by = ROOT
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = dockyard
+					size > 6
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+				type = dockyard
+				level = 6
+				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = VIC_remove_all_safety
+		icon = GFX_goal_generic_production
+		cost = 5
+		x = 1
+		y = 1 
+		prerequisite = {
+			focus = VIC_we_need_more_dockyard 
+
+		}
+		mutually_exclusive = { 
+			focus = VIC_High_sea_fleet
+		}
+		relative_position_id = VIC_we_need_more_dockyard
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas =  VIC_skelon_ship
+		}
+
+	}
+
+	focus = { 
+		id = VIC_High_sea_fleet
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5 
+		x = -1
+		y = 1
+		prerequisite = {
+			focus  = VIC_we_need_more_dockyard
+		}
+		mutually_exclusive = { 
+			focus = VIC_remove_all_safety
+		}
+		relative_position_id = VIC_we_need_more_dockyard
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			add_ideas = vic_arsenal_de_brest
+		}
+	}
+
+	focus = { 
+		id = VIC_raid_the_sea
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5 
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = VIC_appeal_to_the_navy
+		}
+		mutually_exclusive = { 
+			focus = VIC_rebuild_the_french_navy
+		}
+		relative_position_id = VIC_appeal_to_the_navy
+		available ={
+			
+			
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = "Raid the sea"
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+			navy_experience = 50
+		}
+	}
+
+	focus = { 
+		id = VIC_modern_sub
+		icon = GFX_goal_generic_navy_submarine
+		cost = 5 
+		x = -1
+		y = 1 
+		
+		prerequisite = {
+			focus  = VIC_raid_the_sea
+		}
+		relative_position_id = VIC_raid_the_sea
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = "big big strong sub"
+				uses = 2
+				bonus = 1.5
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = VIC_make_better_one
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = { 
+			focus = VIC_modern_sub
+		}
+		relative_position_id = VIC_modern_sub
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			add_ideas = { vic_arsenal_de_toulon }
+		}
+	}
+
+	focus = { 
+		id = VIC_make_more_dockyard 
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = { 
+			focus = VIC_raid_the_sea
+		}
+		relative_position_id = VIC_raid_the_sea
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			navy_experience = 50
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
 					is_core_of = ROOT
 					is_coastal = yes
 					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
+					building = dockyard
+					size > 6
+					include_locked = yes
 				}
-				add_extra_state_shared_building_slots = 12
+				}
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
-					type = dockyard
-					level = 12
-					instant_build = yes
+				type = dockyard
+				level = 6
+				instant_build = yes
 				}
 			}
 		}
 	}
-	focus = {
-		id = VIC_hidden_materials
-		icon = GFX_focus_secret_rearmament
+	
+	focus = { 
+		id = VIC_make_more_sub
+		icon = GFX_focus_generic_midget_submarines
+		cost = 5
 		x = 0
 		y = 1
-		offset = {
-			x = 0
-			y = 0
+		prerequisite = {
+			focus = VIC_make_more_dockyard
+		}
+		relative_position_id = VIC_make_more_dockyard
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			add_ideas = vic_sub_production
+			set_technology = { midget_submarines = 1 }
+		}
+	}
+
+	focus = { 
+		id = VIC_defend_the_altantic_wall
+		icon = GFX_focus_generic_coastal_fort
+		x = 38
+		y = 0 
+		cost = 10 
+		mutually_exclusive = { 
+			focus = VIC_expand_the_special_corp
+		}
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+			add_ideas = VIC_atlantic_wall_idea 
+			army_experience = 50
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = VIC_army_dynamic_modifier }
+				add_to_variable = { VIC_army_defence_factor = -0.1 }
+				add_to_variable = { VIC_army_org_factor = -0.1 }
+				add_to_variable = { VIC_army_attack_factor = -0.1}
+				add_to_variable = { VIC_army_core_defence_factor = -0.1 }
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_expand_the_special_corp
+		icon = GFX_goal_generic_special_forces
+		x = 51
+		y = 0
+		cost = 10
+		mutually_exclusive = { 
+			focus = VIC_defend_the_altantic_wall
+		}
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+		
+		completion_reward = { 
+			hidden_effect = { 
+				add_dynamic_modifier = { modifier = VIC_army_special_forces_dynamic_modifier }
+				add_to_variable = { VIC_special_force_attack_factor = -0.05 }
+				add_to_variable = { VIC_special_force_defence_factor = -0.05 }
+				add_to_variable = { VIC_special_force_out_of_supply_factor = 0.1}
+				add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = -0.1}
+				add_to_variable = { VIC_acclimatization_hot_climate_gain_factor = -0.1}
+			}
+			
+		}
+	}	
+
+	focus = { 
+		id = VIC_the_foreign_legion
+		icon = GFX_focus_fra_french_union
+		x = 4
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_expand_the_special_corp
+		}
+		mutually_exclusive = { 
+			focus = VIC_expand_the_marines_corp
+		}
+		relative_position_id = VIC_expand_the_special_corp
+
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = { 
+			army_experience = 50
+			add_tech_bonus = {
+				name = "the foreign legion"
+				bonus = 1.5
+				uses = 2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+				technology = paratroopers
+				technology = paratroopers2
+				technology = paratroopers3
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_expand_the_marines_corp
+		icon = GFX_goal_generic_amphibious_assault
+		x =-5
+		y = 1
+		cost = 5 
+		mutually_exclusive = { 
+			focus = VIC_the_foreign_legion
 		}
 		prerequisite = { 
-			focus = VIC_rebuild_the_military
+			focus = VIC_expand_the_special_corp
 		}
-		relative_position_id = VIC_rebuild_the_military
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
+		relative_position_id = VIC_expand_the_special_corp
+
+		available = {
+
 		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = "Marin d'eaux douces"
+				bonus = 1.5
+				uses = 1 
+				category = marine_tech
+			}
+			army_experience = 50
+			add_to_variable = { VIC_special_force_out_of_supply_factor = -0.15 }
+			custom_effect_tooltip = VIC_expand_the_marines_corp_tt
+		}
+	}
+
+	focus = { 
+		id = VIC_modernize_the_army
+		icon = GFX_goal_generic_build_tank
+		x = 2
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_defend_the_altantic_wall
+		}
+		mutually_exclusive = { 
+			focus = VIC_the_old_guard
+		}
+		relative_position_id = VIC_defend_the_altantic_wall
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			add_doctrine_cost_reduction = {
+				name = "modernization of the army"
+				cost_reduction = 0.75
+				uses = 4
+				category = cat_mobile_warfare
+			}
+			add_to_variable = { VIC_army_gain_experience = 0.2 }
+			add_to_variable = { VIC_army_org_factor = -0.05 }
+			add_to_variable = { VIC_supply_consumption_factor = 0.05 }
+			add_to_variable = { VIC_army_attack_factor = 0.05}
+			custom_effect_tooltip = VIC_modernize_the_army_tt
+		}
+	}
+
+	focus = {
+		id = VIC_the_old_guard
+		icon = GFX_goal_generic_axis_build_infantry
+		x =-2
+		y = 1
+		cost = 5 
+		mutually_exclusive = { 
+			focus = VIC_modernize_the_army
+		}
+		prerequisite = { 
+			focus = VIC_defend_the_altantic_wall
+		}
+		relative_position_id = VIC_defend_the_altantic_wall
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			add_doctrine_cost_reduction = {
+				name = "the old guard"
+				cost_reduction = 0.75
+				uses = 4
+				category = cat_grand_battle_plan
+			}
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
+			add_to_variable = { VIC_army_org_factor = 0.05 }
+			add_to_variable = { VIC_max_dig_in = 2 }
+			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_attack_factor = -0.05}
+			custom_effect_tooltip = VIC_the_old_guard_tt
+		}
+	}
+
+	focus = {
+		id = VIC_amtrack_are_the_futur
+		icon = GFX_focus_VIC_amtrack
+		x = -3
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_expand_the_marines_corp focus = VIC_modernize_the_army
+		}
+		relative_position_id = VIC_expand_the_marines_corp
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = "amtrack are the futur"
+				bonus = 1
+				uses = 1 
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_build_amtank
+		icon = GFX_goal_generic_build_tank
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_amtrack_are_the_futur
+		}
+		relative_position_id = VIC_amtrack_are_the_futur
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = "make amtank good"
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1 
+				category = tp_tech
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_research_half_track
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_modernize_the_army
+		}
+		relative_position_id = VIC_modernize_the_army
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = { FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = "half track"
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1 
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_tank_are_the_futur
+		icon = GFX_focus_generic_army_tanks2
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_research_half_track
+		}
+		relative_position_id = VIC_research_half_track
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = { FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = "tank for the futur"
+				bonus = 1
+				uses = 2
+				category = armor 
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_restructure_the_army
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_the_old_guard focus = VIC_modernize_the_army
+		}
+		relative_position_id = VIC_the_old_guard
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP }
+		completion_reward = { 
+			add_timed_idea = {idea = VIC_restruturing_the_army days = 90}
+			set_country_flag = VIC_training_flag
+		}
+	}
+
+	focus = { 
+		id = VIC_protect_the_coast
+		icon = GFX_goal_generic_army_artillery
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_the_old_guard
+		}
+		relative_position_id = VIC_the_old_guard
 		available = {
 			
 		}
@@ -818,154 +1744,1893 @@
 
 		}
 		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
+			add_to_variable = { VIC_army_org_factor = 0.1 }
+			custom_effect_tooltip = VIC_protect_the_coast_tt
+			add_tech_bonus = {
+				name = "better equipment"
+				bonus = 1
+				uses = 1
+				category = artillery 
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_protect_our_homeland
+		icon = GFX_goal_generic_defence
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_protect_the_coast
+		}
+		relative_position_id = VIC_protect_the_coast
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP }
+		completion_reward = { 
+			add_to_variable = { VIC_dig_in_speed_factor = 0.2 }
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
+			add_to_variable = { VIC_max_dig_in = 2 }
+			custom_effect_tooltip = VIC_protect_our_homeland_tt
+		}
+	}
+	focus = { 
+		id = VIC_by_any_mean
+		icon = GFX_focus_secret_rearmament
+		x = 0
+		y = 1 
+		cost = 10
+		prerequisite = { 
+			focus = VIC_protect_our_homeland
+		}
+		relative_position_id = VIC_protect_our_homeland
+		available = {
+			
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP }
+		completion_reward = { 
+			add_to_variable = { VIC_dig_in_speed_factor = 0.1 }
+			add_to_variable = { VIC_army_core_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = -0.2 }
+			add_to_variable = { VIC_cas_damage_reduction = 0.05 }
+			add_to_variable = { VIC_equipment_capture_factor = 0.1 }
+			custom_effect_tooltip = VIC_by_any_mean_tt
+		}
+	}
+
+	focus = { 
+		id = VIC_napeleon_would_be_proud
+		icon = GFX_focus_VIC_napoleon
+		x = 0 
+		y = 1
+		cost = 10 
+		prerequisite = { 
+			focus = VIC_restructure_the_army
+		}
+		relative_position_id = VIC_restructure_the_army
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = VIC_trained_army
+				has_country_flag = {
+					flag = VIC_training_flag
+					days > 120
+				}
+			}
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			add_to_variable = { VIC_army_defence_factor = 0.05 }
+			add_to_variable = { VIC_army_gain_experience = 0.2 }
+			add_to_variable = { VIC_army_org_factor = 0.1 }
+			add_to_variable = { VIC_army_attack_factor = 0.05}
+			add_to_variable = {VIC_army_core_defence_factor = 0.05}
+			custom_effect_tooltip = VIC_napeleon_would_be_proud_tt
+		}
+	}
+
+	focus = { 
+		id = VIC_they_will_pay
+		icon = GFX_focus_generic_tank_production
+		x = 0 
+		y = 1 
+		cost = 10 
+		prerequisite = { 
+			focus = VIC_tank_are_the_futur
+		}
+		relative_position_id = VIC_tank_are_the_futur
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP }
+		completion_reward = { 
+			add_ideas = VIC_tonk_good
+		}
+	}
+
+	focus = { 
+		id = VIC_help_the_axis
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_expand_the_marines_corp
+		}
+		relative_position_id = VIC_expand_the_marines_corp
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+	}
+
+	focus = { 
+		id = VIC_crush_the_river_line
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0 
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_help_the_axis
+		}
+		mutually_exclusive = {
+			focus = VIC_control_the_mediteaneran
+		}
+		relative_position_id = VIC_help_the_axis
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+		completion_reward = {
+			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.05 }
+			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
+			custom_effect_tooltip = VIC_crush_the_river_line_tt
+			add_tech_bonus = {
+				name = "Marin des riviers"
+				bonus = 1.5
+				uses = 1 
+				category = marine_tech
+			}
+			
+		}
+	}
+
+	focus = { 
+		id = VIC_control_the_mediteaneran
+		icon = GFX_focus_attack_britain
+		x = 2
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_help_the_axis
+		}
+		mutually_exclusive = {
+			focus = VIC_crush_the_river_line
+		}
+		relative_position_id = VIC_help_the_axis
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+		completion_reward = {
+			add_to_variable = { VIC_special_force_attack_factor = 0.075 }
+			add_to_variable = { VIC_special_force_defence_factor = 0.075 }
+			custom_effect_tooltip = VIC_control_the_mediteaneran_tt
+			add_tech_bonus = {
+				name = "Marin des iles"
+				bonus = 1.5
+				uses = 1 
+				category = marine_tech
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_help_bararossa
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_crush_the_river_line 
+		}
+		relative_position_id = VIC_crush_the_river_line
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				name = "help barbarossa"
+				bonus = 2
+				uses = 2
+				category = train_tech
+			}
+			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.05 }
+			add_to_variable = { VIC_special_force_attack_factor = 0.05 }
+			add_to_variable = { VIC_special_force_defence_factor = 0.05 }
+			custom_effect_tooltip = VIC_help_bararossa_tt
+		}
+	}
+
+	focus = { 
+		id = VIC_help_sealion
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 0 
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_control_the_mediteaneran
+		}
+		relative_position_id = VIC_control_the_mediteaneran
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				name = "help sealions"
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1 
+				category = tp_tech
+			}
+			
+		}
+	}
+	focus = {
+		id = VIC_time_to_die
+		icon = GFX_goal_generic_territory_or_war
+		x = 0 
+		y = 1
+		cost = 1
+		prerequisite = { 
+			focus = VIC_help_sealion
+		}
+		relative_position_id = VIC_help_sealion
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			add_timed_idea = { idea = VIC_time_to_die days = 180}
+		}
+	}
+
+	focus = { 
+		id = VIC_better_training
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { 
+			focus = VIC_expand_the_marines_corp focus = VIC_the_foreign_legion
+		}
+		relative_position_id = VIC_expand_the_special_corp
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		completion_reward = {
+			add_to_variable = { VIC_special_force_attack_factor = 0.05 }
+			add_to_variable = { VIC_special_force_defence_factor = 0.05 }
+			custom_effect_tooltip = VIC_better_training_tt
+		}
+	}
+
+	focus = { 
+		id = VIC_better_equipment
+		icon = GFX_focus_generic_combined_arms
+		x = 0 
+		y = 1
+		cost = 5 
+		prerequisite = {
+			focus = VIC_better_training
+		}
+		relative_position_id = VIC_better_training
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH} 
+		completion_reward = {
+			add_tech_bonus = {
+				name = "better equipment"
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+
+			add_tech_bonus = {
+				name = "better equipment"
+				bonus = 1
+				uses = 1
+				category = artillery 
+			}
+
+			add_tech_bonus = {
+				name = "better equipment"
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_conscription_campaign
+		icon = GFX_VIC_eiffel_tower_soldier
+		x = 0
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_the_foreign_legion
+		}
+		relative_position_id = VIC_the_foreign_legion
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = {id = france.37}
+		}
+	}
+
+	focus = { 
+		id = VIC_assault_compagny
+		icon = GFX_focus_VIC_assault_company2
+		x = -1
+		y = 1 
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_conscription_campaign
+		}
+		mutually_exclusive = { 
+			focus = VIC_armor_compagny
+		}
+		relative_position_id = VIC_conscription_campaign
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = ITA_battaglioni_d_assalto_tt
+			hidden_effect = {
+				set_technology = { blackshirt_assault_battalion_tech = 1 popup = no }
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_armor_compagny
+		icon = GFX_focus_generic_tankette
+		x = 1
+		y = 1
+		cost = 5 
+		prerequisite = { 
+			focus = VIC_conscription_campaign
+		}
+		mutually_exclusive = { 
+			focus = VIC_assault_compagny
+		}
+		relative_position_id = VIC_conscription_campaign
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = "tankette"
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = "flame tank maybe"
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+			add_ideas = { id = VIC_recon_tank }
+		}
+	}
+
+	focus = { 
+		id = VIC_training_for_africa 
+		icon = GFX_focus_prc_infiltration
+		x = 1
+		y = 2
+		cost = 5 
+		prerequisite = {
+			focus = VIC_assault_compagny focus = VIC_armor_compagny
+		}
+		mutually_exclusive = { 
+			focus = VIC_training_for_winter
+		}
+		relative_position_id = VIC_conscription_campaign
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+		completion_reward = {
+			army_experience = 15
+			add_to_variable = { VIC_acclimatization_hot_climate_gain_factor = 0.10 }
+			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
+			custom_effect_tooltip = VIC_training_for_africa_tt
+		}
+	}
+	
+	focus = {
+		id = VIC_training_for_winter
+		icon = GFX_focus_prc_infiltration
+		x =-1
+		y = 2
+		cost = 5 
+		prerequisite = {
+			focus = VIC_assault_compagny focus = VIC_armor_compagny
+		}
+		mutually_exclusive = { 
+			focus = VIC_training_for_africa
+		}
+		relative_position_id = VIC_conscription_campaign
+		available = {
+
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		available_if_capitulated = no 
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+		completion_reward = {
+			army_experience = 15
+			add_to_variable = { VIC_acclimatization_cold_climate_gain_factor = 0.10 }
+			add_to_variable = {VIC_special_force_out_of_supply_factor = -0.05}
+			custom_effect_tooltip = VIC_training_for_winter_tt
+		}
+	}
+
+	focus = {
+		id = VIC_seeking_membership_in_the_axis
+		icon = GFX_focus_chi_mission_to_germany
+		x = -6
+		y = 1
+		cost = 3 
+		prerequisite = {
+			focus = VIC_emergency_powers_to_petain
+		}
+		mutually_exclusive = { 
+			focus = VIC_remaining_neutral
+		}
+		relative_position_id = VIC_emergency_powers_to_petain
+
+		available = {
+			GER = { 
+				is_faction_leader = yes
+				has_government = fascism
+			}
+			is_in_faction = no
+			NOT = { has_war_with = GER }
+			is_subject = no
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = VIC 
+				}
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = GER
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			GER = {
+				country_event = generic.2
+			}
+			add_stability = -0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = VIC_remaining_neutral
+		icon = GFX_goal_generic_neutrality_focus
+		x = 6
+		y = 1
+		cost = 3 
+		prerequisite = {
+			focus = VIC_emergency_powers_to_petain
+		}
+		mutually_exclusive = {
+			focus = VIC_seeking_membership_in_the_axis
+		}
+		relative_position_id = VIC_emergency_powers_to_petain
+
+		available = {
+		
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.05
+		}
+	}
+
+	focus = {
+		id = VIC_negociate_the_occupation
+		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_seeking_membership_in_the_axis
+		}
+		mutually_exclusive = { 
+			focus = VIC_make_conssession_to_the_german focus = VIC_there_will_be_no_more_conssesion
+		}
+		relative_position_id = VIC_seeking_membership_in_the_axis
+
+		available = {
+		
+		}
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.05
+			remove_ideas = FRA_occupation_costs_4
+			add_ideas = FRA_occupation_costs_2
+			GER = {
+				add_ideas = { VIC_occupation_2}
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_there_will_be_no_more_conssesion
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1 
+		cost = 5
+		prerequisite = {
+			focus = VIC_remaining_neutral 
+		}
+		mutually_exclusive = { 
+			focus = VIC_negociate_the_occupation focus = VIC_make_conssession_to_the_german
+		}
+		relative_position_id = VIC_remaining_neutral
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = -0.1
+			
+		}
+	}
+
+	focus = {
+		id = VIC_make_conssession_to_the_german
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = VIC_remaining_neutral focus = VIC_seeking_membership_in_the_axis
+		}
+		mutually_exclusive = {
+			focus = VIC_negociate_the_occupation focus = VIC_there_will_be_no_more_conssesion
+		}
+		relative_position_id = VIC_emergency_powers_to_petain
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.05
+			remove_ideas = FRA_occupation_costs_4
+			add_ideas = FRA_occupation_costs_3
+			GER = {
+				add_ideas = { VIC_occupation_1}
+			}
+		}
+	}
+
+	focus = {
+		id = VIC_help_the_german_occupation
+		icon = GFX_focus_fra_milice
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_negociate_the_occupation focus = VIC_make_conssession_to_the_german
+		}
+		mutually_exclusive = {
+			
+		}
+		relative_position_id = VIC_negociate_the_occupation
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+	 		add_ideas = FRA_milice
+		}
+	}
+
+	focus = {  
+		id = VIC_military_propagand
+		icon = GFX_goal_support_fascism
+		x = 0 
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_make_conssession_to_the_german
+		}
+		mutually_exclusive = {
+			
+		}
+		relative_position_id = VIC_make_conssession_to_the_german
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = -0.05
+		}
+	}
+
+	focus = {  
+		id = VIC_stabilize_the_country
+		icon = GFX_goal_generic_consumer_goods
+		x = -3 
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_there_will_be_no_more_conssesion focus = VIC_make_conssession_to_the_german
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_there_will_be_no_more_conssesion 
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_timed_idea = {idea = VIC_stabilizing days = 120}
+		}
+	}
+
+
+	focus = {
+		id = VIC_hiden_gun
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_there_will_be_no_more_conssesion 
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_there_will_be_no_more_conssesion
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = { FRA_hidden_materials }
 		}
 	}
+
 	focus = {
-		id = VIC_analyze_our_defeat
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
+		id = VIC_prepare_the_country_for_war
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0 
+		y = 1
+		cost = 5 
+		prerequisite = {
+			focus = VIC_negociate_the_occupation
 		}
-		prerequisite = { 
-			focus = VIC_hidden_materials
-		}
-		relative_position_id = VIC_hidden_materials
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
+		mutually_exclusive = {
 
 		}
+		relative_position_id = VIC_negociate_the_occupation
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = war_economy
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {  
+		id = VIC_deal_wiht_the_colonies
+		icon = GFX_goal_tfv_saf_support_german_coup
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_prepare_the_country_for_war
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_prepare_the_country_for_war
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			GER = {country_event = {id = france.41}}
+			ITA = {country_event = {id = france.38}}
+		}
+	}
+
+	focus = { 
+		id = VIC_deal_with_the_german
+		icon = GFX_goal_generic_demand_territory
+		x = 0 
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_prepare_the_country_for_war focus = VIC_help_the_german_occupation 
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_prepare_the_country_for_war
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			GER = {country_event = {id = france.44}}
+		}
+	}
+
+	focus = {
+		id = VIC_send_worker_to_germany
+		icon =  GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_help_the_german_occupation focus = VIC_prepare_the_country_for_war focus = VIC_military_propagand
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_help_the_german_occupation
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			reduce_occupation_cost_effect = yes
+			add_ideas = { FRA_mandatory_work_service }
+			unlock_decision_category_tooltip = VIC_concessions_to_the_germans
+		}
+	}
+
+	focus = {  
+		id = VIC_ask_for_german_equipment
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+				focus = VIC_military_propagand
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_military_propagand
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			GER = {country_event = {id = france.45}}
+		}
+	}
+
+	focus = {  
+		id = VIC_stabilize_the_economie
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+				focus = VIC_stabilize_the_country focus = VIC_military_propagand focus = VIC_hiden_gun
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_stabilize_the_country
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_prepare_for_the_fight
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+				focus = VIC_hiden_gun
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_hiden_gun
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.05
+			add_equipment_to_stockpile ={
+				type = infantry_equipment_1
+				amount = 4000
+			}
+
+		}
+	}
+
+	focus = { 
+		id = VIC_an_oppening_to_our_colonies
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = VIC_hiden_gun
+		}
+		mutually_exclusive = {
+
+		}
+		relative_position_id = VIC_hiden_gun
+		available = { }
+		bypass = { 
+			NOT = { 
+				458 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				665 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				461 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				462 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_state_core = 458
+			add_state_core = 665
+			add_state_core = 461
+			add_state_core = 462
+		}
+	}
+
+	focus = { 
+		id = VIC_like_a_phoenix
+		icon = GFX_focus_fra_le_deluge
+		x = 0 
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_deal_with_the_german
+		}
+		mutually_exclusive = { 
+			focus = VIC_faithul_supporter_of_germany
+		}
+		relative_position_id = VIC_deal_with_the_german
+		available = { 
+		}
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_ideas = FRA_occupation_costs_1
+			GER = {
+				remove_ideas = { VIC_occupation_2}
+			}
+		}
+	}
+
+	focus = { 
+		id = VIC_faithul_supporter_of_germany
+		icon = GFX_focus_up_joan_of_arc
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_ask_for_german_equipment
+		}
+		mutually_exclusive = { 
+			focus = VIC_like_a_phoenix focus = VIC_our_country_back_for_joining_the_war
+		}
+		relative_position_id = VIC_ask_for_german_equipment
+		available = { 
+			
+		}
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_ideas = FRA_occupation_costs_2
+			GER = {
+				remove_ideas = {VIC_occupation_1}	
+			}
+			
+		}
+	}
+
+	focus = {
+		id = VIC_our_country_back_for_joining_the_war
+		icon = GFX_focus_fra_french_union
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_prepare_for_the_fight
+		}
+		mutually_exclusive = { 
+			focus = VIC_faithul_supporter_of_germany
+		}
+		relative_position_id = VIC_prepare_for_the_fight
+		available = { 
+			
+		}
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			remove_ideas = FRA_occupation_costs_4
+			add_ideas = VIC_div_charlemagne
+		}
+	}
+
+	focus = {
+		id = VIC_civilian_ecco
+		icon = GFX_goal_generic_construct_civilian
+		x = 14
+		y = 8
+		cost = 5
+		prerequisite = { }
+		mutually_exclusive = { 
+			focus = VIC_military_ecco
+		}
+		available ={ }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_stability = 0.1
+			add_to_variable = { VIC_civ_production  = 0.05}
+			add_to_variable = { VIC_repair_factor   = 0.1 }
+			add_to_variable = { VIC_capacity_factor = 0.1 }
+			add_dynamic_modifier = {modifier = VIC_industry_modifier}
+			custom_effect_tooltip = VIC_civilian_ecco_tt
+		}
+	}
+
+	focus = {
+		id = VIC_military_ecco
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 22
+		y = 8
+		cost = 5
+		prerequisite = { }
+		mutually_exclusive = { 
+			focus = VIC_civilian_ecco
+		}
+		available ={ }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_to_variable = { VIC_mil_production  = 0.05 }
+			add_to_variable = { VIC_max_efficiency  = 0.1 }
+			add_to_variable = { VIC_capacity_factor = 0.1 }
+			add_dynamic_modifier = {modifier = VIC_industry_modifier}
+			custom_effect_tooltip = VIC_military_ecco_tt
+		}
+	}
+
+	focus = {
+		id = VIC_invest_in_southern_france
+		icon = GFX_focus_VIC_devlop_southern_france
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_civilian_ecco
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_civilian_ecco
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = industrial_complex
+					size > 3
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VIC_invest_in_algeria
+		icon = GFX_focus_VIC_devlop_algeria
+		x = -3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_civilian_ecco
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_civilian_ecco
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = { 
+				limit = {
+					state = 459
+					is_fully_controlled_by = VIC
+					free_building_slots = {
+					building = industrial_complex
+					size > 3
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+				}
+			}
+		}	
+	}
+
+	focus = {
+		id = VIC_modernize_construction
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_civilian_ecco
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_civilian_ecco
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+				add_tech_bonus = {
+					name = "modernize construction"
+					uses = 2
+					bonus =	1.5
+					category = construction_tech
+				}
+			}
+		}
+	
+
+	focus = {
+		id = VIC_move_research_center_to_marseille
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_modernize_construction
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_modernize_construction
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = VIC_invest_in_morocco
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_invest_in_algeria
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_invest_in_algeria
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = { 
+				limit = {
+					state = 462
+					is_fully_controlled_by = VIC
+					free_building_slots = {
+					building = industrial_complex
+					size > 6
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VIC_rebuild_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0 
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_invest_in_southern_france
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_invest_in_southern_france
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_to_variable = { VIC_infrastructure_factor = 0.1 }
+			add_to_variable = { VIC_sncf_factor = 0.1 }
+			custom_effect_tooltip= VIC_rebuild_infrastructure_tt
+		}
+	}
+
+	focus = {
+		id = VIC_build_mil
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0 
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = VIC_invest_in_morocco 
+			focus = VIC_move_research_center_to_marseille 
+			focus = VIC_rebuild_infrastructure
+		}
+		relative_position_id = VIC_move_research_center_to_marseille
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_war_support = 0.05
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 3
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+				}
+			}
+			add_to_variable = { VIC_mil_production = 0.05  }
+			add_to_variable = { VIC_max_efficiency = 0.05  }
+			add_to_variable = { VIC_efficenty_gain = 0.05 }
+			custom_effect_tooltip = VIC_build_mil_tt
+		}
+	}
+
+	focus = {
+		id = VIC_improve_production_speed
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_military_ecco
+		}
+		relative_position_id = VIC_military_ecco
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_to_variable = { VIC_max_efficiency = 0.05 }
+			add_to_variable = { VIC_efficenty_gain = 0.05 }
+			custom_effect_tooltip = VIC_improve_production_speed_tt
+
+		}
+	}
+
+	focus = {
+		id = VIC_take_controlle_of_the_industrie
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_military_ecco
+		}
+		relative_position_id = VIC_military_ecco
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VIC_liberate_industrial_space
+		icon = GFX_goal_generic_construct_civilian
+		x = -3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_military_ecco
+		}
+		relative_position_id = VIC_military_ecco
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 2
+				}
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			}
+		}
+	
+
+	focus = {
+		id = VIC_move_research_center_to_vichy
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_take_controlle_of_the_industrie
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_take_controlle_of_the_industrie
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = VIC_modernize_production_line
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_improve_production_speed
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_improve_production_speed
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_tech_bonus ={
+				name = "modernisation"
+				uses = 2
+				bonus = 1.5
+				category = cat_production
+			}
+		}
+	}
+	
+	focus = {
+		id = VIC_more_factory
+		icon = GFX_focus_generic_industry_3
+		x = -6
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_liberate_industrial_space
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_improve_production_speed
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = industrial_complex
+					size > 4
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VIC_modern_industrie
+		icon = GFX_goal_generic_secret_weapon
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = VIC_more_factory 
+			focus = VIC_move_research_center_to_vichy 
+			focus = VIC_modernize_production_line
+		}
+		mutually_exclusive = { }
+		relative_position_id = VIC_move_research_center_to_vichy
+		available = { }
+		bypass = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VIC_analyse_german_plane_doctorine
+		icon = GFX_goal_generic_air_doctrine
+		x = 51
+		y = 8
+		cost = 5
+		prerequisite = { }
+		mutually_exclusive = { }
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_doctrine_cost_reduction = {
-				name = VIC_analyze_our_defeat
-				category = land_doctrine
-				uses = 5
-				cost_reduction = 0.5
+				name = "studie foreign doctorine"
+				uses = 2
+				cost_reduction = 1.25
+				category = air_doctrine
 			}
 		}
 	}
-	focus = {
-		id = VIC_modernize_the_airforce
-		icon = GFX_goal_generic_air_doctrine
-		x = 2
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_rebuild_the_military
-		}
-		relative_position_id = VIC_rebuild_the_military
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
 
+	focus = { 
+		id = VIC_small_aircraft_prod
+		icon = GFX_focus_generic_aircraft_production
+		x = -3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_analyse_german_plane_doctorine
 		}
+		mutually_exclusive = { 
+			focus = VIC_interception_aircraft
+		}
+		relative_position_id = VIC_analyse_german_plane_doctorine
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-				name = VIC_modernize_the_airforce
-				category = light_fighter
-				category = cas_bomber
-				category = tactical_bomber
+				name = "small plane designe"
+				uses = 1
+				bonus = 1
+				category = light_air
+			}
+			add_ideas =  VIC_producing_fighter_en_masse
+		}
+	}
+	
+	focus = {
+		id = VIC_interception_aircraft
+		icon = GFX_goal_generic_air_fighter2
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_analyse_german_plane_doctorine
+		}
+		mutually_exclusive = { 
+			focus = VIC_small_aircraft_prod
+		}
+		relative_position_id = VIC_analyse_german_plane_doctorine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = "small plane designe"
+				uses = 1
+				bonus = 1
+				category = medium_air
+			}
+			add_tech_bonus = { 
+				name = "air to air radar"
+				uses = 2 
 				bonus = 2
-				uses = 2
+				category = radar_tech
+			}
+			add_ideas =  VIC_producing_interceptor_en_masse
+		}
+	}
+
+	focus = {
+		id = VIC_better_interceptor
+		icon = GFX_goal_generic_CAS
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_interception_aircraft
+		}
+		relative_position_id = VIC_interception_aircraft
+		mutually_exclusive = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			air_experience = 80
+			add_ideas = vic_interceptor_aircraft 
+		}
+	}
+
+	focus = {
+		id = VIC_our_own_glory_in_the_sky
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = VIC_small_aircraft_prod
+		}
+		relative_position_id = VIC_small_aircraft_prod
+		mutually_exclusive = { }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			
+			air_experience = 80
+			add_ideas = {vic_our_own_good_plane}
+		}
+	}
+	focus = {
+		id = VIC_factory_for_plane
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0 
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = VIC_small_aircraft_prod
+			focus = VIC_interception_aircraft
+		}
+		relative_position_id = VIC_analyse_german_plane_doctorine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward ={
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 3
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+				}
 			}
 		}
 	}
-	focus = {
-		id = VIC_learn_from_the_enemy
-		icon = GFX_focus_research2
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = VIC_modernize_the_airforce
-		}
-		relative_position_id = VIC_modernize_the_airforce
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_to_tech_sharing_group = VIC_learn_from_the_enemy
-			GER = { add_to_tech_sharing_group = VIC_learn_from_the_enemy }
-		}
-	}
-	focus = {
-		id = VIC_buy_from_the_enemy
-		icon = GFX_goal_generic_air_fighter
-		x = 0
-		y = 2
-		offset = {
-			x = 0
-			y = 0
-		}
-		allow_branch = { has_dlc = "Death or Dishonor" }
-		prerequisite = { 
-			focus = VIC_learn_from_the_enemy
-		}
-		relative_position_id = VIC_learn_from_the_enemy
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_ideas = { FRA_buy_from_the_enemy }
-		}
-	}
-
 }

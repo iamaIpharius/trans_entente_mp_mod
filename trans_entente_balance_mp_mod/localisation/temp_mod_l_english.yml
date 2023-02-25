@@ -177,3 +177,7 @@
  mongolia.2.t:0 "Northern Menace"
  mongolia.2.d:0 "As if the deteriorating situation with the Japanese invasion wasn't bad enough, word has come of yet another incursion into China, this time from a foe far older. The Mongolian Army has crossed the border, aiming to seize our Chinese land from us, and they have been met by local groups of ethnic Mongols and Communist sympathisers."
  mongolia.2.a:0 "There is nothing we can do."
+
+VIC_army_special_forces_dynamic_modifier:0 "Special forces Modifier"
+VIC_army_dynamic_modifier:0 "Army Modifier"
+VIC_industry_modifier:0 "industry Modifier"

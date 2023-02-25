@@ -1,0 +1,50 @@
+VIC_army_special_forces_dynamic_modifier = { 
+    enable = { 
+        always = yes 
+    }
+    
+    icon = GFX_idea_general_staff
+
+    special_forces_cap = VIC_special_force_cap
+    special_forces_attack_factor = VIC_special_force_attack_factor
+    special_forces_defence_factor = VIC_special_force_defence_factor
+    special_forces_out_of_supply_factor = VIC_special_force_out_of_supply_factor
+    acclimatization_cold_climate_gain_factor = VIC_acclimatization_cold_climate_gain_factor
+    acclimatization_hot_climate_gain_factor = VIC_acclimatization_hot_climate_gain_factor
+}
+
+VIC_army_dynamic_modifier = {
+    enable = {
+        always = yes
+    }
+
+    icon = GFX_idea_vic_army
+
+    experience_gain_army_factor = VIC_army_gain_experience
+    army_org_factor = VIC_army_org_factor
+    max_dig_in = VIC_max_dig_in
+    dig_in_speed_factor = VIC_dig_in_speed_factor
+    cas_damage_reduction = VIC_cas_damage_reduction
+    equipment_capture_factor = VIC_equipment_capture_factor
+    army_defence_factor = VIC_army_defence_factor
+    supply_consumption_factor = VIC_supply_consumption_factor
+    army_attack_factor = VIC_army_attack_factor
+    army_core_defence_factor = VIC_army_core_defence_factor
+
+}
+
+VIC_industry_modifier = {
+    enable = {
+        always = yes
+    }
+    icon = GFX_idea_man_five_year_plan_industry
+
+    production_speed_industrial_complex_factor = VIC_civ_production
+    production_speed_arms_factory_factor = VIC_mil_production
+    production_factory_max_efficiency_factor = VIC_max_efficiency
+    production_factory_efficiency_gain_factor = VIC_efficenty_gain
+    industry_repair_factor = VIC_repair_factor
+    industrial_capacity_factory = VIC_capacity_factor
+    production_speed_infrastructure_factor = VIC_infrastructure_factor
+    production_speed_rail_way_factor = VIC_sncf_factor
+}

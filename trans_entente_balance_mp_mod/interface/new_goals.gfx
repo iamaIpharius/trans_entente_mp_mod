@@ -1,0 +1,40 @@
+spriteTypes = {	
+
+	#### vichy icon 
+	
+	SpriteType = { 
+		name = "GFX_focus_VIC_assault_company"
+		texturefile = "gfx/interface/goals/vic_assault.dds" 
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_VIC_assault_company2"
+		texturefile = "gfx/interface/goals/vic_assault2.dds" 
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_VIC_napoleon"
+		texturefile = "gfx/interface/goals/proud_napoleon.dds" 
+	}
+
+	SpriteType = { 
+		name = "GFX_VIC_eiffel_tower_soldier"
+		texturefile = "gfx/interface/goals/eiffel_tower_soldier.dds" 
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_VIC_amtrack"
+		texturefile = "gfx/interface/goals/vic_amatrack.dds" 
+	}
+
+	SpriteType = {
+		name = "GFX_focus_VIC_devlop_southern_france"
+		texturefile = "gfx/interface/goals/VIC_focus_south_france.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_VIC_devlop_algeria"
+		texturefile = "gfx/interface/goals/vic_invest_algeria.dds"
+	}
+
+}

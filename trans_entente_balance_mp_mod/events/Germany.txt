@@ -7767,3 +7767,20 @@ country_event = { #Handed Over.. NOT
 #	}
 #}
 
+country_event = {
+	id = germany.1044
+	title = "Vichy ask for the return of aquitain "
+	desc = "the Vichy gouvernement just asked for the return of aquitain, citing a need of more space to build a navy"
+	picture = GFX_report_event_german_parade_paris
+
+	is_triggered_only = yes 
+
+	option = { #ACCEPT
+		name = germany.1044.a
+		VIC = {country_event = {id = france.36}}
+	}
+	option = { #REFUSE 
+		name = germany.1044.b
+		VIC = {country_event = {id = france.35}}
+	}
+}
