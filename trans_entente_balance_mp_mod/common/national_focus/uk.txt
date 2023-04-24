@@ -1881,7 +1881,7 @@ focus_tree = {
 			y = 0
 			trigger = {
 				OR = {
-				NOT = { has_dlc = "Man the Guns" }
+					NOT = { has_dlc = "Man the Guns" }
 					AND = {
 						has_game_rule = {
 							rule = obsolete_focus_branches_visibility
@@ -1934,8 +1934,14 @@ focus_tree = {
 			y = 0
 			trigger = {
 				OR = {
-				NOT = { has_dlc = "Man the Guns" }
-					has_completed_focus = uk_empire_focus
+					NOT = { has_dlc = "Man the Guns" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = uk_empire_focus
+					}
 				}
 			}
 		}
@@ -2650,15 +2656,11 @@ focus_tree = {
 			x = -3
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = ENG_revisit_colonial_policy
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = ENG_revisit_colonial_policy
 			}
 		}
 
@@ -7329,11 +7331,11 @@ focus_tree = {
 					has_game_rule = {
 						rule = obsolete_focus_branches_visibility
 						option = HIDE
-		}
-			}
+					}
+				}
 				NOT = {
 					has_completed_focus = ENG_a_change_in_course
-		}
+				}
 			}
 		}
 
@@ -8305,6 +8307,18 @@ focus_tree = {
 				NOT = {
 					has_completed_focus = ENG_a_change_in_course
 				}
+			}
+		}
+
+		offset = {
+			x = 4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_global_defense
 			}
 		}
 
@@ -9398,7 +9412,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = { has_country_flag = ENG_abdication_crisis_changed_mind }
-		}
+				}
 				NOT = { has_country_flag = edward_viii_refused_to_abdicate_flag }
 			}
 		}
@@ -10639,7 +10653,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = { has_country_flag = ENG_abdication_crisis_changed_mind }
-		}
+				}
 				NOT = { has_country_flag = edward_viii_refused_to_abdicate_flag }
 			}
 		}

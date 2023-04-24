@@ -72,12 +72,10 @@ focus_tree = {
 			trigger = {
 				OR = {
 					NOT = { has_dlc = "Man the Guns" }
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = obsolete_focus_branches_visibility
-								option = HIDE
-							}
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
 						}
 						has_completed_focus = USA_reestablish_the_gold_standard
 					}
@@ -88,15 +86,11 @@ focus_tree = {
 			x = -1
 			y = 0
 			trigger = {
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = obsolete_focus_branches_visibility
-								option = HIDE
-							}
-						}
-						has_completed_focus = USA_neutrality_act
-					}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 
@@ -1264,30 +1258,22 @@ focus_tree = {
 			x = 1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_neutrality_act
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 		offset = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -1566,15 +1552,11 @@ focus_tree = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_reestablish_the_gold_standard
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}
 
@@ -1688,15 +1670,11 @@ focus_tree = {
 			x = 0
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -1728,15 +1706,11 @@ focus_tree = {
 			x = 0
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -1800,15 +1774,11 @@ focus_tree = {
 			x = 0
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -1845,15 +1815,11 @@ focus_tree = {
 			x = 0
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -1897,15 +1863,11 @@ focus_tree = {
 			x = 0
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -1944,15 +1906,11 @@ focus_tree = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -1994,46 +1952,34 @@ focus_tree = {
 			x = -1
 			y = -4
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_neutrality_act
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 		offset = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_neutrality_act
-					has_completed_focus = USA_reestablish_the_gold_standard
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_neutrality_act
+				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}
 		offset = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -2095,17 +2041,13 @@ focus_tree = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					OR = {
-						has_completed_focus = USA_reestablish_the_gold_standard
-						has_completed_focus = USA_neutrality_act
-					}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+					has_completed_focus = USA_neutrality_act
 				}
 			}
 		}
@@ -2113,16 +2055,12 @@ focus_tree = {
 			x = -2
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_completed_focus = USA_neutrality_act
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_reestablish_the_gold_standard
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 
@@ -2201,47 +2139,35 @@ focus_tree = {
 			x = -1
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
-					has_completed_focus = USA_neutrality_act
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 		offset = {
 			x = -2
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_completed_focus = USA_neutrality_act
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_reestablish_the_gold_standard
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 		offset = {
 			x = 0
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 
@@ -2357,15 +2283,11 @@ focus_tree = {
 			x = 0
 			y = -1
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_neutrality_act
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 
@@ -2976,12 +2898,10 @@ focus_tree = {
 			trigger = {
 				OR = {
 					NOT = { has_dlc = "Man the Guns" }
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = obsolete_focus_branches_visibility
-								option = HIDE
-							}
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
 						}
 						has_completed_focus = USA_reestablish_the_gold_standard
 					}
@@ -2992,62 +2912,46 @@ focus_tree = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_reestablish_the_gold_standard
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}
 		offset = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_neutrality_act
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 		offset = {
 			x = -1
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_completed_focus = USA_neutrality_act
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_reestablish_the_gold_standard
+				has_completed_focus = USA_neutrality_act
 			}
 		}
 		offset = {
 			x = -2
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_completed_focus = USA_limited_intervention
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_completed_focus = USA_reestablish_the_gold_standard
+				has_completed_focus = USA_limited_intervention
 			}
 		}
 		cost = 10
@@ -4732,85 +4636,65 @@ focus_tree = {
 			x = -17
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_dlc = "Man the Guns"
-					has_completed_focus = USA_continue_the_new_deal
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_dlc = "Man the Guns"
+				has_completed_focus = USA_continue_the_new_deal
 			}
 		}
 		offset = {
 			x = -2
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					NOT = { has_dlc = "Man the Guns" }
-					has_completed_focus = USA_continue_the_new_deal
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				NOT = { has_dlc = "Man the Guns" }
+				has_completed_focus = USA_continue_the_new_deal
 			}
 		}
 		offset = {
 			x = -14
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					has_dlc = "Man the Guns"
-					has_completed_focus = USA_reestablish_the_gold_standard
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				has_dlc = "Man the Guns"
+				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}
 		offset = {
 			x = -2
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					NOT = { has_dlc = "Man the Guns" }
-					has_completed_focus = USA_reestablish_the_gold_standard
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
+				NOT = { has_dlc = "Man the Guns" }
+				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}
 		offset = {
 			x = -2
 			y = 0
 			trigger = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					OR = {
-						has_completed_focus = USA_continue_the_new_deal
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-					OR = {
-						has_completed_focus = USA_limited_intervention
-						has_completed_focus = USA_neutrality_act
-					}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = USA_continue_the_new_deal
+					has_completed_focus = USA_reestablish_the_gold_standard
+				}
+				OR = {
+					has_completed_focus = USA_limited_intervention
+					has_completed_focus = USA_neutrality_act
 				}
 			}
 		}
@@ -6393,7 +6277,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			}			
+			}
 		}
 	}
 	focus = {

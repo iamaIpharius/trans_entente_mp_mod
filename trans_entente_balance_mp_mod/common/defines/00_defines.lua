@@ -696,7 +696,7 @@ NMilitary = {
 		0.50,
 	},
 
-	DIVISIONAL_COMMANDER_TRAIT_XP_REQUIREMENT = 600.0,	--Get a trait if any valid options & xp gained >= this
+	DIVISIONAL_COMMANDER_TRAIT_XP_REQUIREMENT = 400.0,	--Get a trait if any valid options & xp gained >= this
 	NUM_DAYS_FOR_OPERATION_ENTRY = 60,					--Number of days that a unit must have been on a particular active order instance to receive a history entry.
 	MAX_LEADERS_TO_SHOW = 50,							--Max officers to show in field officers list, sorted by field EXP. Divisions with awardable entries will potentially supercede this limit
 	BASE_FEMALE_DIVISIONAL_COMMANDER_CHANCE = 0,		--Chance to receive a female divisonal commander. This is set to zero in the base game, as we do not have generic female portraits for many graphical culture groups.
@@ -705,9 +705,9 @@ NMilitary = {
 	DIVISIONAL_COMMANDER_RANK_XP_THRESHOLD = { 		-- XP thresholds for divisional commander ranks. [TAG]_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_[array index]
 		0,
 		100.0,
-		300.0,
-		600.0,
-		1000.0,
+		200.0,
+		400.0,
+		800.0,
 	},
 
 	USE_MULTIPLICATIVE_ORG_LOSS_WHEN_MOVING = true, -- whether to apply org_loss_when_moving modifiers additively or multiplicatively (hardcoded multiplicative pre-2021)
@@ -724,7 +724,7 @@ NMilitary = {
 	COST_INCREASE_PER_ACTIVE_MEDAL = 0.25,		-- Additional cost factor per active medal
 	MAX_ENTRY_ELISION_COUNT = 4,				-- If we do the same type of thing consecutively, each entry will stack locations up to this number
 	GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = true,	--Should we generate history entries for the AI (may cause savegame bloat)
-	FIELD_EXPERIENCE_ON_DIVISION_MULT = 0.03,	-- Multiply field experience gained by this, when applying to divisional commander
+	FIELD_EXPERIENCE_ON_DIVISION_MULT = 0.04,	-- Multiply field experience gained by this, when applying to divisional commander
 	MAX_FIELD_EXPERIENCE_ON_DIVISION = 8000,	-- Max experience that can be gained on divisional commanders
 	FIELD_EXPERIENCE_ON_DIVISION_PER_MEDAL_MULT = 0.1,	--Multiply officer field experience gain by this * number of division medals on application
 	HISTORY_OPERATION_RANDOM_MAX = 24,			-- max random int to roll when determining whether to grant an awardable entry for operations. 1/N chances.
@@ -1172,7 +1172,7 @@ NAir = {
 	NAVAL_STRIKE_TARGETTING_TO_AMOUNT = 0.3,			-- Balancing value to convert the naval_strike_targetting equipment stats to chances of how many airplanes managed to do successfull strike.
 	NAVAL_STRIKE_DAMAGE_TO_STR = 1.0,					-- Balancing value to convert damage ( naval_strike_attack * hits ) to Strength reduction.
 	NAVAL_STRIKE_DAMAGE_TO_ORG = 1.5,					-- Balancing value to convert damage ( naval_strike_attack * hits ) to Organisation reduction.
-	NAVAL_STRIKE_CARRIER_MULTIPLIER = 5.0,              -- damage bonus when planes are in naval combat where their carrier is present (and can thus sortie faster and more effectively)
+	NAVAL_STRIKE_CARRIER_MULTIPLIER = 10.0,              -- damage bonus when planes are in naval combat where their carrier is present (and can thus sortie faster and more effectively)
 	FIELD_EXPERIENCE_SCALE = 0.0004,
 	FIELD_EXPERIENCE_MAX_PER_DAY = 2,					-- Most xp you can gain per day
 	CLOSE_AIR_SUPPORT_EXPERIENCE_SCALE = 0.0005,		-- How much the experinence gained by CAS is scaled
@@ -1187,11 +1187,11 @@ NAir = {
 
 	AI_ALLOWED_PLANES_KEPT_IN_RESERVE = 0.10,			--AI allowed planes is reduced by this percentage. Overflow will be distributed to the next valid order. Worst case, this will result in this % of planes no being assigned any order.
 
-	ACCIDENT_CHANCE_BASE = 0.05,							-- Base chance % (0 - 100) for accident to happen. Reduced with higher reliability stat.
-	ACCIDENT_CHANCE_CARRIER_MULT = 2.0,					-- The total accident chance is scaled up when it happens on the carrier ship.
-	ACCIDENT_CHANCE_BALANCE_MULT = 0.5,					-- Multiplier for balancing how often the air accident really happens. The higher mult, the more often.
-	ACCIDENT_EFFECT_MULT = 0.005,						-- Multiplier for balancing the effect of accidents
-	ACE_DEATH_CHANCE_BASE = 0.003,						-- Base chance % for ace pilot die when an airplane is shot down in the Ace wing.
+	ACCIDENT_CHANCE_BASE = 0.1,							-- Base chance % (0 - 100) for accident to happen. Reduced with higher reliability stat.
+	ACCIDENT_CHANCE_CARRIER_MULT = 2,					-- The total accident chance is scaled up when it happens on the carrier ship.
+	ACCIDENT_CHANCE_BALANCE_MULT = 1,					-- Multiplier for balancing how often the air accident really happens. The higher mult, the more often.
+	ACCIDENT_EFFECT_MULT = 0.01,						-- Multiplier for balancing the effect of accidents
+	ACE_DEATH_CHANCE_BASE = 0.005,						-- Base chance % for ace pilot die when an airplane is shot down in the Ace wing.
 	ACE_DEATH_BY_OTHER_ACE_CHANCE = 1.0,				-- chance to an ace dying by another ace if it was hit by ace in combat
 	ACE_DEATH_CHANCE_PLANES_MULT = 0.001,				-- The more airplanes was lost in a single airplanes (more bloody it was) the higher chance of Ace to die.
 	AIR_AGILITY_TO_NAVAL_STRIKE_AGILITY = 0.01,         		-- conversion factor to bring agility in line with ship AA
@@ -1250,12 +1250,12 @@ NAir = {
 	AIR_WING_XP_LOSS_WHEN_KILLED = 300,									--if a plane dies, the game assumes that a pilot with this amount of xp died and recalcs average.
 	AIR_WING_XP_TRAINING_MAX = 300.0, 									--Max average XP achieved with training.
 
-	AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 3.0, 						--Daily gain when running training exercise mission
+	AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 7.0, 						--Daily gain when running training exercise mission
 	AIR_WING_XP_AIR_VS_AIR_COMBAT_GAIN = 0.8, 							--Wings in combat gain extra XP
 	AIR_WING_XP_GROUND_MISSION_COMPLETED_GAIN = 0.28, 					--Bombers bombing, CAS cassing, NBs nbing, kamikazees kamikazeeing, etc.
 	AIR_WING_XP_RECON_MISSION_COMPLETED_GAIN = 0.05, 					--recon mission
 
-	AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.0005, 					--Factor on country Air XP gained from wing training
+	AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.003, 					--Factor on country Air XP gained from wing training
 	AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 1.5, 				--Training exercises cause more accidents
 	AIR_WING_XP_LOSS_REDUCTION_OVER_FRIENDLY_TERRITORY_FACTOR = 0.3, 	--Reduction on XP loss over friendly territory
 
@@ -1369,6 +1369,7 @@ NNavy = {
 	WAR_SCORE_GAIN_FOR_SUNK_SHIP_PRODUCTION_COST_FACTOR = 0.004,		-- war score gained for every IC of the sunk ship
 	WAR_SCORE_GAIN_FOR_SUNK_CONVOY = 0.05,							-- war score gained for every sunk convoy
 	WAR_SCORE_DECAY_FOR_BUILT_CONVOY = 0.03,  						-- war score deducted when convoy-raided enemy produces one new convoy
+	PEACE_ACTION_TRANSFER_NAVY_EXPERIENCE_RETAINED = 0.25,			-- % of experience to retain after being transferred in a peace conference
 
 	-- Convoy Priorities START
 	NAVAL_INVASION_PRIORITY = 1,									-- Default convoy priority for naval invasions
@@ -1467,8 +1468,8 @@ NNavy = {
 	NAVAL_TRANSFER_BASE_NAVAL_DIST_ADD = 100,						-- Extra cost for naval movement ( compared to land movement ) when deciding what ports to use for a naval transfer
 	NAVAL_TRANSFER_BASE_NAVAL_DIST_MULT = 20,						-- Multiplier for the cost of naval movement ( compared to land movement ) when deciding what ports to use for naval transfer
 	NAVAL_SUPREMACY_CAN_INVADE = 0.5,								-- required naval supremacy to perform invasions on an area
-	CARRIER_STACK_PENALTY = 10,										-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
-	CARRIER_STACK_PENALTY_EFFECT = 0,								-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
+	CARRIER_STACK_PENALTY = 4,										-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
+	CARRIER_STACK_PENALTY_EFFECT = 0.2,								-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
 	SHORE_BOMBARDMENT_CAP = 0.25,
 	ANTI_AIR_TARGETING = 0.9,                                       -- how good ships are at hitting aircraft
 	MIN_TRACTED_ASSIST_DAMAGE_RATIO = 0.05,							-- How much damage counts as assist damage
@@ -1827,7 +1828,7 @@ NNavy = {
 
 	CONVOY_HIT_PROFILE												= 120.0,  	-- convoys has this contant hit profile
 	HIT_PROFILE_MULT 												= 100.0,  	-- multiplies hit profile of every ship
-	HIT_PROFILE_SPEED_FACTOR										= 2,		-- factors speed value when determining it profile (Vis * HIT_PROFILE_MULT * Ship Hit Profile Mult)
+	HIT_PROFILE_SPEED_FACTOR										= 0.5,		-- factors speed value when determining it profile (Vis * HIT_PROFILE_MULT * Ship Hit Profile Mult)
 	HIT_PROFILE_SPEED_BASE											= 20,		-- Base value added to hitprofile speed calulation
 
 	CONVOY_RAID_MAX_REGION_TO_TASKFORCE_RATIO						= 1.5,		-- each taskforce in convoy raid mission can at most cover this many regions without losing efficiency
@@ -2131,6 +2132,11 @@ NAI = {
 	DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 7;       -- Recalculate desired best template to upgrade with this many days inbetween.
 	DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 7;      -- Recalculate desired best equipment to upgrade with this many days inbetween.
 
+	UNLOCK_SPIRIT_AI_WILL_DO_FACTOR = 20,              -- Factor for scripted ai_will_do value
+	UNLOCK_SPIRIT_MODIFIER_FACTOR = 0.05,              -- Factor for AI's evaluated value of the modifiers connected to the spirit
+	UNLOCK_SPIRIT_USE_TRUNCATION_SELECT = false,       -- Whether to use truncation select or roulette-wheel select. Set threshold for truncation select below.
+	UNLOCK_SPIRIT_TRUNCATION_SELECT_THRESHOLD = 0.80,  -- Valid between [0.0, 1.0]. When unlocking spirits, select randomly from all spirits with AI score >= VALUE * HighestSpiritScore. To always select the best, set this value to 1.0. To select fully randomly, set this value to 0.0.
+
 	FOCUS_TREE_CONTINUE_FACTOR = 1.5,			-- Factor for score of how likely the AI is to keep going down a focus tree rather than starting a new path.
 	PLAN_VALUE_TO_EXECUTE = -0.5,				-- AI will typically avoid carrying out a plan it below this value (0.0 is considered balanced).
 	DECLARE_WAR_NOT_NEIGHBOR_FACTOR = 0.25,		-- Multiplier applied before force factor if country is not neighbor with the one it is considering going to war
@@ -2184,7 +2190,7 @@ NAI = {
 	MIN_AI_SCORE_TO_TRADE_LAW_OVERRIDE_HARD_CODED_SCORE = 1000.0,
 	MIN_AI_SCORE_TO_ALL_LAWS_OVERRIDE_HARD_CODED_SCORE = 0.0,
 
-	AT_WAR_THREAT_FACTOR = 2.0,					-- How much increase in threat does AI feel for being in war against osmeone
+	AT_WAR_THREAT_FACTOR = 2.0,					-- How much increase in threat does AI feel for being in war against someone
 	NEIGHBOUR_WAR_THREAT_FACTOR = 1.10, 		-- How much increase in threat does AI feel against neighbours who are at war
 	POTENTIAL_ALLY_JOIN_WAR_FACTOR = 100, 		-- How much increase in threat does AI feel against neighbours who are allied against one of our enemies
 	POTENTIAL_FUTURE_ENEMY_FACTOR = 100, 		-- How much increase in threat does AI feel against neighbours who at war with our allies
@@ -2732,11 +2738,11 @@ NAI = {
 
 	DECISION_PRIORITY_RANDOMIZER = 0.1,					-- random factor that is used while picking decisions. ai is able to pick a lower priority decision earler than a higher one if it is within this threshold
 
-	DESIGN_COMPANY_SCORE_MULTIPLIER = 2.0,              -- score multiplier for hiring a design company
+	DESIGN_COMPANY_SCORE_MULTIPLIER = 1.25,             -- score multiplier for hiring a design company
 	ARMY_CHIEF_SCORE_MULTIPLIER = 2.0,                  -- score multiplier for hiring an army chief
 	AIR_CHIEF_SCORE_MULTIPLIER = 1.5,                   -- score multiplier for hiring an air chief
 	NAVY_CHIEF_SCORE_MULTIPLIER = 1.0,                  -- score multiplier for hiring an navy chief
-	POLITICAL_ADVISOR_SCORE_MULTIPLIER = 1.0,           -- score multiplier for hiring political advisors
+	POLITICAL_ADVISOR_SCORE_MULTIPLIER = 1.25,          -- score multiplier for hiring political advisors
 	THEORIST_ACCEPTANCE_MULTIPLIER = 0.7,						-- scale the acceptance of hiring a theorist by this number times the amount of non-theorists we have, capped at one.
 	MIN_SCALED_IDEA_WEIGHT_TO_COMPARE_WITH_DECISIONS = 100,		-- idea scores are scaled between these two values while comparing them to decisions
 	MAX_SCALED_IDEA_WEIGHT_TO_COMPARE_WITH_DECISIONS = 200,		-- idea scores are scaled between these two values while comparing them to decisions

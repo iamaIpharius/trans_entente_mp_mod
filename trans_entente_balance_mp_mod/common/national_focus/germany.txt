@@ -6291,10 +6291,10 @@ focus_tree = {
 			x = -8
 			y = 0
 			trigger = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
 				has_completed_focus = GER_oppose_hitler
 			}
 		}
@@ -7143,9 +7143,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = -2
-		y = 1
-		relative_position_id = GER_break_the_anglo_french_colonial_hegemony
+		x = -1
+		y = 3
+		relative_position_id = GER_modular_construction
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -7393,7 +7393,7 @@ focus_tree = {
 					add_popularity = { ideology = neutrality popularity = 0.1 }
 					effect_tooltip = {
 						create_country_leader = {
-							name = "vittorio Emanuele III"
+							name = "Vittorio Emanuele III"
 							desc = "POLITICS_VITTORIO_EMANUELE_III_DESC"
 							picture = "GFX_portrait_italy_vittorio_emanuele_iii"
 							expire = "1965.1.1"

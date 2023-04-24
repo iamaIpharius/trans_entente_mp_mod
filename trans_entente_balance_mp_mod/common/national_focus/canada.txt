@@ -1347,9 +1347,6 @@
 		prerequisite = {
 			focus = CAN_alberta_coal_towns
 		}
-		mutually_exclusive = {
-			focus = CAN_send_in_the_zombies
-		}
 		x = 1
 		y = 4
 		relative_position_id = CAN_defence_of_canada_regulations
@@ -1445,9 +1442,6 @@
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = {
 			focus = CAN_commit_to_the_war
-		}
-		mutually_exclusive = {
-			focus = CAN_national_steel_car
 		}
 		x = 3
 		y = 4
@@ -1778,6 +1772,13 @@
 					}
 				}
 				remove_ideas = CAN_great_depression_2
+				custom_effect_tooltip = if_no_depression_get_stuff_TT
+			}
+			else = {
+				add_timed_idea = {
+					idea = CAN_booming_economy
+					days = 1095
+				}
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -3202,6 +3203,7 @@
 		prerequisite = {
 			focus = CAN_skewer_the_eagle
 			focus = CAN_pinion_the_eagle
+			focus = CAN_reject_authoritarianism
 		}
 		x = 0
 		y = 4
@@ -3241,6 +3243,7 @@
 		prerequisite = {
 			focus = CAN_skewer_the_eagle
 			focus = CAN_pinion_the_eagle
+			focus = CAN_reject_authoritarianism
 		}
 		x = -2
 		y = 4
@@ -3550,12 +3553,20 @@
 					remove_idea = CAN_great_depression_1
 					add_idea = CAN_great_depression_2
 				}
+				custom_effect_tooltip = if_no_depression_get_stuff_TT
 			}
 			else_if = {
 				limit = {
 					has_idea = CAN_great_depression_2
 				}
 				remove_ideas = CAN_great_depression_2
+				custom_effect_tooltip = if_no_depression_get_stuff_TT
+			}
+			else = {
+				add_timed_idea = {
+					idea = CAN_booming_economy
+					days = 1095
+				}
 			}
 		}
 	}
