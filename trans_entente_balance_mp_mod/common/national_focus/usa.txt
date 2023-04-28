@@ -2551,7 +2551,7 @@ focus_tree = {
 			focus = USA_arsenal_of_democracy
 		}
 		available = {
-			has_war_with = JAP
+			has_war = yes
 			democratic > 0.95
 		}
 		continue_if_invalid = yes
