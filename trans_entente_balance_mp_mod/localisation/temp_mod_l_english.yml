@@ -178,10 +178,15 @@
  mongolia.2.d:0 "As if the deteriorating situation with the Japanese invasion wasn't bad enough, word has come of yet another incursion into China, this time from a foe far older. The Mongolian Army has crossed the border, aiming to seize our Chinese land from us, and they have been met by local groups of ethnic Mongols and Communist sympathisers."
  mongolia.2.a:0 "There is nothing we can do."
 
-VIC_army_special_forces_dynamic_modifier:0 "Special forces Modifier"
-VIC_army_dynamic_modifier:0 "Army Modifier"
-VIC_industry_modifier:0 "industry Modifier"
+ VIC_army_special_forces_dynamic_modifier:0 "Special forces Modifier"
+ VIC_army_dynamic_modifier:0 "Army Modifier"
+ VIC_industry_modifier:0 "industry Modifier"
 
  SOV_an_adaptable_army_ns_tt:0 "$SOV_modify_the_red_army_ns_intro$ \nWinter Attrition: §G-10.0%§! \nHeat Attrition: §G-10.0%§! \nCold accmlimatization gain factor: §G+15.0%§! \nHot accmlimatization gain factor: §G+15.0%§!\n\n"
  SOV_experts_in_camouflage_ns_tt:0 "$SOV_modify_the_red_army_ns_intro$ \nDamage Reduction Against CAS: §G+5.0%§! \n\n"
  SOV_military_engineering_university_ns_tt:0 "$SOV_modify_defense_industry_ns_intro$ \n§YLand Fort§! construction speed: §G+5.00%§! \n§YCoastal Fort§! construction speed: §G+5.00%§! \n\n"
+ 
+ SOV_10_cp:0 "£command_power §Y10§!"
+ SOV_50_cp:0 "£command_power §Y50§!"
+ SOV_10_cp_blocked:0 "£command_power §R10§!"
+ SOV_50_cp_blocked:0 "£command_power §R50§!"
