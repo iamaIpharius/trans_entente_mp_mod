@@ -1205,6 +1205,7 @@ focus_tree = {
 		available = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
+			not = { has_country_flag = USA_great_depression_cooldown }
 		}
 		
 		bypass = {
@@ -1247,6 +1248,7 @@ focus_tree = {
 		available = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
+			not = { has_country_flag = USA_great_depression_cooldown }
 		}
 		
 		bypass = {
@@ -1355,7 +1357,9 @@ focus_tree = {
 		completion_reward = {
 			USA_great_depression_level_down = yes
 			USA_congress_medium_opposition = yes
+			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 140 }
 			custom_effect_tooltip = federal_housing_tt
+			custom_effect_tooltip = USA_great_depression_cooldown_tt
 			hidden_effect = {
 				random_owned_controlled_state = {
 					limit = {
@@ -1506,6 +1510,8 @@ focus_tree = {
 			USA_great_depression_level_down = yes
 			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = federal_housing_tt
+			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 140 }
+			custom_effect_tooltip = USA_great_depression_cooldown_tt
 			hidden_effect = {
 				random_owned_controlled_state = {
 					limit = {

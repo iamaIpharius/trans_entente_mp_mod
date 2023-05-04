@@ -3042,6 +3042,7 @@ USA_cash_and_carry_decision = {
 
 		visible = { 
 			original_tag = USA
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 
 		available = {
@@ -3095,6 +3096,7 @@ USA_cash_and_carry_decision = {
 		}
 		visible = {
 			USA = { has_same_ideology = yes }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3106,7 +3108,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3138,6 +3140,7 @@ USA_cash_and_carry_decision = {
 		}
 		visible = {
 			USA = { has_same_ideology = yes }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3149,7 +3152,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3181,6 +3184,7 @@ USA_cash_and_carry_decision = {
 		}
 		visible = {
 			USA = { has_same_ideology = yes }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3192,7 +3196,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 50
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3225,6 +3229,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3236,7 +3241,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3269,6 +3274,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3280,7 +3286,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3313,6 +3319,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3324,7 +3331,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3357,7 +3364,8 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
-		}
+				NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+	}
 		available = {
 			USA = {
 				has_equipment = {
@@ -3368,7 +3376,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3401,6 +3409,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3412,7 +3421,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3445,6 +3454,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3456,7 +3466,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3489,6 +3499,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3500,7 +3511,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3533,6 +3544,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3544,7 +3556,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3577,6 +3589,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3588,7 +3601,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3621,6 +3634,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3632,7 +3646,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3665,6 +3679,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = {
@@ -3676,7 +3691,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
@@ -3709,6 +3724,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
+			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
 		}
 		available = {
 			USA = { has_same_ideology = yes }
@@ -3721,7 +3737,7 @@ USA_cash_and_carry_decision = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		days_remove = 30
 		complete_effect = {
