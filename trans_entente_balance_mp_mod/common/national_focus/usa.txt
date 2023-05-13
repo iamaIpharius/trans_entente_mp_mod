@@ -1206,21 +1206,16 @@ focus_tree = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-			not = {
-				OR = {
-					has_idea = great_depression_1
-					has_idea = great_depression_2
-					has_idea = great_depression_3
-					has_idea = great_depression_4
-					has_idea = great_depression_5
-					has_idea = great_depression_6
-				}
+			OR = {
+				has_idea = great_depression_1
+				has_idea = great_depression_2
+				has_idea = great_depression_3
+				has_idea = great_depression_4
+				has_idea = great_depression_5
+				has_idea = great_depression_6
 			}
 		}
-
+		
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1249,18 +1244,13 @@ focus_tree = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-			not = {
-				OR = {
-					has_idea = great_depression_1
-					has_idea = great_depression_2
-					has_idea = great_depression_3
-					has_idea = great_depression_4
-					has_idea = great_depression_5
-					has_idea = great_depression_6
-				}
+			OR = {
+				has_idea = great_depression_1
+				has_idea = great_depression_2
+				has_idea = great_depression_3
+				has_idea = great_depression_4
+				has_idea = great_depression_5
+				has_idea = great_depression_6
 			}
 		}
 
@@ -1293,18 +1283,13 @@ focus_tree = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-			not = {
-				OR = {
-					has_idea = great_depression_1
-					has_idea = great_depression_2
-					has_idea = great_depression_3
-					has_idea = great_depression_4
-					has_idea = great_depression_5
-					has_idea = great_depression_6
-				}
+			OR = {
+				has_idea = great_depression_1
+				has_idea = great_depression_2
+				has_idea = great_depression_3
+				has_idea = great_depression_4
+				has_idea = great_depression_5
+				has_idea = great_depression_6
 			}
 		}
 
@@ -1336,10 +1321,14 @@ focus_tree = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-
+			OR = {
+				has_idea = great_depression_1
+				has_idea = great_depression_2
+				has_idea = great_depression_3
+				has_idea = great_depression_4
+				has_idea = great_depression_5
+				has_idea = great_depression_6
+			}
 		}
 
 		cancel_if_invalid = no
@@ -1445,18 +1434,13 @@ focus_tree = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-			not = {
-				OR = {
-					has_idea = great_depression_1
-					has_idea = great_depression_2
-					has_idea = great_depression_3
-					has_idea = great_depression_4
-					has_idea = great_depression_5
-					has_idea = great_depression_6
-				}
+			OR = {
+				has_idea = great_depression_1
+				has_idea = great_depression_2
+				has_idea = great_depression_3
+				has_idea = great_depression_4
+				has_idea = great_depression_5
+				has_idea = great_depression_6
 			}
 		}
 
@@ -1488,10 +1472,14 @@ focus_tree = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
 			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-
+			OR = {
+				has_idea = great_depression_1
+				has_idea = great_depression_2
+				has_idea = great_depression_3
+				has_idea = great_depression_4
+				has_idea = great_depression_5
+				has_idea = great_depression_6
+			}
 		}
 
 		cancel_if_invalid = no
@@ -2027,7 +2015,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_cash_and_carry
-		icon = GFX_focus_ETH_freedom_at_gunpoint
+		icon = GFX_focus_USA_cash_and_carry
 		x = -2
 		y = 1
 		prerequisite = { focus = USA_neutrality_act focus = USA_limited_intervention }
@@ -2217,7 +2205,12 @@ focus_tree = {
 			navy_experience = 50
 			army_experience = 50
 			air_experience = 10
-			add_ideas = isolation
+			if = {
+				limit = {
+					has_idea = undisturbed_isolation
+				}
+				add_ideas = isolation
+			}
 		}
 	}
 	focus = {

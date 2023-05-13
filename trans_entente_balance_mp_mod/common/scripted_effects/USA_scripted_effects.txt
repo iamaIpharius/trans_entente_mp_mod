@@ -46,11 +46,18 @@ USA_great_depression_level_up = {
 			add_idea = great_depression_6
 		}
 	}
+	else = {
+		add_ideas = great_depression_1
+	}
 }
 
 #Important to put LOWEST first
 USA_great_depression_level_down = {
 	if = {
+		limit = { has_idea = great_depression_1 }
+		remove_ideas = great_depression_1
+	}
+	else_if = {
 		limit = { has_idea = great_depression_2 }
 		swap_ideas = {
 			remove_idea = great_depression_2

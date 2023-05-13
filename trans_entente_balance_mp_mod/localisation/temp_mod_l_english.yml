@@ -1,14 +1,14 @@
 ﻿l_english:
  warlords_corruption:0 "Warlord Corruption"
  warlords_corruption_desc:0 "The countryside is overrun with warlord pretenders taking their slice of taxes and men."
- CHI_agrarian_society:0 "Agrarian society"
- CHI_agrarian_society_desc:0 "We live in an agrarian society."
+ CHI_agrarian_society:0 "Rural Economy"
+ CHI_agrarian_society_desc:0 "Much of our economy remains geared towards agriculture, we live in an agrarian society."
  achived_victories_3:0 "Achived Victories Tier 3"
  achived_victories_3_desc:0 "Are we GODS?"
- allies_minors_special_forces:0 "Allies Special Forces"
- allies_minors_special_forces_desc:0 "MORBing from the sea and air"
- axis_minors_special_forces:0 "Axis Special Forces"
- axis_minors_special_forces_desc:0 "are you wanna total MORB?"
+ allies_minors_special_forces:0 "Allied Special Forces Training"
+ allies_minors_special_forces_desc:0 "We pull upon the risers, we fall upon the grass. We never land upon our feet, we always hit our..."
+ axis_minors_special_forces:0 "Axis Special Forces Training"
+ axis_minors_special_forces_desc:0 "Through specialized training from our allies in the Axis, we are able to field additional, and more elite, special forces"
 
  d_day_defence:0 "Man the Beaches!"
  d_day_defence_desc:0 "Defence strategy against D-Day"
@@ -18,8 +18,8 @@
  JAP_light_hull_cost_desc:0 "...means cheaper!"
  JAP_heavy_hull_cost:0 "BIG SHIPS ENERGY"
  JAP_heavy_hull_cost_desc:0 "...and also cheaper!"
- minors_license_production:0 "Minor License Production"
- minors_license_production_desc:0 "...because they're poor"
+ minors_license_production:0 "Subsidized Licenses"
+ minors_license_production_desc:0 "Utilizing connections in key industries, our capacity to use licensed equipment can be expanded with improved license production"
 
  pizza_boat_company:0 "Pizza Boat Company"
  spaghetti_naval_yard:0 "Spaghetti Naval Yard"
@@ -229,3 +229,5 @@
  USA_cash_and_carry_fighters:0 "Purchase Fighters through Cash and Carry"
  USA_cash_and_carry_tacs:0 "Purchase Tactical Bombers through Cash and Carry"
  USA_cash_and_carry_strats:0 "Purchase Strategic Bombers through Cash and Carry"
+ 
+ infantry_offensive:0 "Ambush Assault Tactics"

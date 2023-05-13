@@ -3097,6 +3097,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3141,6 +3142,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3185,6 +3187,7 @@ USA_cash_and_carry_decision = {
 		visible = {
 			USA = { has_same_ideology = yes }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3230,6 +3233,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3275,6 +3279,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3320,6 +3325,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3410,6 +3416,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3455,6 +3462,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3500,6 +3508,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3545,6 +3554,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3590,6 +3600,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3635,6 +3646,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {
@@ -3680,6 +3692,7 @@ USA_cash_and_carry_decision = {
 			USA = { has_same_ideology = yes }
 			USA = { has_completed_focus = USA_cash_and_carry }
 			NOT = { USA = { has_completed_focus = USA_lend_lease_act } }
+			has_country_flag = cash_and_carry
 		}
 		available = {
 			USA = {

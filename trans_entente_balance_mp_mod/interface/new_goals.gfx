@@ -37,4 +37,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/vic_invest_algeria.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_USA_cash_and_carry"
+		texturefile = "gfx/interface/goals/focus_USA_cash_and_carry.dds"
+	}
 }

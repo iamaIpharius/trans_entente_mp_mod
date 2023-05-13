@@ -2028,5 +2028,6 @@ country_event = {
 			factor = 1
 		}
 		unlock_decision_category_tooltip = USA_cash_and_carry_decision
+		set_country_flag = cash_and_carry
 	}
 }
