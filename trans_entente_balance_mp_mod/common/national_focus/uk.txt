@@ -1858,6 +1858,21 @@ focus_tree = {
 			NOT = { has_government = communism }
 			num_subjects > 0
 		} 
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_revisit_colonial_policy
+				}
+			}
+		}
+
 		icon = GFX_goal_generic_national_unity
 		x = 28
 		y = 0
@@ -1865,7 +1880,16 @@ focus_tree = {
 			x = -2
 			y = 0
 			trigger = {
-				NOT = { has_dlc = "Man the Guns" }
+				OR = {
+					NOT = { has_dlc = "Man the Guns" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = uk_empire_focus
+					}
+				}
 			}
 		}
 		cost = 10
@@ -1882,6 +1906,18 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_2
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -1897,7 +1933,16 @@ focus_tree = {
 			x = 2
 			y = 0
 			trigger = {
-				NOT = { has_dlc = "Man the Guns" }
+				OR = {
+					NOT = { has_dlc = "Man the Guns" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = uk_empire_focus
+					}
+				}
 			}
 		}
 		relative_position_id = uk_empire_focus
@@ -2165,7 +2210,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = bunker
-					level = 2
+					level = 3
 					province = 1071
 					instant_build = yes
 				}
@@ -2175,7 +2220,23 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		}
+			452 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7148
+					instant_build = yes
+					}
+				}
+			907 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 992
+					instant_build = yes
+					}
+				}
+			}
 	}
 
 	focus = {
@@ -2515,6 +2576,17 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = uk_empire_focus
+				}
+			}
 		}
 
 		available = { 
@@ -2530,6 +2602,19 @@ focus_tree = {
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		x = 33
 		y = 0
+
+		offset = {
+			x = -16
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_revisit_colonial_policy
+			}
+		}
+
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2551,6 +2636,17 @@ focus_tree = {
 			add_political_power = 80
 			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_2
 			hidden_effect = { news_event = { id = mtg_news.14 days = 1 } }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 
@@ -2571,6 +2667,19 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ENG_revisit_colonial_policy
+
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_revisit_colonial_policy
+			}
+		}
+
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -6467,6 +6576,17 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_revisit_colonial_policy
+				}
+			}
 		}
 
 		available = { 	
@@ -6507,6 +6627,17 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_revisit_colonial_policy
+				}
+			}
 		}
 
 		available = {
@@ -7208,21 +7339,26 @@ focus_tree = {
 	focus = {
 		id = ENG_steady_as_she_goes
 		mutually_exclusive = { focus = ENG_a_change_in_course }
-		available = { 
+		icon = GFX_goal_support_democracy
+
+		allow_branch = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = ENG_abdication_crisis_changed_mind }
-		}
-				NOT = { has_country_flag = edward_viii_refused_to_abdicate_flag }
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_a_change_in_course
+				}
 			}
 		}
 
-		cancel_if_invalid = yes
-
-		icon = GFX_goal_support_democracy
-
 		x = 14
 		y = 0
+		relative_position_id = ENG_revisit_colonial_policy
+
 		offset = {
 			x = -7
 			y = 0
@@ -7230,7 +7366,52 @@ focus_tree = {
 				NOT = { has_dlc = "Man the Guns" }
 			}
 		}
-		relative_position_id = ENG_revisit_colonial_policy
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_dlc = "Man the Guns"
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = uk_empire_focus
+			}
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_revisit_colonial_policy
+			}
+		}
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_global_defense
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_home_defence
+			}
+		}
+
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -7242,9 +7423,32 @@ focus_tree = {
 				}
 			}
 		}
+
+		available = { 
+			if = {
+				limit = {
+					NOT = { has_country_flag = ENG_abdication_crisis_changed_mind }
+				}
+				NOT = { has_country_flag = edward_viii_refused_to_abdicate_flag }
+			}
+		}
+		cancel_if_invalid = yes
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}	
 		completion_reward = {
 			add_timed_idea = { idea = ENG_steady_as_she_goes_idea days = 365 }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 
@@ -7257,6 +7461,20 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_home_defence
+						has_completed_focus = ENG_a_change_in_course
+					}
+				}
+			}
 		}
 
 		available = {
@@ -7269,6 +7487,19 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = ENG_steady_as_she_goes
+
+		offset = {
+			x = 4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_global_defense
+			}
+		}
+
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -7401,6 +7632,17 @@ focus_tree = {
 						instant_build = yes
 					}
 				}								
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
 			}
 		}
 	}
@@ -7878,11 +8120,40 @@ focus_tree = {
 				NOT = { has_dlc = "Man the Guns" }
 			}
 		}
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_home_defence
+			}
+		}
 		relative_position_id = ENG_steady_as_she_goes
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_global_defense
+						has_completed_focus = ENG_a_change_in_course
+					}
+				}
+			}
+		}
+
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
 		completion_reward = {
 			add_war_support = 0.05
@@ -7943,6 +8214,17 @@ focus_tree = {
 						province = 540
 						instant_build = yes
 					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 		}
@@ -8031,7 +8313,29 @@ focus_tree = {
 		prerequisite = { focus = uk_iran_focus focus = ENG_no_further_appeasement }
 
 		allow_branch = {
-			always = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_a_change_in_course
+				}
+			}
+		}
+
+		offset = {
+			x = 4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_global_defense
+			}
 		}
 
 		available = {
@@ -8122,7 +8426,7 @@ focus_tree = {
 		id = ENG_military_training_act
 		available = {
 			OR = {
-				threat > 0.3
+				threat > 0.5
 				has_war = yes
 			}
 		}
@@ -8549,6 +8853,17 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ENG_steady_as_she_goes
+				}
+			}
 		}
 
 		available = {
@@ -8558,6 +8873,68 @@ focus_tree = {
 		x = 18
 		y = 0
 		relative_position_id = ENG_steady_as_she_goes
+
+		offset = {
+			x = -18
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_a_change_in_course
+			}
+		}
+
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_the_kings_party
+			}
+		}
+
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_organize_the_blackshirts
+			}
+		}
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_organize_the_blackshirts
+				has_completed_focus = uk_empire_focus
+			}
+		}
+
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+		}
+
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -8701,6 +9078,17 @@ focus_tree = {
 					value = -200
 				}
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 
@@ -8710,6 +9098,38 @@ focus_tree = {
 		id = ENG_the_kings_party
 		prerequisite = { focus = ENG_a_change_in_course }
 		mutually_exclusive = { focus = ENG_organize_the_blackshirts focus = ENG_concessions_to_the_trade_unions }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_organize_the_blackshirts
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+						has_completed_focus = ENG_steady_as_she_goes
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_the_kings_party
+			}
+		}
+
 		available = {
 			has_country_flag = edward_viii_married_wallis_simpson
 			is_subject = no
@@ -8756,6 +9176,17 @@ focus_tree = {
 					type = contain
 					id = GER
 					value = -200
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 		}
@@ -8959,13 +9390,45 @@ focus_tree = {
 		id = ENG_organize_the_blackshirts
 		prerequisite = { focus = ENG_a_change_in_course }
 		mutually_exclusive = { focus = ENG_the_kings_party focus = ENG_concessions_to_the_trade_unions }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_the_kings_party
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+						has_completed_focus = ENG_steady_as_she_goes
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_organize_the_blackshirts
+			}
+		}
+
 		available = {
 			is_subject = no
 			has_war = no
 			if = {
 				limit = {
 					NOT = { has_country_flag = ENG_abdication_crisis_changed_mind }
-		}
+				}
 				NOT = { has_country_flag = edward_viii_refused_to_abdicate_flag }
 			}
 		}
@@ -9057,6 +9520,17 @@ focus_tree = {
 						id = ROOT
 						value = -50
 					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 		}
@@ -10157,13 +10631,45 @@ focus_tree = {
 		id = ENG_concessions_to_the_trade_unions
 		prerequisite = { focus = ENG_a_change_in_course }
 		mutually_exclusive = { focus = ENG_the_kings_party focus = ENG_organize_the_blackshirts }
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_the_kings_party
+						has_completed_focus = ENG_organize_the_blackshirts
+						has_completed_focus = ENG_steady_as_she_goes
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+		}
+
 		available = {
 			is_subject = no
 			has_war = no
 			if = {
 				limit = {
 					NOT = { has_country_flag = ENG_abdication_crisis_changed_mind }
-		}
+				}
 				NOT = { has_country_flag = edward_viii_refused_to_abdicate_flag }
 			}
 		}
@@ -10246,12 +10752,36 @@ focus_tree = {
 				}
 			}
 			hidden_effect = { news_event = { id = mtg_news.33 days = 1 } }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = ENG_move_to_secure_the_dominions
 		prerequisite = { focus = ENG_organize_the_blackshirts focus = ENG_concessions_to_the_trade_unions }
+
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+		}
+
 		available = {
 			is_subject = no
 			has_war = no

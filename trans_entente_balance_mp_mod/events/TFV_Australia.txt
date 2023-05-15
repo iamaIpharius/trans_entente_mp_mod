@@ -226,7 +226,11 @@ country_event = {
 	
 	option = {
 		name = tfv_australia.6.a
-				
+		
+		set_cosmetic_tag = AST_antipodean_union
+		
+		set_capital = {state = 522}
+		
 		every_state = {
 			limit = {
 				is_core_of = SAF

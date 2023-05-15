@@ -1,4 +1,4 @@
-﻿capital = 43
+﻿capital = 909
 # MOD
 
 add_ideas = {

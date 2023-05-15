@@ -178,11 +178,11 @@ give_guarantee = URG
 		#laws
 		isolation
 		volunteer_only
-		great_depression_3
+		great_depression_1
 		new_deal
 	}
 	remove_ideas = {
-		great_depression
+		great_depression_4
 	}
 
 	#focuses
@@ -317,7 +317,7 @@ set_popularities = {
 
 add_ideas = {
 	undisturbed_isolation
-	great_depression
+	great_depression_4
 	disarmed_nation
 	free_trade
 	home_of_the_free

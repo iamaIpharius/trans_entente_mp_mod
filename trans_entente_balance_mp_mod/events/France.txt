@@ -2282,3 +2282,227 @@ news_event = {
 		}
 	}
 }
+country_event = {
+	id = france.35
+	title = "germany refuse"
+	desc = "the german refuse the transfer of state "
+
+	picture = GFX_report_event_german_parade_paris
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "well ..."
+	}
+}
+
+country_event = {
+	id = france.36
+	title = "germany accept the demand"
+	desc = "the german state has accpeted our demand for new land "
+
+	picture = GFX_report_event_german_parade_paris
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "YES"
+		VIC = {
+			
+			transfer_state = 19 
+			transfer_state = 806
+		
+		}
+	}
+}
+
+country_event = { 
+	id = france.37
+	title = "improve our special forces"
+	desc = "has we lost the war many of our troops went to fight for free france 
+	we lost many and even more expertise, we need to change that"
+	picture = GFX_report_event_german_parade_paris
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "let's go with the colonies ..."
+		VIC = { 
+			add_ideas = recruiting_from_colonies
+		}
+	}
+	option = {
+		
+		name = "Let's try with our allies ..."
+		VIC = {
+			add_ideas = recruiting_from_axis
+		}
+	}
+}
+
+country_event = {
+	id = france.38
+	title = "Vichy is willing to give part of there colonies for our economic support"
+	desc = "A delegation from vichy proposed an insteresting idea for our ecomic support they would be willing to give us tunisia"
+	picture = GFX_report_event_german_parade_paris
+	is_triggered_only = yes
+	option = {
+		name = "let's do it"
+		ITA = {
+			transfer_state = 665
+			transfer_state = 458
+		}
+		VIC = {
+			country_event = {id = france.39}
+			add_ideas = VIC_italian_economic_support
+		}
+	}
+	option = {
+		name = "no"
+		VIC =  { country_event = {id = france.40} }
+	}
+}
+country_event = {
+	id = france.39
+	is_triggered_only = yes
+	title = "Italy accept"
+	desc = "the italian have accepted our demand !"
+	option = {
+		name = "yes"
+	}
+}
+country_event = {
+	id = france.40
+	is_triggered_only = yes
+	title = "Italy refuse"
+	desc = "the italian have refused our demand !"
+	option = {
+		name = "well"
+	}
+}
+
+country_event = {
+	id = france.41
+	title = "Vichy is willing to give part of there colonies for our economic support"
+	desc = "A delegation from vichy proposed an insteresting idea for our ecomic support they would be willing to give us morocco"
+	picture = GFX_report_event_german_parade_paris
+	is_triggered_only = yes
+	option = {
+		name = "We will accept there proposal"
+		GER = {
+			transfer_state = 461
+			transfer_state = 462
+		}
+		VIC = {
+			country_event = {id = france.42}
+			add_ideas = VIC_german_economic_support
+		}
+	}
+	option = {
+		name = "we are not interested"
+		VIC =  { country_event = {id = france.43} }
+	}
+}
+country_event = {
+	id = france.42
+	title = "germany accept"
+	desc = "the german have accpeted our demmand !"
+	is_triggered_only = yes
+	option = {
+		name = "YES"
+	}
+}
+country_event = {
+	id = france.43
+	title = "germany refuse"
+	desc = "the german have refused our demand !"
+	is_triggered_only = yes
+	option = {
+		name = "well ..."
+	}
+}
+
+country_event = {
+	id = france.44
+	title = "Vichy ask us to invest in there country"
+	desc = "the Vichy is asking us help in building some new arm factorie"
+	is_triggered_only = yes
+	option = {
+		name = "they will have our support"
+		GER = {
+			add_timed_idea = {idea = VIC_german_support days = 70}
+		}
+		VIC = {
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+					}
+				}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = { 
+				limit = {
+					is_fully_controlled_by = VIC
+					is_core_of = ROOT
+					free_building_slots = {
+					building = arms_factory
+					size > 2
+					include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = "they do not have the power to ask for anything"
+		VIC =  { country_event = {id = france.43} }
+	}
+}
+
+country_event = {
+	id = france.45
+	title = "Vichy ask us for gun"
+	desc = "the Vichy gouverment is asking us for gun ..."
+	is_triggered_only = yes
+	option = {
+		name = "let's do it"
+		GER = {
+			add_equipment_to_stockpile ={
+				type = infantry_equipment
+				amount = -4000
+			}
+		}
+		VIC = {
+			add_equipment_to_stockpile ={
+				type = infantry_equipment_1
+				amount = 6000
+			}
+			add_war_support = 0.05
+		}
+	}
+	option = {
+		name = "we need those"
+		VIC =  { 
+			country_event = {id = france.43} 
+			add_stability = -0.05
+		}
+
+	}
+}
+

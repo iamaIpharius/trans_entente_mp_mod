@@ -297,6 +297,7 @@ political_actions = {
 				}
 				add = 50
 			}
+			
 		}
 	}	
 }
@@ -328,6 +329,141 @@ war_measures = {
 				add_ideas = {
 					megacucked
 				}	
+			}
+		}
+	}
+}
+
+war_measures = {
+	better_training_colonies = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_colonies
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_colonies
+			}
+		}
+		remove_effect = { 
+			VIC = {
+				add_to_variable = {VIC_acclimatization_hot_climate_gain_factor = 0.05}
+			}
+		}
+	}
+	better_training_axis = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		remove_effect = { 
+			VIC = {
+				add_to_variable = {VIC_acclimatization_cold_climate_gain_factor = 0.05}
+			}
+		}
+	}
+	better_training_colonies_2 = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_colonies
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_colonies
+			}
+		}
+		remove_effect = { 
+			VIC = {
+				add_to_variable = {VIC_acclimatization_hot_climate_gain_factor = 0.05}
+			}
+		}
+	}
+	better_training_axis_2 = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		remove_effect = { 
+			VIC = {
+				add_to_variable = {VIC_acclimatization_cold_climate_gain_factor = 0.05}
+			}
+		}
+	}
+	better_training_anywhere = { 
+		icon = generic_construction
+		available = { 
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		cost = 60
+		days_remove = 70
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		visible = {
+			tag = VIC
+			VIC = {
+				has_idea = recruiting_from_axis
+			}
+		}
+		remove_effect = { 
+			VIC = {
+				add_to_variable = {VIC_special_force_attack_factor = 0.05}
+				add_to_variable = {VIC_special_force_defence_factor = 0.05}
+				add_to_variable = { VIC_special_force_out_of_supply_factor = -0.15 }
 			}
 		}
 	}

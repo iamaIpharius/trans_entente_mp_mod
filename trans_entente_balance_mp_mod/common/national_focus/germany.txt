@@ -40,11 +40,24 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 5
+					level = 3
 					instant_build = yes
+				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
 			add_tech_bonus = {
@@ -1206,11 +1219,24 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_industrial_effort_2IC }
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
+				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 				}
 			}			
 		}
@@ -1224,11 +1250,24 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
+				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 				}
 				set_state_flag = GER_industrial_effort_2IC
 			}
@@ -1240,11 +1279,24 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
+				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 				}
 				set_state_flag = GER_industrial_effort_2IC
 			}
@@ -1256,11 +1308,24 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
+				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 				}
 				set_state_flag = GER_industrial_effort_2IC
 			}
@@ -1374,10 +1439,23 @@ focus_tree = {
 					has_full_control_of_state = 65
 				}
 				65 = {
-					add_extra_state_shared_building_slots = 5
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = synthetic_refinery
-						level = 5
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 67
+				}
+				67 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -1514,12 +1592,26 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_german_war_economy }
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1539,12 +1631,26 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+
 				set_state_flag = GER_german_war_economy
 			}
 			random_owned_controlled_state = {
@@ -1555,12 +1661,26 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+
 				set_state_flag = GER_german_war_economy
 			}
 			random_owned_controlled_state = {
@@ -1571,12 +1691,26 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 3
 					instant_build = yes
 				}
+				if = {
+					limit = {
+						JAP = {
+							is_ai = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+
 				set_state_flag = GER_german_war_economy
 			}
 		}
@@ -1660,6 +1794,21 @@ focus_tree = {
 					target = ROOT
 					modifier = GER_align_hungary
 				}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
 			}
 		}
 	}
@@ -1724,6 +1873,23 @@ focus_tree = {
 					target = ROOT
 					modifier = GER_align_romania
 				}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				prioritize = { 46 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+
 			}
 		}
 	}
@@ -1760,19 +1926,10 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = GER_integrate_war_economies_1 }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-			every_state = {
-				limit = { has_state_flag = GER_integrate_war_economies_2 }
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1782,7 +1939,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1791,7 +1948,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1802,7 +1959,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1811,7 +1968,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1848,27 +2005,10 @@ focus_tree = {
 							}
 							NOT = { has_state_flag = GER_integrate_war_economies }
 						}
-						add_extra_state_shared_building_slots = 3
+						add_extra_state_shared_building_slots = 2
 						add_building_construction = {
 							type = arms_factory
-							level = 3
-							instant_build = yes
-						}
-						set_state_flag = GER_integrate_war_economies
-					}
-					random_owned_controlled_state = {
-						limit = {
-							free_building_slots = {
-								building = arms_factory
-								size > 1
-								include_locked = yes
-							}
-							NOT = { has_state_flag = GER_integrate_war_economies }
-						}
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
+							level = 2
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies
@@ -1882,10 +2022,10 @@ focus_tree = {
 									include_locked = yes
 								}
 							}
-							add_extra_state_shared_building_slots = 3
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 								type = arms_factory
-								level = 3
+								level = 2
 								instant_build = yes
 							}
 							set_state_flag = GER_integrate_war_economies_1
@@ -1898,10 +2038,10 @@ focus_tree = {
 									include_locked = yes
 								}
 							}
-							add_extra_state_shared_building_slots = 3
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 								type = arms_factory
-								level = 3
+								level = 2
 								instant_build = yes
 							}
 							set_state_flag = GER_integrate_war_economies_2
@@ -1927,27 +2067,10 @@ focus_tree = {
 							}
 							NOT = { has_state_flag = GER_integrate_war_economies }
 						}
-						add_extra_state_shared_building_slots = 3
+						add_extra_state_shared_building_slots = 2
 						add_building_construction = {
 							type = arms_factory
-							level = 3
-							instant_build = yes
-						}
-						set_state_flag = GER_integrate_war_economies
-					}
-					random_owned_controlled_state = {
-						limit = {
-							free_building_slots = {
-								building = arms_factory
-								size > 1
-								include_locked = yes
-							}
-							NOT = { has_state_flag = GER_integrate_war_economies }
-						}
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
+							level = 2
 							instant_build = yes
 						}
 						set_state_flag = GER_integrate_war_economies
@@ -1961,10 +2084,10 @@ focus_tree = {
 									include_locked = yes
 								}
 							}
-							add_extra_state_shared_building_slots = 3
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 								type = arms_factory
-								level = 3
+								level = 2
 								instant_build = yes
 							}
 							set_state_flag = GER_integrate_war_economies_1
@@ -1977,10 +2100,10 @@ focus_tree = {
 									include_locked = yes
 								}
 							}
-							add_extra_state_shared_building_slots = 3
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 								type = arms_factory
-								level = 3
+								level = 2
 								instant_build = yes
 							}
 							set_state_flag = GER_integrate_war_economies_2
@@ -2743,6 +2866,21 @@ focus_tree = {
 		x = 25
 		y = 0
 		cost = 10
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
+
 		available = {
 			is_subject = no
 		}
@@ -2769,6 +2907,17 @@ focus_tree = {
 				FRA = {
 					country_event = { id = germany.60 }
 					custom_effect_tooltip = may_provoke_hostility
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 		}		
@@ -4742,6 +4891,19 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		x = 35
 		y = 1
+
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GER_oppose_hitler
+			}
+		}
+
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -6062,6 +6224,17 @@ focus_tree = {
 
 		allow_branch = {
 			has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GER_rhineland
+				}
+			}
 		}
 
 		available = {
@@ -6070,6 +6243,42 @@ focus_tree = {
 		}
 		x = 47
 		y = 0
+
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GER_oppose_hitler
+			}
+		}
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GER_reestablish_free_elections
+			}
+		}
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GER_revive_the_kaiserreich
+			}
+		}
+
 		cost = 10
 		ai_will_do = {
 			factor = 7
@@ -6099,6 +6308,17 @@ focus_tree = {
 			add_political_power = 120
 			add_named_threat = { threat = 5 name = GER_oppose_hitler }
 			country_event = { id = wtt_germany.1 }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 
@@ -6143,6 +6363,37 @@ focus_tree = {
 			has_country_flag = GER_mackensen_dead
 			NOT = { has_government = democratic }
 		}
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = GER_rhineland
+						has_completed_focus = GER_reestablish_free_elections
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GER_revive_the_kaiserreich
+			}
+		}
+
 		available = {
 			is_subject = no
 		}
@@ -6161,6 +6412,17 @@ focus_tree = {
 			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 			set_rule = { can_send_volunteers = yes }
 			add_named_threat = { threat = 5 name = GER_revive_the_kaiserreich }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 
@@ -6168,6 +6430,22 @@ focus_tree = {
 		id = GER_rebuild_the_nation
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = GER_revive_the_kaiserreich focus = GER_reestablish_free_elections }
+
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = GER_rhineland
+				}
+			}
+		}
+
 		available = {
 		}
 		x = 1
@@ -6822,9 +7100,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = -2
-		y = 1
-		relative_position_id = GER_break_the_anglo_french_colonial_hegemony
+		x = -1
+		y = 3
+		relative_position_id = GER_modular_construction
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -7072,7 +7350,7 @@ focus_tree = {
 					add_popularity = { ideology = neutrality popularity = 0.1 }
 					effect_tooltip = {
 						create_country_leader = {
-							name = "vittorio Emanuele III"
+							name = "Vittorio Emanuele III"
 							desc = "POLITICS_VITTORIO_EMANUELE_III_DESC"
 							picture = "GFX_portrait_italy_vittorio_emanuele_iii"
 							expire = "1965.1.1"
@@ -7903,6 +8181,37 @@ focus_tree = {
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = GER_secure_the_new_state }
 		mutually_exclusive = { focus = GER_revive_the_kaiserreich }
+	
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = GER_rhineland
+						has_completed_focus = GER_revive_the_kaiserreich
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GER_reestablish_free_elections
+			}
+		}
+	
 		available = {
 			is_subject = no
 		}
@@ -7921,6 +8230,17 @@ focus_tree = {
 				days = 720
 			}
 			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 		}
 	}
 

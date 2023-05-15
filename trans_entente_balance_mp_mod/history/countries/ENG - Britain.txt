@@ -176,7 +176,7 @@ add_ideas = {
 
 give_guarantee = POL	
 
-set_convoys = 800
+set_convoys = 2000
 
 # DIPLOMACY
 if = {
