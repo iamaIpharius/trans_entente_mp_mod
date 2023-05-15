@@ -1,6 +1,14 @@
 spriteTypes = {	
 
 	SpriteType = {
+		name = "GFX_idea_warlords_corruption"
+		texturefile = "gfx/interface/ideas/warlords_corruption.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_CHI_agrarian_society"
+		texturefile = "gfx/interface/ideas/CHI_agrarian_society.dds"	
+	}
+	SpriteType = {
 		name = "GFX_idea_achived_victories_3"
 		texturefile = "gfx/interface/ideas/achived_victories_3.dds"	
 	}

@@ -3733,13 +3733,13 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ITA_thermojet_research
-				bonus = 0.75
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = air_equipment
 			}
 			add_tech_bonus = {
 				name = ITA_thermojet_research
-				ahead_reduction = 2
+				ahead_reduction = 1
 				bonus = 1.0
 				category = jet_technology
 				category = rocketry
@@ -4374,6 +4374,7 @@ focus_tree = {
 					}
 				}
 				
+				ITA_add_basic_light_tank_destroyer_template = yes
 
 				if = {
 					limit = {
@@ -6810,8 +6811,10 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Cagni Class"
 					type = ship_hull_cruiser_submarine
+					allow_without_tech = yes # Display tooltip as if we have the tech.
 					name_group = ITA_SS_HISTORICAL #TODO_Manu: Namelist
 					parent_version = 0
+					allow_without_tech = yes # Display tooltip as if we have the tech.
 					modules = {
 						fixed_ship_torpedo_slot = ship_torpedo_sub_1
 						fixed_ship_engine_slot = sub_ship_engine_2
@@ -6903,8 +6906,10 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "CB Class"
 					type = ship_hull_midget_submarine
+					allow_without_tech = yes # Display tooltip as if we have the tech.
 					name_group = ITA_SS_HISTORICAL #TODO_Manu: Namelist
 					parent_version = 0
+					allow_without_tech = yes # Display tooltip as if we have the tech.
 					modules = {
 						fixed_ship_torpedo_slot = ship_torpedo_sub_2
 						fixed_ship_engine_slot = sub_ship_engine_2
@@ -7015,6 +7020,7 @@ focus_tree = {
 						type = ship_hull_light_3
 						name_group = ITA_DD_HISTORICAL
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
 							fixed_ship_battery_slot = dp_light_battery_2
 							fixed_ship_anti_air_slot = ship_anti_air_2
@@ -7034,6 +7040,7 @@ focus_tree = {
 						type = ship_hull_light_3
 						name_group = ITA_DD_HISTORICAL #TODO_Manu: Name List
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
 							fixed_ship_battery_slot = ship_light_battery_2
 							fixed_ship_anti_air_slot = ship_anti_air_2
@@ -7065,15 +7072,10 @@ focus_tree = {
 			### NO MTG ###
 			##############
 			else = {
-				if = {
-					limit = {
-						NOT = { has_tech = improved_destroyer }
-					}
-					set_technology = { improved_destroyer = 1 }
-				}
 				create_equipment_variant = {
 					name = "Comandanti Medaglie d'Oro Class"
 					type = destroyer_3
+					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 					upgrades = {
 						ship_torpedo_upgrade = 2
 						destroyer_engine_upgrade = 2
@@ -7155,6 +7157,7 @@ focus_tree = {
 						type = ship_hull_light_1
 						name_group = ITA_DD_HISTORICAL
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since ITA already has tech, but in order to keep it consistent
 						modules = {
 							fixed_ship_battery_slot = ship_light_battery_1
 							fixed_ship_anti_air_slot = ship_anti_air_2
@@ -7174,6 +7177,7 @@ focus_tree = {
 						type = ship_hull_light_1
 						name_group = ITA_DD_HISTORICAL #TODO_Manu: Name List
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since ITA already has tech, but in order to keep it consistent
 						modules = {
 							fixed_ship_battery_slot = ship_light_battery_1
 							fixed_ship_anti_air_slot = ship_anti_air_2
@@ -7224,8 +7228,8 @@ focus_tree = {
 					set_technology = { improved_destroyer = 1 }
 				}
 				create_equipment_variant = {
-					name = "Comandanti Medaglie d'Oro Class"
-					type = destroyer_3
+					name = "Gabbiano Class"
+					type = destroyer_1
 					upgrades = {
 						ship_torpedo_upgrade = 1
 						destroyer_engine_upgrade = 1
@@ -7419,6 +7423,7 @@ focus_tree = {
 					type = ship_hull_carrier_1
 					name_group = ITA_CV_HISTORICAL
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 					modules = {
 						fixed_ship_deck_slot_1 = ship_deck_space
 						fixed_ship_deck_slot_2 = ship_deck_space
@@ -7456,6 +7461,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Aquila Class"
 					type = carrier_2
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 					upgrades = {
 						ship_deckspace_upgrade = 3
 						carrier_armor_upgrade = 2
@@ -7532,6 +7538,7 @@ focus_tree = {
 					type = ship_hull_carrier_conversion_ca
 					name_group = ITA_CV_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, Conte Grande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma (Aquila) and Augustus (Sparviero)
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 					modules = {
 						fixed_ship_deck_slot_1 = ship_deck_space
 						fixed_ship_deck_slot_2 = ship_deck_space
@@ -7580,6 +7587,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Conte di Savoia Class - Converted Liner"
 					type = carrier_1
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 					upgrades = {
 						ship_deckspace_upgrade = 2
 						carrier_armor_upgrade = 1
@@ -7635,6 +7643,12 @@ focus_tree = {
 		relative_position_id = ITA_ispettorato_dei_mezzi_antisommergibili
 		cost = 10
 		available = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				has_tech = basic_light_cruiser
+			}
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
@@ -7743,6 +7757,7 @@ focus_tree = {
 							type = ship_hull_cruiser_3
 							name_group = ITA_CL_HISTORICAL
 							parent_version = 0
+							allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 							modules = {
 								front_1_custom_slot = ship_light_medium_battery_3
 								mid_1_custom_slot = ship_torpedo_2
@@ -7766,6 +7781,7 @@ focus_tree = {
 							type = ship_hull_cruiser_3
 							name_group = ITA_CL_HISTORICAL
 							parent_version = 0
+							allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 							modules = {
 								front_1_custom_slot = ship_light_medium_battery_3
 								mid_1_custom_slot = ship_torpedo_2
@@ -7819,6 +7835,7 @@ focus_tree = {
 							type = ship_hull_cruiser_2
 							name_group = ITA_CL_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, Conte Grande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma (Aquila) and Augustus (Sparviero)
 							parent_version = 0
+							allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 							modules = {
 								front_1_custom_slot = ship_anti_air_2
 								mid_1_custom_slot = ship_torpedo_1
@@ -7841,6 +7858,7 @@ focus_tree = {
 							type = ship_hull_cruiser_2
 							name_group = ITA_CL_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, Conte Grande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma (Aquila) and Augustus (Sparviero)
 							parent_version = 0
+							allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 							modules = {
 								front_1_custom_slot = ship_anti_air_2
 								mid_1_custom_slot = ship_torpedo_1
@@ -7889,15 +7907,16 @@ focus_tree = {
 			else = {
 				if = {
 					limit = {
-						NOT = { has_tech = improved_light_cruiser }
+						has_tech = improved_light_cruiser
 					}
 					create_equipment_variant = {
 						name = "Costanzo Ciano Class"
 						type = light_cruiser_3
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						upgrades = {
 							ship_reliability_upgrade = 2
 							ship_engine_upgrade = 3
-							ship_armor_upgrade = 3
+							ship_anti_air_upgrade = 3
 							ship_gun_upgrade = 3
 						}
 					}
@@ -7926,10 +7945,11 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "Costanzo Ciano Class"
 						type = light_cruiser_2
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						upgrades = {
 							ship_reliability_upgrade = 2
 							ship_engine_upgrade = 2
-							ship_armor_upgrade = 2
+							ship_anti_air_upgrade = 2
 							ship_gun_upgrade = 2
 						}
 					}
@@ -8617,8 +8637,16 @@ focus_tree = {
 
 			ITA_bop_low_decrease_effect = yes	
 
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
 			mark_focus_tree_layout_dirty = yes
 		}
+	}
 	}
 
 
@@ -8953,8 +8981,16 @@ focus_tree = {
 
 			ITA_bop_very_low_increase_effect = yes
 
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
 			mark_focus_tree_layout_dirty = yes
 		}
+	}
 	}
 	
 	focus = {
@@ -11110,7 +11146,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
 
 		completion_reward = {
-			custom_effect_tooltip = "Longer training?"
 			army_experience = 25
 			add_timed_idea = { 
 				idea = ITA_prioritizing_the_military 
@@ -12629,6 +12664,7 @@ focus_tree = {
 					type = ship_hull_pre_dreadnought
 					name_group = ITA_BC_HISTORICAL
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 					modules = {
 						front_1_custom_slot = ship_anti_air_1
 						mid_1_custom_slot = ship_secondaries_1
@@ -12672,6 +12708,7 @@ focus_tree = {
 					type = ship_hull_light_1
 					name_group = ITA_DD_HISTORICAL
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since appropriate tech is already researched, but it improves tooltip
 					modules = {
 						front_1_custom_slot = ship_anti_air_1
 						rear_1_custom_slot = ship_mine_layer_1
@@ -12712,6 +12749,7 @@ focus_tree = {
 					type = ship_hull_cruiser_coastal_defense_ship
 					name_group = ITA_BC_HISTORICAL
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
 					modules = {
 						front_1_custom_slot = ship_anti_air_1
 						mid_1_custom_slot = ship_secondaries_1
@@ -12742,6 +12780,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Vecchio Esploratore Class"
 					type = heavy_cruiser_1
+					allow_without_tech = yes #Makes no difference since focus appropriate tech is already researched but it improves tooltip
 					upgrades = {
 						ship_reliability_upgrade = 2
 						ship_engine_upgrade = 1
@@ -12776,6 +12815,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Alessandro Poerio Class"
 					type = destroyer_1
+					allow_without_tech = yes #Makes no difference since focus appropriate tech is already researched but it improves tooltip
 					upgrades = {
 						ship_torpedo_upgrade = 1
 						destroyer_engine_upgrade = 1
@@ -12810,6 +12850,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Eritrea Class"
 					type = destroyer_1
+					allow_without_tech = yes #Makes no difference since focus appropriate tech is already researched but it improves tooltip
 					upgrades = {
 						ship_torpedo_upgrade = 1
 						destroyer_engine_upgrade = 2
@@ -14075,6 +14116,7 @@ focus_tree = {
 					type = ship_hull_super_heavy_1
 					name_group = ITA_BB_HISTORICAL #TODO_Manu: Namelist?
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 					modules = {
 						front_1_custom_slot = ship_anti_air_2
 						front_2_custom_slot = ship_super_heavy_battery_1
@@ -14123,6 +14165,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Neptunus Class"
 					type = SH_battleship_1
+					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 					upgrades = {
 						ship_reliability_upgrade = 2
 						ship_engine_upgrade = 2
@@ -14257,6 +14300,11 @@ focus_tree = {
 				add_opinion_modifier = {
 				    target = ITA
 				    modifier = ITA_latin_initiatives
+				}
+				country_event = { 
+				    id = BBA_italy_interaction_events.44
+				    days = 2
+				    random = 6
 				}
 			}
 		}
@@ -15367,6 +15415,26 @@ focus_tree = {
 					id = BBA_italy_interaction_events.40
 				    days = 3
 				    random = 6
+				}
+			}
+			effect_tooltip = {
+				every_country = { #If Italy has any wargoal on other countries, remove them so they can join the faction
+					limit = {
+						OR = {
+							is_in_faction_with = FRA
+							tag = FRA
+						} 
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+					custom_effect_tooltip = if_they_accept_tt
+					ROOT = {
+						remove_wargoal = {
+							type = all
+							target = PREV 
+						}
+					}
 				}
 			}
 		}
@@ -18525,7 +18593,15 @@ focus_tree = {
 				play_song = "bella_ciao"
 			}
 
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
 			mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
