@@ -176,12 +176,21 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4391;4828;impassable;-1;-1;-1;-1;-1;;pamir mountains
 4391;1703;impassable;-1;-1;-1;-1;-1;;pamir mountains
 4391;12526;impassable;-1;-1;-1;-1;-1;;pamir mountains
+764;3764;impassable;-1;-1;-1;-1;-1;;french alps
+764;9736;impassable;-1;-1;-1;-1;-1;;french alps
+6975;11721;impassable;-1;-1;-1;-1;-1;;french alps
+6975;3959;impassable;-1;-1;-1;-1;-1;;french alps
+778;611;impassable;-1;-1;-1;-1;-1;;french alps
 611;3612;impassable;-1;-1;-1;-1;-1;;western alps
 11570;3612;impassable;-1;-1;-1;-1;-1;;western alps
 11570;9587;impassable;-1;-1;-1;-1;-1;;western alps
 6635;9587;impassable;-1;-1;-1;-1;-1;;western alps
+11590;9618;impassable;-1;-1;-1;-1;-1;;western alps
 3641;11601;impassable;-1;-1;-1;-1;-1;;central alps
 3641;658;impassable;-1;-1;-1;-1;-1;;central alps
+661;11601;impassable;-1;-1;-1;-1;-1;;central alps
+11604;11601;impassable;-1;-1;-1;-1;-1;;central alps
+636;11601;impassable;-1;-1;-1;-1;-1;;central alps
 6661;3662;impassable;-1;-1;-1;-1;-1;;eastern alps
 3662;11587;impassable;-1;-1;-1;-1;-1;;eastern alps
 11587;3660;impassable;-1;-1;-1;-1;-1;;eastern alps
@@ -189,6 +198,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 6675;9633;impassable;-1;-1;-1;-1;-1;;eastern alps
 9633;9630;impassable;-1;-1;-1;-1;-1;;eastern alps
 9630;11618;impassable;-1;-1;-1;-1;-1;;eastern alps
+6675;11587;impassable;-1;-1;-1;-1;-1;;italian alps
+9630;11615;impassable;-1;-1;-1;-1;-1;;italian alps
+656;6656;impassable;-1;-1;-1;-1;-1;;italian alps
+656;3657;impassable;-1;-1;-1;-1;-1;;italian alps
+11615;3657;impassable;-1;-1;-1;-1;-1;;italian alps
 671;11634;impassable;-1;-1;-1;-1;-1;;austrian alps
 671;3675;impassable;-1;-1;-1;-1;-1;;austrian alps
 3675;668;impassable;-1;-1;-1;-1;-1;;austrian alps
@@ -197,5 +211,41 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 6691;6687;impassable;-1;-1;-1;-1;-1;;austrian alps
 6691;9650;impassable;-1;-1;-1;-1;-1;;austrian alps
 9650;3684;impassable;-1;-1;-1;-1;-1;;austrian alps
+9884;11838;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+9884;915;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+9882;899;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+9882;3899;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+3915;3899;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+3915;3898;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+6915;11779;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+899;3899;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+899;897;impassable;-1;-1;-1;-1;-1;;pyrenees mountains
+3729;9699;impassable;-1;-1;-1;-1;-1;;cantabrian mountains
+6749;9699;impassable;-1;-1;-1;-1;-1;;cantabrian mountains
+9703;9699;impassable;-1;-1;-1;-1;-1;;cantabrian mountains
+9703;11684;impassable;-1;-1;-1;-1;-1;;cantabrian mountains
+11820;3845;impassable;-1;-1;-1;-1;-1;;central spanish mountains
+11820;939;impassable;-1;-1;-1;-1;-1;;central spanish mountains
+977;13227;impassable;-1;-1;-1;-1;-1;;central spanish mountains
+6841;13227;impassable;-1;-1;-1;-1;-1;;central spanish mountains
+6841;11806;impassable;-1;-1;-1;-1;-1;;central spanish mountains
+7196;1192;impassable;-1;-1;-1;-1;-1;;baetic mountains
+7196;4195;impassable;-1;-1;-1;-1;-1;;baetic mountains
+1176;10063;impassable;-1;-1;-1;-1;-1;;baetic mountains
+1176;747;impassable;-1;-1;-1;-1;-1;;baetic mountains
+7196;11956;impassable;-1;-1;-1;-1;-1;;baetic mountains
+4139;10107;impassable;-1;-1;-1;-1;-1;;atlas mountains
+1207;8046;impassable;-1;-1;-1;-1;-1;;atlas mountains
+1207;4933;impassable;-1;-1;-1;-1;-1;;atlas mountains
+1207;1152;impassable;-1;-1;-1;-1;-1;;atlas mountains
+12042;7173;impassable;-1;-1;-1;-1;-1;;atlas mountains
+12042;11987;impassable;-1;-1;-1;-1;-1;;atlas mountains
+7173;11987;impassable;-1;-1;-1;-1;-1;;atlas mountains
+989;7116;impassable;-1;-1;-1;-1;-1;;atlas mountains
+12034;11953;impassable;-1;-1;-1;-1;-1;;algerian atlas mountains
+1141;11953;impassable;-1;-1;-1;-1;-1;;algerian atlas mountains
+1058;11953;impassable;-1;-1;-1;-1;-1;;algerian atlas mountains
+1058;1141;impassable;-1;-1;-1;-1;-1;;algerian atlas mountains
+4061;1141;impassable;-1;-1;-1;-1;-1;;algerian atlas mountains
 3314;6336;sea;2752;2885;1578;2890;1581;;Afsluitdijk
 -1;-1;;-1;-1;-1;-1;-1;-1
