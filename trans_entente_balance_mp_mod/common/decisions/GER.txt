@@ -355,8 +355,6 @@ operations = {
 
 		allowed = {
 			tag = GER
-			GER = { has_government = fascism }
-			HUN = {	is_ai = yes }
 			}
 		available = {
 			divisions_in_state = { state = 909 size > 9 }
@@ -365,6 +363,8 @@ operations = {
 		visible = {
 			tag = GER
 			has_war_together_with = HUN
+			GER = { has_government = fascism }
+			HUN = {	is_ai = yes }
 		}
 
 		complete_effect = {

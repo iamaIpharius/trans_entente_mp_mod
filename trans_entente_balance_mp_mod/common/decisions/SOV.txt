@@ -10837,6 +10837,7 @@ SOV_industry_relocation = {
 				infrastructure > 2
 			}
 			has_equipment = { train_equipment > 39 } #10 trains per factory
+			has_war_with_major = yes
 		}
 
 		visible = {
@@ -11067,6 +11068,7 @@ SOV_industry_relocation = {
 				infrastructure > 2
 			}
 			has_equipment = { train_equipment > 39 } #10 trains per factory
+			has_war_with_major = yes
 		}
 
 		visible = {

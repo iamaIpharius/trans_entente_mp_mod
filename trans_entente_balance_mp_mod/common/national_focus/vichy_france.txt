@@ -42,20 +42,20 @@
 			add_country_leader_trait = emergency_powers
 
 			hidden_effect = { 
-				recruit_character = VIC_pierre_laval
-				recruit_character = VIC_marius_viple
-				recruit_character = VIC_rene_bousquet
-				recruit_character = VIC_eugene_bridoux
-				recruit_character = VIC_maxime_weygand
-				recruit_character = VIC_jean_marie_bergeret
-				recruit_character = VIC_jean_romatet
-				recruit_character = VIC_jean_francois_darlan
-				recruit_character = VIC_jean_marie_abrial
-				recruit_character = VIC_jean_francois_jannekeyn
-				recruit_character = VIC_jean_de_laborde
-				recruit_character = VIC_marcel_bruno_gensoul
-				recruit_character = VIC_jean_romatet
-				recruit_character = VIC_pierre_le_gloan
+				activate_advisor = VIC_pierre_laval
+				activate_advisor = VIC_marius_viple
+				activate_advisor = VIC_rene_bousquet
+				activate_advisor = VIC_eugene_bridoux
+				activate_advisor = VIC_maxime_weygand
+				activate_advisor = VIC_jean_marie_bergeret
+				activate_advisor = VIC_jean_romatet
+				activate_advisor = VIC_jean_francois_darlan
+				activate_advisor = VIC_jean_marie_abrial
+				activate_advisor = VIC_jean_francois_jannekeyn
+				activate_advisor = VIC_jean_de_laborde
+				activate_advisor = VIC_marcel_bruno_gensoul
+				activate_advisor = VIC_jean_romatet
+				activate_advisor = VIC_pierre_le_gloan
 			}
 
 			if = {

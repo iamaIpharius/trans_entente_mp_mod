@@ -6740,6 +6740,17 @@ ITA_diplomacy_balkan_decision_category = {
 			4 = {
 				is_controlled_by = GER
 				}
+			736 = {
+				is_controlled_by = GER
+				}
+			OR = { 
+				853 = {
+					is_controlled_by = GER
+					}
+				102 = {
+					is_controlled_by = ITA
+					}
+				}
 		}
 
 		complete_effect = {
