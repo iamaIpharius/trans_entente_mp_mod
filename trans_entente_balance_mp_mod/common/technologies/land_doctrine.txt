@@ -2315,13 +2315,13 @@ technologies = {
 		}
 		
 		mountaineers = {
-			breakthrough = 5
+			breakthrough = 1.5
 		}
 		marine = {
-			breakthrough = 5
+			breakthrough = 1.5
 		}
 		paratrooper = {
-			breakthrough = 5
+			breakthrough = 1.5
 		}
 		amphibious_mechanized = {
 			breakthrough = 0.1
@@ -2541,13 +2541,13 @@ technologies = {
 		xp_unlock_cost = 100
 		
 		marine = {
-			hardness = 20.0
+			hardness = 10.0
 		}
 		mountaineers = {
-			hardness = 20.0
+			hardness = 10.0
 		}
 		paratrooper = {
-			hardness = 20.0
+			hardness = 10.0
 		}
 		amphibious_armor = {
 			soft_attack = 0.05
@@ -2562,6 +2562,15 @@ technologies = {
 		category_tanks = {
 			max_organisation = 1
 		}	
+		mot_anti_tank_brigade = {
+			breakthrough = 0.1
+		}
+		mot_artillery_brigade = {
+			breakthrough = 0.1
+		}
+		mot_anti_air_brigade = {
+			breakthrough = 0.1
+		}
 			
 
 		path = {
@@ -2970,27 +2979,26 @@ technologies = {
 		xp_unlock_cost = 100
 		supply_consumption_factor = -0.10
 		
+		
+		no_supply_grace = 48
 		light_armor = {
-			combat_width = -0.2
+			fuel_capacity = 100
 		}
 		medium_armor = {
-			combat_width = -0.2
+			fuel_capacity = 100
 		}
 		heavy_armor = {
-			combat_width = -0.2
+			fuel_capacity = 100
+		}		
+		amphibious_armor = {
+			fuel_capacity = 100
 		}
 		super_heavy_armor = {
-			combat_width = -0.2
+			fuel_capacity = 100
 		}
 		modern_armor = {
-			combat_width = -0.2
+			fuel_capacity = 100
 		}
-		amphibious_armor = {
-			combat_width = -0.2
-		}
-		
-
-		
 		enable_tactic = tactic_overwhelming_fire
 		
 		path = {
