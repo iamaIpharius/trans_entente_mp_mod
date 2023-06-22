@@ -654,7 +654,7 @@ NPolitics = {
 NBuildings = {
 	ANTI_AIR_SUPERIORITY_MULT = 5.0,	-- How much air superiority reduction to the enemy does our AA guns? Normally each building level = -1 reduction. With this multiplier.
 	MAX_BUILDING_LEVELS = 15,			-- Max levels a building can have.
-	AIRBASE_CAPACITY_MULT = 200,		-- Each level of airbase building multiplied by this, gives capacity (max operational value). Value is int. 1 for each airplane.
+	AIRBASE_CAPACITY_MULT = 100,		-- Each level of airbase building multiplied by this, gives capacity (max operational value). Value is int. 1 for each airplane.
 	ROCKETSITE_CAPACITY_MULT = 100,		-- Each level of rocketsite building multiplied by this, gives capacity (max operational value). Value is int. 1 for each rocket.
 	NAVALBASE_REPAIR_MULT = 0.05,		-- Each level of navalbase building repairs X strength and can repair as many ships as its level
 	RADAR_RANGE_BASE = 20,				-- Radar range base, first level radar will be this + min, best radar will be this + max
@@ -1217,7 +1217,7 @@ NAir = {
 	ACE_WING_SIZE =	100,								-- size of wing ace bonuses are set up for. if lower more bonus, if higher less bonus
 	ACE_WING_SIZE_MAX_BONUS = 2,               	        -- biggest bonus we can get from having a small wing with an ace on
 	NO_SEARCH_MISSION_DETECT_FACTOR = -0.5,				-- value of planes not on active search missions for detection
-	SUPPLY_NEED_FACTOR = 0.28, 							-- multiplies supply usage
+	SUPPLY_NEED_FACTOR = 0.56, 							-- multiplies supply usage
 	SUPPLY_PRIO_FACTOR = 100.0,							-- Effect of supply need per unit for target province picking for air supply
 	CAPACITY_PENALTY = 2,								-- scales penalty of having overcrowded bases.
 	AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.015,               -- % how many max disrupted only planes are alloed to die in a single combat
@@ -1328,8 +1328,8 @@ NAir = {
 	},
 
 	MISSION_FUEL_COSTS = {  -- fuel cost per plane for each mission
-		1.0, -- AIR_SUPERIORITY
-		1.0, -- CAS
+		1.2, -- AIR_SUPERIORITY
+		1.2, -- CAS
 		0.2, -- INTERCEPTION
 		1.0, -- STRATEGIC_BOMBER
 		1.0, -- NAVAL_BOMBER
@@ -1338,8 +1338,8 @@ NAir = {
 		0.75, -- NAVAL_KAMIKAZE
 		1.2, -- PORT_STRIKE
 		1.2, -- ATTACK_LOGISTICS
-		1.0, -- AIR_SUPPLY
-		0.6, -- TRAINING
+		1.5, -- AIR_SUPPLY
+		0.3, -- TRAINING
 		1.0, -- NAVAL_MINES_PLANTING
 		1.0, -- NAVAL_MINES_SWEEPING
 		1.0, -- RECON
