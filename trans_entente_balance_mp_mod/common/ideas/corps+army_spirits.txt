@@ -87,8 +87,7 @@ ideas = {
 			available = {
 				has_military_academy = yes
 			}
-			modifier
-			{
+			modifier = {
 				weekly_manpower = 150
 				mobilization_speed = 0.1
 			}
@@ -118,8 +117,7 @@ ideas = {
 			available = {
 				has_military_academy = yes
 			}
-			modifier
-			{
+			modifier =	{
 				land_equipment_upgrade_xp_cost = -0.25
 				#production_factory_start_efficiency_factor = 0.05
 				unit_maintenance_company_design_cost_factor = -1
@@ -141,8 +139,7 @@ ideas = {
 		asymmetrical_warfare_spirit = {
 			ledger = army
 			modifier = {
-				hidden_modifier
-				{
+				hidden_modifier = {
 					tactic_guerrilla_tactics_preferred_weight_factor = 1
 				}
 				custom_modifier_tooltip = asymmetrical_warfare_spirit_tt
@@ -163,8 +160,7 @@ ideas = {
 		adaptable_modernizers_spirit = {
 			ledger = army
 			modifier = {
-				hidden_modifier
-				{
+				hidden_modifier = {
 					tactic_backhand_blow_preferred_weight_factor = 1
 				}
 				custom_modifier_tooltip = adaptable_modernizers_spirit_tt
