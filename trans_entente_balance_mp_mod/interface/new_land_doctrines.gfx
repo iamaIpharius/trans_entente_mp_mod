@@ -58,5 +58,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/mass_assault.dds"
 		alwaystransparent = yes
 	}
+	SpriteType = {
+		name = "GFX_tunnels_medium"
+		texturefile = "gfx/interface/technologies/tunnels.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_trophy_medium"
+		texturefile = "gfx/interface/technologies/trophy2.dds"
+		alwaystransparent = yes
+	}
 }
 
