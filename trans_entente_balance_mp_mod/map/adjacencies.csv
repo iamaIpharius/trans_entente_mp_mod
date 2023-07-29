@@ -126,8 +126,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 6062;6205;sea;3590;-1;-1;-1;-1;;West Scottish-Strait
 8435;6550;sea;7452;-1;-1;-1;-1;;Aegan Isle-Strait
 7304;4360;sea;8614;-1;-1;-1;-1;;New Foundland-Strait
-5407;5382;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar North
-5407;2400;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar South
+4135;10113;sea;5407;-1;-1;-1;-1;;Gibraltar-Tangiers
+4135;9945;sea;5407;-1;-1;-1;-1;;Gibraltar-Ceuta
+5407;5382;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar Strait
 2455;2506;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
 5412;7678;;-1;-1;-1;-1;-1;BOSPHORUS_STRAIT;Bosphorus
 2919;2943;;-1;-1;-1;-1;-1;HORMUZ_STRAIT;hormuz

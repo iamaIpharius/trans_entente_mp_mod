@@ -230,6 +230,11 @@
  USA_cash_and_carry_tacs:0 "Purchase Tactical Bombers through Cash and Carry"
  USA_cash_and_carry_strats:0 "Purchase Strategic Bombers through Cash and Carry"
  
+ lar_spain.100.t:0 "The Remilitarisation of Tangiers"
+ lar_spain.100.desc:0 "The Morrocan port of Tangiers has been a neutral international port since 1925, protected from militarisation from any interested European power. However, as a result of recent tensions, we have begun to use Tangiers as a military port, giving us far greater control of the city's economic actions."
+ lar_spain.100.a:0 "The other side of the strait is now in our full control."
+
+ 
  infantry_offensive:0 "Ambush Assault Tactics"
 tunnels_desc:0 "Dig the fucking hole!"
 tunnels:0 "Tunnel Tactics"
