@@ -338,9 +338,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			cancel = {
-				has_war_with = ENG				
-			}
+
 			modifier = {
 				consumer_goods_factor = -0.1
 			}
