@@ -927,8 +927,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
-		start_year = 1943
+		research_cost = 1
+		start_year = 1942
 		
 		folder = {
 			name = electronics_folder
@@ -986,7 +986,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1944
+		start_year = 1942
 		
 		folder = {
 			name = electronics_folder
@@ -1025,6 +1025,8 @@ technologies = {
 
 		enable_equipment_modules = {
 			rocket_engine_2
+			guided_anti_ship_missile
+			aa_rocket_rails
 		}
 		
 		rocket_artillery = {
@@ -1045,8 +1047,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
-		start_year = 1945
+		research_cost = 1
+		start_year = 1943
 		
 		folder = {
 			name = electronics_folder
@@ -1080,7 +1082,6 @@ technologies = {
 
 		enable_equipment_modules = {
 			rocket_engine_3
-			guided_anti_ship_missile
 		}
 		
 		rocket_artillery = {
@@ -1096,8 +1097,8 @@ technologies = {
 			soft_attack = 0.05
 		}
 		
-		research_cost = 1.5
-		start_year = 1946
+		research_cost = 2
+		start_year = 1945
 		
 		folder = {
 			name = electronics_folder
@@ -1120,13 +1121,12 @@ technologies = {
 			position = { x = 2 y = 2 }
 		}
 		
-		start_year = 1944
-		research_cost = 2
+		start_year = 1942
+		research_cost = 1
 		enable_equipment_modules = {
 			tank_gas_turbine_engine
 			jet_engine_1x
 			jet_engine_2x
-			jet_engine_3x
 			jet_engine_4x
 			jet_engine_6x
 		}
