@@ -154,7 +154,6 @@ ideas = {
 			}
 			
 			modifier = {
-				license_production_speed = 0.3 
 				license_purchase_cost = -1 
 			}
 		}
@@ -301,7 +300,7 @@ ideas = {
 			modifier = {
 				acclimatization_cold_climate_gain_factor = 0.2
 				acclimatization_hot_climate_gain_factor = 0.2
-				special_forces_min = 240
+				special_forces_min = 120
 			}
 		}
 		axis_minors_special_forces = {
@@ -321,7 +320,7 @@ ideas = {
 			modifier = {
 				acclimatization_cold_climate_gain_factor = 0.2
 				acclimatization_hot_climate_gain_factor = 0.2
-				special_forces_min = 240
+				special_forces_min = 120
 			}
 		}
 	
