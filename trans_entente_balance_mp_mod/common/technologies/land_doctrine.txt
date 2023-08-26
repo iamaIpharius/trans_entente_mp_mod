@@ -2315,13 +2315,13 @@ technologies = {
 		}
 		
 		mountaineers = {
-			breakthrough = 1.5
+			breakthrough = 1
 		}
 		marine = {
-			breakthrough = 1.5
+			breakthrough = 1
 		}
 		paratrooper = {
-			breakthrough = 1.5
+			breakthrough = 1
 		}
 		amphibious_mechanized = {
 			breakthrough = 0.1

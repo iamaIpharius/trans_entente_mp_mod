@@ -131,3 +131,4 @@ dmypy.json
 
 trans_entente_mp_mod.sublime-project
 trans_entente_mp_mod.sublime-workspace
+/.vs/slnx.sqlite
