@@ -1172,6 +1172,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 		
 		add_stats = {
+			sub_detection = 3
 			build_cost_ic = 100
 			surface_detection = 5
 		}
@@ -1189,7 +1190,7 @@ equipment_modules = {
 			naval_heavy_gun_hit_chance_factor = 0.025
 			build_cost_ic = 130
 			surface_detection = 7
-			sub_detection = 2
+			sub_detection = 5
 		}
 		
 		can_convert_from = {
@@ -1209,7 +1210,7 @@ equipment_modules = {
 			naval_light_gun_hit_chance_factor = 0.05
 			naval_heavy_gun_hit_chance_factor = 0.05
 			surface_detection = 12
-			sub_detection = 6
+			sub_detection = 8
 			build_cost_ic = 160
 		}
 		can_convert_from = {
@@ -2221,8 +2222,9 @@ equipment_modules = {
 		gfx = ship_airplane_launcher_1
 		
 		add_stats = {
+			sub_attack = 2
 			surface_detection = 7
-			sub_detection = 2.5
+			sub_detection = 3
 			build_cost_ic = 150
 		}
 		multiply_stats = {
@@ -2235,8 +2237,9 @@ equipment_modules = {
 		gfx = ship_airplane_launcher_2
 		parent = ship_airplane_launcher_1
 		add_stats = {
+			sub_attack = 3
 			surface_detection = 10
-			sub_detection = 3.5
+			sub_detection = 4
 			build_cost_ic = 170
 		}
 		can_convert_from = {
