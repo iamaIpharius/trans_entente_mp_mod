@@ -814,7 +814,7 @@ ideas = {
 
 			}
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 			}
 		}
 		
@@ -1276,13 +1276,13 @@ ideas = {
 			equipment_bonus = {
 				
 				small_plane_airframe = {
-					air_agility = 0.25
+					air_agility = 0.15
 				}
 				cv_small_plane_airframe = {
-					air_agility = 0.25
+					air_agility = 0.15
 				}
 				medium_plane_fighter_airframe = {
-					air_agility = 0.25
+					air_agility = 0.15
 				}
 			}
 

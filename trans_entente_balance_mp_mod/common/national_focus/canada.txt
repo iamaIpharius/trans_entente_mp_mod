@@ -4270,10 +4270,25 @@
 				category = tactical_bomber
 				category = cas_bomber
 			}
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = CAN_fairchild_aircraft_ltd_organization
+				mio:CAN_fairchild_aircraft_ltd_organization = {
+					add_mio_funds = 2500
+				}
+			}
+
+			else = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = CAN_fairchild_aircraft_ltd
+			}
 		}
 	}
+
 	focus = {
 		id = CAN_cookie_carriers
 		icon = GFX_goal_generic_CAS
@@ -4308,10 +4323,31 @@
 				uses = 1
 				category = cat_strategic_bomber
 			}
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = CAN_handley_page_organization
+				mio:CAN_handley_page_organization = {
+					add_mio_size = 1
+					add_mio_funds = 500
+
+				#	unlock_mio_trait_tooltip  = {
+				#		department = CAN_mio_department_design_plane_heavy_combat
+				#		trait = CAN_mio_trait_cookie_carriers
+				#	}
+				}
+			}
+
+			else = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = CAN_handley_page
 		}
 	}
+	}
+
 	focus = {
 		id = CAN_the_sabre_project
 		icon = GFX_focus_rocketry

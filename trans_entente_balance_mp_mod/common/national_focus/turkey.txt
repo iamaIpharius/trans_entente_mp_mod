@@ -2073,6 +2073,12 @@ focus_tree = {
 
 	focus = {
 		id = TUR_georgian_manganese_extraction
+		icon = {
+			value = GFX_focus_generic_steel
+			trigger = {
+				SOV = { NOT = { controls_state = 231 } } #APPROPRIATE CONDITIONS FOR GENERIC ICON
+			}
+		}
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = TUR_halk_ve_devlet }
 		x = -2
@@ -2085,15 +2091,15 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			if = {
-				limit = {
-					GEO = { exists = yes }
+			every_country = {
+				limit = {	
+					controls_state = 231
+					owns_state = 231
 				}
-				GEO = { country_event = { id = bftb_turkey.38 } }
+				country_event = { id = bftb_turkey.38 }
 			}
-			else = { 
-				SOV = { country_event = { id = bftb_turkey.38 } }
-			}
+				
+			
 		}
 	}
 
@@ -2886,25 +2892,25 @@ focus_tree = {
 			base = 10
 		}
 
-		bypass = {
-			custom_trigger_tooltip = { 
-				tooltip = TUR_no_faction_alliance_members_tt
-				AND = {
-					AFG = {
-						NOT = { is_in_faction_with = TUR }
-					}
-					PER = {
-						NOT = { is_in_faction_with = TUR }
-					}
-					IRQ = {
-						NOT = { is_in_faction_with = TUR }
-					}
-					SYR = {
-						NOT = { is_in_faction_with = TUR }
-					}
-				}
-			}
-		}
+		#bypass = {
+		#	custom_trigger_tooltip = { 
+		#		tooltip = TUR_no_faction_alliance_members_tt
+		#		AND = {
+		#			AFG = {
+		#				NOT = { is_in_faction_with = TUR }
+		#			}
+		#			PER = {
+		#				NOT = { is_in_faction_with = TUR }
+		#			}
+		#			IRQ = {
+		#				NOT = { is_in_faction_with = TUR }
+		#			}
+		#			SYR = {
+		#				NOT = { is_in_faction_with = TUR }
+		#			}
+		#		}
+		#	}
+		#}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -5073,6 +5079,16 @@ focus_tree = {
 				}
 			}
 			add_equipment_to_stockpile = { type = motorized_equipment amount = 275 }
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_equipment_subsidy = {
+					cic = 250
+					equipment_type = motorized_equipment
+					seller_tags = { USA } 
+				}
+			}
 		}
 	}
 

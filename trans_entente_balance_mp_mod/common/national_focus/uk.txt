@@ -686,7 +686,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		icon = GFX_goal_generic_consumer_goods
-		x = 4
+		x = 5
 		y = 1
 		relative_position_id = limited_rearmament_focus
 		cost = 10
@@ -720,6 +720,33 @@ focus_tree = {
 			add_ideas = ENG_special_air_service_idea
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ENG_david_stirling
+		}
+	}
+	
+	focus = {
+		id = ENG_parachute_regiments
+		prerequisite = { focus = ENG_special_air_service }
+		allow_branch = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_paratrooper
+		x = 0
+		y = 1
+		relative_position_id = ENG_special_air_service
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_potential_special_forces_tree = yes
+			add_doctrine_cost_reduction = {
+				name = ENG_parachute_regiments
+				cost_reduction = 0.25
+				uses = 2
+				category = special_forces_doctrine
+			}
 		}
 	}
 	
@@ -915,7 +942,7 @@ focus_tree = {
 		prerequisite = { focus = general_rearmament_focus }
 		icon = GFX_goal_generic_air_doctrine
 		x = -2
-		y = 1
+		y = 2
 		relative_position_id = general_rearmament_focus
 		cost = 10
 		ai_will_do = {
@@ -1338,7 +1365,7 @@ focus_tree = {
 		prerequisite = { focus = general_rearmament_focus }
 		icon = GFX_goal_generic_construct_naval_dockyard 
 		x = 2
-		y = 1
+		y = 2
 		relative_position_id = general_rearmament_focus
 		cost = 10
 		ai_will_do = {
@@ -1874,7 +1901,7 @@ focus_tree = {
 		}
 
 		icon = GFX_goal_generic_national_unity
-		x = 28
+		x = 29
 		y = 0
 		offset = {
 			x = -2
@@ -2612,7 +2639,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 33
+		x = 34
 		y = 0
 
 		offset = {
@@ -5808,10 +5835,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				add_autonomy_ratio = {
-					value = -0.05
-					localization = uk_india_focus
-				}
+				ENG_viceroy_reduce_autonomy_effect = yes
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -5866,10 +5890,7 @@ focus_tree = {
 					}
 					set_state_flag = ENG_uk_india_focus_1IC
 				}
-				add_autonomy_ratio = {
-					value = -0.05
-					localization = uk_india_focus
-				}
+				ENG_viceroy_reduce_autonomy_effect = yes
 			}
 		}
 	}
@@ -6625,6 +6646,8 @@ focus_tree = {
 			set_autonomy = {
 				target = RAJ
 				autonomy_state = autonomy_dominion
+				end_wars = no 
+				end_civil_wars = no
 			}
 			RAJ = { add_timed_idea = { idea = ENG_indian_autonomy_RAJ_idea days = 730 } }
 			custom_effect_tooltip = ENG_indian_autonomy_tt
@@ -6861,6 +6884,7 @@ focus_tree = {
 								OR = {
 									has_autonomy_state = autonomy_integrated_puppet
 									has_autonomy_state = autonomy_reichskommissariat
+									ROOT = { has_country_leader_with_trait = viceroy_emeritus }
 								}
 							}
 							AND = {
@@ -7302,6 +7326,23 @@ focus_tree = {
 				annex_country = {
 				    target = RAJ
 				    transfer_troops = yes
+				}
+				if = {
+					limit = {
+						ROOT = { has_country_leader_with_trait = viceroy_emeritus }
+					}
+					custom_effect_tooltip = viceroy_emeritus_downside_tt
+					every_state = {
+						limit = { 
+							OR = {
+								is_owned_by = ROOT
+								is_owned_by = RAJ #For the tooltip
+							}
+							is_core_of = RAJ 
+							NOT = { is_core_of = ROOT }
+						}
+						add_resistance = 15
+					}
 				}
 			}
 			AST = {

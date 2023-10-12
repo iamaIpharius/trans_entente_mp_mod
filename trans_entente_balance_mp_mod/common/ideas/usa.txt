@@ -148,7 +148,8 @@ ideas = {
 				economy_cost_factor = 1
 			}
 		}
-		USA_neutrality_act_idea = {
+		USA_neutrality_act_aat = {
+			name = USA_neutrality_act
 			picture = generic_production_bonus
 			
 			allowed = {
@@ -161,12 +162,23 @@ ideas = {
 
 			removal_cost = -1
 			
+			on_add = {
+				
+			}
+			on_remove = {
+				remove_relation_rule_override = {
+					can_access_market = no
+					trigger = trade_partner_not_at_war
+				}
+			}
+
 			modifier = {
-				lend_lease_tension = 1
+				custom_modifier_tooltip = trade_partner_not_at_war_tt
 				join_faction_tension = 0.25
 				send_volunteers_tension = 0.5
 				guarantee_tension = 0.5
 				embargo_threshold_factor = 1.5
+				
 			}
 		}
 		# version if player went down limited intervention
@@ -396,6 +408,54 @@ ideas = {
 			
 			modifier = {
 				production_speed_dockyard_factor = 0.1	
+			}
+		}
+		USA_greenland_patrol_idea = {
+			picture = tur_sub_zero_survival_training
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			cancel = {
+				AND = {
+					date > 1945.1.1
+					has_war = no
+					DEN = {
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+							has_government = ROOT
+						}
+					}
+				}
+			}
+
+			on_remove = {
+				IF = {
+					limit = {
+						DEN = {
+							exists = yes
+						}
+						101 = {
+							is_owned_by = ROOT
+						}
+					}
+					101 = {
+						transfer_state_to = DEN
+					}
+				}
+				
+			}
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.1
+				spotting_chance = 0.02
 			}
 		}
 		USA_us_air_force = {

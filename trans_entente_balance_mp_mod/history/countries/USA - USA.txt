@@ -232,6 +232,7 @@ give_guarantee = URG
 	}
 
 	set_technology = {
+		tech_trucks = 1
 		interwar_artillery = 1
 		interwar_antitank = 1
 		infantry_weapons2 = 1

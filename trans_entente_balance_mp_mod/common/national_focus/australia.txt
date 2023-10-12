@@ -3191,7 +3191,7 @@
 			is_in_faction_with = ENG
 			ENG = { has_government = ROOT }
 			MAL = {
-				is_subject_of = ENG
+				is_puppet_of = ENG
 			}
 		}
 		
@@ -3573,7 +3573,19 @@
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = AST_commonwealth_aircraft_corporation
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = AST_com_aircraft_corporation_organization
+				mio:AST_com_aircraft_corporation_organization = {
+					add_mio_size = 2
+				}
+			}
+			ELSE = {
+				add_ideas = AST_commonwealth_aircraft_corporation 
+			}
 		}
 	}
 
@@ -3585,7 +3597,7 @@
 		id = AST_never_another_gallipoli
 		icon = GFX_focus_AST_never_gallipoli
 		mutually_exclusive = { focus = AST_support_the_policy_of_appeasement }
-		x = 38
+		x = 37
 		y = 0
 
 		cost = 10

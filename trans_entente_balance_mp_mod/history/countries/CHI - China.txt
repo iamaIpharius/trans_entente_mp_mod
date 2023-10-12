@@ -277,7 +277,7 @@ set_convoys = 40
 		}
 	}
 	set_technology = {
-
+		tech_trucks = 1
 		#PLACEHOLDER techs for vehicles
 		motorised_infantry = 1
 		tech_support = 1		

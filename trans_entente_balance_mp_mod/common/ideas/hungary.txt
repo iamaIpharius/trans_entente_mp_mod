@@ -8,6 +8,27 @@ ideas = {
 			available = {
 				has_war = no
 			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+			}
+		}
+		HUN_treaty_of_triannon_aat = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+  				can_access_market = no
+  			}
+
 			modifier = {
 				conscription = -0.005
 				production_speed_arms_factory_factor = -0.5
@@ -23,7 +44,7 @@ ideas = {
 				has_war = no
 			}
 			modifier = {
-				production_speed_arms_factory_factor = -0.15
+				production_speed_arms_factory_factor = -0.15	
 			}
 		}
 		HUN_treaty_of_triannon_3 = {
@@ -203,7 +224,7 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
 				political_power_factor = -0.25
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 			}
 		}
 		HUN_interventionism_2 = {
@@ -213,7 +234,7 @@ ideas = {
 			}
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 			}
 		}
 		HUN_interventionism_communism = {
@@ -223,7 +244,7 @@ ideas = {
 			}
 			picture = FRA_scw_intervention_nationalists_focus
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				communism_drift = 0.02
 			}
 		}

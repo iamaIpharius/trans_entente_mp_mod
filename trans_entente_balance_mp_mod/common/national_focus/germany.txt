@@ -1248,6 +1248,10 @@ focus_tree = {
 				}
 				set_state_flag = GER_industrial_effort_2IC
 			}
+add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 35
+			}
 		}
 	}
 
@@ -1441,7 +1445,7 @@ focus_tree = {
 				has_full_control_of_state = 64
 				has_full_control_of_state = 59
 				has_full_control_of_state = 60
-				has_full_control_of_state = 53
+				has_full_control_of_state = 54
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2322,10 +2326,7 @@ focus_tree = {
 				limit = { 
 					has_dlc = "No Step Back"
 				}
-				if = {
-					limit = {
-						has_tech = basic_medium_tank_chassis
-					}
+				#custom_effect_tooltip = GER_soviet_treaty_research_nsb_tt #Obsolete now
 					effect_tooltip = {
 						create_equipment_variant = {
 							name = "Panzer III Ausf. A"
@@ -2364,57 +2365,13 @@ focus_tree = {
 								tank_nsb_armor_upgrade = 2
 							}
 							icon = "GFX_GER_basic_medium_tank_medium"
-						}
-					}
-				}
-				else = {
-					custom_effect_tooltip = GER_soviet_treaty_research_nsb_tt
-					effect_tooltip = {
-						create_equipment_variant = {
-							name = "Panzer III Ausf. A"
-							type = medium_tank_chassis_1
-							parent_version = 0
-							modules = {
-								main_armament_slot = tank_high_velocity_cannon
-								turret_type_slot = tank_medium_three_man_tank_turret
-								suspension_type_slot = tank_bogie_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = tank_radio_1
-								special_type_slot_2 = smoke_launchers
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 6
-								tank_nsb_armor_upgrade = 3
-							}
-							icon = "GFX_GER_basic_medium_tank_medium"
-						}
-						create_equipment_variant = {
-							name = "Panzer IV Ausf. A"
-							type = medium_tank_chassis_1
-							parent_version = 1
-							modules = {
-								main_armament_slot = tank_close_support_gun
-								turret_type_slot = tank_medium_three_man_tank_turret
-								suspension_type_slot = tank_bogie_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = tank_radio_1
-								special_type_slot_2 = smoke_launchers
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 6
-								tank_nsb_armor_upgrade = 2
-							}
-							icon = "GFX_GER_basic_medium_tank_medium"
-						}	
-					}
-				}
+										}
 				add_tech_bonus = {
 					name = armor_bonus
 					bonus = 1.0
 					uses = 2
 					category = armor
+}
 				}
 			}
 			else = {
@@ -2807,7 +2764,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = GER_rhineland
 		cost = 10
@@ -2869,7 +2826,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = GER_rhineland
 		cost = 10
@@ -2891,6 +2848,70 @@ focus_tree = {
 			}
 			JAP = {
 				add_opinion_modifier = { target = GER modifier = supported_the_chinese }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_swedish_trade_agreement
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = GER_rhineland }
+		available = {
+			is_subject = no
+			AND = {
+				country_exists = SWE
+				SWE = { is_subject = no }
+				NOT = { has_war_with = SWE }
+				SWE = {
+					custom_trigger_tooltip = {
+						tooltip = GER_alone_or_peace_faction_tt
+						is_alone_or_in_faction_at_peace_with_GER = yes
+					}
+				}
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_rhineland
+		cost = 10
+		ai_will_do = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			SWE = {
+				country_event = { id = AAT_germany.1 hours = 5 random_hours = 5 }
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				SWE = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 2
+					}
+
+					add_offsite_building = {
+						type = arms_factory
+						level = 1
+					}
+
+					add_timed_idea = {
+						idea = GER_german_swedish_trade_agreement
+						days = 480
+					}
+
+					give_resource_rights = {
+						receiver = ROOT 
+						state = 918 #Västerbotten 
+					}
+				}
+
+				add_opinion_modifier = {
+					target = SWE # target of the relation
+					modifier = GER_SWE_historic_trade_Partners
+				}
 			}
 		}
 	}
@@ -3021,11 +3042,30 @@ focus_tree = {
 		relative_position_id = GER_anti_comitern_pact
 		cost = 10
 		historical_ai = {
-			NOT = {
+			
 				any_home_area_neighbor_country = {
+OR = {
+					NOT = { has_war_with = ROOT	}
+					AND = {
+						is_ai = no
 					has_war_with = ROOT					
+				OR = {
+							original_tag = DEN
+							original_tag = NOR
+							AND = {
+								original_tag = HOL
+								FRA = {
+									has_capitulated = yes
+								}
+								BEL = {
+									has_capitulated = yes
+								}
+							}
+						}
+					}
 				}		
 			}
+
 		}
 		bypass = {
 			has_war_with = SOV
@@ -3180,6 +3220,13 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_army_manpower = { size > 499999 }
+
+			check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
+			custom_trigger_tooltip = {
+			 	tooltip = GER_anschluss_eq_trigger_tt
+			 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
+			 }
+			 
 			NOT = { has_idea = rhineland_challenge_met }
 			if = {
 				limit = {
@@ -3427,17 +3474,17 @@ focus_tree = {
 			86 = { add_claim_by = GER }
 			762 = { add_claim_by = GER }
 			add_named_threat = { threat = 3 name = GER_demand_memel_threat }
-			if = {
+			random_other_country = {
 				limit = {
-					LIT = { 
-						owns_state = 188
+											owns_state = 188
 						controls_state = 188 
 					}
+country_event = { 
+					id = baltic.4 
+					days = 1
+					random_days = 3
 				}
-				LIT = {
-					country_event = { id = baltic.4 }
-				}
-			}
+							}
 		}
 	}
 
@@ -3617,6 +3664,17 @@ focus_tree = {
 		}
 		
 		available = {
+hidden_trigger = {
+				OR = {
+					AND = {
+						is_ai = yes
+						NOT = { has_country_flag = SWE_GER_avoid_dow_nordics }
+					}
+
+					is_ai = no
+				}
+			}
+
 			10 = {
 				controller = {
 					OR = {
@@ -3651,6 +3709,10 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		complete_tooltip = {
+			custom_effect_tooltip = GER_weserubung_tt_complete
+		}
 		completion_reward = {
 
 			if = {
@@ -3690,6 +3752,8 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { hours = 6 id = news.233 }
 			}	
+
+			custom_effect_tooltip = GER_weserubung_tt
 		}
 	}
 	
@@ -4956,6 +5020,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
+is_coastal = yes
 					free_building_slots = {
 						building = dockyard
 						size > 2
@@ -4974,6 +5039,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
+is_coastal = yes
 					free_building_slots = {
 						building = dockyard
 						size > 2
@@ -5832,6 +5898,10 @@ focus_tree = {
 						if = {
 							limit = { owns_state = 44 }
 							transfer_state = 802
+						}
+if = {
+							limit = { owns_state = 44 }
+							transfer_state = 934
 						}
 					}
 				}
@@ -7523,8 +7593,15 @@ focus_tree = {
 			28 = { set_state_name = "Elsass-Lothringen" }
 			set_province_name = { id = 9503 name = "Strassburg" }
 			set_province_name = { id = 678 name = "Mulhausen" }
+if = {
+				limit = {
+					FRA = {
+						exists = yes
+					}	
+				}
 			FRA = {
 				country_event = { id = wtt_germany.63 }
+}
 			}
 		}
 	}
@@ -7537,6 +7614,14 @@ focus_tree = {
 			is_subject = no
 			has_full_control_of_state = 5
 		}
+
+		bypass = {
+			any_country = {
+				owns_state = 188
+				is_in_faction_with = GER
+			}	
+		}
+		
 		cancel_if_invalid = yes
 		x = 0
 		y = 2
@@ -7545,6 +7630,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+
 		
 		completion_reward = {
 			188 = { add_claim_by = GER }
@@ -7554,7 +7640,11 @@ focus_tree = {
 					owns_state = 188
 					controls_state = 188 
 				}
-				country_event = { id = baltic.4 }
+				country_event = { 
+					id = baltic.4 
+					days = 1
+					random_days = 3
+				}
 			}
 			if = {
 				limit = {
@@ -7630,11 +7720,13 @@ focus_tree = {
 			is_subject = no
 			NOT = { has_war_with = POL }
 			NOT = { is_in_faction_with = POL }
+POL = { has_civil_war = no }
 		}
 		bypass = {
 			OR = {
 				AND = {
 					POL = { has_war = yes }
+POL = { has_civil_war = no }
 					NOT = { has_war_with = POL }
 				}
 				AND = {
