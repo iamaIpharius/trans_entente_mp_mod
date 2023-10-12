@@ -52,7 +52,7 @@ NDiplomacy = {
 	PEACE_COST_FACTOR_UNCONTESTED_BID_STEP = 0.15,  -- Uncontested cost factor will increase by this much each turn.
 	PEACE_COST_FACTOR_CAPITAL_SHIP_IC = 0.005,				-- In peace conference, cost for taking one capital ship per IC
 	PEACE_COST_FACTOR_SCREENING_SHIP_IC = 0.005,			-- In peace conference, cost for taking a part of the screening ships per IC
-	PEACE_INCREASE_COST_FACTOR_PER_MISSING_PERCENT_FOR_CAPITULATION = 0.002, 	-- increase factor if loser has not capitulated, for every percent between surrender level and BASE_SURRENDER_LEVEL
+	PEACE_INCREASE_COST_FACTOR_PER_MISSING_PERCENT_FOR_CAPITULATION = 0.0012, 	-- increase factor if loser has not capitulated, for every percent between surrender level and BASE_SURRENDER_LEVEL
 	-- peace action taker has a discount if they occupy the state depending on compliance
 	-- it's a table where first value is the compliance level, and the second the factor
 	PEACE_COST_FACTOR_COMPLIANCE_STEPS = {
@@ -405,7 +405,7 @@ NCountry = {
 	NUM_DAYS_TO_FULLY_DELETE_STOCKPILED_EQUIPMENT = 90,	 -- time in days to fully delete equipments from stockpile. when you delete an equipment, they go to a temporary hidden pool which still can be seized
 	AIR_SUPPLY_CONVERSION_SCALE = 0.05,				-- Conversion scale for planes to air supply
 	AIR_SUPPLY_DROP_EXPIRATION_HOURS = 168,			-- Air drop length after being dropped
-	STARTING_COMMAND_POWER = 15.0,					-- starting command power for every country
+	STARTING_COMMAND_POWER = 25.0,					-- starting command power for every country
 	BASE_MAX_COMMAND_POWER = 400.0,					-- base value for maximum command power
 	BASE_COMMAND_POWER_GAIN = 0.4,					-- base value for daily command power gain
 	AIR_VOLUNTEER_PLANES_RATIO = 0.2,				-- Ratio for volunteer planes available for sending in relation to sender air force
@@ -786,7 +786,7 @@ NMilitary = {
 	WAR_SCORE_LAND_DAMAGE_FACTOR = 0.1,          				-- war score gained for every strengh damage done to an enemy's army
 	WAR_SCORE_ATTACKER_AND_WINNER_FACTOR = 1.2,					-- factor applied to war score gained for strength damage done when being the attacker and the winner
 	WAR_SCORE_LAND_IC_LOSS_FACTOR = 0.1,         				-- war score gained for every IC damage done to an enemy's army
-	WAR_SCORE_PROVINCE_FACTOR = 2.0,							-- war score gained when capturing a province for the first time, multiplied by province's worth
+	WAR_SCORE_PROVINCE_FACTOR = 4.0,							-- war score gained when capturing a province for the first time, multiplied by province's worth
 	WAR_SCORE_LEND_LEASE_GIVEN_IC_FACTOR = 0.001,  				-- war score gained for every IC of lend lease sent to allies
 	WAR_SCORE_LEND_LEASE_GIVEN_FUEL_FACTOR = 0.001,  			-- war score gained for every 100 units of fuel lend lease sent to allies
 	WAR_SCORE_LEND_LEASE_RECEIVED_IC_FACTOR = 0.001,  			-- war score deducted for every IC of lend lease received from allies
@@ -870,8 +870,8 @@ NMilitary = {
 	CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.5, -- if there are multiple leaders in same combat, each one gets thisratio + (1-thisratio)/num leaders. amount of xp each general gets scales 1 0.75 0.66 etc for 1 2 3 generals
 	BASE_LEADER_TRAIT_GAIN_XP = 0.45,			   -- Base xp gain for traits per hour for armies
 	MAX_NUM_TRAITS = -1,						   -- cant have more, -1 to disable
-	ENEMY_AIR_SUPERIORITY_IMPACT = -0.1,          -- effect on defense due to enemy air superiorty
-	ENEMY_AIR_SUPERIORITY_DEFENSE = 0.40,	       -- more AA attack will approach this amount of help (diminishing returns)
+	ENEMY_AIR_SUPERIORITY_IMPACT = 0,          -- effect on defense due to enemy air superiorty
+	ENEMY_AIR_SUPERIORITY_DEFENSE = 0,	       -- more AA attack will approach this amount of help (diminishing returns)
 	ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112, -- how quickly defense approaches the max impact diminishing returns curve
 	ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.2,     -- effect on speed due to enemy air superiority
 
@@ -1024,7 +1024,7 @@ NMilitary = {
 	COMBAT_STACKING_START = 8,						-- at what nr of divisions stacking penalty starts
 	COMBAT_STACKING_EXTRA = 4,                      -- extra stacking from directions
 	COMBAT_STACKING_PENALTY = -0.02,                -- how much stackign penalty per division
-	COMBAT_OVER_WIDTH_PENALTY = -1.5,					-- over combat width penalty per %.
+	COMBAT_OVER_WIDTH_PENALTY = -1,					-- over combat width penalty per %.
 	COMBAT_OVER_WIDTH_PENALTY_MAX = -0.33,			-- over combat width max (when you cant join no more).
 	RETREAT_SPEED_FACTOR = 0.25,                    -- speed bonus when retreating
 	WITHDRAWING_SPEED_FACTOR = 0.15,				-- speed bonus when withdrawing
@@ -1369,22 +1369,22 @@ NAir = {
 	},
 
 	MISSION_FUEL_COSTS = {  -- fuel cost per plane for each mission
-		1.2, -- AIR_SUPERIORITY
-		1.2, -- CAS
-		0.2, -- INTERCEPTION
-		1.0, -- STRATEGIC_BOMBER
-		1.0, -- NAVAL_BOMBER
-		1.0, -- DROP_NUKE
-		1.0, -- PARADROP
+		1.25, -- AIR_SUPERIORITY
+		1.25, -- CAS
+		0.25, -- INTERCEPTION
+		1.5, -- STRATEGIC_BOMBER
+		1.5, -- NAVAL_BOMBER
+		1.5, -- DROP_NUKE
+		1.5, -- PARADROP
 		0.75, -- NAVAL_KAMIKAZE
-		1.2, -- PORT_STRIKE
-		1.2, -- ATTACK_LOGISTICS
+		1.5, -- PORT_STRIKE
+		1.5, -- ATTACK_LOGISTICS
 		1.5, -- AIR_SUPPLY
 		0.3, -- TRAINING
-		1.0, -- NAVAL_MINES_PLANTING
-		1.0, -- NAVAL_MINES_SWEEPING
-		1.0, -- RECON
-		1.0, -- NAVAL_PATROL
+		1.25, -- NAVAL_MINES_PLANTING
+		1.5, -- NAVAL_MINES_SWEEPING
+		1.25, -- RECON
+		1.25, -- NAVAL_PATROL
 	},
 	MAX_FUEL_FLOW_MULT = 1.0, -- max fuel flow ratio for planes, which will be multiplied by supply
 
@@ -2266,6 +2266,15 @@ NAI = {
 
 	GARRISON_TEMPLATE_SCORE_IC_FACTOR = 1.0,		-- ai uses these defines while calculating garrison template score of a template.
 	GARRISON_TEMPLATE_SCORE_MANPOWER_FACTOR = 0.05,  -- formula is (template_ic * ic_factor + template_manpower * manpower_factor ) / template_supression (lower is better)
+
+	ADVISOR_SCORE_TRAIT_MODIFIER_FACTOR = 0.2,     -- When scoring advisors, factor the score contribution from the advisor's trait modifiers by this value
+	ADVISOR_SCORE_CHEAPER_IS_BETTER_FACTOR = 0.1,  -- When scoring advisors, this define scales how much the AI prefers cheaper advisors over more expensive ones. 0.0 means no effect, 0.15 means a cost difference of 100 PP modifies the score by 15 %.
+	ADVISOR_SCORE_CHEAPER_IS_BETTER_MIN = 0.5,     -- Clamps the above scoring factor to at minimum this value
+
+	-- stuff related to how the AI evaluates/scores how useful modifiers are
+	EVAL_MODIFIER_NON_PERCENT_FACTOR = 0.1,                       -- Multiply non-percent-based modifiers with this to put the values in the approximately same range so they can be compared. (Why we are using 0.1 and not 0.01? No idea...)
+	EVAL_MODIFIER_UNSPECIFIED_CATEGORY_FACTOR = 0.75,             -- Arbitrary scoring factor for modifiers the AI doesn't know how to categorize
+	EVAL_MODIFIER_MAX_COMMAND_POWER_FACTOR = 0.01,                -- Increasing CP cap with x is maybe 100 times less useful than e.g. gaining x more XP per day
 
 	-- for positive values of following defines, ai weights will take over of hardcoded ai scoring system
 	MIN_AI_SCORE_TO_MOBILIZATION_LAW_OVERRIDE_HARD_CODED_SCORE = 0.0,
@@ -3857,7 +3866,7 @@ NCharacter = {
 
 	SPECIALIST_ADVISOR_MIN_RANK = 3,
 	EXPERT_ADVISOR_MIN_RANK = 5,
-	GENIUS_ADVISOR_MIN_RANK = 7,
+	GENIUS_ADVISOR_MIN_RANK = 6,
 },
 
 NSupply = {

@@ -1,4 +1,4 @@
-﻿capital = 912
+﻿capital = 938
 
 add_ideas = {
 	axis_minors_special_forces

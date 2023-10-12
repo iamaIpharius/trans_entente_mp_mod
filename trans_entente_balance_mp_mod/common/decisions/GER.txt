@@ -357,7 +357,7 @@ operations = {
 			tag = GER
 			}
 		available = {
-			divisions_in_state = { state = 909 size > 9 }
+			divisions_in_state = { state = 935 size > 9 }
 			has_war_together_with = HUN
 		}
 		visible = {

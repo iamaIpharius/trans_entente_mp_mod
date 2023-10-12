@@ -148,6 +148,26 @@ ideas = {
 				economy_cost_factor = 1
 			}
 		}
+		USA_neutrality_act = {
+			picture = generic_production_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				join_faction_tension = 0.25
+				send_volunteers_tension = 0.5
+				guarantee_tension = 0.5
+				embargo_threshold_factor = 1.5
+			}
+		}
 		USA_neutrality_act_aat = {
 			name = USA_neutrality_act
 			picture = generic_production_bonus
