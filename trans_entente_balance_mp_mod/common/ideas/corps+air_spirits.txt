@@ -9,8 +9,8 @@ ideas = {
 			modifier = {
 				custom_modifier_tooltip = torpedo_bombers_spirit_tt
 				hidden_modifier = {
-				small_plane_naval_bomber_airframe_design_cost_factor = -1
-				cv_small_plane_naval_bomber_airframe_design_cost_factor = -1
+				small_plane_naval_bomber_airframe_design_cost_factor = -0.75
+				cv_small_plane_naval_bomber_airframe_design_cost_factor = -0.75
 				}
 			}
 			ai_will_do = {
