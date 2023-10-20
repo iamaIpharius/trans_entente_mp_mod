@@ -7,6 +7,22 @@ add_ideas = {
 	}
 
 oob = "HUN_1936"
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "HUN_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+	else = {
+		set_air_oob = "HUN_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
 
 set_research_slots = 3
 set_stability = 0.7
@@ -55,7 +71,30 @@ if = {
 	}
 	add_ideas = {
 		disarmed_nation
-		HUN_treaty_of_triannon
+	}
+	if = {
+		limit = { has_dlc = "Arms Against Tyranny" }
+		add_ideas = { HUN_treaty_of_triannon_aat }
+	}
+	if = {
+		limit = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+		add_ideas = { HUN_treaty_of_triannon }
+	}
+}
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "WM-16"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
 	}
 }
 
@@ -78,7 +117,18 @@ if = {
 }
 
 1939.1.1 = {
-	remove_ideas = HUN_treaty_of_triannon
+	if = {
+		limit = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		remove_ideas = HUN_treaty_of_triannon_aat
+	}
+	if = {
+		limit = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+		remove_ideas = HUN_treaty_of_triannon
+	}
 
 	add_political_power = 1198
 	add_command_power = 100
@@ -167,6 +217,18 @@ if = {
 		dispersed_industry = 1
 		dispersed_industry2 = 1
 		fuel_refining = 1
+	}
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+			set_air_oob = "HUN_1939_air_bba"
+		else = {
+			set_air_oob = "HUN_1939_air_legacy"
+			set_technology = {
+				fighter1 = 1
+				early_bomber = 1
+				tactical_bomber1 = 1
+			}
+		}
 	}
 	if = {
 		limit = {

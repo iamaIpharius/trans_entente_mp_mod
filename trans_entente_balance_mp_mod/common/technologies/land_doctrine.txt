@@ -1991,6 +1991,7 @@ technologies = {
 	grand_mechanized_offensive = {
 		xp_research_type = army
 		xp_unlock_cost = 100
+		additional_brigade_column_size = 1
 		xor = {
 			infantry_offensive
 		}
