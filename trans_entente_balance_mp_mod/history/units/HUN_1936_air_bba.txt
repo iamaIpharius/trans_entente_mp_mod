@@ -2,7 +2,7 @@
 
 ### Magyar Légiero ###
 air_wings = {
-	909 = {
+	935 = {
 		# 1. Légi Ezred -- Fiat CR.32 fighters
 		# 2. Légi Ezred -- Fiat CR.32 fighters
 		small_plane_airframe_0 = {
