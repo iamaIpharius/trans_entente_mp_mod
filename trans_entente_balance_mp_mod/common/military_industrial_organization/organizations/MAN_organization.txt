@@ -1,0 +1,134 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+MAN_manchurian_heavy_industries_organization = {
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_man_manchurian_heavy_industries
+	allowed = {	
+		tag = MAN
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+MAN_dalian_shipyard_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_man_dalian_shipyard
+	allowed = {	
+		OR = {
+			tag = CHI
+			tag = PRC
+			tag = GXC
+			tag = YUN
+			tag = XSM
+			tag = SHX
+			tag = SIK
+			tag = MAN
+		}
+	}
+	available = {
+		owner = {
+			controls_state = 745
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+MAN_mamc_organization = {
+	name = MAN_manchurian_aircraft_manufacturing_company
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_man_mamc
+	
+	allowed = {	
+		original_tag = MAN
+		NOT = { has_dlc = "Waking the Tiger" }
+	}
+}
+
+MAN_mamc_light_organization = {
+	name = MAN_manchurian_aircraft_manufacturing_company
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_man_mamc
+	allowed = {	
+		original_tag = MAN
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+MAN_manchurian_aviation_company_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_man_manchurian_aviation_company
+	
+	allowed = {	
+		original_tag = MAN
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+MAN_mukden_arsenal_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_man_mukden_arsenal
+	allowed = {	
+		tag = MAN
+	}
+}
+
+MAN_mukden_arsenal_artillery_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_man_mukden_arsenal_artillery
+	allowed = {	
+		tag = MAN
+	}
+}
+
+MAN_dowa_automobile_company_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_man_dowa_automobile_company
+	allowed = {	
+		tag = MAN
+	}
+	equipment_type = {
+		motorized_equipment
+		mechanized_equipment
+		motorized_rocket_equipment
+		armored_car_equipment
+	}
+	
+	research_categories = {
+		mio_cat_tech_all_motorized_mechanized
+		cat_armored_cars
+	}
+}

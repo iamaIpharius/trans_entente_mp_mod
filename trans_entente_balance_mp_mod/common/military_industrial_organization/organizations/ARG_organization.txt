@@ -1,0 +1,134 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+ 
+ARG_arsenal_estebal_de_luca_organization = {
+    include = generic_medium_tank_organization
+    icon = GFX_idea_arg_arsenal_esteban_de_luca
+    allowed = { 
+        tag = ARG
+    }
+}
+
+ARG_ferrocarriles_del_estado_organization = {
+    include = generic_tank_organization
+    icon = GFX_idea_arg_state_railway
+    allowed = { 
+        tag = ARG
+    }
+	equipment_type = {  
+        armor
+        train_equipment
+    }
+    research_categories = { 
+        armor
+        train_tech
+    }
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ARG_rio_santiago_shipyard_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_arg_rio_santiago_shipyard
+	allowed = {	
+		tag = ARG
+	}
+}
+
+ARG_astarsa_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_arg_astarsa
+	allowed = {	
+		tag = ARG
+	}
+}
+
+ARG_astilleros_allianza_organization = {
+	include = generic_refurbishment_repair_organization
+	icon = GFX_idea_arg_astilleros_allianza
+	allowed = {	
+		tag = ARG
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+ARG_fabrica_militar_de_aviones_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_arg_fabrica_militar_de_aviones
+	allowed = {	
+		tag = ARG
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+ARG_fabricciones_militares_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_arg_fabricaciones_militares
+	allowed = {	
+		tag = ARG
+	}
+}
+
+ARG_fabricciones_militares_artileria_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_arg_fabricaciones_militares_artillery
+	allowed = {	
+		tag = ARG
+	}
+}
+
+ARG_hispano_argentina_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_arg_hispano_argentina
+	allowed = {	
+		tag = ARG
+	}
+	trait = {
+        token = ARG_mio_trait_reliable_diesel_engines
+        name = ARG_mio_trait_reliable_diesel_engines
+        icon = GFX_generic_mio_trait_icon_reliability
+        special_trait_background = yes
+		any_parent = { generic_mio_trait_composite_cargo_bed generic_mio_trait_steel_cargo_bed }
+
+        position = { x=2 y=1 }
+		
+		equipment_bonus = {
+			reliability = 0.05
+			maximum_speed = 0.05
+		}
+    }
+}

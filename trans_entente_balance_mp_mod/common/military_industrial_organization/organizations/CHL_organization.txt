@@ -1,0 +1,81 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+CHL_famae_armor_organization = {
+	name = CHL_famae_organization
+    include = generic_infantry_tank_organization
+    icon = GFX_idea_chl_famae_armor
+    allowed = { 
+        tag = CHL
+    }
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+CHL_asmar_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_chl_asmar
+	allowed = {	
+		tag = CHL
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+CHL_enaer_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_chl_enaer
+	allowed = {	
+		tag = CHL
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+CHL_famae_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_chl_famae
+	allowed = {	
+		tag = CHL
+	}
+}
+
+CHL_famae_artillery_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_chl_famae_artillery
+	allowed = {	
+		tag = CHL
+	}
+}
