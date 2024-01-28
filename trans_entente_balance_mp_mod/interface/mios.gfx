@@ -1,0 +1,7 @@
+spriteTypes = { 
+
+	SpriteType = {
+		name = "GFX_idea_ger_evil_messerschmitt"
+		texturefile = "gfx/interface/ideas/idea_evil_messerschmitt.dds"
+	}
+}
