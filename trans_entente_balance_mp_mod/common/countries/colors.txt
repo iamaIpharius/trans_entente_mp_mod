@@ -58,7 +58,7 @@ SPR = {
 	color_ui = rgb { 255 255 122 }
 }
 ITA = {
-	color = rgb { 67 127 63 }
+	color = rgb { 125 171 84 }
 	color_ui = rgb { 87 165 82 }
 }
 ROM = {
@@ -110,8 +110,8 @@ IRE = {
 	color_ui = rgb { 104 207 117 }
 }
 HUN = {
-	color = rgb { 249 126 98 }
-	color_ui = rgb { 255 164 127 }
+	color = rgb { 116  38  155 }
+	color_ui = rgb { 144  70  181 }
 }
 AFG = {
 	color = rgb { 64 160 167 }
