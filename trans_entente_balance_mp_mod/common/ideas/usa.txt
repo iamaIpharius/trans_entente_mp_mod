@@ -198,7 +198,7 @@ ideas = {
 				send_volunteers_tension = 0.5
 				guarantee_tension = 0.5
 				embargo_threshold_factor = 1.5
-				
+				lend_lease_tension = 0.5
 			}
 		}
 		# version if player went down limited intervention

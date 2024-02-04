@@ -1976,11 +1976,54 @@ focus_tree = {
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
 		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+					has_completed_focus = USA_neutrality_act
+				}
+			}
+		}
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_reestablish_the_gold_standard
+				has_completed_focus = USA_neutrality_act
+			}
+		}
+
 		cost = 10
 
 		ai_will_do = {
 			factor = 1
 		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = USA_limited_intervention
+				}
+			}
+		}
+
 
 		available = {
 			congress_low_support_trigger = yes
@@ -1999,17 +2042,52 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_political_power = 200
-			add_ideas = USA_neutrality_act_idea 
 			add_war_support = -0.05
+			if = {
+				limit = {
+						  
+	 
+									
+	
+		 
+			 
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_ideas = USA_neutrality_act_aat
+				hidden_effect = {
+					add_relation_rule_override = {
+						can_access_market = no
+						trigger = trade_partner_not_at_war
+						usage_desc = trade_partner_not_at_war_tt
+					}
+				}
+			}
+			else = {
+				add_ideas = USA_neutrality_act
+			}
+			
 			if = {
 				limit = {
 					has_war_support < 0.4
 				}
 				USA_congress_small_support = yes
 			}
+
+			
 			custom_effect_tooltip = USA_lend_lease_act_neutrality_tt
 			hidden_effect = {
 				news_event = { id = mtg_news.3 days = 3 random_days = 5 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
 			}
 		}
 	}
@@ -2044,12 +2122,19 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_political_power = 100
-			custom_effect_tooltip = USA_cash_and_carry_tt 
+			remove_ideas = USA_neutrality_act_aat 
 			if = {
 				limit = {
 					has_war_support > 0.2
 				}
 				USA_congress_small_support = yes
+			}
+			hidden_effect = {
+				remove_relation_rule_override = {
+					can_access_market = no
+					trigger = trade_partner_not_at_war
+					usage_desc = trade_partner_not_at_war_tt
+				}
 			}
 		}
 	}
@@ -2076,7 +2161,7 @@ focus_tree = {
 			else = {
 				congress_high_support_trigger = yes
 			}
-			threat > .99
+			threat > .95
 			democratic > 0.95
 			custom_trigger_tooltip = {
 				tooltip = USA_lend_lease_act_neutrality_tt
@@ -2095,7 +2180,6 @@ focus_tree = {
 		}
 		
 		bypass = {
-
 		}
 
 		cancel_if_invalid = no
