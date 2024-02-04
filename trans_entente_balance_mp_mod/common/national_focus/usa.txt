@@ -2105,9 +2105,19 @@ focus_tree = {
 		}
 
 		available = {
-			any_country = {
-				has_government = ROOT
-				has_war = yes
+			OR = {
+				any_country = {
+					has_government = ROOT
+					has_war_with = GER
+				}
+				any_country = {
+					has_government = ROOT
+					has_war_with = ITA
+				}
+				any_country = {
+					has_government = ROOT
+					has_war_with = JAP
+				}
 			}
 			congress_low_support_trigger = yes
 		}
