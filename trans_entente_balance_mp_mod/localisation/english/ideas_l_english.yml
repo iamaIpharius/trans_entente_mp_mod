@@ -2700,3 +2700,7 @@
  CAN_true_revolution:0 "True Revolution"
  CAN_booming_economy:0 "Booming Economy"
  CAN_booming_economy_desc:0 "With the great depression firmly a thing of the past, our economy has begun to improve under the significant demands of the current world situation."
+ 
+ cannot_access_market_tt:0 "Is not allowed access the international arms market"
+ USA_neutrality_act_aat:0 "The Neutrality Act"
+
