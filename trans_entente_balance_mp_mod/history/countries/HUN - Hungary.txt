@@ -1,11 +1,6 @@
 ﻿capital = 935
 # MOD
 
-add_ideas = {
-	axis_minors_special_forces
-	minors_license_production
-	}
-
 oob = "HUN_1936"
 if = {
 	limit = { has_dlc = "By Blood Alone" }

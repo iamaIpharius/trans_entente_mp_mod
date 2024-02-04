@@ -1,11 +1,6 @@
 ﻿capital = 328
 # MOD
 
-add_ideas = {
-	axis_minors_special_forces
-	minors_license_production
-	}
-
 oob = "MAN_1936"
 
 set_technology = {

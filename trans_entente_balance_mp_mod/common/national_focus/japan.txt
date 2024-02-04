@@ -11,6 +11,7 @@
 	
 
 	default = no
+	shared_focus = AXIS_the_tripartide_pact
 
 	continuous_focus_position = { x = 20 y = 1200 }
 
@@ -1953,13 +1954,7 @@
 
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					original_tag = GER
-					has_government = fascism
-				}
-				country_event = { id = wtt_japan.109 days = 1 }
-			}
+			add_political_power = 100
 		}
 	}
 

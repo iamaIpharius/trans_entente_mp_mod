@@ -19,6 +19,7 @@ focus_tree = {
 	}
 	
 	default = no
+	shared_focus = AXIS_the_tripartide_pact
 
 	focus = {
 		id = GER_four_year_plan

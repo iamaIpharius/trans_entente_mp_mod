@@ -1,0 +1,288 @@
+shared_focus = {
+	id = AXIS_the_tripartide_pact
+	icon = GFX_goal_support_fascism
+	dynamic = yes
+	
+	x = 4
+	y = 0
+	cost = 10
+
+	offset = {
+		x = 0
+		y = 4
+		trigger = {
+			has_focus_tree = german_focus
+		}
+	}
+
+	offset = {
+		x = 0
+		y = 7
+		trigger = {
+			has_focus_tree = italian_focus
+		}
+	}
+
+	offset = {
+		x = 2
+		y = 6
+		trigger = {
+			has_focus_tree = japan_wtt_focus
+		}
+	}
+
+	offset = {
+		x = 10
+		y = 4
+		trigger = {
+			has_focus_tree = romanian_focus
+		}
+	}
+
+	offset = {
+		x = 11
+		y = 7
+		trigger = {
+			has_focus_tree = hungarian_focus
+		}
+	}
+
+	offset = {
+		x = 0
+		y = 7
+		trigger = {
+			has_focus_tree = bulgarian_focus
+		}
+	}
+
+	offset = {
+		x = 1
+		y = 18
+		trigger = {
+			has_focus_tree = spanish_focus
+		}
+	}
+
+	available = {
+		AXIS_basic_available_trigger = yes
+		is_faction_leader = yes
+	}
+
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_major = yes
+				has_government = fascism
+			}
+			give_guarantee = FROM
+		}
+		every_other_country = {
+			limit = {
+				is_major = yes
+				has_government = fascism
+			}
+			give_guarantee = THIS
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_the_second_world_war
+	
+	icon = GFX_goal_generic_major_war
+	
+	prerequisite = { focus = AXIS_the_tripartide_pact }
+	
+	x = 0
+	y = 1
+	relative_position_id = AXIS_the_tripartide_pact
+	cost = 10`
+
+	available = {
+		always = no
+	}
+
+	bypass = {
+		has_war_with = ENG
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+	}
+}
+
+joint_focus = {
+	id = AXIS_joint_army_training
+	
+	icon = GFX_goal_generic_army_doctrines
+	
+	prerequisite = { focus = AXIS_the_tripartide_pact }
+	
+	x = -4
+	y = 1
+	relative_position_id = AXIS_the_tripartide_pact
+	cost = 10
+
+	available = {
+		AXIS_basic_available_trigger = yes
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		air_experience = 25
+		army_experience = 25
+		add_command_power = 25
+	}
+
+	completion_reward_joint_originator = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.25
+			uses = 2
+			category = land_doctrine 
+		}
+	}
+
+	completion_reward_joint_member = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.25
+			uses = 1
+			category = land_doctrine 
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_military_specialisation
+	
+	icon = GFX_focus_chi_army_reform
+	
+	prerequisite = { focus = AXIS_joint_army_training }
+	prerequisite = { focus = AXIS_the_second_world_war }
+	
+	x = 0
+	y = 1
+	relative_position_id = AXIS_joint_army_training
+	cost = 10`
+
+	available = {
+		AXIS_basic_available_trigger = yes
+		is_major = no
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		IF = {
+			limit = {
+				is_major = no
+			}
+			add_ideas = axis_minors_special_forces
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = special_forces_doctrine 
+			}
+		}
+	}
+
+	completion_reward_joint_originator = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.50
+			uses = 1
+			category = special_forces_doctrine 
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_german_arms_subsidies
+	
+	icon = GFX_focus_generic_reorient_production
+	
+	prerequisite = { focus = AXIS_the_tripartide_pact }
+	
+	x = -2
+	y = 1
+	relative_position_id = AXIS_the_tripartide_pact
+	cost = 10
+
+	available = {
+		tag = GER
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+	}
+
+	completion_reward_joint_originator = {
+		add_political_power = 100
+	}
+
+	completion_reward_joint_member = {
+		add_equipment_subsidy = {
+			cic = 500
+			equipment_type = infantry_equipment
+			seller_tags = { GER }
+		}
+		add_equipment_subsidy = {
+			cic = 500
+			equipment_type = artillery_equipment
+			seller_tags = { GER }
+		}
+		add_equipment_subsidy = {
+			cic = 500
+			equipment_type = support_equipment
+			seller_tags = { GER }
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_german_industrial_experts
+	
+	icon = GFX_focus_generic_modernize_industry
+	
+	prerequisite = { focus = AXIS_german_arms_subsidies }
+	prerequisite = { focus = AXIS_the_second_world_war }
+	
+	x = 0
+	y = 1
+	relative_position_id = AXIS_german_arms_subsidies
+	cost = 10`
+
+	available = {
+		tag = GER
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+	}
+
+	completion_reward_joint_member = { ##this isn't firing properly, probably because of the available variable
+		IF = {
+			limit = {
+				is_major = no
+			}
+			random_owned_state = {
+				limit = {
+					is_capital = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+}
