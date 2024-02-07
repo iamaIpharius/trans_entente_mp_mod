@@ -1,0 +1,9 @@
+AXIS_military_industrial_integration = {
+	enable = { always = yes }
+	icon =  GFX_idea_generic_license_production
+	
+	remove_trigger = { AXIS_basic_joint_trigger = no }
+	
+	license_purchase_cost = -1
+	license_production_speed = AXIS_military_industrial_integration_license_production_speed
+}

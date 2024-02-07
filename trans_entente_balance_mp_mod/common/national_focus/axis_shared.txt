@@ -24,32 +24,32 @@ shared_focus = {
 	}
 
 	offset = {
-		x = 2
-		y = 6
+		x = 12
+		y = 8
 		trigger = {
 			has_focus_tree = japan_wtt_focus
 		}
 	}
 
 	offset = {
-		x = 10
-		y = 4
+		x = 11
+		y = 5
 		trigger = {
 			has_focus_tree = romanian_focus
 		}
 	}
 
 	offset = {
-		x = 11
-		y = 7
+		x = 12
+		y = 8
 		trigger = {
 			has_focus_tree = hungarian_focus
 		}
 	}
 
 	offset = {
-		x = 0
-		y = 7
+		x = 5
+		y = 6
 		trigger = {
 			has_focus_tree = bulgarian_focus
 		}
@@ -68,20 +68,24 @@ shared_focus = {
 		is_faction_leader = yes
 	}
 
-	completion_reward = {
-		every_other_country = {
-			limit = {
-				is_major = yes
-				has_government = fascism
+	bypass = {
+		any_country = {
+			OR = {
+				has_completed_focus = AXIS_the_tripartide_pact
+				has_completed_focus = JAP_sign_tripartite_pact
 			}
-			give_guarantee = FROM
 		}
-		every_other_country = {
+	}
+
+		completion_reward = {
+		every_country = {
 			limit = {
 				is_major = yes
 				has_government = fascism
 			}
-			give_guarantee = THIS
+			give_guarantee = GER
+			give_guarantee = JAP
+			give_guarantee = ITA
 		}
 	}
 }
@@ -130,6 +134,12 @@ joint_focus = {
 		AXIS_basic_available_trigger = yes
 	}
 
+	bypass = {
+		any_country = {
+			has_completed_focus = AXIS_joint_army_training
+		}
+	}
+
 	joint_trigger = {
   		AXIS_basic_joint_trigger = yes 
 	}
@@ -175,24 +185,46 @@ joint_focus = {
 		is_major = no
 	}
 
+	bypass = {
+		any_country = {
+			has_completed_focus = AXIS_military_specialisation
+		}
+	}
+
 	joint_trigger = {
   		AXIS_basic_joint_trigger = yes 
 	}
 
 	completion_reward = {
-		IF = {
-			limit = {
-				is_major = no
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					is_major = no
+					AXIS_basic_joint_trigger = yes
+				}
+				add_ideas = axis_minors_special_forces
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.25
+					uses = 1
+					category = special_forces_doctrine 
+				}
 			}
-			add_ideas = axis_minors_special_forces
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.25
-				uses = 1
-				category = special_forces_doctrine 
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					is_major = no
+					AXIS_basic_joint_trigger = yes
+				}
+				add_ideas = axis_minors_special_forces
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.25
+					uses = 1
+					category = special_forces_doctrine 
+				}
 			}
 		}
 	}
-
 	completion_reward_joint_originator = {
 		add_doctrine_cost_reduction = {
 			cost_reduction = 0.50
@@ -205,7 +237,7 @@ joint_focus = {
 joint_focus = {
 	id = AXIS_german_arms_subsidies
 	
-	icon = GFX_focus_generic_reorient_production
+	icon = GFX_goal_generic_production
 	
 	prerequisite = { focus = AXIS_the_tripartide_pact }
 	
@@ -216,6 +248,12 @@ joint_focus = {
 
 	available = {
 		tag = GER
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = AXIS_german_arms_subsidies
+		}
 	}
 
 	joint_trigger = {
@@ -265,23 +303,318 @@ joint_focus = {
 		tag = GER
 	}
 
+	bypass = {
+		any_country = {
+			has_completed_focus = AXIS_german_industrial_experts
+		}
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	
+	completion_reward = {
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					is_major = no
+					AXIS_basic_joint_trigger = yes
+				}
+				random_owned_state = {
+					limit = {
+						is_capital = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					is_major = no
+					AXIS_basic_joint_trigger = yes
+				}
+				random_owned_state = {
+					limit = {
+						is_capital = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+		}
+	}
+
+	completion_reward_joint_member = {
+	}
+}
+
+joint_focus = {
+	id = AXIS_new_european_trade_links
+	
+	icon = GFX_goal_generic_positive_trade_relations
+	
+	prerequisite = { focus = AXIS_the_tripartide_pact }
+	
+	x = 2
+	y = 1
+	relative_position_id = AXIS_the_tripartide_pact
+	cost = 10
+
+	available = {
+		AXIS_basic_available_trigger = yes
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = AXIS_new_european_trade_links
+		}
+	}
+
 	joint_trigger = {
   		AXIS_basic_joint_trigger = yes 
 	}
 
 	completion_reward = {
-	}
-
-	completion_reward_joint_member = { ##this isn't firing properly, probably because of the available variable
-		IF = {
+		every_country = {
+			limit = {
+				is_major = yes
+				AXIS_basic_joint_trigger = yes
+			}
+			add_ideas = AXIS_new_european_trade_links_idea_major
+		}
+		every_country = {
 			limit = {
 				is_major = no
+				AXIS_basic_joint_trigger = yes
 			}
-			random_owned_state = {
-				limit = {
-					is_capital = yes
+			add_ideas = AXIS_new_european_trade_links_idea_minor
+		}
+	}
+
+	completion_reward_joint_originator = {
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_synthetic_technology_sharing
+	
+	icon = GFX_focus_generic_rubber
+	
+	prerequisite = { focus = AXIS_new_european_trade_links }
+	prerequisite = { focus = AXIS_the_second_world_war }
+	
+	x = 0
+	y = 1
+	relative_position_id = AXIS_new_european_trade_links
+	cost = 10`
+
+	available = {
+		tag = GER
+		has_tech = rubber_processing
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = AXIS_synthetic_technology_sharing
+		}
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = AXIS_synthetic_technology_sharing_tt
+		IF = {
+			limit = {
+				AXIS_basic_joint_trigger = yes
+				NOT = {
+					has_tech = synth_oil_experiments
 				}
-				add_extra_state_shared_building_slots = 2
+			}
+			set_technology = {
+				synth_oil_experiments = 1
+			}
+		}
+		IF = {
+			limit = {
+				AXIS_basic_joint_trigger = yes
+				NOT = {
+					has_tech = rubber_processing
+				}
+			}
+			set_technology = {
+				rubber_processing = 1
+			}
+		}
+		IF = {
+			limit = {
+				AXIS_basic_joint_trigger = yes
+				NOT = {
+					has_tech = improved_rubber_processing
+				}
+				GER = {
+					has_tech = improved_rubber_processing
+				}
+			}
+			set_technology = {
+				improved_rubber_processing = 1
+			}
+		}
+		IF = {
+			limit = {
+				AXIS_basic_joint_trigger = yes
+				NOT = {
+					has_tech = advanced_rubber_processing
+				}
+				GER = {
+					has_tech = advanced_rubber_processing
+				}
+			}
+			set_technology = {
+				advanced_rubber_processing = 1
+			}
+		}
+		IF = {
+			limit = {
+				AXIS_basic_joint_trigger = yes
+				NOT = {
+					has_tech = modern_rubber_processing
+				}
+				GER = {
+					has_tech = modern_rubber_processing
+				}
+			}
+			set_technology = {
+				modern_rubber_processing = 1
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_military_industrial_integration
+	
+	icon = GFX_focus_generic_reorient_production
+	
+	prerequisite = { focus = AXIS_the_tripartide_pact }
+	
+	x = 4
+	y = 1
+	relative_position_id = AXIS_the_tripartide_pact
+	cost = 10
+
+	available = {
+		tag = GER
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = AXIS_military_industrial_integration
+		}
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					is_major = no
+					AXIS_basic_joint_trigger = yes
+				}
+				add_ideas = AXIS_military_industrial_integration_dummy
+			}
+		}
+	}
+
+	completion_reward_joint_originator = {
+		capital_scope = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			set_variable = { AXIS_military_industrial_integration_license_production_speed = 0.10 }
+			every_country = {
+				limit = {
+					is_major = no
+					AXIS_basic_joint_trigger = yes
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_military_industrial_integration
+					scope = ROOT
+				}
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_continental_war_economy
+	
+	icon = GFX_focus_generic_tank_production
+	
+	prerequisite = { focus = AXIS_military_industrial_integration }
+	prerequisite = { focus = AXIS_the_second_world_war }
+	
+	x = 0
+	y = 1
+	relative_position_id = AXIS_military_industrial_integration
+	cost = 10`
+
+	bypass = {
+		any_country = {
+			has_completed_focus = AXIS_continental_war_economy
+		}
+	}
+
+	available = {
+		tag = GER
+	}
+
+	joint_trigger = {
+  		AXIS_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = AXIS_modify_military_industrial_integration_dmod
+	}
+
+	completion_reward_joint_originator = {
+		capital_scope = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			set_variable = { AXIS_military_industrial_integration_license_production_speed = 0.25 }
+			every_country = {
+				limit = {
+					is_major = no
+					AXIS_basic_joint_trigger = yes
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_military_industrial_integration
+					scope = ROOT
+				}
 			}
 		}
 	}

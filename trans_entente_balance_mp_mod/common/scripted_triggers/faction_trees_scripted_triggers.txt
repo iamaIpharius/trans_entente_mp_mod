@@ -2,8 +2,6 @@ AXIS_basic_joint_trigger = {
 	has_government = fascism
 	OR = {
 		original_tag = GER
-		original_tag = JAP
-		original_tag = ITA
 		is_ally_with = GER
 	}	
 }

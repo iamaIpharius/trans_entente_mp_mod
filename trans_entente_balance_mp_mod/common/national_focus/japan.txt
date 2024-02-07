@@ -1945,6 +1945,9 @@
 						has_war_with = GER
 					}
 				}
+				any_country = {
+					has_completed_focus = AXIS_the_tripartide_pact
+				}
 			}
 		}
 
@@ -1954,7 +1957,13 @@
 
 
 		completion_reward = {
-			add_political_power = 100
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				country_event = { id = wtt_japan.109 days = 1 }
+			}
 		}
 	}
 

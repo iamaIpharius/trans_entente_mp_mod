@@ -1,0 +1,72 @@
+ideas = {
+	country = {
+		AXIS_new_european_trade_links_idea_major = {
+
+			allowed = {
+				OR = {
+					original_tag = GER
+					original_tag = ITA
+				}
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { AXIS_basic_joint_trigger = no }
+			
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = ROM
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = HUN
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = BUL
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = SPA
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+
+		AXIS_new_european_trade_links_idea_minor = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { AXIS_basic_joint_trigger = no }
+
+			picture = can_wartime_prices_and_trade_board
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		AXIS_military_industrial_integration_dummy = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { AXIS_basic_joint_trigger = no }
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				license_purchase_cost = -1
+				license_production_speed = 0.15
+			}
+		}
+	}
+}
