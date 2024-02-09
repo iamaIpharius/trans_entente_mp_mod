@@ -1,0 +1,502 @@
+shared_focus = {
+	id = ALLIES_renew_allied_ties
+	icon = GFX_goal_support_democracy
+	dynamic = yes
+	
+	x = 4
+	y = 0
+	cost = 10
+
+	offset = {
+		x = 0
+		y = 8
+		trigger = {
+			has_focus_tree = british_focus
+		}
+	}
+
+	offset = {
+		x = 18
+		y = 6
+		trigger = {
+			has_focus_tree = canadian_focus
+		}
+	}
+
+	offset = {
+		x = 8
+		y = 5
+		trigger = {
+			has_focus_tree = indian_focus
+		}
+	}
+
+	offset = {
+		x = 9
+		y = 6
+		trigger = {
+			has_focus_tree = australian_focus
+		}
+	}
+
+	offset = {
+		x = 10
+		y = 8
+		trigger = {
+			has_focus_tree = south_african_focus
+		}
+	}
+
+	offset = {
+		x = 0
+		y = 6
+		trigger = {
+			has_focus_tree = new_zealander_focus
+		}
+	}
+
+	offset = {
+		x = 0
+		y = 8
+		trigger = {
+			has_focus_tree = usa_focus
+		}
+	}
+
+	available = {
+		ALLIES_basic_joint_trigger = yes
+		is_faction_leader = yes
+		is_ally_with = FRA
+	}
+
+	bypass = {
+		any_country = {
+			OR = {
+				has_completed_focus = ALLIES_renew_allied_ties
+			}
+		}
+	}
+
+	completion_reward = {
+		every_country = {
+			limit = {
+				has_government = democratic
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = offered_support
+			}		
+		}
+	}
+}
+
+joint_focus = {
+	id = ALLIES_the_second_world_war
+	
+	icon = GFX_goal_generic_major_war
+	
+	prerequisite = { focus = ALLIES_renew_allied_ties }
+	
+	x = 0
+	y = 1
+	relative_position_id = ALLIES_renew_allied_ties
+	cost = 10`
+
+	available = {
+		always = no
+	}
+
+	bypass = {
+		has_war_with = GER
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+	}
+}
+
+joint_focus = {
+	id = ALLIES_military_diversity
+	
+	icon = GFX_goal_generic_special_forces
+	
+	prerequisite = { focus = ALLIES_renew_allied_ties }
+	
+	x = -4
+	y = 1
+	relative_position_id = ALLIES_renew_allied_ties
+	cost = 10
+
+	available = {
+		ALLIES_basic_available_trigger = yes
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = ALLIES_military_diversity
+		}
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					is_major = no
+					ALLIES_basic_joint_trigger = yes
+				}
+				add_ideas = allies_minors_special_forces
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.25
+					uses = 1
+					category = special_forces_doctrine 
+				}
+			}
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					is_major = no
+					ALLIES_basic_joint_trigger = yes
+				}
+				add_ideas = allies_minors_special_forces
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.25
+					uses = 1
+					category = special_forces_doctrine 
+				}
+			}
+		}
+	}
+	completion_reward_joint_originator = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.50
+			uses = 1
+			category = special_forces_doctrine 
+		}
+	}
+}
+
+joint_focus = {
+	id = ALLIES_supreme_allied_commanders
+	
+	icon = GFX_focus_generic_military_mission
+	
+	prerequisite = { focus = ALLIES_military_diversity }
+	prerequisite = { focus = ALLIES_the_second_world_war }
+	
+	x = 0
+	y = 1
+	relative_position_id = ALLIES_military_diversity
+	cost = 10`
+
+	available = {
+		ALLIES_basic_available_trigger = yes
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = ALLIES_supreme_allied_commanders
+		}
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		army_experience = 25
+		add_command_power = 25
+		add_ideas = ALLIES_coordinated_allied_planning
+	}
+
+	completion_reward_joint_originator = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.25
+			uses = 1
+			category = land_doctrine 
+		}
+	}
+}
+
+joint_focus = {
+	id = ALLIES_secure_the_sea_lanes
+	
+	icon = GFX_goal_generic_occupy_states_coastal
+	
+	prerequisite = { focus = ALLIES_renew_allied_ties }
+	
+	x = -2
+	y = 1
+	relative_position_id = ALLIES_renew_allied_ties
+	cost = 10
+
+	available = {
+		ALLIES_basic_available_trigger = yes
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = ALLIES_secure_the_sea_lanes
+		}
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		navy_experience = 25
+	}
+
+	completion_reward_joint_originator = {
+		navy_experience = 50
+		add_doctrine_cost_reduction = {
+			name = USA_convoy_tactics
+			cost_reduction = 0.5
+			uses = 2
+			category = convoy_defense_tree
+		}
+		add_tech_bonus = {
+			name = ENG_asw_warfare
+			bonus = 1.0
+			uses = 2
+			category = asw_tech
+		}	
+	}
+}
+
+joint_focus = {
+	id = ALLIES_the_british_commonwealth_together
+	
+	icon = GFX_focus_eng_imperial_federation
+	
+	prerequisite = { focus = ALLIES_secure_the_sea_lanes }
+	prerequisite = { focus = ALLIES_the_second_world_war }
+	
+	x = 0
+	y = 1
+	relative_position_id = ALLIES_secure_the_sea_lanes
+	cost = 10`
+
+	available = {
+		ALLIES_basic_available_trigger = yes
+		COMMONWEALTH_basic_joint_trigger = yes
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = ALLIES_the_british_commonwealth_together
+		}
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	
+	completion_reward = {
+		every_country = {
+			limit = {
+				COMMONWEALTH_basic_joint_trigger = yes
+			}
+			add_ideas = ALLIES_the_commonwealth_together
+			add_political_power = 100
+		}
+	}
+
+	completion_reward_joint_originator = {
+		add_war_support = 0.05
+		add_political_power = 100
+	}
+}
+
+joint_focus = {
+	id = ALLIES_rearmament_fund
+	
+	icon = GFX_focus_generic_reorient_production
+	
+	prerequisite = { focus = ALLIES_renew_allied_ties }
+	
+	x = 2
+	y = 1
+	relative_position_id = ALLIES_renew_allied_ties
+	cost = 10
+
+	available = {
+		tag = ENG
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = ALLIES_rearmament_fund
+		}
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+	}
+
+	completion_reward_joint_originator = {
+		add_political_power = 100
+	}
+
+	completion_reward_joint_member = {
+		add_equipment_subsidy = {
+			cic = 500
+			equipment_type = infantry_equipment
+			seller_tags = { USA }
+		}
+		add_equipment_subsidy = {
+			cic = 500
+			equipment_type = artillery_equipment
+			seller_tags = { USA }
+		}
+		add_equipment_subsidy = {
+			cic = 500
+			equipment_type = support_equipment
+			seller_tags = { USA }
+		}
+	}
+}
+
+joint_focus = {
+	id = ALLIES_american_industrial_coordination
+	
+	icon = GFX_goal_generic_construct_civ_factory
+	
+	prerequisite = { focus = ALLIES_rearmament_fund }
+	prerequisite = { focus = ALLIES_the_second_world_war }
+	
+	x = 0
+	y = 1
+	relative_position_id = ALLIES_rearmament_fund
+	cost = 10`
+
+	available = {
+		tag = USA
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = ALLIES_american_industrial_coordination
+		}
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		every_country = {
+			limit = {
+				is_major = no
+				ALLIES_basic_joint_trigger = yes
+			}
+			add_ideas = ALLIES_industrial_coordination
+		}
+	}
+
+	completion_reward_joint_originator = {
+		add_political_power = 100
+	}
+}
+
+joint_focus = {
+	id = ALLIES_reinforce_commonwealth_trade
+	
+	icon = GFX_goal_generic_positive_trade_relations
+	
+	prerequisite = { focus = ALLIES_renew_allied_ties }
+	
+	x = 4
+	y = 1
+	relative_position_id = ALLIES_renew_allied_ties
+	cost = 10
+
+	available = {
+		COMMONWEALTH_basic_joint_trigger = yes
+	}
+
+	bypass = {
+		any_country = {
+			has_completed_focus = ALLIES_reinforce_commonwealth_trade
+		}
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		every_country = {
+			limit = {
+				COMMONWEALTH_basic_joint_trigger = yes
+			}
+			add_ideas = ALLIES_commonwealth_trade
+		}
+	}
+
+	completion_reward_joint_originator = {
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = ALLIES_bretton_woods_conference
+	
+	icon = GFX_focus_SWI_issue_war_bonds
+	
+	prerequisite = { focus = ALLIES_reinforce_commonwealth_trade }
+	prerequisite = { focus = ALLIES_the_second_world_war }
+	
+	x = 0
+	y = 1
+	relative_position_id = ALLIES_reinforce_commonwealth_trade
+	cost = 10`
+
+	bypass = {
+		any_country = {
+			has_completed_focus = ALLIES_bretton_woods_conference
+		}
+	}
+
+	available = {
+		tag = USA
+		date > 1944.01.01
+	}
+
+	joint_trigger = {
+  		ALLIES_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+		every_country = {
+			limit = {
+				ALLIES_basic_joint_trigger = yes
+			}
+			add_ideas = ALLIES_bretton_woods
+			remove_ideas = ALLIES_commonwealth_trade
+		}
+	}
+
+	completion_reward_joint_originator = {
+		add_political_power = 150
+	}
+}

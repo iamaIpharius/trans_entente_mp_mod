@@ -1,8 +1,4 @@
 ﻿capital = 439
-# MOD
-add_ideas = {
-	minors_license_production
-	}
 	
 oob = "RAJ_1936"
 if = {

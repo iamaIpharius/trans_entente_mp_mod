@@ -1,10 +1,4 @@
 ﻿capital = 277
-# MOD
-
-add_ideas = {
-	allies_minors_special_forces
-	minors_license_production
-	}
 
 oob = "MEX_1936"
 if = {

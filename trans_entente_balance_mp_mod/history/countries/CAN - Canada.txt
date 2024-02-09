@@ -1,7 +1,4 @@
 ﻿capital = 276
-# MOD
-add_ideas = allies_minors_special_forces
-add_ideas = minors_license_production
 
 if = {
 	limit = {

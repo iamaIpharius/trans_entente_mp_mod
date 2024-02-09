@@ -1,7 +1,4 @@
 ﻿capital = 285
-# MOD
-add_ideas = minors_license_production
-add_ideas = allies_minors_special_forces
 
 oob = "AST_1936"
 set_stability = 0.8
