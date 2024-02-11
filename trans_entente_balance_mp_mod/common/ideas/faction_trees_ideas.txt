@@ -1,0 +1,266 @@
+ideas = {
+	country = {
+		AXIS_new_european_trade_links_idea_major = {
+
+			allowed = {
+				OR = {
+					original_tag = GER
+					original_tag = ITA
+				}
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { AXIS_basic_joint_trigger = no }
+			
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = ROM
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = HUN
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = BUL
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = SPA
+				trade_cost_for_target_factor = -1
+			}
+		}
+
+		AXIS_new_european_trade_links_idea_minor = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { AXIS_basic_joint_trigger = no }
+
+			picture = can_wartime_prices_and_trade_board
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		AXIS_military_industrial_integration_dummy = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { AXIS_basic_joint_trigger = no }
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				license_purchase_cost = -1
+				license_production_speed = 0.10
+			}
+		}
+
+		ALLIES_coordinated_allied_planning = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { ALLIES_basic_joint_trigger = no }
+			
+			picture = eng_imperial_conscription
+
+			modifier = {
+				max_planning = 0.1
+				planning_speed = 0.2
+			}
+		}
+
+		ALLIES_the_commonwealth_together = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { ALLIES_basic_joint_trigger = no }
+			
+			picture = eng_the_sun_never_sets
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+
+		ALLIES_industrial_coordination = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { ALLIES_basic_joint_trigger = no }
+			
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				license_purchase_cost = -1
+				license_production_speed = 0.15
+			}
+		}
+		ALLIES_commonwealth_trade = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { ALLIES_basic_joint_trigger = no }
+			
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = ENG
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = CAN
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = RAJ
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = AST
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = SAF
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = NZL
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = MAL
+				trade_cost_for_target_factor = -0.5
+			}
+
+			targeted_modifier = {
+				tag = IRQ
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+		ALLIES_bretton_woods = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel = { ALLIES_basic_joint_trigger = no }
+			
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = ENG
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = CAN
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = RAJ
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = AST
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = SAF
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = NZL
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = IRQ
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = MAL
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = PHI
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = BRA
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = MEX
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = FRA
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = BEL
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = HOL
+				trade_cost_for_target_factor = -1
+			}
+
+			targeted_modifier = {
+				tag = INS
+				trade_cost_for_target_factor = -1
+			}
+		}
+	}
+}

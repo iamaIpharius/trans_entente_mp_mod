@@ -1,0 +1,31 @@
+AXIS_basic_joint_trigger = {
+	has_government = fascism
+	OR = {
+		original_tag = GER
+		is_ally_with = GER
+	}	
+}
+AXIS_basic_available_trigger = {
+	is_subject = no 
+	AXIS_basic_joint_trigger = yes	
+}
+ALLIES_basic_joint_trigger = {
+	has_government = democratic
+	OR = {
+		original_tag = ENG
+		is_ally_with = ENG
+	}	
+}
+ALLIES_basic_available_trigger = {
+	OR = {
+		is_subject = no 
+		is_subject_of = ENG
+	}
+	ALLIES_basic_joint_trigger = yes	
+}
+COMMONWEALTH_basic_joint_trigger = {
+	OR = {
+		original_tag = ENG 
+		is_subject_of = ENG
+	}
+}

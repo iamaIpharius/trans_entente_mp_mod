@@ -1,10 +1,5 @@
 ﻿capital = 938
 
-add_ideas = {
-	axis_minors_special_forces
-	minors_license_production
-	}
-
 if = {
 	limit = {
 		NOT = {
