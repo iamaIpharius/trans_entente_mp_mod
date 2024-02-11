@@ -81,7 +81,7 @@ ideas = {
 			picture = eng_imperial_conscription
 
 			modifier = {
-				max_planning = 0.2
+				max_planning = 0.1
 				planning_speed = 0.2
 			}
 		}
