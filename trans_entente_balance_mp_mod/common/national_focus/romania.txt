@@ -2856,6 +2856,7 @@
 			OR = {
 				has_war = yes
 				threat > 0.25
+				surrender_progress > 0.05
 			}
 		}
 
