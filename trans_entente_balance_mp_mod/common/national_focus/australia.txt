@@ -3227,47 +3227,47 @@
 		}
 	}
 
-	focus = {
-		id = AST_antipodean_union
-		icon = GFX_focus_eng_imperial_federation
-		prerequisite = { focus = AST_the_singapore_strategy }
-		x = 1
-		y = 1
-		relative_position_id = AST_the_singapore_strategy
+	# focus = {
+	# 	id = AST_antipodean_union
+	# 	icon = GFX_focus_eng_imperial_federation
+	# 	prerequisite = { focus = AST_the_singapore_strategy }
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = AST_the_singapore_strategy
 
-		cost = 10
+	# 	cost = 10
 
-		ai_will_do = {
-			factor = 0.2
-		}
+	# 	ai_will_do = {
+	# 		factor = 0.2
+	# 	}
 
-		available = {
-			is_in_faction_with = ENG
-			ENG = { has_government = ROOT }
-			SAF = {
-				is_subject_of = ENG
-			}
-			MAL = {
-				is_subject_of = AST
-			}
-			284 = {
-				is_owned_by = AST
-			}
-			723 = {
-				is_owned_by = AST
-			}
-		}
+	# 	available = {
+	# 		is_in_faction_with = ENG
+	# 		ENG = { has_government = ROOT }
+	# 		SAF = {
+	# 			is_subject_of = ENG
+	# 		}
+	# 		MAL = {
+	# 			is_subject_of = AST
+	# 		}
+	# 		284 = {
+	# 			is_owned_by = AST
+	# 		}
+	# 		723 = {
+	# 			is_owned_by = AST
+	# 		}
+	# 	}
 		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
 
-		completion_reward = {
-			ENG = {
-				country_event = { id = tfv_australia.5 }
-			}
-		}
-	}
+	# 	completion_reward = {
+	# 		ENG = {
+	# 			country_event = { id = tfv_australia.5 }
+	# 		}
+	# 	}
+	# }
 
 	focus = {
 		id = AST_adopt_westminster
