@@ -132,7 +132,7 @@ if = {
 		MEX_cedillo_tension_2
 	}
 }
-
+set_country_flag = monroe_doctrine
 1939.1.1 = {
 	add_political_power = 1198
 	add_command_power = 100

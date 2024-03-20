@@ -81,7 +81,7 @@ recruit_character = PRU_reynaldo_vinatea
 set_country_flag = monroe_doctrine
 
 set_convoys = 5
-
+set_country_flag = monroe_doctrine
 1939.1.1 = {
 
 	add_political_power = 1198
