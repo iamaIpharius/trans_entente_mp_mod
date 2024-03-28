@@ -1,5 +1,6 @@
 ﻿capital = 277
-
+add_ideas = minors_license_production
+add_ideas = allies_minors_special_forces
 oob = "MEX_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }

@@ -1,6 +1,7 @@
 ﻿capital = 48
 # MOD
-
+add_ideas = axis_minors_special_forces
+add_ideas = minors_license_production
 #TROOPS
 oob = "BUL_1936" #VANILLA & DLC
 if = {
