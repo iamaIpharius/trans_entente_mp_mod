@@ -1,5 +1,6 @@
 ﻿capital = 284
-
+add_ideas = minors_license_production
+add_ideas = allies_minors_special_forces
 oob = "NZL_1936"
 if = {
 	limit = { has_dlc = "By Blood Alone" }

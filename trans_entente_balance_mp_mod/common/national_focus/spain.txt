@@ -23,7 +23,7 @@ focus_tree = {
 	}
 
 	default = no
-	shared_focus = AXIS_the_tripartide_pact
+	#shared_focus = AXIS_the_tripartide_pact
 
 	continuous_focus_position = { x = 50 y = 2850 }
 

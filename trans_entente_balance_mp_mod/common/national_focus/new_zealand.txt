@@ -18,7 +18,7 @@
 	}
 	
 	default = no
-	shared_focus = ALLIES_renew_allied_ties
+	# shared_focus = ALLIES_renew_allied_ties
 	continuous_focus_position = { x = 50 y = 1250 }
 
 #	focus = {
